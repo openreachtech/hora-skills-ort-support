@@ -4,9 +4,9 @@
   "description": "Distributes the ORT support skills used to develop with Hora Kit.",
   "type": "module",
   "files": [
-    "lib/",
-    "types/",
-    "!types/env/**"
+    "dist/",
+    "docs/",
+    "lib/"
   ],
   "keywords": [
     "hora",
