@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "description": "Distributes the ORT support skills used to develop with Hora Kit.",
   "type": "module",
-  "main": "index.js",
   "files": [
-    "lib/",
-    "types/",
-    "!types/env/**"
+    "dist/",
+    "docs/",
+    "lib/"
   ],
-  "types": "./types/index.d.ts",
+  "bin": {
+    "hora-skills-ort-support": "lib/equip/hora-skills-ort-support.js"
+  },
   "keywords": [
     "hora",
     "hora-kit",
@@ -17,8 +18,11 @@
     "support"
   ],
   "scripts": {
+    "build": "node .claude/skills/build/scripts/build.js",
     "l": "npm run lint",
     "lint": "eslint .",
+    "prepack": "npm run build",
+    "skill-names": "node .claude/skills/audit/scripts/audit.js",
     "test": "export NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\"; export NODE_ENV=development; jest"
   },
   "repository": {
@@ -26,11 +30,14 @@
     "url": "git+https://github.com/openreachtech/hora-skills-ort-support.git"
   },
   "author": "Open Reach Tech Inc.",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/openreachtech/hora-skills-ort-support/issues"
   },
   "homepage": "https://github.com/openreachtech/hora-skills-ort-support#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
   },
   "devDependencies": {
