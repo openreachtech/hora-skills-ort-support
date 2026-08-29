@@ -22,6 +22,31 @@ and three under 1 MB.
 compacted, and the summary that replaced it keeps conclusions while dropping the exchanges
 that produced them. The corrections are in the exchanges.
 
+## A resumed conversation spans more than one file
+
+Resuming an earlier session **opens a new transcript rather than appending to the old one.**
+The conversation continues; the file does not. So the current session's transcript holds
+only what happened after the resume, and the material a run is looking for may be almost
+entirely in a predecessor.
+
+Measured on a conversation continued across two sessions: 13.8 MB in the first file, 3.5 MB
+in the second, seven compactions between them. Reading only the current file would have
+missed four fifths of the material — including every measurement the run was harvesting.
+
+**The predecessor names itself inside the current transcript.** A resume injects a summary
+of the session it continues, and that summary carries the earlier file's absolute path.
+Find it, then repeat for the file it names: a conversation resumed twice has two
+predecessors, and the chain ends at a transcript that summarises nothing.
+
+- **A path taken from a summary is a predecessor, not the current session.** Reading it
+  because a summary handed it over, without establishing which file is being written to
+  now, puts the run one session behind and it stays there for every later run. The current
+  session's file is the one still growing; modification time settles it.
+- Report every file located and its size, so the caller sees the span the run covers rather
+  than assuming it is one conversation in one file.
+- Ordering matters when reading: the predecessors hold the earlier exchanges. A passage's
+  position is its position within the chain, not within whichever file it sits in.
+
 ## What a line is
 
 Each line is an object with a `type`. Only three carry material:
