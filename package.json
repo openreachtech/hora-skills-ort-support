@@ -19,6 +19,7 @@
     "l": "npm run lint",
     "lint": "eslint .",
     "prepack": "npm run build",
+    "skill-names": "node .claude/skills/audit/scripts/audit.js",
     "test": "export NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\"; export NODE_ENV=development; jest"
   },
   "repository": {
