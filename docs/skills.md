@@ -4,7 +4,7 @@ A catalog of every skill in this package — 3 in total — with a one- or two-l
 
 Each skill lives at `kit/skills/<name>/`, directly under the skills directory, and that folder name is both the skill's `name:` and the folder name it is installed under. **Skill** below is therefore all you need: it is what you invoke as `/name`, what appears under `.claude/skills/` once installed, and where the source sits. The prefix is four characters, the hyphen included, and its third character names the library — see [the build convention](https://github.com/openreachtech/hora-skills-ort-support/blob/main/.claude/skills/build/SKILL.md) for the layout and the naming rules. Full guidance for a skill is in its own `SKILL.md` and in the `references/` beside it — all three here carry one, and each `SKILL.md` says which of its references settles what.
 
-| Skill (= Command) | Summary |
+| Skill | Summary |
 | :-- | :-- |
 | `hos-explain` | Rewrite an AI-generated explanation, report or proposal into plain language with diagrams, so a reader with no technical background can understand it in one read. It rewrites an existing message and adds no new analysis. |
 | `hos-skillify` | Build a skill out of the conversation you are in — mine its transcript, decide what is durable convention, and hand the result to the skill-writing convention. Material that turns out not to be a convention is reported and dropped. |
