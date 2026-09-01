@@ -87,6 +87,16 @@ Find the transcript for the current session and report its line count, its size,
 many turns in it are the user's own rather than tool output. The mechanics are in
 [transcript.md](./references/transcript.md).
 
+**A conversation resumed from an earlier session spans more than one transcript.** Resuming
+opens a new file rather than appending to the old one, so the current session's file holds
+only what has happened since — and the predecessor is usually the larger of the two. Locate
+the predecessors too, and report each; how to find them is in
+[transcript.md](./references/transcript.md).
+
+**A path handed over by a compaction summary is a predecessor, not the current session.**
+Taking it and going no further leaves the run one session behind, reading nothing that has
+happened since the resume.
+
 Report the numbers before going further. A caller who sees "271 turns of yours across
 6,371 lines" knows the run is about to read a lot; a caller who sees eight knows the
 opposite, and both should know which one they are in.
@@ -287,8 +297,8 @@ Three rules make the loop safe:
 **A run only ever reads the current session's transcript**, so a subject harvested here
 cannot come back in a different conversation — a different conversation holds different
 material. To continue a harvest later, resume the session rather than starting a new one:
-resuming restores the transcript and the outlines already presented, and there is nothing
-else to restore. **Do not keep a record of what has been harvested.** The transcript is that
+resuming restores the conversation, and phase 1 follows the chain of transcripts back
+through it. **Do not keep a record of what has been harvested.** The transcript is that
 record, and a log beside it would be a less reliable copy of something already on disk.
 
 A re-run repeats the harvest, and in addition mode it repeats the full read of the target
