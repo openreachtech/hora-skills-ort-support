@@ -1,6 +1,6 @@
 # @openreachtech/hora-skills-ort-support
 
-Hora Kit で開発するための ORT サポートスキルを配布するパッケージです。
+ORT サポートスキルを配布するパッケージです。単体でどのリポジトリにも導入でき、Hora Kit ではそのスキルライブラリの 1 つとして装備されます。
 
 ## コンセプト
 
