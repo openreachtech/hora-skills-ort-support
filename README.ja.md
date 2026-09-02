@@ -10,7 +10,7 @@ Hora Kit で開発するための ORT サポートスキルを配布するパッ
 
 | パッケージ | プレフィックス | ドメイン | スキル数 |
 | :-- | :-- | :-- | --: |
-| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 35 |
+| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
 | `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
 | `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
 | `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` | 3 |
