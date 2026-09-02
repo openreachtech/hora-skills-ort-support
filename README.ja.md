@@ -125,9 +125,9 @@ npm test
 
 ## ライセンス
 
-本プロジェクトは Apache License 2.0 で公開しています。
+本プロジェクトは Apache License 2.0 で公開されています。
 
-詳細は [LICENSE ファイル](./LICENSE) をご覧ください。
+詳細は [LICENSE ファイル](./LICENSE) を参照してください。
 
 ## 開発元
 
