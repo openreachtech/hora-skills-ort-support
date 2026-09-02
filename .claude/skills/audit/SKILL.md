@@ -1,6 +1,6 @@
 ---
 name: audit
-description: "Repository-specific check: reports every skill under kit/skills/ whose folder name, SKILL.md or placement would stop the build — a wrong name, a missing or mismatched name: field, a nested skill, a stray file. Reads only, writes nothing. Use before opening a pull request that touches kit/skills/, or when the build aborts and the whole list of problems is wanted at once."
+description: "Repository-specific check: reports every skill under kit/skills/ whose folder name, SKILL.md or placement would stop the build — a wrong name, a missing or mismatched name: field, a nested skill, a stray file — and every place a document states a skill count that no longer matches what is there. Reads only, writes nothing. Use before opening a pull request that touches kit/skills/, or when the build aborts and the whole list of problems is wanted at once."
 ---
 
 # Audit
@@ -29,6 +29,9 @@ It prints how many skills it checked, then one group per kind of problem, and ex
 | `Folder name is not ...` | The folder name does not read `hos-<name>`, and the folder name is the installed name. |
 | `Missing name:` | The frontmatter declares no `name:`. |
 | `name: does not match the folder name` | The two disagree, so a reader cannot tell which one the skill is. |
+| `Stated skill count does not match ...` | A document states a number of skills that disagrees with what is under `kit/skills/`. |
+
+Six places restate the count as prose — the catalog heading and the README opening in both languages, and this package's own row of the package table in both. Each is a fact about a directory, written by hand, so when a skill is added the count in all six moves or none of them does. The package table's other rows are **not** checked: they state a sibling library's count, which cannot be verified from inside this repository.
 
 The rule for a valid name is written out in this script and in the build's, rather than shared through an import, so that neither has to reach into the other's skill folder. A test pins the two copies to each other: changing the rule in one place alone fails it.
 
