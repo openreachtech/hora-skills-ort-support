@@ -1,5 +1,7 @@
 # @openreachtech/hora-skills-ort-support
 
+*[English](https://github.com/openreachtech/hora-skills-ort-support/blob/main/README.md)*
+
 ORT サポートスキルを配布するパッケージです。単体でどのリポジトリにも導入でき、Hora Kit ではそのスキルライブラリの 1 つとして装備されます。
 
 ## コンセプト
