@@ -8,14 +8,14 @@ A distribution package of the ORT support skills — installed into any reposito
 
 This package ships **skills only** — there is no library to `import`, and the one executable it carries exists to install those skills. A skill is a directory holding a `SKILL.md`, plus optional `references/` and `scripts/`, that Claude Code loads and invokes as `/<name>`. Installing this package into a repository puts the conventions and procedures Open Reach Tech develops with in front of the agent working on that repository.
 
-4 skills are distributed, all of the `support` domain: the work that surrounds the code rather than the code itself — explaining a result to somebody who did not write it, repairing a document its readers stall on, writing the manual its users read, and turning a settled conversation into a skill. Every name opens with a four-character prefix, the hyphen included: `ho` is Hora Kit, the product this skill library is named for, and the third character names the library — `s` for this one. A reader looking at one flat list of skills can therefore tell at a glance which came from this package. Each domain is a package of its own, and a repository installs the ones it works in:
+5 skills are distributed, all of the `support` domain: the work that surrounds the code rather than the code itself — explaining a result to somebody who did not write it, repairing a document its readers stall on, writing the issue that opens a piece of work, writing the manual its users read, and turning a settled conversation into a skill. Every name opens with a four-character prefix, the hyphen included: `ho` is Hora Kit, the product this skill library is named for, and the third character names the library — `s` for this one. A reader looking at one flat list of skills can therefore tell at a glance which came from this package. Each domain is a package of its own, and a repository installs the ones it works in:
 
 | Package | Prefix | Domain | Skills |
 | :-- | :-- | :-- | --: |
 | `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
 | `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
 | `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
-| `@openreachtech/hora-skills-ort-support` (this one) | `hos-` | `support` | 4 |
+| `@openreachtech/hora-skills-ort-support` (this one) | `hos-` | `support` | 5 |
 
 [**Skill catalog**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md) ([日本語](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md)) — every skill in this package with a one- or two-line summary, listed by the command name it is invoked by.
 
@@ -53,7 +53,7 @@ Where the package is not a dependency at all — a one-off, or a repository that
 
 ## Usage
 
-The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-humanize-docs`, `/hos-user-manual`, `/hos-skillify`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
+The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-humanize-docs`, `/hos-user-manual`, `/hos-write-issue`, `/hos-skillify`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
 
 ### Installing more than one domain
 
