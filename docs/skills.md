@@ -2,21 +2,23 @@
 
 *[日本語](./skills.ja.md)*
 
-A catalog of every skill in this package — 3 in total — with a one- or two-line summary each.
+A catalog of every skill in this package — 4 in total — with a one- or two-line summary each.
 
-Each skill lives at `kit/skills/<name>/`, directly under the skills directory, and that folder name is both the skill's `name:` and the folder name it is installed under. **Skill** below is therefore all you need: it is what you invoke as `/name`, what appears under `.claude/skills/` once installed, and where the source sits. The prefix is four characters, the hyphen included, and its third character names the library — see [the build convention](https://github.com/openreachtech/hora-skills-ort-support/blob/main/.claude/skills/build/SKILL.md) for the layout and the naming rules. Full guidance for a skill is in its own `SKILL.md` and in the `references/` beside it — all three here carry one, and each `SKILL.md` says which of its references settles what.
+Each skill lives at `kit/skills/<name>/`, directly under the skills directory, and that folder name is both the skill's `name:` and the folder name it is installed under. **Skill** below is therefore all you need: it is what you invoke as `/name`, what appears under `.claude/skills/` once installed, and where the source sits. The prefix is four characters, the hyphen included, and its third character names the library — see [the build convention](https://github.com/openreachtech/hora-skills-ort-support/blob/main/.claude/skills/build/SKILL.md) for the layout and the naming rules. Full guidance for a skill is in its own `SKILL.md` and in the `references/` beside it — all four here carry one, and each `SKILL.md` says which of its references settles what.
 
 | Skill | Summary |
 | :-- | :-- |
 | `hos-explain` | Rewrite an AI-generated explanation, report or proposal into plain language with diagrams, so a reader with no technical background can understand it in one read. It rewrites an existing message and adds no new analysis. |
+| `hos-humanize-docs` | Repair a maintained document so a first-time reader stops stalling on it: an agent with no prior knowledge reports where it stalled, each stall is classified against written criteria, and the document is fixed, looping until the findings fall inside a threshold. Structure, voice and intended reader all stay. |
 | `hos-skillify` | Build a skill out of the conversation you are in — mine its transcript, decide what is durable convention, and hand the result to the skill-writing convention. Material that turns out not to be a convention is reported and dropped. |
 | `hos-user-manual` | Generate end-user operation manuals by driving the system for real: walk each feature in the UI of a running environment, and write one HTML page per feature with screenshots, plus a table-of-contents page bound to the product version. |
 
 ## Where the boundaries are
 
-The three overlap less than their summaries suggest, and each says in its own `SKILL.md` what it hands over rather than doing:
+The four overlap less than their summaries suggest, and each says in its own `SKILL.md` what it hands over rather than doing:
 
 - **`hos-explain` rewrites, it does not investigate.** What it is given is already an answer; it makes that answer readable by somebody who did not follow the thread. A question that needs new analysis belongs to whatever skill covers the analysis.
+- **`hos-humanize-docs` repairs a document; it does not rewrite one for a different reader.** The structure, the voice and the intended reader all stay, and the technical terms stay with them. Rebuilding a message so that somebody outside the field can read it is `hos-explain`'s job.
 - **`hos-user-manual` writes for the product's users, not for its developers.** It needs a running environment to walk through — building that environment is the backend package's job — and what it produces is the manual a customer reads.
 - **`hos-skillify` produces skills only.** It mines a settled conversation for what is durable, and the naming, the `description:` and the file layout of what it produces belong to the skill-writing convention it hands off to.
 
