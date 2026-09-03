@@ -8,14 +8,14 @@ ORT サポートスキルを配布するパッケージです。単体でどの�
 
 このパッケージが配布するのは **スキルのみ** です。`import` して使うライブラリはなく、同梱する唯一の実行コマンドはそのスキルを配置するためのものです。スキルとは `SKILL.md`(と任意の `references/`・`scripts/`)を収めたディレクトリで、Claude Code が読み込み `/<name>` として呼び出します。導入先のリポジトリにインストールすることで、Open Reach Tech が開発に用いている規約と手順を、そのリポジトリで作業するエージェントに届けます。
 
-配布されるスキルは 5 件、すべて `support` ドメインのもので、内容は「コードそのものではなく、その周りの仕事」です — 書いていない人に結果を説明する、読者が詰まる文書を直す、作業の入口になる issue を書く、利用者が読むマニュアルを書く、決着した会話をスキルにする。各名前はハイフンを含む 4 文字の接頭辞で始まります。`ho` は、このスキルライブラリの名前の由来である製品 Hora Kit を表し、3 文字目がライブラリを表します(このパッケージは `s`)。そのため、フラットに並んだスキル一覧を見た人が、どれがこのパッケージ由来かを一目で判別できます。ドメインごとに別のパッケージになっており、リポジトリは自分が扱うドメインのものを入れます。
+配布されるスキルは 6 件、すべて `support` ドメインのもので、内容は「コードそのものではなく、その周りの仕事」です — 書いていない人に結果を説明する、読者が詰まる文書を直す、作業の入口になる issue と、それを閉じる pull request を書く、利用者が読むマニュアルを書く、決着した会話をスキルにする。各名前はハイフンを含む 4 文字の接頭辞で始まります。`ho` は、このスキルライブラリの名前の由来である製品 Hora Kit を表し、3 文字目がライブラリを表します(このパッケージは `s`)。そのため、フラットに並んだスキル一覧を見た人が、どれがこのパッケージ由来かを一目で判別できます。ドメインごとに別のパッケージになっており、リポジトリは自分が扱うドメインのものを入れます。
 
 | パッケージ | プレフィックス | ドメイン | スキル数 |
 | :-- | :-- | :-- | --: |
 | `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
 | `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
 | `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
-| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` | 5 |
+| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` | 6 |
 
 [**スキルカタログ**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md) ([English](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md)) — このパッケージに収録された全スキルの一覧と概要(1〜2 行)を、呼び出しコマンド名で並べています。
 
@@ -53,7 +53,7 @@ npx --no hora-skills-ort-support install
 
 ## 使い方
 
-スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-humanize-docs`, `/hos-user-manual`, `/hos-write-issue`, `/hos-skillify`)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
+スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-humanize-docs`, `/hos-user-manual`, `/hos-write-issue`, `/hos-write-pull-request`, `/hos-skillify`)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
 
 ### 複数のドメインを入れる
 
