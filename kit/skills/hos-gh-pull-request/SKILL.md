@@ -19,7 +19,7 @@ at the text it wrote; `hos-gh-issue` is the other one carrying it.
 
 | Section | What goes in it | Written |
 | :-- | :-- | :-- |
-| `# Why` | `Close #<issue>`, and nothing else | always |
+| `# Why` | `* Close #<issue>`, and nothing else | always |
 | `# How` | The approach the work took | always |
 | `# Note` | What has to be watched — follow-up left undone, a side effect, an ordering dependency | **only when there is something** |
 
@@ -30,6 +30,11 @@ at the text it wrote; `hos-gh-issue` is the other one carrying it.
 
 * Close #123
 ```
+
+**The bullet is not decoration.** GitHub expands a list item holding nothing but an issue
+reference into that issue's title and its state, so `* Close #123` arrives saying what #123 is
+about, where a bare `Close #123` arrives as a bare number. The marker is what buys the expansion,
+and dropping it costs the reader the one line that would have told them what they are merging.
 
 **Do not restate the issue.** It says where things stood and which direction to take, and it is one
 click away. A pull request that repeats it creates a second copy that will disagree with the first
@@ -133,7 +138,7 @@ hand.
 
 ### Reading
 
-**`# Why` opens with the issue this pull request closes, on a line of its own:**
+**`# Why` opens with the issue this pull request closes, as the list item described above:**
 
 ```markdown
 # Why
