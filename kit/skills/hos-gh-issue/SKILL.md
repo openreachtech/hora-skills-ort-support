@@ -209,7 +209,10 @@ say that is what happened.
 - **Converting a `# Sub-issues` line, and closing a box.** Both are done by hand on GitHub, and
   neither follows from filing the issue
 - **Everything after the issue exists.** Labels, assignees, milestones, the sub-issue panel and
-  the project board are set by whoever owns them
+  the project board are set by whoever owns them, so `gh issue create` is run with none of them
+  and the assignee is left empty on purpose. **An issue is often filed for somebody else to pick
+  up**, which is what parts it from a pull request: that one is the work of whoever opened it,
+  and `hos-gh-pull-request` assigns it to them by default
 - **A requirement definition document.** That is a document in the repository, written with the
   requester and approved by them. An issue is a work item on the host
 
