@@ -27,7 +27,7 @@ A skill folder's name is the skill's `name:`, and the folder name it gets under 
 kit/skills/hos-explain/   name: hos-explain   →   dist/skills/hos-explain/
 ```
 
-The prefix is part of the name: the skill is invoked as `/hos-explain`. The `ho` stands for **hora**, from Hora Kit — the Open Reach Tech product this skill library is part of — and the third character names the library: `s` for this one, against `c` for `hora-skills-ort-core`, `r` for `hora-skills-ort-renchan` and `f` for `hora-skills-ort-furo`.
+The prefix is part of the name: the skill is invoked as `/hos-explain`. The `ho` stands for **hora**, from Hora Kit — the Open Reach Tech product this skill library is part of — and the third character names the library: `s` for this one, and a character of its own for each sibling.
 
 Those characters buy two things. A consuming repository installs these skills side by side with its own and with the sibling libraries' — a project equips whichever libraries it works with — all in one flat list, and the prefix is what tells a reader at a glance which library a skill came from. And because every prefix belongs to exactly one library, and a filesystem cannot hold two folders of one name in one directory, no two installed skills can collide: the flat namespace is protected by the source layout itself, with nothing to check.
 
