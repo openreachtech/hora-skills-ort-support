@@ -114,18 +114,34 @@ blocks, because they are two fields on the form and two arguments on the command
 - **Nothing but the issue text goes inside the fence.** Commentary, a heading saying "body", an
   explanation of a choice — all of that goes outside it, or the reader pastes it into GitHub
 
-## Sending it
+## Using `gh`
+
+**Where `gh` can reach GitHub, this skill uses it** — for reading the host as much as for filing
+to it. What follows is decided by the environment rather than by the request:
+
+| `gh` | What this skill does |
+| :-- | :-- |
+| installed, and `gh auth status` passes | Reads the issues it needs, and files this one once you say so |
+| missing, or nobody is logged in | Says which of the two it was, and stops at the text |
+
+**Nothing above this section changes either way.** What an issue holds, how it is titled and
+which language it is written in are the same whether it is filed from here or pasted by hand.
+
+### Reading
+
+**A sub-issue whose body is to be written is read, never guessed at.** GitHub made it from a
+`# Sub-issues` line and left it empty, so its title is the whole of what says which of the five
+sections it needs — and the title is on the host, not in the conversation.
+
+```sh
+gh issue view <number>
+```
+
+### Filing
 
 **`gh` is touched only after the text has been shown.** A send is not the moment to read what is
 being sent, so the title and the body are in front of the reader in full before the question is
 even asked.
-
-What follows is decided by the environment rather than by the request:
-
-| The environment | What follows |
-| :-- | :-- |
-| `gh` is installed, and `gh auth status` passes | Ask whether to send, and send on a yes |
-| `gh` is missing, or nobody is logged in | Stop at the text, and say which of the two it was |
 
 - **Never send without asking.** The question comes after the text, so what is being agreed to is
   on the screen when it is asked. A yes covers the issue that was shown, and nothing beyond it
