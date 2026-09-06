@@ -91,6 +91,20 @@ moves to the native sub-issues panel. So:
 - **An empty `# Sub-issues` section means every line was converted**, not that somebody forgot to
   fill it in
 
+**A sub-issue can also be filed straight into the panel**, with no line to convert:
+
+```sh
+gh issue create --parent <parent number> --title '💪 …' --body-file <path>
+```
+
+- **A line and a `--parent` filing are the same relation by two routes**, so do one or the other.
+  Converting a line after the child already exists leaves two issues where one was meant
+- **An issue that already exists joins by number**, from either end: `gh issue edit <child>
+  --parent <parent>`, or `gh issue edit <parent> --add-sub-issue <number>`. `--remove-parent` and
+  `--remove-sub-issue` undo them
+- **A child filed this way is an issue like any other.** Its title carries its own type emoji and
+  its body carries the sections it needs; having a parent changes neither
+
 **A converted sub-issue arrives with an empty body.** No template is applied, so it holds a title
 and nothing else — and **writing that body is this skill's work too.** Given such an issue, write
 the five sections for it as for any other.
@@ -171,6 +185,7 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 - **`--repo <owner>/<name>` wherever the working directory is not the repository the issue
   belongs to.** Left out, `gh` files against whatever repository the directory resolves to, which
   is how an issue lands somewhere nobody meant
+- **`--parent <number>` files the issue under another one**, described under `# Sub-issues` above
 - **Report the URL `gh` prints.** It is the one part of the result that is not already on the
   screen
 
