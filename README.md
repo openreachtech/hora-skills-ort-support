@@ -53,7 +53,7 @@ Where the package is not a dependency at all — a one-off, or a repository that
 
 ## Usage
 
-The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-write-issue`, `/hos-write-pull-request`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
+The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-gh-issue`, `/hos-gh-pull-request`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
 
 ### Installing more than one domain
 

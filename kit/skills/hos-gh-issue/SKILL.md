@@ -1,9 +1,9 @@
 ---
-name: hos-write-issue
+name: hos-gh-issue
 description: "Write a GitHub issue for this organization — a title carrying its type emoji, and a body of `As-is`, `To-be`, `Note`, `Checklist` and `Sub-issues` — handed back inside a fenced block so it can be pasted straight into the form. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. It also writes the body of a sub-issue that GitHub created from a `Sub-issues` line and left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
-# Write issue
+# GitHub issue
 
 **An issue says where things stand and which direction to take. It does not say how the work is
 carried out** — that belongs to the pull request, which links back to the issue and describes

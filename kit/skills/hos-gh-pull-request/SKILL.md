@@ -1,9 +1,9 @@
 ---
-name: hos-write-pull-request
+name: hos-gh-pull-request
 description: "Write a pull request for this organization — a title carrying the linked issue's type emoji, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — handed back inside a fenced block so it can be pasted straight into the form. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
 ---
 
-# Write pull request
+# GitHub pull request
 
 **A pull request is read once, at merge, by somebody who already has the diff, the commit list,
 the CI result and the linked issue in front of them.** So it does not narrate the change. It
@@ -90,7 +90,7 @@ Which branches are trunks, and which are sub-branches, is settled by the branch 
 
 **The emoji is the linked issue's.** `# Why` names the issue this pull request closes, and that
 issue's title already opens with its type — a pull request picking a different one would say the
-work changed kind on its way to review. The types and their emoji belong to `hos-write-issue`,
+work changed kind on its way to review. The types and their emoji belong to `hos-gh-issue`,
 in its `references/types.md`, and this skill keeps no second copy of the list.
 
 **Name the work the pull request carries, never the branch it came from.** The host writes

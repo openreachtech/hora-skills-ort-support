@@ -53,7 +53,7 @@ npx --no hora-skills-ort-support install
 
 ## 使い方
 
-スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-write-issue`, `/hos-write-pull-request` など)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
+スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-gh-issue`, `/hos-gh-pull-request` など)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
 
 ### 複数のドメインを入れる
 
