@@ -10,12 +10,12 @@ ORT サポートスキルを配布するパッケージです。単体でどの�
 
 配布されるスキルは 6 件、すべて `support` ドメインのもので、内容は「コードそのものではなく、その周りの仕事」です。各名前はハイフンを含む 4 文字の接頭辞で始まります。`ho` は、このスキルライブラリの名前の由来である製品 Hora Kit を表し、3 文字目がライブラリを表します(このパッケージは `s`)。そのため、フラットに並んだスキル一覧を見た人が、どれがこのパッケージ由来かを一目で判別できます。ドメインごとに別のパッケージになっており、リポジトリは自分が扱うドメインのものを入れます。
 
-| パッケージ | プレフィックス | ドメイン | スキル数 |
-| :-- | :-- | :-- | --: |
-| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
-| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
-| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
-| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` | 6 |
+| パッケージ | プレフィックス | ドメイン |
+| :-- | :-- | :-- |
+| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` |
+| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` |
+| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` |
+| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` |
 
 [**スキルカタログ**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md) ([English](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md)) — このパッケージに収録された全スキルの一覧と概要(1〜2 行)を、呼び出しコマンド名で並べています。
 

@@ -10,12 +10,12 @@ This package ships **skills only** — there is no library to `import`, and the 
 
 6 skills are distributed, all of the `support` domain: the work that surrounds the code rather than the code itself. Every name opens with a four-character prefix, the hyphen included: `ho` is Hora Kit, the product this skill library is named for, and the third character names the library — `s` for this one. A reader looking at one flat list of skills can therefore tell at a glance which came from this package. Each domain is a package of its own, and a repository installs the ones it works in:
 
-| Package | Prefix | Domain | Skills |
-| :-- | :-- | :-- | --: |
-| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
-| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
-| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
-| `@openreachtech/hora-skills-ort-support` (this one) | `hos-` | `support` | 6 |
+| Package | Prefix | Domain |
+| :-- | :-- | :-- |
+| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` |
+| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` |
+| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` |
+| `@openreachtech/hora-skills-ort-support` (this one) | `hos-` | `support` |
 
 [**Skill catalog**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md) ([日本語](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md)) — every skill in this package with a one- or two-line summary, listed by the command name it is invoked by.
 
