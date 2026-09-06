@@ -31,6 +31,19 @@ The prefix is part of the name: the skill is invoked as `/hos-explain`. The `ho`
 
 Those characters buy two things. A consuming repository installs these skills side by side with its own and with the sibling libraries' — a project equips whichever libraries it works with — all in one flat list, and the prefix is what tells a reader at a glance which library a skill came from. And because every prefix belongs to exactly one library, and a filesystem cannot hold two folders of one name in one directory, no two installed skills can collide: the flat namespace is protected by the source layout itself, with nothing to check.
 
+### A family may share a segment past the prefix
+
+What follows the prefix is the skill's own name, and the build reads it as one string. Where several skills work on the same thing, they share the first segment of it:
+
+```
+kit/skills/hos-gh-issue/          →   /hos-gh-issue
+kit/skills/hos-gh-pull-request/   →   /hos-gh-pull-request
+```
+
+`gh` is GitHub, after the CLI those two drive. The segment marks a skill that reaches the host rather than stopping at the text it wrote, which is what separates these two from every other skill here.
+
+**Nothing validates this.** The build checks the four-character prefix and stops, so a family segment holds for exactly as long as it is written down and followed — which is why it is written down.
+
 ## The build
 
 ```

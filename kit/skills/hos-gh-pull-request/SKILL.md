@@ -1,9 +1,9 @@
 ---
-name: hos-write-pull-request
-description: "Write a pull request for this organization — a title carrying the linked issue's type emoji, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — handed back inside a fenced block so it can be pasted straight into the form. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
+name: hos-gh-pull-request
+description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
 ---
 
-# Write pull request
+# GitHub pull request
 
 **A pull request is read once, at merge, by somebody who already has the diff, the commit list,
 the CI result and the linked issue in front of them.** So it does not narrate the change. It
@@ -11,6 +11,9 @@ carries the one thing none of those hold: **the approach that was taken.**
 
 That is why it is three sections against the issue's five. The asymmetry is deliberate — an issue
 is read before the work, with nothing else to look at.
+
+**The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
+at the text it wrote; `hos-gh-issue` is the other one carrying it.
 
 ## What it holds
 
@@ -90,7 +93,7 @@ Which branches are trunks, and which are sub-branches, is settled by the branch 
 
 **The emoji is the linked issue's.** `# Why` names the issue this pull request closes, and that
 issue's title already opens with its type — a pull request picking a different one would say the
-work changed kind on its way to review. The types and their emoji belong to `hos-write-issue`,
+work changed kind on its way to review. The types and their emoji belong to `hos-gh-issue`,
 in its `references/types.md`, and this skill keeps no second copy of the list.
 
 **Name the work the pull request carries, never the branch it came from.** The host writes
@@ -104,15 +107,68 @@ merge commit did not.
 rather than whoever is in the conversation, so the language of the request does not decide it. An
 explicit instruction wins.
 
-## How it is handed over
+## How the text is shown
 
-**Inside fenced blocks, so it can be copied.** The title and the body go in separate blocks,
-because the form has two fields.
+**Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
+blocks, because they are two fields on the form and two arguments on the command.
 
 - **Where the body contains a fenced block of its own, fence the whole thing with four backticks or
   more.** Three would end the block at the first inner fence
 - **Nothing but the pull request text goes inside the fence.** Commentary belongs outside it, or it
   gets pasted into the form
+
+## Sending it
+
+**`gh` is touched only after the text has been shown.** A send is not the moment to read what is
+being sent, so the title and the body are in front of the reader in full before the question is
+even asked.
+
+What follows is decided by the environment rather than by the request:
+
+| The environment | What follows |
+| :-- | :-- |
+| `gh` is installed, and `gh auth status` passes | Ask whether to send, and send on a yes |
+| `gh` is missing, or nobody is logged in | Stop at the text, and say which of the two it was |
+
+- **Never send without asking.** The question comes after the text, so what is being agreed to is
+  on the screen when it is asked. A yes covers the pull request that was shown, and nothing
+  beyond it
+- **A no ends the work, and ends it well.** The text stands, and it is worth no less for not
+  having been opened
+- **Where `gh` cannot be used, hand over the command along with the text**, so that whoever logs
+  in later has nothing to reassemble
+
+```sh
+gh pr create --draft --base <the branch it returns to> --title '🤖 …' --body-file <path>
+```
+
+### `--draft`, without exception
+
+**Every pull request opened from here is a draft.** Whether the work is ready to be looked at is
+a judgement about the work, made by a person once the pull request exists — never by whoever
+assembled the command.
+
+- **Raising it is `gh pr ready <number>`**, and `gh pr ready --undo <number>` puts it back. Both
+  are a person's, as the judgement is
+- **A draft runs CI like any other.** `pull_request` fires `opened` and `synchronize` on one, so
+  nothing is held back by opening it as a draft
+- **The flag comes off only where it was asked for in so many words.** A hurry is not that, and
+  neither is work that looks finished
+
+### The rest of the command
+
+- **`--base` is always stated.** Left out, `gh` opens against the repository's default branch,
+  where a sub-branch here usually returns to a `release/x.x.x` trunk instead. Which branch it
+  returns to is settled by the branch convention (`hoc-git-branch`)
+- **The body goes through `--body-file`, never `--body`.** A body is full of backticks, `#` and
+  newlines, and the shell reads every one of them before `gh` sees anything. A file is read by
+  `gh` itself, so nothing inside has to be escaped — and `-` reads standard input where writing a
+  file is not wanted
+- **The branch has to be on the remote already.** Given every flag it needs, `gh pr create` opens
+  the pull request without prompting, and a branch that exists nowhere but here has nothing to
+  open one from. Where it is unpushed, say so and stop: a push is a decision of its own
+- **Report the URL `gh` prints.** It is the one part of the result that is not already on the
+  screen
 
 ## Referring to a file
 
@@ -142,7 +198,7 @@ Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
 - **The issue.** Where things stand and which direction to take are the issue's, and the pull
   request links to it rather than repeating it
 - **Commit messages and branch names.** They belong to the git conventions
-- **Opening, reviewing or merging the pull request.** This skill produces text; the rest is a
-  person's action
+- **Reviewing and merging the pull request.** Opening one is this skill's; what becomes of it
+  afterwards is not, and taking it out of draft is a person's call
 - **The merge commit's own subject.** A merge made through a host is written by the host, and
   nobody here chooses its wording
