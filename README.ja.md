@@ -12,10 +12,10 @@ ORT サポートスキルを配布するパッケージです。単体でどの�
 
 | パッケージ | プレフィックス | ドメイン |
 | :-- | :-- | :-- |
-| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` |
-| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` |
-| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` |
-| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` |
+| [`@openreachtech/hora-skills-ort-core`](https://github.com/openreachtech/hora-skills-ort-core) | `hoc-` | `core` |
+| [`@openreachtech/hora-skills-ort-renchan`](https://github.com/openreachtech/hora-skills-ort-renchan) | `hor-` | `backend` |
+| [`@openreachtech/hora-skills-ort-furo`](https://github.com/openreachtech/hora-skills-ort-furo) | `hof-` | `frontend` |
+| [`@openreachtech/hora-skills-ort-support`](https://github.com/openreachtech/hora-skills-ort-support)(このパッケージ) | `hos-` | `support` |
 
 [**スキルカタログ**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md) ([English](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md)) — このパッケージに収録された全スキルの一覧と概要(1〜2 行)を、呼び出しコマンド名で並べています。
 
