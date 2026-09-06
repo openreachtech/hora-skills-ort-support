@@ -12,6 +12,9 @@ carries the one thing none of those hold: **the approach that was taken.**
 That is why it is three sections against the issue's five. The asymmetry is deliberate — an issue
 is read before the work, with nothing else to look at.
 
+**The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
+at the text it wrote; `hos-gh-issue` is the other one carrying it.
+
 ## What it holds
 
 | Section | What goes in it | Written |

@@ -13,6 +13,9 @@ what was done.
 raw, inside a fenced block, never as rendered markdown — that is the shape it is checked in, and
 the shape it is pasted in where `gh` cannot reach GitHub.
 
+**The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
+at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
+
 ## What each artefact holds
 
 | | Holds |
