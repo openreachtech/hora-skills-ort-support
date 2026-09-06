@@ -133,8 +133,30 @@ hand.
 
 ### Reading
 
-**The linked issue is read, never remembered.** `# Why` carries its number and the title carries
-its emoji, and both belong to the issue rather than to the conversation:
+**`# Why` opens with the issue this pull request closes, on a line of its own:**
+
+```markdown
+# Why
+
+* Close #123
+```
+
+**The number is worked out before it is asked for.** Where `gh` can reach GitHub, the open issues
+are listed and matched against the work in hand — the branch name, the commit subjects, what the
+diff touches:
+
+```sh
+gh issue list --state open --limit 100
+```
+
+- **One issue that plainly matches is the answer.** Take it, and name it when the text is shown,
+  so that a wrong match is caught before anything is opened
+- **Several that could fit, or none that does, is a question.** Ask which issue this closes
+  rather than taking the likeliest: `Close #<issue>` closes that issue the moment the pull
+  request merges, and reopening it afterwards does not unsay what the close told everybody
+
+**The issue is then read, never remembered.** Its number goes into `# Why` and its emoji goes
+into the title, and both belong to the issue rather than to the conversation:
 
 ```sh
 gh issue view <number>
