@@ -247,31 +247,45 @@ branch GitHub has to be able to see, and one that exists only here is not that. 
 unpushed and ask — never fall back to whatever else happens to be reachable, because the fallback
 is always a branch further up, and opening against it drags in every commit in between.
 
-**No marker anywhere in the ancestry means `main`**, and which branches may take it is the next
+**No marker anywhere in the ancestry means `main`**, and only a main-bound branch may take it — the next
 section.
 
-### What may return to `main`
+### Main-bound branches
 
-**Four kinds of branch merge into `main`, and nothing else does:** `dev`, `env`, `hotfix/*` and
-`release/*`. Everything else returns to one of those, and reaches `main` when that one does.
+**Only a main-bound branch opens against `main`**, and there are four of them: `dev`, `env`,
+`hotfix/*` and `release/*`. Everything else returns to one of those, and reaches `main` when that
+one does.
 
 | The branch | What it opens against |
 | :-- | :-- |
-| `dev`, `env`, `release/*` | `main` |
-| `hotfix/*` | `main` — a general branch, not a trunk, allowed there because the fix cannot wait for one |
+| `dev`, `env`, `release/*` | `main` — main-bound, and trunks besides |
+| `hotfix/*` | `main` — main-bound without being a trunk, because the fix cannot wait for one |
 | anything else | the trunk it was cut from |
 
-**So a walk that reaches `main` from any other branch name is a result to check rather than to
-use.** Either there was no trunk above to find, or the one above it was opened without its
-marker — and the second is a defect in that branch, not an answer about this one.
+**The word is `main-bound` because the four have nothing else in common.** Three are trunks and
+`hotfix/*` is not, so `trunk` cannot name the set; what they share is a destination, and that is
+all the name claims.
+
+**The set is closed because a merge into `main` is not only a merge.** Publishing and deployment
+hang off it, so what arrives there arrives in production. Every other base punishes a wrong guess
+with a diff nobody wrote; `main` punishes it with a release.
+
+**And it is enforced rather than merely agreed.** The organization's repositories carry a
+`main-guard` workflow that reads the pull request's head branch and fails on anything outside the
+four, so one opened against `main` from elsewhere is rejected before anybody reads it.
+
+**So a walk that reaches `main` from a branch that is not main-bound is a result to check rather
+than to use.** Either there was no trunk above to find, or the one above it was opened without
+its marker — and the second is a defect in that branch, not an answer about this one.
 
 - **A repository on GitHub Flow is the exception, and it is not a rare one.** Where there is no
-  `dev`, no `env` and no `release/*` anywhere, every branch does return to `main` directly
-  and the table restricts nothing. Look before distrusting the answer
+  `dev`, no `env`, no `release/*` and no `main-guard` workflow, every branch does return to
+  `main` directly and the table restricts nothing. The absent workflow is the plainest of the
+  four tells: a repository that meant to restrict `main` would be checking
 - **An explicit instruction wins.** Told which branch to open against, open against that one and
   say so when the text is shown
-- **What is still unsettled is asked.** A pull request opened against the wrong base shows a diff
-  nobody wrote; the base can be edited afterwards, but not before somebody has read the wrong one
+- **What is still unsettled is asked.** The base can be edited after the fact — `gh pr edit
+  --base <branch>` — but not before somebody has read the wrong diff
 
 ### The rest of the command
 
