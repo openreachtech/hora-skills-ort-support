@@ -196,11 +196,99 @@ assembled the command.
 - **The flag comes off only where it was asked for in so many words.** A hurry is not that, and
   neither is work that looks finished
 
+### The base branch
+
+**`--base` is always stated.** Left out, `gh` opens against the repository's default branch, and
+a sub-branch here usually returns to a trunk that is not it.
+
+**The base is the nearest trunk above, and what marks a trunk is the commit it opens with.** A
+branch merged through GitHub never reaches its trunk by a local merge, so the trunk has to be
+named on the command — and its name is no help in finding it. A `feature/xxx` with branches cut
+from it is as much a trunk as a `release/x.x.x` is, and the branch convention (`hoc-git-branch`)
+says so by giving both the same empty marker: `Start …`, or `Release x.x.x` on a `release/x.x.x`.
+
+Walk the ancestry and stop at the first one:
+
+```sh
+git log --first-parent --format='%H %s' HEAD | while read -r sha subject; do
+  case $subject in Start\ *|Release\ *) ;; *) continue ;; esac
+  [ -z "$(git diff-tree --no-commit-id -r "$sha")" ] && echo "$sha $subject" && break
+done
+```
+
+**The emptiness test is not decoration.** `Start` is reserved for a commit that carries no change
+of its own, so one whose tree differs from its parent's is a mislabelled change rather than a
+marker, and taking it would name the wrong branch.
+
+Then find the branch that marker opened. It is the one that has taken no work of its own since:
+
+```sh
+marker=<the sha above>
+git for-each-ref --format='%(refname:short)' refs/remotes/origin refs/heads |
+  while read -r ref; do
+    git merge-base --is-ancestor "$marker" "$ref" 2>/dev/null || continue
+    echo "$(git rev-list --first-parent --no-merges --count "$marker..$ref") $ref"
+  done | sort -n
+```
+
+**Zero is the trunk.** Nothing is committed to a trunk directly — work arrives there through
+merges — so the branch carrying no non-merge commit of its own past the marker is the branch the
+marker opened. Every sub-branch cut from that trunk scores higher, which is what stops a sibling
+from being taken for a base.
+
+**A trunk opening a pull request of its own walks past its own marker.** `release/0.3.0` heading
+for `main` meets `Release 0.3.0` first, and that is the commit that opened the branch doing the
+walking rather than anything above it. Step over it, take the next marker up, and where there is
+none take `main`. The same holds for `dev` and for a `feature/xxx` returning to what it was cut
+from.
+
+**A trunk that is not on the remote is a question, not a base.** `gh pr create --base` names a
+branch GitHub has to be able to see, and one that exists only here is not that. Say it is
+unpushed and ask — never fall back to whatever else happens to be reachable, because the fallback
+is always a branch further up, and opening against it drags in every commit in between.
+
+**No marker anywhere in the ancestry means `main`**, and only a main-bound branch may take it — the next
+section.
+
+### Main-bound branches
+
+**Only a main-bound branch opens against `main`**, and there are four of them: `dev`, `env`,
+`hotfix/*` and `release/*`. Everything else returns to one of those, and reaches `main` when that
+one does.
+
+| The branch | What it opens against |
+| :-- | :-- |
+| `dev`, `env`, `release/*` | `main` — main-bound, and trunks besides |
+| `hotfix/*` | `main` — main-bound without being a trunk, because the fix cannot wait for one |
+| anything else | the trunk it was cut from |
+
+**The word is `main-bound` because the four have nothing else in common.** Three are trunks and
+`hotfix/*` is not, so `trunk` cannot name the set; what they share is a destination, and that is
+all the name claims.
+
+**The set is closed because a merge into `main` is not only a merge.** Publishing and deployment
+hang off it, so what arrives there arrives in production. Every other base punishes a wrong guess
+with a diff nobody wrote; `main` punishes it with a release.
+
+**And it is enforced rather than merely agreed.** The organization's repositories carry a
+`main-guard` workflow that reads the pull request's head branch and fails on anything outside the
+four, so one opened against `main` from elsewhere is rejected before anybody reads it.
+
+**So a walk that reaches `main` from a branch that is not main-bound is a result to check rather
+than to use.** Either there was no trunk above to find, or the one above it was opened without
+its marker — and the second is a defect in that branch, not an answer about this one.
+
+- **A repository on GitHub Flow is the exception, and it is not a rare one.** Where there is no
+  `dev`, no `env`, no `release/*` and no `main-guard` workflow, every branch does return to
+  `main` directly and the table restricts nothing. The absent workflow is the plainest of the
+  four tells: a repository that meant to restrict `main` would be checking
+- **An explicit instruction wins.** Told which branch to open against, open against that one and
+  say so when the text is shown
+- **What is still unsettled is asked.** The base can be edited after the fact — `gh pr edit
+  --base <branch>` — but not before somebody has read the wrong diff
+
 ### The rest of the command
 
-- **`--base` is always stated.** Left out, `gh` opens against the repository's default branch,
-  where a sub-branch here usually returns to a `release/x.x.x` trunk instead. Which branch it
-  returns to is settled by the branch convention (`hoc-git-branch`)
 - **The body goes through `--body-file`, never `--body`.** A body is full of backticks, `#` and
   newlines, and the shell reads every one of them before `gh` sees anything. A file is read by
   `gh` itself, so nothing inside has to be escaped — and `-` reads standard input where writing a
