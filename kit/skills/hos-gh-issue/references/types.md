@@ -15,6 +15,8 @@ verbatim, so a line written without one produces an issue nobody can classify at
 | 💪 Enhancement | an existing thing made better |
 | ⚙️ Environment | the environment a project runs or builds in |
 | ⚒️ Feature | a capability that did not exist |
+| 📂 Hub | **a hub.** It holds no work of its own; its children carry it |
+| 🦵 Kick out | **a part removed from something that stays** — a member, a section, an entry, a field |
 | 🏗️ Building layout | markup and layout written for the first time |
 | 🧵 Lint | lint configuration and the fixes it demands |
 | 🚚 Migrate | content carried in from elsewhere |
@@ -22,19 +24,18 @@ verbatim, so a line written without one produces an issue nobody can classify at
 | ✋ Proposal | something put up for a decision |
 | 🚀 Publish (GitHub Packages) | a release to GitHub Packages |
 | 🚀 Publish (npmjs.com) | a release to npm |
+| 🗑️ Purge | **a file or folder gone whole**, with nothing replacing it |
 | 🚧 Refactoring | structure changed, behaviour untouched |
+| 🛡️ Sentinel | an exposure, a hardening, an authorization decision |
 | 📄 Specification | what something must do, written down |
 | 🎨 Adjusting CSS | styling |
-| 🛡️ Sentinel | an exposure, a hardening, an authorization decision |
-| 📂 Hub | **a hub.** It holds no work of its own; its children carry it |
 | 🧪 Test | tests |
 | 🧹 Tidy Up | a place brought into order, nothing removed, no behaviour changed |
 | 🧩 Type | type declarations and annotations |
-| 🗑️ Purge | **a file or folder gone whole**, with nothing replacing it |
-| 🦵 Kick out | **a part removed from something that stays** — a member, a section, an entry, a field |
 
-**The last two split on what survives**, and picking the wrong one loses the distinction a reader
-needs: `🗑️ Purge` says the thing is gone, `🦵 Kick out` says the place is still there without it.
+**`🗑️ Purge` and `🦵 Kick out` split on what survives**, and picking the wrong one loses the
+distinction a reader needs: `Purge` says the thing is gone, `Kick out` says the place is still
+there without it.
 
 **Two types share 🚀.** So the emoji alone does not name a type — **quote the label as well**
 whenever one is being referred to.
