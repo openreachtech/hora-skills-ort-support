@@ -47,7 +47,7 @@ says nothing and costs the reader a stop.
 long `# Checklist` under H2s is the ordinary use.
 
 **Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go: the
-title opens with `✅ Tasks`, `# Checklist` is not written at all, and `# Sub-issues` stands where
+title opens with `📂 Hub`, `# Checklist` is not written at all, and `# Sub-issues` stands where
 it would have. A hub with work of its own is not a hub — that work belongs in one of the children.
 
 **The two checkbox sections are not interchangeable.** A box under `# Checklist` is work done
@@ -56,7 +56,7 @@ full title it will carry, emoji and all — which is what lets GitHub's own sub-
 the line into an issue, as the section below describes. An ordinary issue may carry either or
 both; **a hub carries only the second.**
 
-[types.md](./references/types.md) carries `✅ Tasks` alongside the other types, and the hub's body
+[types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
 ## The title

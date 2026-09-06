@@ -25,8 +25,8 @@ verbatim, so a line written without one produces an issue nobody can classify at
 | 🚧 Refactoring | structure changed, behaviour untouched |
 | 📄 Specification | what something must do, written down |
 | 🎨 Adjusting CSS | styling |
-| 🛡️ Security | an exposure, a hardening, an authorization decision |
-| ✅ Tasks | **a hub.** It holds no work of its own; its children carry it |
+| 🛡️ Sentinel | an exposure, a hardening, an authorization decision |
+| 📂 Hub | **a hub.** It holds no work of its own; its children carry it |
 | 🧪 Test | tests |
 | 🧹 Tidy Up | a place brought into order, nothing removed, no behaviour changed |
 | 🧩 Type | type declarations and annotations |
@@ -62,7 +62,7 @@ action.
 
 ## Where a hub differs
 
-**`✅ Tasks` is the one type whose body is shaped differently.** It carries the situation and the
+**`📂 Hub` is the one type whose body is shaped differently.** It carries the situation and the
 direction, then its children:
 
 ```markdown
