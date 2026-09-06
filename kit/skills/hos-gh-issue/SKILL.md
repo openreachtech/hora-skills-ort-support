@@ -1,6 +1,6 @@
 ---
 name: hos-gh-issue
-description: "Write a GitHub issue for this organization — a title carrying its type emoji, and a body of `As-is`, `To-be`, `Note`, `Checklist` and `Sub-issues` — handed back inside a fenced block so it can be pasted straight into the form. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. It also writes the body of a sub-issue that GitHub created from a `Sub-issues` line and left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
+description: "Write a GitHub issue for this organization and file it — a title carrying its type emoji, and a body of `As-is`, `To-be`, `Note`, `Checklist` and `Sub-issues` — shown in full first, then sent with `gh issue create` once you say so, and handed over as text alone where `gh` is missing or logged out. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. It also writes the body of a sub-issue that GitHub created from a `Sub-issues` line and left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
 # GitHub issue
@@ -9,8 +9,9 @@ description: "Write a GitHub issue for this organization — a title carrying it
 carried out** — that belongs to the pull request, which links back to the issue and describes
 what was done.
 
-The output is text somebody pastes into a form. So it is handed over raw, inside a fenced block,
-never as rendered markdown.
+**The text is shown before anything is sent, and it is sent only if you say so.** It goes past
+raw, inside a fenced block, never as rendered markdown — that is the shape it is checked in, and
+the shape it is pasted in where `gh` cannot reach GitHub.
 
 ## What each artefact holds
 
@@ -100,15 +101,49 @@ stops matching it.
 💪 `docs/` にクイックスタートを追加する          asked for in Japanese
 ```
 
-## How it is handed over
+## How the text is shown
 
-**Inside fenced blocks, so it can be copied.** The title and the body go in separate blocks,
-because the form has two fields.
+**Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
+blocks, because they are two fields on the form and two arguments on the command.
 
 - **Where the body contains a fenced block of its own, fence the whole thing with four backticks
   or more.** Three would end the block at the first inner fence
 - **Nothing but the issue text goes inside the fence.** Commentary, a heading saying "body", an
   explanation of a choice — all of that goes outside it, or the reader pastes it into GitHub
+
+## Sending it
+
+**`gh` is touched only after the text has been shown.** A send is not the moment to read what is
+being sent, so the title and the body are in front of the reader in full before the question is
+even asked.
+
+What follows is decided by the environment rather than by the request:
+
+| The environment | What follows |
+| :-- | :-- |
+| `gh` is installed, and `gh auth status` passes | Ask whether to send, and send on a yes |
+| `gh` is missing, or nobody is logged in | Stop at the text, and say which of the two it was |
+
+- **Never send without asking.** The question comes after the text, so what is being agreed to is
+  on the screen when it is asked. A yes covers the issue that was shown, and nothing beyond it
+- **A no ends the work, and ends it well.** The text stands, and it is worth no less for not
+  having been filed
+- **Where `gh` cannot be used, hand over the command along with the text**, so that whoever logs
+  in later has nothing to reassemble
+
+```sh
+gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
+```
+
+- **The body goes through `--body-file`, never `--body`.** An issue body is full of backticks,
+  `#` and newlines, and the shell reads every one of them before `gh` sees anything. A file is
+  read by `gh` itself, so nothing inside has to be escaped — and `-` reads standard input where
+  writing a file is not wanted
+- **`--repo <owner>/<name>` wherever the working directory is not the repository the issue
+  belongs to.** Left out, `gh` files against whatever repository the directory resolves to, which
+  is how an issue lands somewhere nobody meant
+- **Report the URL `gh` prints.** It is the one part of the result that is not already on the
+  screen
 
 ## Referring to a file
 
@@ -152,8 +187,10 @@ say that is what happened.
 
 - **Pull request bodies.** Only the boundary above is this skill's
 - **Commit messages and branch names.** They belong to the git conventions
-- **Filing the issue.** This skill produces text; opening the issue, converting a `# Sub-issues`
-  line, and closing a box are a person's actions
+- **Converting a `# Sub-issues` line, and closing a box.** Both are done by hand on GitHub, and
+  neither follows from filing the issue
+- **Everything after the issue exists.** Labels, assignees, milestones, the sub-issue panel and
+  the project board are set by whoever owns them
 - **A requirement definition document.** That is a document in the repository, written with the
   requester and approved by them. An issue is a work item on the host
 
