@@ -114,6 +114,29 @@ because the form has two fields.
 - **Nothing but the pull request text goes inside the fence.** Commentary belongs outside it, or it
   gets pasted into the form
 
+## Referring to a file
+
+**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
+pull request's own URL rather than the repository tree, so it breaks the moment it is pasted.
+
+```
+Bad   [`docs/adopting.md`](./docs/adopting.md)
+Good  `docs/adopting.md`
+```
+
+Everything a reader would copy and search for takes backticks: file names and paths, class,
+method, function and variable names, package names, config keys, versions, commands. A name
+written in code is written in backticks in prose as well.
+
+**A version number is one of them, in the title as much as in the body.** It is what a reader
+copies to check what they are running against, and left bare it reads as prose rather than as a
+value.
+
+```
+Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
+Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
+```
+
 ## Out of scope
 
 - **The issue.** Where things stand and which direction to take are the issue's, and the pull
