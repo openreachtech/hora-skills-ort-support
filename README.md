@@ -8,7 +8,7 @@ A distribution package of the ORT support skills — installed into any reposito
 
 This package ships **skills only** — there is no library to `import`, and the one executable it carries exists to install those skills. A skill is a directory holding a `SKILL.md`, plus optional `references/` and `scripts/`, that Claude Code loads and invokes as `/<name>`. Installing this package into a repository puts the conventions and procedures Open Reach Tech develops with in front of the agent working on that repository.
 
-The skills distributed are all of the `support` domain: the work that surrounds the code rather than the code itself. Every name opens with a four-character prefix, the hyphen included: `ho` is Hora Kit, the product this skill library is named for, and the third character names the library — `s` for this one. A reader looking at one flat list of skills can therefore tell at a glance which came from this package. Each domain is a package of its own, and a repository installs the ones it works in:
+The skills distributed are all of the `support` domain: the work that surrounds the code rather than the code itself. Every name opens with a four-character prefix, the hyphen included: `ho` is Hora Kit, the product this skill library is named for, and the third character names the library — `s` for this one. A reader looking at one flat list of skills can therefore tell at a glance which came from this package. Past the prefix, a family of skills may share a segment of its own: `gh` is GitHub, and it marks a skill that reaches the host rather than stopping at the text it wrote. Each domain is a package of its own, and a repository installs the ones it works in:
 
 | Package | Prefix | Domain |
 | :-- | :-- | :-- |
@@ -53,7 +53,7 @@ Where the package is not a dependency at all — a one-off, or a repository that
 
 ## Usage
 
-The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-write-issue`, `/hos-write-pull-request`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
+The skills land in your repository's `.claude/skills/`. Claude Code discovers them from there, and each becomes invocable by its own name — `/hos-explain`, `/hos-gh-issue`, `/hos-gh-pull-request`. Installed skills sit side by side with your repository's own, in one flat list, which is what the `hos-` prefix is for.
 
 ### Installing more than one domain
 
