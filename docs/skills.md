@@ -17,7 +17,7 @@ Each skill lives at `kit/skills/<name>/`, directly under the skills directory, a
 
 ## Where the boundaries are
 
-The six overlap less than their summaries suggest, and each says in its own `SKILL.md` what it hands over rather than doing:
+They overlap less than their summaries suggest, and each says in its own `SKILL.md` what it hands over rather than doing:
 
 - **`hos-explain` rewrites, it does not investigate.** What it is given is already an answer; it makes that answer readable by somebody who did not follow the thread. A question that needs new analysis belongs to whatever skill covers the analysis.
 - **`hos-humanize-docs` repairs a document; it does not rewrite one for a different reader.** The structure, the voice and the intended reader all stay, and the technical terms stay with them. Rebuilding a message so that somebody outside the field can read it is `hos-explain`'s job.
