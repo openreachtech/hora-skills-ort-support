@@ -46,8 +46,18 @@ says nothing and costs the reader a stop.
 **Inside an H1 section, headings from H2 down may be used.** Depth is not capped, and grouping a
 long `# Checklist` under H2s is the ordinary use.
 
-**A hub issue carries no `# Checklist`.** Its work is entirely in its children, so it states the
-situation and the direction, then lists them under `# Sub-issues`.
+**Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go: the
+title opens with `✅ Tasks`, `# Checklist` is not written at all, and `# Sub-issues` stands where
+it would have. A hub with work of its own is not a hub — that work belongs in one of the children.
+
+**The two checkbox sections are not interchangeable.** A box under `# Checklist` is work done
+inside this issue; a box under `# Sub-issues` is an issue that does not exist yet, written as the
+full title it will carry, emoji and all — which is what lets GitHub's own sub-issue feature turn
+the line into an issue, as the section below describes. An ordinary issue may carry either or
+both; **a hub carries only the second.**
+
+[types.md](./references/types.md) carries `✅ Tasks` alongside the other types, and the hub's body
+in full.
 
 ## The title
 
