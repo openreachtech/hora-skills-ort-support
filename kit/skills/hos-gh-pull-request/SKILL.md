@@ -117,18 +117,37 @@ blocks, because they are two fields on the form and two arguments on the command
 - **Nothing but the pull request text goes inside the fence.** Commentary belongs outside it, or it
   gets pasted into the form
 
-## Sending it
+## Using `gh`
+
+**Where `gh` can reach GitHub, this skill uses it** — for reading the host as much as for opening
+against it. What follows is decided by the environment rather than by the request:
+
+| `gh` | What this skill does |
+| :-- | :-- |
+| installed, and `gh auth status` passes | Reads the linked issue, and opens the pull request once you say so |
+| missing, or nobody is logged in | Says which of the two it was, and stops at the text |
+
+**Nothing above this section changes either way.** What a pull request holds, how it is titled
+and which language it is written in are the same whether it is opened from here or pasted by
+hand.
+
+### Reading
+
+**The linked issue is read, never remembered.** `# Why` carries its number and the title carries
+its emoji, and both belong to the issue rather than to the conversation:
+
+```sh
+gh issue view <number>
+```
+
+An emoji taken from memory is how a pull request ends up announcing a type its issue never had,
+and the mismatch survives the merge.
+
+### Opening
 
 **`gh` is touched only after the text has been shown.** A send is not the moment to read what is
 being sent, so the title and the body are in front of the reader in full before the question is
 even asked.
-
-What follows is decided by the environment rather than by the request:
-
-| The environment | What follows |
-| :-- | :-- |
-| `gh` is installed, and `gh auth status` passes | Ask whether to send, and send on a yes |
-| `gh` is missing, or nobody is logged in | Stop at the text, and say which of the two it was |
 
 - **Never send without asking.** The question comes after the text, so what is being agreed to is
   on the screen when it is asked. A yes covers the pull request that was shown, and nothing
