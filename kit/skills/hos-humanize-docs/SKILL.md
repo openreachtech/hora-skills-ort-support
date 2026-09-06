@@ -155,6 +155,6 @@ document's defect and not a house style to carry forward.
 ## Detail files
 
 - [cold-read.md](./references/cold-read.md) — running a cold read, the severity classes, the threshold, the loop
-- [criteria.md](./references/criteria.md) — the eight criteria, each with its test and one example
+- [criteria.md](./references/criteria.md) — the criteria, each with its test and one example
 - [style-probe.md](./references/style-probe.md) — extracting the voice, and the seam test
 - [correspondence.md](./references/correspondence.md) — comparing language versions, the fan-out, structural requests

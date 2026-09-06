@@ -40,7 +40,7 @@ kit/skills/hos-gh-issue/          →   /hos-gh-issue
 kit/skills/hos-gh-pull-request/   →   /hos-gh-pull-request
 ```
 
-`gh` is GitHub, after the CLI those two drive. The segment marks a skill that reaches the host rather than stopping at the text it wrote, which is what separates these two from every other skill here.
+`gh` is GitHub, after the CLI those skills drive. The segment marks a skill that reaches the host rather than stopping at the text it wrote, which is what separates them from every other skill here.
 
 **Nothing validates this.** The build checks the four-character prefix and stops, so a family segment holds for exactly as long as it is written down and followed — which is why it is written down.
 
