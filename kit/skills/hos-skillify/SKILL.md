@@ -189,7 +189,7 @@ several?* A decision closes. In a pasted chat log, look at whether the thread we
 disputing it.
 
 When adding to an existing skill, classify every fact against what that skill already
-says. The five relations, and why the target has to be read in full to tell them apart,
+says. The relations, and why the target has to be read in full to tell them apart,
 are in [classification.md](./references/classification.md).
 
 ### 4. Sift

@@ -8,14 +8,14 @@ ORT サポートスキルを配布するパッケージです。単体でどの�
 
 このパッケージが配布するのは **スキルのみ** です。`import` して使うライブラリはなく、同梱する唯一の実行コマンドはそのスキルを配置するためのものです。スキルとは `SKILL.md`(と任意の `references/`・`scripts/`)を収めたディレクトリで、Claude Code が読み込み `/<name>` として呼び出します。導入先のリポジトリにインストールすることで、Open Reach Tech が開発に用いている規約と手順を、そのリポジトリで作業するエージェントに届けます。
 
-配布されるスキルは 3 件、すべて `support` ドメインのもので、内容は「コードそのものではなく、その周りの仕事」です — 書いていない人に結果を説明する、利用者が読むマニュアルを書く、決着した会話をスキルにする。各名前はハイフンを含む 4 文字の接頭辞で始まります。`ho` は、このスキルライブラリの名前の由来である製品 Hora Kit を表し、3 文字目がライブラリを表します(このパッケージは `s`)。そのため、フラットに並んだスキル一覧を見た人が、どれがこのパッケージ由来かを一目で判別できます。ドメインごとに別のパッケージになっており、リポジトリは自分が扱うドメインのものを入れます。
+配布されるスキルはすべて `support` ドメインのもので、内容は「コードそのものではなく、その周りの仕事」です。各名前はハイフンを含む 4 文字の接頭辞で始まります。`ho` は、このスキルライブラリの名前の由来である製品 Hora Kit を表し、3 文字目がライブラリを表します(このパッケージは `s`)。そのため、フラットに並んだスキル一覧を見た人が、どれがこのパッケージ由来かを一目で判別できます。接頭辞より後ろでは、同じものを扱うスキルの一群が、さらに 1 つのセグメントを共有することがあります。`gh` は GitHub で、書いたテキストを渡して終わるのではなく、ホストまで届くスキルであることを表します。ドメインごとに別のパッケージになっており、リポジトリは自分が扱うドメインのものを入れます。
 
-| パッケージ | プレフィックス | ドメイン | スキル数 |
-| :-- | :-- | :-- | --: |
-| `@openreachtech/hora-skills-ort-core` | `hoc-` | `core` | 39 |
-| `@openreachtech/hora-skills-ort-renchan` | `hor-` | `backend` | 31 |
-| `@openreachtech/hora-skills-ort-furo` | `hof-` | `frontend` | 46 |
-| `@openreachtech/hora-skills-ort-support`(このパッケージ) | `hos-` | `support` | 3 |
+| パッケージ | プレフィックス | ドメイン |
+| :-- | :-- | :-- |
+| [`@openreachtech/hora-skills-ort-core`](https://github.com/openreachtech/hora-skills-ort-core) | `hoc-` | `core` |
+| [`@openreachtech/hora-skills-ort-renchan`](https://github.com/openreachtech/hora-skills-ort-renchan) | `hor-` | `backend` |
+| [`@openreachtech/hora-skills-ort-furo`](https://github.com/openreachtech/hora-skills-ort-furo) | `hof-` | `frontend` |
+| [`@openreachtech/hora-skills-ort-support`](https://github.com/openreachtech/hora-skills-ort-support)(このパッケージ) | `hos-` | `support` |
 
 [**スキルカタログ**](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.ja.md) ([English](https://github.com/openreachtech/hora-skills-ort-support/blob/main/docs/skills.md)) — このパッケージに収録された全スキルの一覧と概要(1〜2 行)を、呼び出しコマンド名で並べています。
 
@@ -53,11 +53,11 @@ npx --no hora-skills-ort-support install
 
 ## 使い方
 
-スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-user-manual`, `/hos-skillify`)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
+スキルは自分のリポジトリの `.claude/skills/` に配置されます。Claude Code はそこからスキルを認識し、それぞれが自身の名前で呼び出せるようになります(`/hos-explain`, `/hos-gh-issue`, `/hos-gh-pull-request` など)。インストールされたスキルは、そのリポジトリ自身のスキルと 1 つのフラットな一覧に並びます。`hos-` のプレフィックスはそのためにあります。
 
 ### 複数のドメインを入れる
 
-4 つのパッケージはいずれも同じ `.claude/skills/` に配置し、それぞれが自分の配置内容を `.hora/<パッケージ名>.json` に記録します。したがって、ある実行が削除するのはそのパッケージが配置したものだけで、他には手を触れません。
+`hora-skills` のパッケージはいずれも同じ `.claude/skills/` に配置し、それぞれが自分の配置内容を `.hora/<パッケージ名>.json` に記録します。したがって、ある実行が削除するのはそのパッケージが配置したものだけで、他には手を触れません。
 
 ```json
 {
