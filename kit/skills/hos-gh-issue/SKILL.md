@@ -133,6 +133,8 @@ stops matching it.
 **Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
 blocks, because they are two fields on the form and two arguments on the command.
 
+- **The body goes in one fenced block, whatever it contains.** Split across two, it needs a
+  label to say which half is which, and that label is pasted into GitHub along with them
 - **Where the body contains a fenced block of its own, fence the whole thing with four backticks
   or more.** Three would end the block at the first inner fence
 - **Nothing but the issue text goes inside the fence.** Commentary, a heading saying "body", an
