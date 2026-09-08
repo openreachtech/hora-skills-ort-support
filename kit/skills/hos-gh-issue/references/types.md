@@ -63,8 +63,20 @@ action.
 
 ## Where a hub differs
 
-**`📂 Hub` is the one type whose body is shaped differently.** It carries the situation and the
-direction, then its children:
+**`📂 Hub` is the one type whose title and body are both shaped differently.**
+
+The title takes one of two forms, and the word `Hub` appears in neither:
+
+```
+📂 Release `1.4.0`                          gathering a release — the version is the whole title
+📂 The move off the legacy mail templates    any other hub — what the whole of it is about
+```
+
+A release hub is titled by its version alone; every other hub is titled by the overview of what
+it gathers. `Hub` in the title says nothing the emoji has not, and it costs the reader the words
+that would have told them what the group is.
+
+The body carries the situation and the direction, then its children:
 
 ```markdown
 # As-is
