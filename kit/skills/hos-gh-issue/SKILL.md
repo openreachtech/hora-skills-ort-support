@@ -46,9 +46,22 @@ says nothing and costs the reader a stop.
 **Inside an H1 section, headings from H2 down may be used.** Depth is not capped, and grouping a
 long `# Checklist` under H2s is the ordinary use.
 
-**Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go: the
-title opens with `📂 Hub`, `# Checklist` is not written at all, and `# Sub-issues` stands where
-it would have. A hub with work of its own is not a hub — that work belongs in one of the children.
+**Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go:
+`# Checklist` is not written at all, and `# Sub-issues` stands where it would have. A hub with
+work of its own is not a hub — that work belongs in one of the children.
+
+**A hub's title takes one of two forms, and the word `Hub` appears in neither.**
+
+```
+📂 Release `1.4.0`                          gathering a release — the version is the whole title
+📂 The move off the legacy mail templates    any other hub — what the whole of it is about
+```
+
+A hub that gathers a release is titled by that release and nothing else. Every other hub is
+titled by the overview of what it gathers, at the altitude the children sit beneath.
+
+**Writing `Hub` into the title says nothing the emoji has not already said**, and it spends the
+first words on a label instead of on the thing a reader opened the issue for.
 
 **The two checkbox sections are not interchangeable.** A box under `# Checklist` is work done
 inside this issue; a box under `# Sub-issues` is an issue that does not exist yet, written as the
