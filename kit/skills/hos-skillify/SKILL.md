@@ -156,6 +156,22 @@ phase 5's question, and asking it twice wastes the reading that phase 3 has not 
 Mark a subject with one weak passage as `thin`, and say whether it is better dropped or
 folded into another.
 
+**A `thin` verdict counts passages; it does not report what they establish.** This phase is
+deliberately too shallow to judge that — the artefacts and the words of the correction, and no
+further — so `thin` is a count with a guess attached to it. **The caller overrides it without
+owing an argument.**
+
+Measured across two runs, `thin` was wrong both times it was used. One subject was marked on a
+misreading of how its exchange had closed, and produced two rows. The other was marked because no
+skill seemed to hold it, and produced four rows across two skills.
+
+**The second is the failure the column invites.** `New`, `addition` and `thin` sit in one cell
+while answering two different questions: the first two say which skill, the third says how much
+material. A subject with no obvious home is not thin, and a subject with one weak passage can have
+an obvious home. **Where a subject looks homeless, leave `Existing skill` blank and leave
+`Proposal` alone** — which skill it belongs to is settled at the sift, with the reading this phase
+has not done.
+
 Where the subjects are to be split rather than merged, say so with the reason. The reason
 is not a matter of taste: a skill's prefix has to match the directory it sits in, so
 subjects that fall in one domain **can** become one skill, and subjects spread across
