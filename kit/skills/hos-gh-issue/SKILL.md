@@ -246,6 +246,25 @@ Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
 ```
 
+## What the `# Checklist` leaves out
+
+**What CI runs on its own is never a checklist line.** `npm test`, `npm run lint`, a typecheck,
+`npm audit` — nobody closes those by hand, and a red run blocks the merge without being asked, so
+the line adds nothing the repository was not already saying.
+
+**This holds every time.** There is no run where writing them in to be sure makes the checklist
+say more than it said without them.
+
+Running them while the work is going on is a different thing, and nothing here is against it. What
+is ruled out is standing them up as rows for somebody to close.
+
+**What CI does not watch is a checklist line.** Behaviour confirmed on a real device, a setting
+that has to take effect on an external service, a value somebody enters in a console — those close
+by hand alone, which is what a box is for.
+
+**A box is work that changes something.** Something left as it stands, and the outcome of a check,
+are neither: they belong under `# Note`.
+
 ## Two things about the checkboxes
 
 - **An issue is sometimes filed after the work is done.** Where that is what happened, hand it over
