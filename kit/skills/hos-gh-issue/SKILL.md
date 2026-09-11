@@ -81,6 +81,25 @@ in full.
 🗑️ Purge the unused fixtures under `tests/legacy/`
 ```
 
+**The title names the work, not the file the diff happens to concentrate in.** The test is
+whether the file is the decision or the place the decision was recorded. A file purged, a
+document written, a lock file regenerated because it had drifted from the manifest — each of
+those is the work, and the title names it. The same lock file moved by an install that raised a
+dependency is where the work came out, and there the title names the dependency.
+
+The second example above names a path for the first reason: purging those files is the whole of
+what the issue asks for.
+
+A title reading `Tidy up <one file>` is the usual way this goes wrong. The file shrank because
+fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
+work was the fifteen.
+
+**A title that has stopped describing the work is corrected while the work is still running.** A
+title is written before the work exists, so it is a guess the work is free to outrun, and going
+stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
+opening marker along — those two belong to the git branch convention, and what is worth having is
+the three of them saying one thing.
+
 The types, and how to pick one, are in [types.md](./references/types.md).
 
 ## `# Sub-issues` empties itself
@@ -226,6 +245,25 @@ value.
 Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
 ```
+
+## What the `# Checklist` leaves out
+
+**What CI runs on its own is never a checklist line.** `npm test`, `npm run lint`, a typecheck,
+`npm audit` — nobody closes those by hand, and a red run blocks the merge without being asked, so
+the line adds nothing the repository was not already saying.
+
+**This holds every time.** There is no run where writing them in to be sure makes the checklist
+say more than it said without them.
+
+Running them while the work is going on is a different thing, and nothing here is against it. What
+is ruled out is standing them up as rows for somebody to close.
+
+**What CI does not watch is a checklist line.** Behaviour confirmed on a real device, a setting
+that has to take effect on an external service, a value somebody enters in a console — those close
+by hand alone, which is what a box is for.
+
+**A box is work that changes something.** Something left as it stands, and the outcome of a check,
+are neither: they belong under `# Note`.
 
 ## Two things about the checkboxes
 
