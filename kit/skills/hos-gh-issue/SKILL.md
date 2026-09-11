@@ -81,6 +81,19 @@ in full.
 🗑️ Purge the unused fixtures under `tests/legacy/`
 ```
 
+**The title names the work, not the file the diff happens to concentrate in.** The test is
+whether the file is the decision or the place the decision was recorded. A file purged, a
+document written, a lock file regenerated because it had drifted from the manifest — each of
+those is the work, and the title names it. The same lock file moved by an install that raised a
+dependency is where the work came out, and there the title names the dependency.
+
+The second example above names a path for the first reason: purging those files is the whole of
+what the issue asks for.
+
+A title reading `Tidy up <one file>` is the usual way this goes wrong. The file shrank because
+fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
+work was the fifteen.
+
 The types, and how to pick one, are in [types.md](./references/types.md).
 
 ## `# Sub-issues` empties itself
