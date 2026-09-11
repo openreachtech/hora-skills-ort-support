@@ -90,6 +90,32 @@ that share their type. An assistant record's `content` is a list too, holding `t
 
 Report the counts at phase 1. They tell the caller the size of what is about to be read.
 
+## A message sent while the assistant is working
+
+**It is not a `type: "user"` record.** A person who types while a turn is still running has
+that message queued, and it reaches the transcript by three routes, none of them the one the
+section above describes:
+
+| Where it lands | Shape |
+| :-- | :-- |
+| `type: "queue-operation"` | The queue's own record. Two per message, as it is taken in and as it is taken up |
+| `type: "attachment"` | A mirror of the text, injected into the turn that was already running |
+| `type: "user"` | Quoted inside a `tool_result` block, once per tool call the message reached |
+
+**So a harvest that reads `type: "user"` and excludes tool results sees none of the three.**
+Measured on one session: 16 messages arrived this way against 68 ordinary turns, and one of
+them — a correction overturning the assistant's reading of a convention — appears in the file
+as no `type: "user"` record at all.
+
+- **Take the text from `queue-operation`.** The attachment and the `tool_result` quotation are
+  copies of the same message, and one message is one passage however many times it was
+  mirrored.
+- **`last-prompt` does not close the gap.** It carries a person's words, but it mirrors
+  ordinary turns only, never a queued one.
+- These are the passages most worth having. Somebody types mid-turn because something is going
+  wrong *now*, which is exactly the shape the harvest is looking for — and a run that misses
+  them loses its sharpest corrections while reporting a healthy count of turns.
+
 ## What to harvest
 
 Not the procedure. **The procedure is in the diff; what is not in the diff is why the
