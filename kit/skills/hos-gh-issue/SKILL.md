@@ -94,6 +94,12 @@ A title reading `Tidy up <one file>` is the usual way this goes wrong. The file 
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
 
+**A title that has stopped describing the work is corrected while the work is still running.** A
+title is written before the work exists, so it is a guess the work is free to outrun, and going
+stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
+opening marker along — those two belong to the git branch convention, and what is worth having is
+the three of them saying one thing.
+
 The types, and how to pick one, are in [types.md](./references/types.md).
 
 ## `# Sub-issues` empties itself
