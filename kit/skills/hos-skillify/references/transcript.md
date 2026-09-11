@@ -49,7 +49,7 @@ predecessors, and the chain ends at a transcript that summarises nothing.
 
 ## What a line is
 
-Each line is an object with a `type`. Only three carry material:
+Each line is an object with a `type`. Three of them carry the bulk of the material:
 
 | `type` | What it is |
 | :-- | :-- |
@@ -57,7 +57,16 @@ Each line is an object with a `type`. Only three carry material:
 | `assistant` | Text, tool calls, or both |
 | `attachment` | Injected context — reminders, file contents, notices |
 
-The rest are bookkeeping: modes, titles, cost, file-history snapshots. Ignore them.
+**Which types are present is read off the file, not assumed.** Enumerate every `type` the
+transcript holds and account for each one before deciding what to skip. Counted on one
+session: `assistant` 949, `attachment` 592, `user` 556, `mode` 157, `permission-mode` 157,
+`atis-latch` 157, `ai-title` 157, `last-prompt` 157, `system` 103, `file-history-snapshot`
+86, `queue-operation` 38, `file-history-delta` 20.
+
+Nine of those twelve look like bookkeeping — modes, titles, cost, file-history snapshots —
+and **one of the nine carried the person's own words.** That is what the enumeration is for.
+It costs one pass over the file; skipping it means harvesting the types some earlier run
+happened to find, on a format nobody has promised to hold still.
 
 ## Telling a person's turn from a tool result
 
