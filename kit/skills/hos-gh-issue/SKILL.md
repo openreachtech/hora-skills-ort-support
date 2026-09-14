@@ -355,6 +355,15 @@ by hand alone, which is what a box is for.
 **A box is work that changes something.** Something left as it stands, and the outcome of a check,
 are neither: they belong under `# Note`.
 
+**Whether a line is still outstanding is checked before it is written.** A box already closed by
+the time the issue is filed is something left as it stands, and belongs under `# Note` with the
+rest — but it only lands there if somebody looked first. Written unchecked, it sends whoever picks
+the issue up to do work that was finished before they arrived.
+
+**A line nothing asks for is the worse of the two.** Where the repository's own documents say a
+thing needs no arranging, a checklist that arranges it invents the work outright, and there is
+nothing to find at review except that the line should never have been there.
+
 ## Two things about the checkboxes
 
 - **An issue is sometimes filed after the work is done.** Where that is what happened, hand it over
