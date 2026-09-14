@@ -72,6 +72,25 @@ both; **a hub carries only the second.**
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
+## `# As-is` is observed, never inferred
+
+**Every sentence in `# As-is` is something that was read, or it is not written.** The section
+states how things stand, so each sentence is a claim about the present — and one nobody checked
+reads exactly like one that was, which leaves the reader holding a guess they cannot pick out.
+
+- **Read the state where it lives.** Much of what an `# As-is` wants to say about a repository is
+  held by the host rather than by the files — what gates a merge, what has already run, what a
+  job can reach. A clone shows none of it, so a section written from the clone alone describes a
+  repository nobody is looking at
+- **Where the branch for the work already exists, it settles the scope.** An issue written beside
+  a branch describes what that branch carries, and a paragraph wandering onto work the branch
+  does not touch belongs to a different issue
+
+**`# As-is` is the section that fails quietly.** `# To-be` is a direction and `# Checklist` is a
+list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
+as reporting — and a reader who catches one sentence of it false has no reason left to trust the
+others.
+
 ## A settled question leaves the body
 
 **An open question belongs in the issue. The history of its answer does not.**
