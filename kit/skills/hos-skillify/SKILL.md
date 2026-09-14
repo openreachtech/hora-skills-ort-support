@@ -45,6 +45,22 @@ then where that thing lives, then how the run behaves. **Accept the `key:value` 
 in any order** — making the order a requirement buys nothing and fails a caller who
 writes them the other way round.
 
+**What separates an option from the topic is its shape, never its position.** The arguments
+arrive as one string, and it is this skill that divides them: a token opening with one of the
+keys above and a colon is that option, the bare word `dry` is that flag, and **everything else
+is the topic**, joined in the order it appeared. A topic holding spaces therefore needs no
+quoting, and **quoting it is worse than leaving it bare** — nothing here strips a quote mark, so
+it would be harvested as part of the subject.
+
+Two topics cannot be written at all, and a caller meets them by surprise rather than by an
+error:
+
+- **A topic holding a colon.** Everything up to it reads as a key, and an unknown key is not an
+  error — the run simply mines for a subject that lost its first words. Write the clause without
+  the colon
+- **A topic holding the standalone word `dry`.** The run reports and writes nothing, which looks
+  like a decision somebody made. Reword it, or drop the topic and let the subject gate ask
+
 **There is no argument for choosing a source.** Material from outside the conversation —
 a chat log from elsewhere, a design document, someone's notes — arrives by being pasted
 in, and a pasted block is part of the thread from that moment. An argument would only be
