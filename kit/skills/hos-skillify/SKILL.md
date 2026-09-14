@@ -61,6 +61,9 @@ error:
 - **A topic holding the standalone word `dry`.** The run reports and writes nothing, which looks
   like a decision somebody made. Reword it, or drop the topic and let the subject gate ask
 
+**A deliberate `dry` is worth stating twice** — once as the flag and once in the report — so that
+a run which wrote nothing never leaves the caller wondering whether it was asked to.
+
 **There is no argument for choosing a source.** Material from outside the conversation —
 a chat log from elsewhere, a design document, someone's notes — arrives by being pasted
 in, and a pasted block is part of the thread from that moment. An argument would only be
