@@ -72,6 +72,29 @@ both; **a hub carries only the second.**
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
+## A settled question leaves the body
+
+**An open question belongs in the issue. The history of its answer does not.**
+
+While a matter is undecided, writing it into `# Note` is what gets it decided. The reader is
+being asked for something, and the candidates, the objection against each and what each would
+cost are what they need in order to answer. The section is doing work.
+
+The moment the matter settles, those same paragraphs stop being a question and become an account
+of how the answer was arrived at — what was proposed first, which objection retired it, where
+somebody conceded. **Nobody opens an issue to read that.** What the issue now carries is the
+answer, and the answer is already in the title, the `# To-be` and the `# Checklist`.
+
+- **Delete the section rather than rewriting it in the past tense.** A settled question written
+  up as a record still reads as live, and costs the reader the paragraph it takes to find out it
+  is not.
+- **Reasoning that will govern the next decision of its kind is a convention, and it moves.** It
+  goes to whichever convention owns that kind of decision. Reasoning that explains this issue
+  alone goes nowhere, and nowhere is the right destination for it.
+- **A constraint is not a biography.** `# Note` keeps premises, orderings and warnings, and every
+  one of those still binds after the work is done. What leaves is the deliberation, never the
+  conditions.
+
 ## The title
 
 **The title opens with the type's emoji**, and the rest of it says what the issue is about.
