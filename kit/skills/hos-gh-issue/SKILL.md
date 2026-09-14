@@ -121,7 +121,13 @@ work was the fifteen.
 title is written before the work exists, so it is a guess the work is free to outrun, and going
 stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
 opening marker along — those two belong to the git branch convention, and what is worth having is
-the three of them saying one thing.
+the four of them saying one thing.
+
+**The body comes with the title.** Where a title named something that has since been renamed, the
+body names it too — in a `# Checklist` path, in a `# Note`, in a `# Sub-issues` line — and none of
+those move when the title does. A title corrected on its own leaves an issue disagreeing with
+itself, and the checklist is where it shows, because a path written inside a box is the copy
+nobody rereads.
 
 The types, and how to pick one, are in [types.md](./references/types.md).
 
