@@ -1,6 +1,6 @@
 ---
 name: hos-gh-issue
-description: "Write a GitHub issue for this organization and file it — a title carrying its type emoji, and a body of `As-is`, `To-be`, `Note`, `Checklist` and `Sub-issues` — shown in full first, then sent with `gh issue create` once you say so, and handed over as text alone where `gh` is missing or logged out. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. It also writes the body of a sub-issue that GitHub created from a `Sub-issues` line and left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
+description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
 # GitHub issue
