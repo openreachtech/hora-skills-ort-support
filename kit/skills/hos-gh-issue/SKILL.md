@@ -310,6 +310,33 @@ Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
 ```
 
+## Several of one kind go in a table
+
+**Where one kind of change reaches several things of one kind — fields, parameters, files,
+workflows — they are not enumerated in prose.** They go in a table, one row each, with a column
+for whatever differs between them. This holds in every section of the body, not only in
+`# As-is`.
+
+```
+Bad   `name:`, `repository:`, `bugs:` and `homepage:` all still carry the boilerplate's
+      name, and `description:` still reads `TODO: fulfill here`.
+
+Good  | Field | Current value |
+      | :-- | :-- |
+      | `name:` | `@acme/todo-fulfill-here` |
+      | `description:` | `TODO: fulfill here` |
+```
+
+**Items of one kind are alike by construction, so what a reader came for is the differences.**
+Prose spends its length on what they share and leaves the one thing that varies scattered through
+a run-on clause; a reader checking whether their own case is among them has to parse the sentence
+instead of scanning a column.
+
+- **The columns carry what differs, and nothing else.** Where every row would repeat one value,
+  that value belongs in the line above the table rather than in a column of its own.
+- **This is the prose counterpart of one line per target, below.** A checkbox already gives each
+  item a row of its own; a paragraph does not, and the table is what gives it one.
+
 ## One line, one target
 
 **A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
