@@ -40,7 +40,10 @@ and dropping it costs the reader the one line that would have told them what the
 click away. A pull request that repeats it creates a second copy that will disagree with the first
 the moment either is edited.
 
-**`Close #<issue>` is what ties them**, and it is what closes the issue on merge.
+**`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
+host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
+— so look at the issue once the pull request has landed, and close it by hand where it is still
+open.
 
 ## `# How` is the approach, not the diff
 
