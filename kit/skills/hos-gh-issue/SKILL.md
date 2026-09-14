@@ -166,6 +166,22 @@ gh issue create --parent <parent number> --title '💪 …' --body-file <path>
 - **A child filed this way is an issue like any other.** Its title carries its own type emoji and
   its body carries the sections it needs; having a parent changes neither
 
+**Confirm a link from the parent, never from the child.** A child's REST payload carries no
+`parent` field — `parent_issue_url` sits where one would be — so asking it for `.parent` answers
+`null` whether the issue has a parent or not. The reading is indistinguishable from a link that
+never took, and it is the first thing anyone reaches for.
+
+```sh
+gh api /repos/<owner>/<name>/issues/<parent>/sub_issues --jq '.[].number'
+```
+
+- **The parent's `sub_issues` is the plain check**, and it lists every child in one call
+- **From the child's end the relation is reachable only through GraphQL**, as
+  `issue(number: <child>) { parent { number } }`
+- **A link made and then read back wrongly is worse than one not checked at all**, because the
+  next move is to make it again — and a second `--parent` on an issue that already has one is how
+  a relation gets reported as missing while it stands
+
 **A converted sub-issue arrives with an empty body.** No template is applied, so it holds a title
 and nothing else — and **writing that body is this skill's work too.** Given such an issue, write
 the five sections for it as for any other.
