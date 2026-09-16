@@ -88,7 +88,7 @@ reader a stop and says nothing.
 
 **They ask different things of the reader**, which is why they are two headings and not one:
 
-| | What it means | What the reader does |
+| Heading | What it means | What the reader does |
 | :-- | :-- | :-- |
 | `## 🦵 Kicked Out` | It is gone in this version | Change their code now, or stay behind |
 | `## ⚠️ Deprecated` | It still works, and is going | Take the version now, and change their code before the next major |
