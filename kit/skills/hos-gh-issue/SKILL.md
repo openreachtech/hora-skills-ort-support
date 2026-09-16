@@ -291,6 +291,24 @@ Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
 ```
 
+## One line, one target
+
+**A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
+two files, two workflows or two config keys sharing a line give a reader a box that can only be
+whole or untouched — there is no way to say the half that is done.
+
+```markdown
+Bad   - [ ] Raise `@acme/env` and `jest`
+Good  - [ ] Raise `@acme/env` to `^1.0.6`
+      - [ ] Raise `jest` to `^30.5.1`
+```
+
+- **A dependency line carries the package and the version it goes to.** A raise without its target
+  is not a line somebody can close, because nothing says what would make it true.
+- The rule is not about packages. Anything taking the same operation over several targets splits
+  per target, and a long result is grouped under `##` headings rather than folded back into fewer
+  lines.
+
 ## What the `# Checklist` leaves out
 
 **What CI runs on its own is never a checklist line.** `npm test`, `npm run lint`, a typecheck,
