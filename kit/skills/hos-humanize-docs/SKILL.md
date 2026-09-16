@@ -116,7 +116,7 @@ Eight, each with a mechanical test, in [`criteria.md`](./references/criteria.md)
 keeps a criterion out of the realm of taste — and a criterion nobody can test is what lets a
 defect through.
 
-| | |
+| # | Criterion |
 | :-- | :-- |
 | 1 | Every word and reference resolves to exactly one thing |
 | 2 | Every sentence has an actor |
