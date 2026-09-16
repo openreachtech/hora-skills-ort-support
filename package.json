@@ -58,7 +58,6 @@
   },
   "allowScripts": {
     "@parcel/watcher": false,
-    "fsevents": false,
     "unrs-resolver": false
   }
 }
