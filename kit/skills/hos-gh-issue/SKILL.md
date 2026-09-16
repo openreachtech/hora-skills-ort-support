@@ -18,7 +18,7 @@ at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
 
 ## What each artefact holds
 
-| | Holds |
+| Artefact | Holds |
 | :-- | :-- |
 | **Issue** | `# As-is` · `# To-be` · `# Note` · `# Checklist` · `# Sub-issues` |
 | **Pull request** | `# Why` — `Close #<issue>`, and nothing more — then `# How` |

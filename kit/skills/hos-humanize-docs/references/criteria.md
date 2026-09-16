@@ -83,7 +83,7 @@ that line.
 
 Three outcomes, and only the first two are allowed:
 
-| | |
+| Outcome | What it comes out as |
 | :-- | :-- |
 | Introduce it at first use | 「まず渡されたものを読みます — これが第0段です」 |
 | Drop the term and say the thing | 「第0段が読みます」 → 「最初に読みます」 |

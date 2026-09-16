@@ -20,7 +20,7 @@ Read the target, its language siblings, and the other documents in the same dire
 answers down — an extraction that stays in the reader's head is one nobody can check the result
 against.
 
-| | What to settle |
+| Aspect | What to settle |
 | :-- | :-- |
 | Register | Plain or polite form, and whether it is consistent |
 | Bold | What it marks — the imperative, the term, the topic — and roughly how much per section |
