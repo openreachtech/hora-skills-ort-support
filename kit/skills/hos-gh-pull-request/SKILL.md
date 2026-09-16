@@ -105,20 +105,26 @@ the screen in a different shape, which is what the table under `# How` rules out
 is the reason the points fall together: what the approach rests on, what it hands to another
 convention, what it deliberately left alone.
 
-Two signs say a section wants them.
+Three signs say a section wants them, and they arrive in this order.
 
 - **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
   `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
-  subject boundary making itself felt. It is the earlier of the two signs, because it arrives
-  while the section is still being written
+  subject boundary making itself felt. It is the earliest of the three, because it arrives while
+  the section is still being written
+- **One value repeated down the points.** Where several points open with the same words — the
+  same file, the same skill, the same convention — that value is a heading written into each of
+  them instead of above them. **The test is repetition, not naming.** Four points each naming a
+  different thing are the four things and stay as they are; eleven points each naming the same
+  thing are eleven under one subject, and that subject is the heading
 - **`# How` and the linked issue's `# Checklist` disagreeing.** The work divides one way, so the
   boxes that record it and the approach that carried it out divide the same way. Where the two
   sets of H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a
   box it has nothing to say about — it holds the approach, not what was done — but the ones it
-  carries are the checklist's
+  carries are the checklist's. It is the last of the three, because it needs the issue as well
 
-**The second sign catches what the first misses.** A flat run of six points raises no wish to nest
-anything, and is as unsorted as a nested one would have been.
+**Each sign catches what the one before it missed.** A flat run of six points raises no wish to
+nest anything; six points that repeat nothing raise no second sign either, and the division shows
+only when the section and the checklist are held against each other.
 
 **`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
 each other are `# As-is` and `# Checklist`.
@@ -148,7 +154,7 @@ Which branches are trunks, and which are sub-branches, is settled by the branch 
 **The title opens with the type's emoji**, as an issue's does, and the rest of it names the work.
 
 ```
-🤖 Author three skills for document repair, issues and pull requests
+🤖 Author the skills that hand work over
 🐛 Fix the skill count the catalog states
 ```
 
@@ -161,6 +167,19 @@ in its `references/types.md`, and this skill keeps no second copy of the list.
 `Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is already
 recorded; the title is what survives it, and a title repeating the branch name says nothing the
 merge commit did not.
+
+**The title names the whole at one altitude, and never lists the parts.** Work that falls into
+two subjects is still one pull request, and the title is where that one piece gets named. `A, and
+B` hands the reader the division instead of the thing, and the division already has a home —
+`# How` carries it under its own `##`.
+
+```
+Bad   🤖 Author three skills for document repair, issues and pull requests
+Good  🤖 Author the skills that hand work over
+```
+
+**The altitude to find is the one the parts sit beneath.** The three skills of the bad title were
+all for handing work over, and the good one covers them without naming any of the three.
 
 ## Language
 
