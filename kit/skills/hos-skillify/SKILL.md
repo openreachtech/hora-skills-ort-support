@@ -82,6 +82,11 @@ reading that skill **in full** (see [classification.md](./references/classificat
 and reading several in one run multiplies a cost that is already the largest part of the
 work.
 
+**The cost is paid per skill, not per subject**, which is why several subjects landing in one
+skill ride together. The bound counts skills because that is what the reading counts; a run
+carrying three subjects into one skill reads it once, and a run carrying one subject into each
+of three skills reads three.
+
 To grow one skill across several runs: create it on the first run, then pass
 `skill:<that name>` on the following ones.
 
@@ -164,14 +169,16 @@ What it shows, one row per subject:
 
 | Column | Where it comes from |
 | :-- | :-- |
+| # | A number, counted from one |
 | Subject | The files touched and the words of the correction |
 | Passages | Counted in this phase |
 | Touched | The arguments of the tool calls |
 | Existing skill | The survey. Blank for none, `not surveyed` when out of range |
 | Proposal | New, addition, or thin |
 
-**The caller picks one subject and nothing else.** Whether a fact is worth keeping is
-phase 5's question, and asking it twice wastes the reading that phase 3 has not done yet.
+**The caller picks one skill's worth — one subject, or several that land in the same skill.**
+Whether a fact is worth keeping is phase 5's question, and asking it twice wastes the reading
+that phase 3 has not done yet.
 Mark a subject with one weak passage as `thin`, and say whether it is better dropped or
 folded into another.
 
@@ -260,9 +267,15 @@ This stop always happens. It carries the outline and, for a new skill, the name.
 The outline is **a table, not prose.** Reviewing prose is expensive, and the argument is
 never about the wording — it is about which facts survive.
 
-| Claim | Basis | Kind | Source | Verdict |
-| :-- | :-- | :-- | :-- | :-- |
-| A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
+**A table the caller has to point at carries an identifier, and both of these are pointed at.**
+A row is answered with its number, so a caller who has to quote the subject back in order to name
+it is being charged for the table's own omission — and the quote is the place a selection goes
+wrong, because two rows of one harvest often differ by a few words. Numbering elsewhere is a
+default worth refusing; here it is what the table is for.
+
+| # | Claim | Basis | Kind | Source | Verdict |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| A number, counted from one | A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
 
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
