@@ -133,6 +133,11 @@ a disagreement with anything.
 nest anything; six points that repeat nothing raise no second sign either, and the division shows
 only when the section and the checklist are held against each other.
 
+**Where two box-answering divisions disagree, the checklist is the one to suspect.** `# How` is
+written after the work, so a heading there is evidence that the work under it was carried out —
+and a box that was never written is the likelier omission of the two. The reverse needs no rule:
+a box `# How` says nothing about is already allowed.
+
 **`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
 each other are `# As-is` and `# Checklist`.
 
