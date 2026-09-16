@@ -13,9 +13,10 @@ So the first act is not a checklist. It is a **cold read**: an agent with no pri
 reads the document and reports only where it stalled. The criteria in this skill are what turn
 that report into edits; they are not what finds the defects.
 
-The input is a document the repository maintains. The output is edits to that document, with
-its structure and its voice intact. **The reader never changes** — a document for engineers
-stays a document for engineers, and its technical terms stay.
+The input is a document the repository maintains. The output is edits to that document.
+**The reader never changes** — a document for engineers stays a document for engineers, and its
+technical terms stay. Everything else is what gets repaired: sentences first, and the structure
+only where nothing inside it will do, which is a change every language version takes at once.
 
 ## Invocation
 
@@ -116,7 +117,7 @@ Eight, each with a mechanical test, in [`criteria.md`](./references/criteria.md)
 keeps a criterion out of the realm of taste — and a criterion nobody can test is what lets a
 defect through.
 
-| | |
+| # | Criterion |
 | :-- | :-- |
 | 1 | Every word and reference resolves to exactly one thing |
 | 2 | Every sentence has an actor |
@@ -142,7 +143,7 @@ document's defect and not a house style to carry forward.
 
 - **Rewriting a message for a different reader** belongs to the `hos-explain` skill. That one
   throws the structure away and rebuilds it for a reader with no technical background. This one
-  changes neither the structure nor the reader
+  replaces neither
 - **Which language a document is written in**, and the notation for class members, belong to the
   documentation convention (`hoc-documentation`)
 - **A README's section structure** belongs to the `hoc-readme` skill. This one works on the
@@ -151,6 +152,9 @@ document's defect and not a house style to carry forward.
   a requirement definition, a runbook, a manual. This one only repairs what is already there
 - **Filling a missing fact.** Where the cold read stalls on something another document owns,
   report it. Inventing the fact makes this skill an author
+- **The library's own skills.** The criteria are held against a document maintained for a reader,
+  and a skill is written for an agent. Running them over a `SKILL.md` reports defects nobody
+  asked about, in a file whose reader is not the one they were written for
 
 ## Detail files
 

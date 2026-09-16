@@ -74,7 +74,7 @@ reader is the measurement.
 
 ## The threshold
 
-| | `critical` | `major` | `minor` |
+| Mode | `critical` | `major` | `minor` |
 | :-- | :-- | :-- | :-- |
 | Default | 0 | 0 | characters ÷ 1000, rounded up |
 | `strict` | 0 | 0 | **0** |

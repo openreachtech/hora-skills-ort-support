@@ -278,7 +278,6 @@ gh pr create --draft \
   --base <the branch it returns to> \
   --title '🤖 …' \
   --body-file <path> \
-  --reviewer openreachtech/ort-internal \
   --assignee @me
 ```
 
@@ -386,31 +385,20 @@ its marker — and the second is a defect in that branch, not an answer about th
 - **What is still unsettled is asked.** The base can be edited after the fact — `gh pr edit
   --base <branch>` — but not before somebody has read the wrong diff
 
-### Reviewers and the assignee
+### The assignee
 
-**Both are asked once in a conversation, and reused for the rest of it.** The first pull request
-in a thread asks who reviews it and who it belongs to; every one after that takes the same answer
-without asking again. A default that has to be confirmed every time is not a default.
+**`--assignee @me`, and no `--reviewer`.** `@me` is `gh`'s own shorthand for whoever is logged
+in, so nothing has to look the account up first. The pull request is the work of whoever opened
+it, which is why the sender is the default rather than a name somebody has to choose.
 
-| Flag | What it defaults to |
-| :-- | :-- |
-| `--reviewer` | `openreachtech/ort-internal` |
-| `--assignee` | `@me` |
-
-- **A team is written `<org>/<team>`, and a bare slug is not one.** `--reviewer ort-internal`
-  asks GitHub for a user of that handle and fails on finding none; `openreachtech/ort-internal`
-  is the team
-- **`@me` is `gh`'s own shorthand for whoever is logged in**, so nothing has to look the account
-  up first. The pull request is the work of whoever opened it, which is why the sender is the
-  default rather than a name somebody has to choose
-- **Requesting a review on a draft records it rather than asks for it.** Every pull request
-  opened from here is a draft, so the reviewers sit attached to it, and `gh pr ready <number>`
-  is what turns the attachment into a request
-- **The answer lasts the conversation and no longer.** There is nowhere to write it down, so a
-  new thread asks again — and where a long one has lost the answer, asking a second time costs
-  less than guessing
-- **Either can be changed afterwards**: `gh pr edit <number> --add-reviewer <handle>` and
-  `gh pr edit <number> --add-assignee <handle>`
+- **Who reviews is the repository's own arrangement.** A team that names somebody in one
+  organization names nobody in the next, and this skill is installed into repositories whose
+  reviewers it cannot know. A handle that does not resolve fails the create outright
+- **Told who reviews it, pass them.** An instruction in the conversation supplies the one thing
+  the skill cannot work out for itself
+- **Adding one afterwards costs nothing**: `gh pr edit <number> --add-reviewer <handle>`, and
+  `--add-assignee` beside it. A draft holds a reviewer as an attachment rather than a request, so
+  `gh pr ready <number>` is what turns it into one
 
 ### The rest of the command
 
@@ -426,25 +414,25 @@ without asking again. A default that has to be confirmed every time is not a def
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-pull request's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything the reader will match against the diff goes in backticks** — file names and paths,
+class, method, function and variable names, package names, config keys, versions, commands. The
+body is read at merge with the diff already open, and a name set in prose is one they have to
+find twice.
 
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-Everything a reader would copy and search for takes backticks: file names and paths, class,
-method, function and variable names, package names, config keys, versions, commands. A name
-written in code is written in backticks in prose as well.
-
-**A version number is one of them, in the title as much as in the body.** It is what a reader
-copies to check what they are running against, and left bare it reads as prose rather than as a
-value.
+**The title takes them as well.** It is what survives the merge commit, and a raise nobody can
+read a version out of says only that something moved.
 
 ```
 Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
 Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
+```
+
+**Never link a path.** The pull request has a URL of its own, and a relative link resolves against
+that rather than the repository tree — so it breaks on the way to review.
+
+```
+Bad   [`docs/quick-start.md`](./docs/quick-start.md)
+Good  `docs/quick-start.md`
 ```
 
 ## Out of scope

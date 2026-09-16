@@ -1,6 +1,6 @@
 ---
 name: hos-gh-release-note
-description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the compare link, its `##` sections taken from a fixed list and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
+description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the compare link, its `##` sections taken from a standing list it may extend and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
 ---
 
 # GitHub release note
@@ -88,7 +88,7 @@ reader a stop and says nothing.
 
 **They ask different things of the reader**, which is why they are two headings and not one:
 
-| | What it means | What the reader does |
+| Heading | What it means | What the reader does |
 | :-- | :-- | :-- |
 | `## 🦵 Kicked Out` | It is gone in this version | Change their code now, or stay behind |
 | `## ⚠️ Deprecated` | It still works, and is going | Take the version now, and change their code before the next major |
@@ -260,7 +260,10 @@ usually has the right neighbour by accident.
   to disagree
 - **The oldest tag has no predecessor**, and its note is written as a first release: what the
   version is, rather than what moved. There is no compare link, so `# Change Log` is left out
-- **The tag has to be present locally to be diffed.** `git fetch --tags` first where it is not
+- **The tag is confirmed on the remote, not only here.** A release hangs off the tag the host
+  holds, so one that exists locally alone is not the tag the note is for.
+  `git ls-remote --tags origin` answers it, and `git fetch --tags` brings it down so the range
+  can be diffed
 
 ## Language
 
@@ -399,24 +402,28 @@ from afterwards.
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-release's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything the reader will check against their own manifest goes in backticks** — package names,
+versions, file names and paths, config keys, commands. They came to this note holding the versions
+they are on, so every name in it is something they copy rather than read.
 
-Everything a reader would copy and search for takes backticks: file names and paths, package
-names, config keys, commands, and **every version number**. A version is the thing a reader copies
-to check what they are running against, and left bare it reads as prose rather than as a value.
+**The tables are where this bites hardest.** A `package name` cell and a version cell are read as
+values and nothing else, and a row that sets either in prose costs the reader the comparison the
+table was built for.
 
 ```
 Bad   Raise example-parser to 4.0.1
 Good  Raise `example-parser` to `4.0.1`
 ```
 
+**A path is written, not linked.** A relative link resolves against the release's own URL rather
+than the repository tree, and a note on the repository's front page is where that costs most.
+
 ## Out of scope
 
-- **Whether a release exists at all.** Tagging and creating one may belong to a workflow; this
-  skill writes the note that goes in it
 - **Whether to publish a draft, and when.** That is a person's call, as taking a pull request out
   of draft is
-- **Tagging, and the commits the range covers.** They belong to the git conventions
+- **Tagging, and the commits the range covers.** A tag is set by a person through CI, and both
+  belong to the git conventions. This skill's reach ends at confirming the tag is on the remote;
+  what it creates from there is the release that carries the note
 - **The pull request and issue bodies.** How the work was carried out is the pull request's, and
   where things stood is the issue's
