@@ -169,6 +169,7 @@ What it shows, one row per subject:
 
 | Column | Where it comes from |
 | :-- | :-- |
+| # | A number, counted from one |
 | Subject | The files touched and the words of the correction |
 | Passages | Counted in this phase |
 | Touched | The arguments of the tool calls |
@@ -266,9 +267,15 @@ This stop always happens. It carries the outline and, for a new skill, the name.
 The outline is **a table, not prose.** Reviewing prose is expensive, and the argument is
 never about the wording — it is about which facts survive.
 
-| Claim | Basis | Kind | Source | Verdict |
-| :-- | :-- | :-- | :-- | :-- |
-| A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
+**A table the caller has to point at carries an identifier, and both of these are pointed at.**
+A row is answered with its number, so a caller who has to quote the subject back in order to name
+it is being charged for the table's own omission — and the quote is the place a selection goes
+wrong, because two rows of one harvest often differ by a few words. Numbering elsewhere is a
+default worth refusing; here it is what the table is for.
+
+| # | Claim | Basis | Kind | Source | Verdict |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| A number, counted from one | A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
 
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
