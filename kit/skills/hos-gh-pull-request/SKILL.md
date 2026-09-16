@@ -40,7 +40,22 @@ and dropping it costs the reader the one line that would have told them what the
 click away. A pull request that repeats it creates a second copy that will disagree with the first
 the moment either is edited.
 
-**`Close #<issue>` is what ties them**, and it is what closes the issue on merge.
+**`# Why` names exactly one issue, always.** A pull request is opened for one reason, and the
+issue is that reason written down. Where the work arrives as several pieces at once, what the
+pull request closes is the issue those pieces sit under — the hub — and never the children
+beside it.
+
+- **Several `Close` lines say the pull request had several reasons**, which is what one reason
+  rules out. A reader meeting three of them has to work out which the pull request was for, and
+  the answer is that it was for none of them on its own.
+- **The children are reached through the hub**, whose sub-issue panel already lists them.
+  Repeating them here is the restatement above by another route, and it goes stale the moment a
+  child is added or dropped.
+
+**`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
+host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
+— so look at the issue once the pull request has landed, and close it by hand where it is still
+open.
 
 ## `# How` is the approach, not the diff
 
@@ -66,6 +81,47 @@ reader a stop and says nothing.
 
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
+
+## When a section takes H2s
+
+**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
+number of subjects the section holds — never the number of points.** A `# How` carrying ten
+sentences about one approach takes none; a `# How` carrying two approaches takes one H2 each.
+Depth is not capped, and the same test settles each level below.
+
+**An H2 is a table of contents.** `# How` says only "the approach", so a section carrying two of
+them leaves the reader working out which sentence belongs to which as they go. The H2 hands them
+that sorting before they start. A flat run of long bullets gives them nowhere to aim: every one
+has to be read to find the one they opened the pull request for.
+
+**So a count never triggers one.** Six points falling four on one subject and two on another take
+two H2s, and the four are not divided again — points differing only in which thing they name are
+one subject. The division lands where the subjects part, never where the points pile up.
+
+**And the units of the change never supply the subjects.** One heading per rule added, per file
+touched, per commit made is the change's own table of contents, and the reader already holds it —
+the diff lists the files and the commit subjects list the order. A section built that way restates
+the screen in a different shape, which is what the table under `# How` rules out. What replaces it
+is the reason the points fall together: what the approach rests on, what it hands to another
+convention, what it deliberately left alone.
+
+Two signs say a section wants them.
+
+- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
+  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
+  subject boundary making itself felt. It is the earlier of the two signs, because it arrives
+  while the section is still being written
+- **`# How` and the linked issue's `# Checklist` disagreeing.** The work divides one way, so the
+  boxes that record it and the approach that carried it out divide the same way. Where the two
+  sets of H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a
+  box it has nothing to say about — it holds the approach, not what was done — but the ones it
+  carries are the checklist's
+
+**The second sign catches what the first misses.** A flat run of six points raises no wish to nest
+anything, and is as unsorted as a nested one would have been.
+
+**`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
+each other are `# As-is` and `# Checklist`.
 
 ## Merging a trunk
 
