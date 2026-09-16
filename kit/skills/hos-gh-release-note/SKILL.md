@@ -1,6 +1,6 @@
 ---
 name: hos-gh-release-note
-description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the compare link, its `##` sections taken from a fixed list and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
+description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the compare link, its `##` sections taken from a standing list it may extend and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
 ---
 
 # GitHub release note
