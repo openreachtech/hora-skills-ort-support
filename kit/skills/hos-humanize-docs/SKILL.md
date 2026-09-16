@@ -151,6 +151,9 @@ document's defect and not a house style to carry forward.
   a requirement definition, a runbook, a manual. This one only repairs what is already there
 - **Filling a missing fact.** Where the cold read stalls on something another document owns,
   report it. Inventing the fact makes this skill an author
+- **The library's own skills.** The criteria are held against a document maintained for a reader,
+  and a skill is written for an agent. Running them over a `SKILL.md` reports defects nobody
+  asked about, in a file whose reader is not the one they were written for
 
 ## Detail files
 
