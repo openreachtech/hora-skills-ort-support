@@ -84,18 +84,29 @@ sorting before they start.
 two H2s, and the four are not divided again — items differing only in which thing they name are
 one subject. The division lands where the subjects part, never where the items pile up.
 
-Two signs say a section wants them.
+Three signs say a section wants them, and they arrive in this order.
 
 - **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
   `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
-  subject boundary making itself felt. It is the earlier of the two signs, because it arrives
-  while the section is still being written
+  subject boundary making itself felt. It is the earliest of the three, because it arrives while
+  the section is still being written
+- **One value repeated down the lines.** Where several lines open with the same words — the same
+  file, the same section, the same package — that value is a heading written into each line
+  instead of above them. **The test is repetition, not naming.** Four items each naming a
+  different thing are the four things and stay as they are; eleven lines each naming the same
+  thing are eleven items under one subject, and that subject is the heading
 - **`# As-is` and `# Checklist` disagreeing.** The division is the issue's own, so the current
   state and the work divide the same way. Where the two sets of H2s do not correspond, one of the
-  two divisions is wrong
+  two divisions is wrong. It is the last of the three, because it needs both sections written
 
-**The second sign catches what the first misses.** A flat run of six items raises no wish to nest
-anything, and is as unsorted as a nested one would have been.
+**Each sign catches what the one before it missed.** A flat run of six items raises no wish to
+nest anything; six items that repeat nothing raise no second sign either, and the division shows
+only when the two sections are held against each other.
+
+**The second sign is the table rule one level up.** `## Several of one kind go in a table` sends
+a value every row would repeat to the line above the table rather than to a column of its own,
+and a value every line would repeat goes to the heading above them for the same reason: what they
+share is not what the reader came for.
 
 ## `# As-is` is observed, never inferred
 
@@ -160,6 +171,27 @@ what the issue asks for.
 A title reading `Tidy up <one file>` is the usual way this goes wrong. The file shrank because
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
+
+**The title names the whole at one altitude, and never lists the parts.** Work that falls into
+two subjects is still one piece of work, and the title is where that one piece gets named. `A,
+and B` hands the reader the division instead of the thing, and the division already has a home —
+`# As-is` and `# Checklist` carry it under their own `##`.
+
+```
+Bad   💪 Settle the rules three skills leave unstated, and the audit no skill covers
+Good  💪 Enhance skills by feedback
+```
+
+**The altitude to find is the one the parts sit beneath.** Both halves of the bad title above
+were the same thing — something the library settles by hand every time instead of once — and the
+good one covers both without naming either. **A hub's title is written this way for the same
+reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
+where it shows most.
+
+**The branch name and the trunk's opening marker are written at this altitude too.** All three
+name one piece of work, so a title that stops listing its parts while the branch name keeps
+listing them leaves the three disagreeing. Those two belong to the git branch convention, which
+states the same rule from their side.
 
 **A title that has stopped describing the work is corrected while the work is still running.** A
 title is written before the work exists, so it is a guess the work is free to outrun, and going
@@ -358,7 +390,8 @@ a run-on clause; a reader checking whether their own case is among them has to p
 instead of scanning a column.
 
 - **The columns carry what differs, and nothing else.** Where every row would repeat one value,
-  that value belongs in the line above the table rather than in a column of its own.
+  that value belongs in the line above the table rather than in a column of its own. A list does
+  the same thing with a heading, which is the second sign under `## When a section takes H2s`.
 - **This is the prose counterpart of one line per target, below.** A checkbox already gives each
   item a row of its own; a paragraph does not, and the table is what gives it one.
 
