@@ -148,7 +148,7 @@ Which branches are trunks, and which are sub-branches, is settled by the branch 
 **The title opens with the type's emoji**, as an issue's does, and the rest of it names the work.
 
 ```
-🤖 Author three skills for document repair, issues and pull requests
+🤖 Author the skills that hand work over
 🐛 Fix the skill count the catalog states
 ```
 
@@ -161,6 +161,19 @@ in its `references/types.md`, and this skill keeps no second copy of the list.
 `Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is already
 recorded; the title is what survives it, and a title repeating the branch name says nothing the
 merge commit did not.
+
+**The title names the whole at one altitude, and never lists the parts.** Work that falls into
+two subjects is still one pull request, and the title is where that one piece gets named. `A, and
+B` hands the reader the division instead of the thing, and the division already has a home —
+`# How` carries it under its own `##`.
+
+```
+Bad   🤖 Author three skills for document repair, issues and pull requests
+Good  🤖 Author the skills that hand work over
+```
+
+**The altitude to find is the one the parts sit beneath.** The three skills of the bad title were
+all for handing work over, and the good one covers them without naming any of the three.
 
 ## Language
 
