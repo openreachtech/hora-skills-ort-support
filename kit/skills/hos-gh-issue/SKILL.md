@@ -346,25 +346,26 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-issue's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything somebody would search for goes in backticks** — file names and paths, class, method,
+function and variable names, package names, config keys, versions, commands. An issue is read
+before the work by whoever is deciding to pick it up, and a name set in prose is one they cannot
+lift out of the sentence to look up.
 
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-Everything a reader would copy and search for takes backticks: file names and paths, class,
-method, function and variable names, package names, config keys, versions, commands. A name
-written in code is written in backticks in prose as well.
-
-**A version number is one of them, in the title as much as in the body.** It is what a reader
-copies to check what they are running against, and left bare it reads as prose rather than as a
-value.
+**A version is one of them, and the title is where it goes missing.** A `# Sub-issues` line
+becomes a title verbatim and a `# Checklist` line carries the version that closes it, so a bare
+number lands in both places at once.
 
 ```
 Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
+```
+
+**A path goes in backticks, not in a link.** A relative link resolves against the issue's own URL
+rather than the repository tree, so filing the issue is what breaks it.
+
+```
+Bad   [`docs/adopting.md`](./docs/adopting.md)
+Good  `docs/adopting.md`
 ```
 
 ## Several of one kind go in a table
