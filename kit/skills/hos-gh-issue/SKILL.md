@@ -161,6 +161,22 @@ A title reading `Tidy up <one file>` is the usual way this goes wrong. The file 
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
 
+**The title names the whole at one altitude, and never lists the parts.** Work that falls into
+two subjects is still one piece of work, and the title is where that one piece gets named. `A,
+and B` hands the reader the division instead of the thing, and the division already has a home —
+`# As-is` and `# Checklist` carry it under their own `##`.
+
+```
+Bad   💪 Settle the rules three skills leave unstated, and the audit no skill covers
+Good  💪 Enhance skills by feedback
+```
+
+**The altitude to find is the one the parts sit beneath.** Both halves of the bad title above
+were the same thing — something the library settles by hand every time instead of once — and the
+good one covers both without naming either. **A hub's title is written this way for the same
+reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
+where it shows most.
+
 **A title that has stopped describing the work is corrected while the work is still running.** A
 title is written before the work exists, so it is a guess the work is free to outrun, and going
 stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
