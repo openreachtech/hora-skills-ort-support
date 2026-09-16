@@ -414,25 +414,25 @@ it, which is why the sender is the default rather than a name somebody has to ch
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-pull request's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything the reader will match against the diff goes in backticks** — file names and paths,
+class, method, function and variable names, package names, config keys, versions, commands. The
+body is read at merge with the diff already open, and a name set in prose is one they have to
+find twice.
 
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-Everything a reader would copy and search for takes backticks: file names and paths, class,
-method, function and variable names, package names, config keys, versions, commands. A name
-written in code is written in backticks in prose as well.
-
-**A version number is one of them, in the title as much as in the body.** It is what a reader
-copies to check what they are running against, and left bare it reads as prose rather than as a
-value.
+**The title takes them as well.** It is what survives the merge commit, and a raise nobody can
+read a version out of says only that something moved.
 
 ```
 Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
 Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
+```
+
+**Never link a path.** The pull request has a URL of its own, and a relative link resolves against
+that rather than the repository tree — so it breaks on the way to review.
+
+```
+Bad   [`docs/quick-start.md`](./docs/quick-start.md)
+Good  `docs/quick-start.md`
 ```
 
 ## Out of scope
