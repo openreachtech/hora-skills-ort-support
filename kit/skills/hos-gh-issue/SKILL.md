@@ -43,9 +43,6 @@ says nothing and costs the reader a stop.
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
 
-**Inside an H1 section, headings from H2 down may be used.** Depth is not capped, and grouping a
-long `# Checklist` under H2s is the ordinary use.
-
 **Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go:
 `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. A hub with
 work of its own is not a hub — that work belongs in one of the children.
@@ -71,6 +68,34 @@ both; **a hub carries only the second.**
 
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
+
+## When a section takes H2s
+
+**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
+number of subjects the section holds — never the number of items.** A section holding ten items on
+one subject takes none; a section holding two items on two subjects takes both. Depth is not
+capped, and the same test settles each level below.
+
+**An H2 is a table of contents.** `# As-is` says only "the current state", so a section carrying
+two kinds of current state leaves the reader sorting the items as they go. The H2 hands them that
+sorting before they start.
+
+**So a count never triggers one.** Six items falling four on one subject and two on another take
+two H2s, and the four are not divided again — items differing only in which thing they name are
+one subject. The division lands where the subjects part, never where the items pile up.
+
+Two signs say a section wants them.
+
+- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
+  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
+  subject boundary making itself felt. It is the earlier of the two signs, because it arrives
+  while the section is still being written
+- **`# As-is` and `# Checklist` disagreeing.** The division is the issue's own, so the current
+  state and the work divide the same way. Where the two sets of H2s do not correspond, one of the
+  two divisions is wrong
+
+**The second sign catches what the first misses.** A flat run of six items raises no wish to nest
+anything, and is as unsorted as a nested one would have been.
 
 ## `# As-is` is observed, never inferred
 
