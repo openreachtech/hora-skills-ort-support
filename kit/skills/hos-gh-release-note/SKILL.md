@@ -260,7 +260,10 @@ usually has the right neighbour by accident.
   to disagree
 - **The oldest tag has no predecessor**, and its note is written as a first release: what the
   version is, rather than what moved. There is no compare link, so `# Change Log` is left out
-- **The tag has to be present locally to be diffed.** `git fetch --tags` first where it is not
+- **The tag is confirmed on the remote, not only here.** A release hangs off the tag the host
+  holds, so one that exists locally alone is not the tag the note is for.
+  `git ls-remote --tags origin` answers it, and `git fetch --tags` brings it down so the range
+  can be diffed
 
 ## Language
 
@@ -413,10 +416,10 @@ Good  Raise `example-parser` to `4.0.1`
 
 ## Out of scope
 
-- **Whether a release exists at all.** Tagging and creating one may belong to a workflow; this
-  skill writes the note that goes in it
 - **Whether to publish a draft, and when.** That is a person's call, as taking a pull request out
   of draft is
-- **Tagging, and the commits the range covers.** They belong to the git conventions
+- **Tagging, and the commits the range covers.** A tag is set by a person through CI, and both
+  belong to the git conventions. This skill's reach ends at confirming the tag is on the remote;
+  what it creates from there is the release that carries the note
 - **The pull request and issue bodies.** How the work was carried out is the pull request's, and
   where things stood is the issue's
