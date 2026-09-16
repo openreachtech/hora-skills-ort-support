@@ -82,6 +82,11 @@ reading that skill **in full** (see [classification.md](./references/classificat
 and reading several in one run multiplies a cost that is already the largest part of the
 work.
 
+**The cost is paid per skill, not per subject**, which is why several subjects landing in one
+skill ride together. The bound counts skills because that is what the reading counts; a run
+carrying three subjects into one skill reads it once, and a run carrying one subject into each
+of three skills reads three.
+
 To grow one skill across several runs: create it on the first run, then pass
 `skill:<that name>` on the following ones.
 
@@ -170,8 +175,9 @@ What it shows, one row per subject:
 | Existing skill | The survey. Blank for none, `not surveyed` when out of range |
 | Proposal | New, addition, or thin |
 
-**The caller picks one subject and nothing else.** Whether a fact is worth keeping is
-phase 5's question, and asking it twice wastes the reading that phase 3 has not done yet.
+**The caller picks one skill's worth — one subject, or several that land in the same skill.**
+Whether a fact is worth keeping is phase 5's question, and asking it twice wastes the reading
+that phase 3 has not done yet.
 Mark a subject with one weak passage as `thin`, and say whether it is better dropped or
 folded into another.
 
