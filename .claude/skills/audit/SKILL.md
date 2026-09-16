@@ -29,9 +29,9 @@ It prints how many skills it checked, then one group per kind of problem, and ex
 | `Folder name is not ...` | The folder name does not read `hos-<name>`, and the folder name is the installed name. |
 | `Missing name:` | The frontmatter declares no `name:`. |
 | `name: does not match the folder name` | The two disagree, so a reader cannot tell which one the skill is. |
-| `Catalog rows do not match ...` | A catalog is missing a row for a skill, or carries a row for something not under `kit/skills/`. |
+| `Catalogs do not match ...` | A catalog is missing a row or a boundary bullet for a skill, or carries one for something not under `kit/skills/`. |
 
-`docs/skills.md` and `docs/skills.ja.md` each restate `kit/skills/` as a table, one row per skill, written by hand. A skill added, renamed or dropped moves both catalogs or neither. No document states a skill count any more, so none is checked: a count is derivable from the directory, and the catalog beside it already shows the skills.
+`docs/skills.md` and `docs/skills.ja.md` each restate `kit/skills/` twice, written by hand: a table with one row per skill, and a boundary section with one bullet per skill. A skill added, renamed or dropped moves all four or none of them, and each of the four is checked in both directions. No document states a skill count any more, so none is checked: a count is derivable from the directory, and the catalog beside it already shows the skills.
 
 The rule for a valid name is written out in this script and in the build's, rather than shared through an import, so that neither has to reach into the other's skill folder. A test pins the two copies to each other: changing the rule in one place alone fails it.
 

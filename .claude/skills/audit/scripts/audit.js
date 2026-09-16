@@ -9,8 +9,8 @@ const namePattern = /^hos-[a-z0-9-]{1,60}$/u
 /**
  * Every catalog the documents keep of the skills this package distributes.
  *
- * A catalog restates `kit/skills/` as a table, one row per skill. Each entry
- * names the file and what the catalog is called in a report.
+ * A catalog restates `kit/skills/` twice, as a table and as a boundary section.
+ * Each entry names the file and what the catalog is called in a report.
  *
  * @returns {Array<{file: string, label: string}>} One entry per catalog.
  */
@@ -22,11 +22,27 @@ function catalogFiles () {
 }
 
 /**
- * Compare one catalog's rows against the skills actually there.
+ * Every part of a catalog that names one skill per entry.
+ *
+ * The table gives a skill a row and the boundary section gives it a bullet, so a
+ * skill added, renamed or dropped moves both or neither. Each entry names the
+ * part in a report and the pattern that finds its entries.
+ *
+ * @returns {Array<{part: string, pattern: RegExp}>} One entry per part.
+ */
+function catalogParts () {
+  return [
+    { part: 'row', pattern: /^\| `([^`]+)` \|/gmu },
+    { part: 'boundary', pattern: /^- \*\*`([^`]+)`/gmu },
+  ]
+}
+
+/**
+ * Compare every part of one catalog against the skills actually there.
  *
  * @param {{file: string, label: string}} catalog - Which catalog to read.
  * @param {Array<string>} folderNames - The skill folders under kit/skills/.
- * @returns {Array<string>} A report line per skill with no row, and per row naming no skill.
+ * @returns {Array<string>} A report line per skill with no entry, and per entry naming no skill.
  */
 function readCatalogedNames (
   catalog,
@@ -40,20 +56,24 @@ function readCatalogedNames (
     ]
   }
 
-  const cataloged = Array.from(
-    readFileSync(absolutePath, 'utf8')
-      .matchAll(/^\| `([^`]+)` \|/gmu),
-    it => it[1]
-  )
+  const content = readFileSync(absolutePath, 'utf8')
 
-  return [
-    ...folderNames
-      .filter(it => !cataloged.includes(it))
-      .map(it => `${catalog.file}  (${catalog.label} — no row for ${it})`),
-    ...cataloged
-      .filter(it => !folderNames.includes(it))
-      .map(it => `${catalog.file}  (${catalog.label} — a row for ${it}, which is not under kit/skills/)`),
-  ]
+  return catalogParts()
+    .flatMap(({ part, pattern }) => {
+      const cataloged = Array.from(
+        content.matchAll(pattern),
+        it => it[1]
+      )
+
+      return [
+        ...folderNames
+          .filter(it => !cataloged.includes(it))
+          .map(it => `${catalog.file}  (${catalog.label} — no ${part} for ${it})`),
+        ...cataloged
+          .filter(it => !folderNames.includes(it))
+          .map(it => `${catalog.file}  (${catalog.label} — a ${part} for ${it}, which is not under kit/skills/)`),
+      ]
+    })
 }
 
 /**
@@ -186,7 +206,7 @@ const problemGroups = [
       .map(it => `${it.path}/SKILL.md`),
   },
   {
-    heading: 'Catalog rows do not match what is under kit/skills/',
+    heading: 'Catalogs do not match what is under kit/skills/',
     lines: catalogFiles()
       .flatMap(it => readCatalogedNames(it, presentSkillFolderNames)),
   },

@@ -1,6 +1,6 @@
 ---
 name: hos-skillify
-description: "Build a skill out of the conversation you are in: mine its transcript, decide what is durable convention, and hand the result to the skill-writing convention. Use when a thread has settled something worth keeping — as a new skill, or as an addition to one that already exists. Produces skills only: material that turns out not to be a convention is reported and dropped. Naming, `description:` and file layout belong to the skill-updating convention, not here."
+description: "Build a skill out of the conversation you are in: mine its transcript, decide what is durable convention, and hand the result to the skill-updating convention. Use when a thread has settled something worth keeping — as a new skill, or as an addition to one that already exists. Produces skills only: material that turns out not to be a convention is reported and dropped. Naming, `description:` and file layout belong to the skill-updating convention, not here."
 ---
 
 # Skillify
@@ -45,6 +45,25 @@ then where that thing lives, then how the run behaves. **Accept the `key:value` 
 in any order** — making the order a requirement buys nothing and fails a caller who
 writes them the other way round.
 
+**What separates an option from the topic is its shape, never its position.** The arguments
+arrive as one string, and it is this skill that divides them: a token opening with one of the
+keys above and a colon is that option, the bare word `dry` is that flag, and **everything else
+is the topic**, joined in the order it appeared. A topic holding spaces therefore needs no
+quoting, and **quoting it is worse than leaving it bare** — nothing here strips a quote mark, so
+it would be harvested as part of the subject.
+
+Two topics cannot be written at all, and a caller meets them by surprise rather than by an
+error:
+
+- **A topic holding a colon.** Everything up to it reads as a key, and an unknown key is not an
+  error — the run simply mines for a subject that lost its first words. Write the clause without
+  the colon
+- **A topic holding the standalone word `dry`.** The run reports and writes nothing, which looks
+  like a decision somebody made. Reword it, or drop the topic and let the subject gate ask
+
+**A deliberate `dry` is worth stating twice** — once as the flag and once in the report — so that
+a run which wrote nothing never leaves the caller wondering whether it was asked to.
+
 **There is no argument for choosing a source.** Material from outside the conversation —
 a chat log from elsewhere, a design document, someone's notes — arrives by being pasted
 in, and a pasted block is part of the thread from that moment. An argument would only be
@@ -62,6 +81,11 @@ This bound is what makes the rest affordable. Adding to an existing skill requir
 reading that skill **in full** (see [classification.md](./references/classification.md)),
 and reading several in one run multiplies a cost that is already the largest part of the
 work.
+
+**The cost is paid per skill, not per subject**, which is why several subjects landing in one
+skill ride together. The bound counts skills because that is what the reading counts; a run
+carrying three subjects into one skill reads it once, and a run carrying one subject into each
+of three skills reads three.
 
 To grow one skill across several runs: create it on the first run, then pass
 `skill:<that name>` on the following ones.
@@ -145,16 +169,34 @@ What it shows, one row per subject:
 
 | Column | Where it comes from |
 | :-- | :-- |
+| # | A number, counted from one |
 | Subject | The files touched and the words of the correction |
 | Passages | Counted in this phase |
 | Touched | The arguments of the tool calls |
 | Existing skill | The survey. Blank for none, `not surveyed` when out of range |
 | Proposal | New, addition, or thin |
 
-**The caller picks one subject and nothing else.** Whether a fact is worth keeping is
-phase 5's question, and asking it twice wastes the reading that phase 3 has not done yet.
+**The caller picks one skill's worth — one subject, or several that land in the same skill.**
+Whether a fact is worth keeping is phase 5's question, and asking it twice wastes the reading
+that phase 3 has not done yet.
 Mark a subject with one weak passage as `thin`, and say whether it is better dropped or
 folded into another.
+
+**A `thin` verdict counts passages; it does not report what they establish.** This phase is
+deliberately too shallow to judge that — the artefacts and the words of the correction, and no
+further — so `thin` is a count with a guess attached to it. **The caller overrides it without
+owing an argument.**
+
+Measured across two runs, `thin` was wrong both times it was used. One subject was marked on a
+misreading of how its exchange had closed, and produced two rows. The other was marked because no
+skill seemed to hold it, and produced four rows across two skills.
+
+**The second is the failure the column invites.** `New`, `addition` and `thin` sit in one cell
+while answering two different questions: the first two say which skill, the third says how much
+material. A subject with no obvious home is not thin, and a subject with one weak passage can have
+an obvious home. **Where a subject looks homeless, leave `Existing skill` blank and leave
+`Proposal` alone** — which skill it belongs to is settled at the sift, with the reading this phase
+has not done.
 
 Where the subjects are to be split rather than merged, say so with the reason. The reason
 is not a matter of taste: a skill's prefix has to match the directory it sits in, so
@@ -225,9 +267,15 @@ This stop always happens. It carries the outline and, for a new skill, the name.
 The outline is **a table, not prose.** Reviewing prose is expensive, and the argument is
 never about the wording — it is about which facts survive.
 
-| Claim | Basis | Kind | Source | Verdict |
-| :-- | :-- | :-- | :-- | :-- |
-| A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
+**A table the caller has to point at carries an identifier, and both of these are pointed at.**
+A row is answered with its number, so a caller who has to quote the subject back in order to name
+it is being charged for the table's own omission — and the quote is the place a selection goes
+wrong, because two rows of one harvest often differ by a few words. Numbering elsewhere is a
+default worth refusing; here it is what the table is for.
+
+| # | Claim | Basis | Kind | Source | Verdict |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| A number, counted from one | A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
 
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is

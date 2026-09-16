@@ -10,6 +10,12 @@ disagree about the same sentence, and the loop cannot say whether a round improv
 slightly differently, which is why each entry below is the rule and its test, and the example is
 only there to show the shape.
 
+**They are held against the document under repair, and against nothing else.** A skill is written
+for an agent; a document is maintained for a reader. So the library's own `SKILL.md` and the files
+under its `references/` are not what these criteria are run over, and how a skill is written
+belongs to the convention that governs skills. `hos-documentation-audit` states the same split
+from its own side.
+
 ---
 
 ## 1. Every word and reference resolves to exactly one thing
@@ -83,7 +89,7 @@ that line.
 
 Three outcomes, and only the first two are allowed:
 
-| | |
+| Outcome | What it comes out as |
 | :-- | :-- |
 | Introduce it at first use | 「まず渡されたものを読みます — これが第0段です」 |
 | Drop the term and say the thing | 「第0段が読みます」 → 「最初に読みます」 |

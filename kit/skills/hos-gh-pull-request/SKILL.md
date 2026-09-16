@@ -40,7 +40,22 @@ and dropping it costs the reader the one line that would have told them what the
 click away. A pull request that repeats it creates a second copy that will disagree with the first
 the moment either is edited.
 
-**`Close #<issue>` is what ties them**, and it is what closes the issue on merge.
+**`# Why` names exactly one issue, always.** A pull request is opened for one reason, and the
+issue is that reason written down. Where the work arrives as several pieces at once, what the
+pull request closes is the issue those pieces sit under — the hub — and never the children
+beside it.
+
+- **Several `Close` lines say the pull request had several reasons**, which is what one reason
+  rules out. A reader meeting three of them has to work out which the pull request was for, and
+  the answer is that it was for none of them on its own.
+- **The children are reached through the hub**, whose sub-issue panel already lists them.
+  Repeating them here is the restatement above by another route, and it goes stale the moment a
+  child is added or dropped.
+
+**`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
+host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
+— so look at the issue once the pull request has landed, and close it by hand where it is still
+open.
 
 ## `# How` is the approach, not the diff
 
@@ -67,6 +82,65 @@ reader a stop and says nothing.
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
 
+## When a section takes H2s
+
+**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
+number of subjects the section holds — never the number of points.** A `# How` carrying ten
+sentences about one approach takes none; a `# How` carrying two approaches takes one H2 each.
+Depth is not capped, and the same test settles each level below.
+
+**An H2 is a table of contents.** `# How` says only "the approach", so a section carrying two of
+them leaves the reader working out which sentence belongs to which as they go. The H2 hands them
+that sorting before they start. A flat run of long bullets gives them nowhere to aim: every one
+has to be read to find the one they opened the pull request for.
+
+**So a count never triggers one.** Six points falling four on one subject and two on another take
+two H2s, and the four are not divided again — points differing only in which thing they name are
+one subject. The division lands where the subjects part, never where the points pile up.
+
+**And the units of the change never supply the subjects.** One heading per rule added, per file
+touched, per commit made is the change's own table of contents, and the reader already holds it —
+the diff lists the files and the commit subjects list the order. A section built that way restates
+the screen in a different shape, which is what the table under `# How` rules out. What replaces it
+is the reason the points fall together: what the approach rests on, what it hands to another
+convention, what it deliberately left alone.
+
+Three signs say a section wants them, and they arrive in this order.
+
+- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
+  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
+  subject boundary making itself felt. It is the earliest of the three, because it arrives while
+  the section is still being written
+- **One value repeated down the points.** Where several points open with the same words — the
+  same file, the same skill, the same convention — that value is a heading written into each of
+  them instead of above them. **The test is repetition, not naming.** Four points each naming a
+  different thing are the four things and stay as they are; eleven points each naming the same
+  thing are eleven under one subject, and that subject is the heading
+- **`# How` and the linked issue's `# Checklist` disagreeing.** The work divides one way, so the
+  boxes that record it and the approach that carried it out divide the same way. Where the two
+  sets of H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a
+  box it has nothing to say about — it holds the approach, not what was done — and the ones that
+  do answer a box are that box's. It is the last of the three, because it needs the issue as well
+
+**An H2 about how the work was carried out answers no box, and is `# How`'s alone.** The branch
+structure the work took, the order the sub-branches landed in, what was dropped rather than
+written — a `# Checklist` never records any of it, because an issue says where things stand and
+which direction to take and leaves how the work is carried out to this artefact. So the third
+sign is read against the headings that answer boxes, and a heading about the carrying-out is not
+a disagreement with anything.
+
+**Each sign catches what the one before it missed.** A flat run of six points raises no wish to
+nest anything; six points that repeat nothing raise no second sign either, and the division shows
+only when the section and the checklist are held against each other.
+
+**Where two box-answering divisions disagree, the checklist is the one to suspect.** `# How` is
+written after the work, so a heading there is evidence that the work under it was carried out —
+and a box that was never written is the likelier omission of the two. The reverse needs no rule:
+a box `# How` says nothing about is already allowed.
+
+**`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
+each other are `# As-is` and `# Checklist`.
+
 ## Merging a trunk
 
 **A pull request that merges a trunk** — a `release/x.x.x`, a `dev`, an `env` — into another
@@ -92,7 +166,7 @@ Which branches are trunks, and which are sub-branches, is settled by the branch 
 **The title opens with the type's emoji**, as an issue's does, and the rest of it names the work.
 
 ```
-🤖 Author three skills for document repair, issues and pull requests
+🤖 Author the skills that hand work over
 🐛 Fix the skill count the catalog states
 ```
 
@@ -105,6 +179,19 @@ in its `references/types.md`, and this skill keeps no second copy of the list.
 `Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is already
 recorded; the title is what survives it, and a title repeating the branch name says nothing the
 merge commit did not.
+
+**The title names the whole at one altitude, and never lists the parts.** Work that falls into
+two subjects is still one pull request, and the title is where that one piece gets named. `A, and
+B` hands the reader the division instead of the thing, and the division already has a home —
+`# How` carries it under its own `##`.
+
+```
+Bad   🤖 Author three skills for document repair, issues and pull requests
+Good  🤖 Author the skills that hand work over
+```
+
+**The altitude to find is the one the parts sit beneath.** The three skills of the bad title were
+all for handing work over, and the good one covers them without naming any of the three.
 
 ## Language
 
@@ -191,7 +278,6 @@ gh pr create --draft \
   --base <the branch it returns to> \
   --title '🤖 …' \
   --body-file <path> \
-  --reviewer openreachtech/ort-internal \
   --assignee @me
 ```
 
@@ -299,31 +385,20 @@ its marker — and the second is a defect in that branch, not an answer about th
 - **What is still unsettled is asked.** The base can be edited after the fact — `gh pr edit
   --base <branch>` — but not before somebody has read the wrong diff
 
-### Reviewers and the assignee
+### The assignee
 
-**Both are asked once in a conversation, and reused for the rest of it.** The first pull request
-in a thread asks who reviews it and who it belongs to; every one after that takes the same answer
-without asking again. A default that has to be confirmed every time is not a default.
+**`--assignee @me`, and no `--reviewer`.** `@me` is `gh`'s own shorthand for whoever is logged
+in, so nothing has to look the account up first. The pull request is the work of whoever opened
+it, which is why the sender is the default rather than a name somebody has to choose.
 
-| Flag | What it defaults to |
-| :-- | :-- |
-| `--reviewer` | `openreachtech/ort-internal` |
-| `--assignee` | `@me` |
-
-- **A team is written `<org>/<team>`, and a bare slug is not one.** `--reviewer ort-internal`
-  asks GitHub for a user of that handle and fails on finding none; `openreachtech/ort-internal`
-  is the team
-- **`@me` is `gh`'s own shorthand for whoever is logged in**, so nothing has to look the account
-  up first. The pull request is the work of whoever opened it, which is why the sender is the
-  default rather than a name somebody has to choose
-- **Requesting a review on a draft records it rather than asks for it.** Every pull request
-  opened from here is a draft, so the reviewers sit attached to it, and `gh pr ready <number>`
-  is what turns the attachment into a request
-- **The answer lasts the conversation and no longer.** There is nowhere to write it down, so a
-  new thread asks again — and where a long one has lost the answer, asking a second time costs
-  less than guessing
-- **Either can be changed afterwards**: `gh pr edit <number> --add-reviewer <handle>` and
-  `gh pr edit <number> --add-assignee <handle>`
+- **Who reviews is the repository's own arrangement.** A team that names somebody in one
+  organization names nobody in the next, and this skill is installed into repositories whose
+  reviewers it cannot know. A handle that does not resolve fails the create outright
+- **Told who reviews it, pass them.** An instruction in the conversation supplies the one thing
+  the skill cannot work out for itself
+- **Adding one afterwards costs nothing**: `gh pr edit <number> --add-reviewer <handle>`, and
+  `--add-assignee` beside it. A draft holds a reviewer as an attachment rather than a request, so
+  `gh pr ready <number>` is what turns it into one
 
 ### The rest of the command
 
@@ -339,25 +414,25 @@ without asking again. A default that has to be confirmed every time is not a def
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-pull request's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything the reader will match against the diff goes in backticks** — file names and paths,
+class, method, function and variable names, package names, config keys, versions, commands. The
+body is read at merge with the diff already open, and a name set in prose is one they have to
+find twice.
 
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-Everything a reader would copy and search for takes backticks: file names and paths, class,
-method, function and variable names, package names, config keys, versions, commands. A name
-written in code is written in backticks in prose as well.
-
-**A version number is one of them, in the title as much as in the body.** It is what a reader
-copies to check what they are running against, and left bare it reads as prose rather than as a
-value.
+**The title takes them as well.** It is what survives the merge commit, and a raise nobody can
+read a version out of says only that something moved.
 
 ```
 Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
 Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
+```
+
+**Never link a path.** The pull request has a URL of its own, and a relative link resolves against
+that rather than the repository tree — so it breaks on the way to review.
+
+```
+Bad   [`docs/quick-start.md`](./docs/quick-start.md)
+Good  `docs/quick-start.md`
 ```
 
 ## Out of scope
