@@ -1,6 +1,6 @@
 ---
 name: hos-npm-publish-audit
-description: "Audit a package before it reaches the npm registry, and report rather than release it — the artefact a consumer receives is read rather than the repository it was built from, and the inventory goes back in full. Covers the entry points resolved from outside the tree, the document followed the way a reader follows it, and the version number a release spends permanently. Use before a package goes out. Where the version bump sits among the commits is not this skill's."
+description: "Audit a package before it reaches the npm registry — the artefact a consumer receives is read rather than the repository it was built from, and the inventory goes back in full. Covers what an allowlist only declares, the entry points resolved from outside the tree, the document followed the way a reader follows it, and the rules no linter enforces. Use before a package goes out. What happens at the registry, and how a release is ordered, are not this skill's."
 ---
 
 # npm publish audit
@@ -9,16 +9,18 @@ description: "Audit a package before it reaches the npm registry, and report rat
 tarball and a document, and whatever is wrong in either is what they meet in their first
 minute.
 
-It also cannot be taken back. Every other step in a package's life can be redone; this one
-spends a version number permanently, whether or not the release is later withdrawn. So this
-audit reads what is about to go out, reports, and stops.
+**This is the last reading before it arrives.** Whatever is wrong is wrong from the moment it
+does, and no check downstream of here opens it — so this audit reads what is about to go out,
+reports, and stops.
 
 ## What the name says
 
 **`npm` is the registry, and `audit` is the shape.** It reads and reports and repairs nothing,
-as `hos-documentation-audit` does for a document — and here that restraint is not a preference.
-The last step is irreversible, so the person who owns the consequence is the person who takes
-it. **Nothing in this skill runs a publish.**
+as `hos-documentation-audit` does for a document.
+
+**The name also states where it ends.** The audit runs before the package reaches the registry
+and goes no further: what the command takes, what the registry does with it and what can be
+done afterwards are all outside, and none of them is described here.
 
 ## What is read is the artefact, not the repository
 
@@ -87,8 +89,8 @@ grep.**
 
 - These are cheap to check and easy to forget for the same reason: nothing goes red when they
   are violated.
-- **The publish is the last point at which forgetting one is still recoverable.** After it, the
-  text is in a tarball that stays fetchable.
+- **Nothing downstream of this reading looks for them.** This is where they are caught or not
+  at all.
 - Include the rules about files that must not be edited. A document whose whole purpose is to
   record a frozen state is one that a tidy-up will happily bring up to date.
 
@@ -96,7 +98,7 @@ grep.**
 
 **Show the inventory in full — the count and every path, not a summary.** A summary is exactly
 the second-hand statement the reading exists to stop trusting, and a reader who is about to
-spend a version number is owed the thing itself.
+hand this to a stranger is owed the thing itself.
 
 - **A rehearsal is not a finding.** A command that reports what it would have done proves it
   would run. It says nothing about whether what it packed should go out, and reporting that it
@@ -107,40 +109,17 @@ spend a version number is owed the thing itself.
 - **Where nothing was found, say that.** A clean run is a result, and a report that only ever
   appears when something is wrong teaches everybody to skip it.
 
-## Where the audit stops
-
-The audit ends with the report. **A person runs the publish**, and these are the things the
-report tells them, because nothing else will:
-
-- **Whether this is a scoped package's first release.** Scoped packages are not public by
-  default, so that release needs `--access public`; later versions of one already public do not
-- **Whether the version is a prerelease.** `--tag` defaults to `latest`, so a prerelease sent
-  without a tag of its own takes over what `npm install <name>` resolves to for everybody
-- **Whether two-factor authentication is on**, so the command is given `--otp` rather than
-  stalling on a prompt
-
-## What cannot be taken back
-
-| Situation | What the registry allows |
-| :-- | :-- |
-| Within 72 hours | Withdraw the version, as long as nothing in the public registry depends on the package |
-| After 72 hours | Withdraw it only where **all three** hold: nothing depends on it, it had under 300 downloads in the last week, and it has a single maintainer |
-| A version number already used | Never reusable. `package@version` is spent whether or not it was withdrawn |
-| Every version withdrawn | No new version of that package may go out for 24 hours |
-
-**So the remedy for a bad release is a new version, not a withdrawal.** `npm deprecate` puts a
-warning on the version and leaves it fetchable, which is what a consumer who already has it
-needs; taking it away removes it from them and still does not free the number.
-
 ## Out of scope
 
-**What got the tree into a state worth releasing is what this audit could not reach:**
+**Everything on the far side of the reading, and everything that got the tree to it:**
 
-- **Where the version bump sits among the commits, and the two commits it takes.** The
-  publishing convention (`hoc-npm-publish`) covers it, and it is where a reader goes when this
-  audit says the tree is not ready to go out at all
+- **The publish itself** — the command, what it takes, when it is run and by whom. A person's,
+  and the publishing convention's (`hoc-npm-publish`)
+- **What the registry does with a version once it has one**, and what can be done about it
+  afterwards. The same convention's. Nothing here describes it, because a reader who has got
+  that far is past what this audit is for
+- **Where the version bump sits among the commits.** The same convention again, and it is where
+  a reader goes when this audit says the tree is not ready to go out at all
 - **The release note.** `hos-gh-release-note` writes what a reader deciding whether to upgrade
   needs; this audit reads the package, not the announcement
 - **The tag, and the commits in its range.** The git conventions
-- **Running the publish, and deciding when.** Both are a person's, as taking a pull request out
-  of draft is
