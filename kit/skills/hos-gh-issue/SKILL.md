@@ -188,6 +188,11 @@ good one covers both without naming either. **A hub's title is written this way 
 reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
 where it shows most.
 
+**The branch name and the trunk's opening marker are written at this altitude too.** All three
+name one piece of work, so a title that stops listing its parts while the branch name keeps
+listing them leaves the three disagreeing. Those two belong to the git branch convention, which
+states the same rule from their side.
+
 **A title that has stopped describing the work is corrected while the work is still running.** A
 title is written before the work exists, so it is a guess the work is free to outrun, and going
 stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
