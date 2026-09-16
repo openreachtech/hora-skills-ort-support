@@ -40,7 +40,22 @@ and dropping it costs the reader the one line that would have told them what the
 click away. A pull request that repeats it creates a second copy that will disagree with the first
 the moment either is edited.
 
-**`Close #<issue>` is what ties them**, and it is what closes the issue on merge.
+**`# Why` names exactly one issue, always.** A pull request is opened for one reason, and the
+issue is that reason written down. Where the work arrives as several pieces at once, what the
+pull request closes is the issue those pieces sit under — the hub — and never the children
+beside it.
+
+- **Several `Close` lines say the pull request had several reasons**, which is what one reason
+  rules out. A reader meeting three of them has to work out which the pull request was for, and
+  the answer is that it was for none of them on its own.
+- **The children are reached through the hub**, whose sub-issue panel already lists them.
+  Repeating them here is the restatement above by another route, and it goes stale the moment a
+  child is added or dropped.
+
+**`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
+host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
+— so look at the issue once the pull request has landed, and close it by hand where it is still
+open.
 
 ## `# How` is the approach, not the diff
 
