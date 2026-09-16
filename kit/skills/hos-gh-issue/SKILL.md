@@ -1,6 +1,6 @@
 ---
 name: hos-gh-issue
-description: "Write a GitHub issue for this organization and file it — a title carrying its type emoji, and a body of `As-is`, `To-be`, `Note`, `Checklist` and `Sub-issues` — shown in full first, then sent with `gh issue create` once you say so, and handed over as text alone where `gh` is missing or logged out. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. It also writes the body of a sub-issue that GitHub created from a `Sub-issues` line and left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
+description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
 # GitHub issue
@@ -72,6 +72,48 @@ both; **a hub carries only the second.**
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
+## `# As-is` is observed, never inferred
+
+**Every sentence in `# As-is` is something that was read, or it is not written.** The section
+states how things stand, so each sentence is a claim about the present — and one nobody checked
+reads exactly like one that was, which leaves the reader holding a guess they cannot pick out.
+
+- **Read the state where it lives.** Much of what an `# As-is` wants to say about a repository is
+  held by the host rather than by the files — what gates a merge, what has already run, what a
+  job can reach. A clone shows none of it, so a section written from the clone alone describes a
+  repository nobody is looking at
+- **Where the branch for the work already exists, it settles the scope.** An issue written beside
+  a branch describes what that branch carries, and a paragraph wandering onto work the branch
+  does not touch belongs to a different issue
+
+**`# As-is` is the section that fails quietly.** `# To-be` is a direction and `# Checklist` is a
+list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
+as reporting — and a reader who catches one sentence of it false has no reason left to trust the
+others.
+
+## A settled question leaves the body
+
+**An open question belongs in the issue. The history of its answer does not.**
+
+While a matter is undecided, writing it into `# Note` is what gets it decided. The reader is
+being asked for something, and the candidates, the objection against each and what each would
+cost are what they need in order to answer. The section is doing work.
+
+The moment the matter settles, those same paragraphs stop being a question and become an account
+of how the answer was arrived at — what was proposed first, which objection retired it, where
+somebody conceded. **Nobody opens an issue to read that.** What the issue now carries is the
+answer, and the answer is already in the title, the `# To-be` and the `# Checklist`.
+
+- **Delete the section rather than rewriting it in the past tense.** A settled question written
+  up as a record still reads as live, and costs the reader the paragraph it takes to find out it
+  is not.
+- **Reasoning that will govern the next decision of its kind is a convention, and it moves.** It
+  goes to whichever convention owns that kind of decision. Reasoning that explains this issue
+  alone goes nowhere, and nowhere is the right destination for it.
+- **A constraint is not a biography.** `# Note` keeps premises, orderings and warnings, and every
+  one of those still binds after the work is done. What leaves is the deliberation, never the
+  conditions.
+
 ## The title
 
 **The title opens with the type's emoji**, and the rest of it says what the issue is about.
@@ -98,7 +140,13 @@ work was the fifteen.
 title is written before the work exists, so it is a guess the work is free to outrun, and going
 stale is not a defect in the original. Correct it, and bring the branch name and the trunk's
 opening marker along — those two belong to the git branch convention, and what is worth having is
-the three of them saying one thing.
+the four of them saying one thing.
+
+**The body comes with the title.** Where a title named something that has since been renamed, the
+body names it too — in a `# Checklist` path, in a `# Note`, in a `# Sub-issues` line — and none of
+those move when the title does. A title corrected on its own leaves an issue disagreeing with
+itself, and the checklist is where it shows, because a path written inside a box is the copy
+nobody rereads.
 
 The types, and how to pick one, are in [types.md](./references/types.md).
 
@@ -136,6 +184,22 @@ gh issue create --parent <parent number> --title '💪 …' --body-file <path>
   `--remove-sub-issue` undo them
 - **A child filed this way is an issue like any other.** Its title carries its own type emoji and
   its body carries the sections it needs; having a parent changes neither
+
+**Confirm a link from the parent, never from the child.** A child's REST payload carries no
+`parent` field — `parent_issue_url` sits where one would be — so asking it for `.parent` answers
+`null` whether the issue has a parent or not. The reading is indistinguishable from a link that
+never took, and it is the first thing anyone reaches for.
+
+```sh
+gh api /repos/<owner>/<name>/issues/<parent>/sub_issues --jq '.[].number'
+```
+
+- **The parent's `sub_issues` is the plain check**, and it lists every child in one call
+- **From the child's end the relation is reachable only through GraphQL**, as
+  `issue(number: <child>) { parent { number } }`
+- **A link made and then read back wrongly is worse than one not checked at all**, because the
+  next move is to make it again — and a second `--parent` on an issue that already has one is how
+  a relation gets reported as missing while it stands
 
 **A converted sub-issue arrives with an empty body.** No template is applied, so it holds a title
 and nothing else — and **writing that body is this skill's work too.** Given such an issue, write
@@ -246,6 +310,59 @@ Bad   💪 Raise @humanfs/node to 0.16.8
 Good  💪 Raise `@humanfs/node` to `0.16.8`
 ```
 
+## Several of one kind go in a table
+
+**Where one kind of change reaches several things of one kind — fields, parameters, files,
+workflows — they are not enumerated in prose.** They go in a table, one row each, with a column
+for whatever differs between them. This holds in every section of the body, not only in
+`# As-is`.
+
+```
+Bad   `name:`, `repository:`, `bugs:` and `homepage:` all still carry the boilerplate's
+      name, and `description:` still reads `TODO: fulfill here`.
+
+Good  | Field | Current value |
+      | :-- | :-- |
+      | `name:` | `@acme/todo-fulfill-here` |
+      | `description:` | `TODO: fulfill here` |
+```
+
+**Items of one kind are alike by construction, so what a reader came for is the differences.**
+Prose spends its length on what they share and leaves the one thing that varies scattered through
+a run-on clause; a reader checking whether their own case is among them has to parse the sentence
+instead of scanning a column.
+
+- **The columns carry what differs, and nothing else.** Where every row would repeat one value,
+  that value belongs in the line above the table rather than in a column of its own.
+- **This is the prose counterpart of one line per target, below.** A checkbox already gives each
+  item a row of its own; a paragraph does not, and the table is what gives it one.
+
+## One line, one target
+
+**A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
+two files, two workflows or two config keys sharing a line give a reader a box that can only be
+whole or untouched — there is no way to say the half that is done.
+
+```markdown
+Bad   - [ ] Raise `@acme/env` and `jest`
+Good  - [ ] Raise `@acme/env` to `^1.0.6`
+      - [ ] Raise `jest` to `^30.5.1`
+```
+
+- **A dependency line carries the package and the version it goes to.** A raise without its target
+  is not a line somebody can close, because nothing says what would make it true.
+- The rule is not about packages. Anything taking the same operation over several targets splits
+  per target, and a long result is grouped under `##` headings rather than folded back into fewer
+  lines.
+
+**Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
+it a second one that says nothing more — then has to be renumbered every time a line is inserted or
+dropped.
+
+- **Number them where you are asked to.** What is ruled out is reaching for numbering by default,
+  not numbering itself: a reader who has to refer to a line from elsewhere is a reason, and being
+  asked is the other.
+
 ## What the `# Checklist` leaves out
 
 **What CI runs on its own is never a checklist line.** `npm test`, `npm run lint`, a typecheck,
@@ -264,6 +381,15 @@ by hand alone, which is what a box is for.
 
 **A box is work that changes something.** Something left as it stands, and the outcome of a check,
 are neither: they belong under `# Note`.
+
+**Whether a line is still outstanding is checked before it is written.** A box already closed by
+the time the issue is filed is something left as it stands, and belongs under `# Note` with the
+rest — but it only lands there if somebody looked first. Written unchecked, it sends whoever picks
+the issue up to do work that was finished before they arrived.
+
+**A line nothing asks for is the worse of the two.** Where the repository's own documents say a
+thing needs no arranging, a checklist that arranges it invents the work outright, and there is
+nothing to find at review except that the line should never have been there.
 
 ## Two things about the checkboxes
 
@@ -286,11 +412,14 @@ say that is what happened.
 - **Commit messages and branch names.** They belong to the git conventions
 - **Converting a `# Sub-issues` line, and closing a box.** Both are done by hand on GitHub, and
   neither follows from filing the issue
-- **Everything after the issue exists.** Labels, assignees, milestones, the sub-issue panel and
-  the project board are set by whoever owns them, so `gh issue create` is run with none of them
-  and the assignee is left empty on purpose. **An issue is often filed for somebody else to pick
-  up**, which is what parts it from a pull request: that one is the work of whoever opened it,
-  and `hos-gh-pull-request` assigns it to them by default
+- **Everything after the issue exists.** Labels, assignees, milestones and the project board are
+  set by whoever owns them, so `gh issue create` is run with none of them and the assignee is
+  left empty on purpose. **An issue is often filed for somebody else to pick up**, which is what
+  parts it from a pull request: that one is the work of whoever opened it, and
+  `hos-gh-pull-request` assigns it to them by default
+  - **The parent relation is not one of these.** A sub-issue is an issue, and which issue it sits
+    under is part of what it is rather than metadata laid over it afterwards. That is why
+    `--parent` and the `gh issue edit` flags beside it are this skill's, above
 - **A requirement definition document.** That is a document in the repository, written with the
   requester and approved by them. An issue is a work item on the host
 
