@@ -402,17 +402,21 @@ from afterwards.
 
 ## Referring to a file
 
-**Write the path in backticks. Never as a markdown link.** A relative link resolves against the
-release's own URL rather than the repository tree, so it breaks the moment it is pasted.
+**Anything the reader will check against their own manifest goes in backticks** — package names,
+versions, file names and paths, config keys, commands. They came to this note holding the versions
+they are on, so every name in it is something they copy rather than read.
 
-Everything a reader would copy and search for takes backticks: file names and paths, package
-names, config keys, commands, and **every version number**. A version is the thing a reader copies
-to check what they are running against, and left bare it reads as prose rather than as a value.
+**The tables are where this bites hardest.** A `package name` cell and a version cell are read as
+values and nothing else, and a row that sets either in prose costs the reader the comparison the
+table was built for.
 
 ```
 Bad   Raise example-parser to 4.0.1
 Good  Raise `example-parser` to `4.0.1`
 ```
+
+**A path is written, not linked.** A relative link resolves against the release's own URL rather
+than the repository tree, and a note on the repository's front page is where that costs most.
 
 ## Out of scope
 
