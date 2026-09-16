@@ -119,12 +119,24 @@ Three signs say a section wants them, and they arrive in this order.
 - **`# How` and the linked issue's `# Checklist` disagreeing.** The work divides one way, so the
   boxes that record it and the approach that carried it out divide the same way. Where the two
   sets of H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a
-  box it has nothing to say about — it holds the approach, not what was done — but the ones it
-  carries are the checklist's. It is the last of the three, because it needs the issue as well
+  box it has nothing to say about — it holds the approach, not what was done — and the ones that
+  do answer a box are that box's. It is the last of the three, because it needs the issue as well
+
+**An H2 about how the work was carried out answers no box, and is `# How`'s alone.** The branch
+structure the work took, the order the sub-branches landed in, what was dropped rather than
+written — a `# Checklist` never records any of it, because an issue says where things stand and
+which direction to take and leaves how the work is carried out to this artefact. So the third
+sign is read against the headings that answer boxes, and a heading about the carrying-out is not
+a disagreement with anything.
 
 **Each sign catches what the one before it missed.** A flat run of six points raises no wish to
 nest anything; six points that repeat nothing raise no second sign either, and the division shows
 only when the section and the checklist are held against each other.
+
+**Where two box-answering divisions disagree, the checklist is the one to suspect.** `# How` is
+written after the work, so a heading there is evidence that the work under it was carried out —
+and a box that was never written is the likelier omission of the two. The reverse needs no rule:
+a box `# How` says nothing about is already allowed.
 
 **`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
 each other are `# As-is` and `# Checklist`.
