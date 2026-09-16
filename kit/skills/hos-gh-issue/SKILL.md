@@ -309,6 +309,14 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   per target, and a long result is grouped under `##` headings rather than folded back into fewer
   lines.
 
+**Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
+it a second one that says nothing more — then has to be renumbered every time a line is inserted or
+dropped.
+
+- **Number them where you are asked to.** What is ruled out is reaching for numbering by default,
+  not numbering itself: a reader who has to refer to a line from elsewhere is a reason, and being
+  asked is the other.
+
 ## What the `# Checklist` leaves out
 
 **What CI runs on its own is never a checklist line.** `npm test`, `npm run lint`, a typecheck,
