@@ -214,7 +214,7 @@ The types, and how to pick one, are in [types.md](./references/types.md).
 ```markdown
 # Sub-issues
 
-- [ ] 🚀 Publish (npmjs.com) — `@openreachtech/hora` 0.8.0
+- [ ] 🚀 Publish (npmjs.com) — `@openreachtech/hora` `0.8.0`
 - [ ] 📄 Specification of the new drop-off directory
 ```
 
