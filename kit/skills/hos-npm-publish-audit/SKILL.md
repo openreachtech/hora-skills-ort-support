@@ -90,3 +90,12 @@ the second-hand statement the reading exists to stop trusting.
   with the findings.
 - **Where nothing was found, say that.** A clean run is a result, and a report that only ever
   appears when something is wrong teaches everybody to skip it.
+
+## Out of scope
+
+- **Repairing what the reading finds.** A file that must not ship, an entry point that resolves
+  here and not there, a document teaching a default the package does not hold — each is fixed by
+  whoever owns it. This is the last reading before a package goes out, and what it owes the person
+  deciding is the finding, not a tree quietly put right underneath them
+- **Whether to publish, and when.** The reading says what is in the tarball; taking that as a yes
+  is a person's call, as taking a pull request out of draft is
