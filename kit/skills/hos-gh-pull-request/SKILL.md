@@ -84,6 +84,17 @@ Follow-up deliberately left for later, a side effect somebody will meet, an orde
 another pull request. **It is left out entirely when there is none** — an empty heading costs the
 reader a stop and says nothing.
 
+**A note is about this pull request's own content, and nothing else.** What belongs is what the
+reader cannot take from the diff in front of them — above all what the work deliberately did not
+do, where the diff on its own would read as an oversight. A test case simplified rather than
+written out in full is one shape of it, and a `## TODO` section naming what the change leaves for
+later is another. The reader meets the gap, and the line is what tells them it was chosen.
+
+**What holds for every pull request is not a note.** How the host behaves on a merge, what a
+keyword does when one lands, which steps somebody takes afterwards — whoever merges pull requests
+brings that with them, and a body restating it spends the reader's one stop on something this
+change does not contain.
+
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
 
