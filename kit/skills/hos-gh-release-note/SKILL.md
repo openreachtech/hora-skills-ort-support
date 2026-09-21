@@ -1,6 +1,6 @@
 ---
 name: hos-gh-release-note
-description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the compare link, its `##` sections taken from a standing list it may extend and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
+description: "Write a release note for a tag and send it — a body of `# What's Changed` carrying the change itself and `# Change Log` carrying nothing but the link to its range, its `##` sections taken from a standing list it may extend and led by `## Kicked Out`, `## Deprecated` and `## New Features` on a new major and by `## Security` on every other release, with dependency moves in a table per `package.json` field and a third table for `overrides:`. Covers the range a single tag implies, the confirmation every body takes before it is sent, and the draft every new release is created as. Use whenever a release note is asked for. Pull request bodies, issue bodies and commit messages are not this skill's."
 ---
 
 # GitHub release note
@@ -20,7 +20,7 @@ at the text it wrote; `hos-gh-issue` and `hos-gh-pull-request` are the others ca
 | Heading | What goes in it | Level |
 | :-- | :-- | :-- |
 | `# What's Changed` | The changes themselves, in `##` sections | H1 |
-| `# Change Log` | The compare link, and nothing else | H1 |
+| `# Change Log` | One link to the range, and nothing else | H1 |
 
 **Both are H1, and the sections inside `# What's Changed` are H2.** The host's own generated body
 opens at H2, so a note written to this shape replaces that body rather than being appended to it.
@@ -33,9 +33,23 @@ opens at H2, so a note written to this shape replaces that body rather than bein
 **Full Changelog**: https://github.com/<owner>/<repo>/compare/<previous tag>...<tag>
 ```
 
+**A first release has no predecessor to compare against, and it carries the heading all the
+same** — with the link the host generates for a tag that has nothing before it:
+
+```markdown
+# Change Log
+
+**Full Changelog**: https://github.com/<owner>/<repo>/commits/<tag>
+```
+
+**Every release carries `# Change Log`, the first one included.** It is where a reader is most
+likely to want the whole list, because no earlier note holds any of it — and a body that stops
+without the heading reads as one somebody left unfinished rather than as one whose range had no
+far end.
+
 **It holds nothing else.** The name invites being read as "the list of changes", and it is not
-that — the changes are in `# What's Changed`. This heading exists so the compare link arrives
-under a heading rather than trailing off the end of the body.
+that — the changes are in `# What's Changed`. This heading exists so the link arrives under a
+heading rather than trailing off the end of the body.
 
 ## What it leaves out
 
@@ -259,7 +273,8 @@ usually has the right neighbour by accident.
   `compare/<previous tag>...<tag>` link. Deciding it separately in two places is how the two come
   to disagree
 - **The oldest tag has no predecessor**, and its note is written as a first release: what the
-  version is, rather than what moved. There is no compare link, so `# Change Log` is left out
+  version is, rather than what moved. **`# Change Log` stays**, carrying `commits/<tag>` in place
+  of a compare link
 - **The tag is confirmed on the remote, not only here.** A release hangs off the tag the host
   holds, so one that exists locally alone is not the tag the note is for.
   `git ls-remote --tags origin` answers it, and `git fetch --tags` brings it down so the range

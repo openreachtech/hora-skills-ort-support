@@ -52,6 +52,11 @@ beside it.
   Repeating them here is the restatement above by another route, and it goes stale the moment a
   child is added or dropped.
 
+**The only issue the body links is the one it closes.** Naming another puts a cross-reference to
+this pull request into that issue, so an issue mentioned in passing — as background, as a
+neighbour, as something the work touched on the way — arrives in that issue beside the pull
+request that closes it, and which one closed it stops being readable from there.
+
 **`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
 host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
 — so look at the issue once the pull request has landed, and close it by hand where it is still
@@ -78,6 +83,27 @@ places.
 Follow-up deliberately left for later, a side effect somebody will meet, an ordering dependency on
 another pull request. **It is left out entirely when there is none** — an empty heading costs the
 reader a stop and says nothing.
+
+**A note is about this pull request's own content, and nothing else.** What belongs is what the
+reader cannot take from the diff in front of them — above all what the work deliberately did not
+do, where the diff on its own would read as an oversight. A test case simplified rather than
+written out in full is one shape of it, and a `## TODO` section naming what the change leaves for
+later is another. The reader meets the gap, and the line is what tells them it was chosen.
+
+**What holds for every pull request is not a note.** How the host behaves on a merge, what a
+keyword does when one lands, which steps somebody takes afterwards — whoever merges pull requests
+brings that with them, and a body restating it spends the reader's one stop on something this
+change does not contain.
+
+**What the reader already has is not a note.** The heading is read for what nothing else in front
+of them supplies, so a line the linked issue, the title or the diff has already delivered spends
+the stop and gives nothing back for it. The linked issue is the usual source — it holds where
+things stand and which direction to take, and a note restating either of those puts one sentence
+in two places, leaving a reader to work out whether the difference between them was meant.
+
+**The two paragraphs above are the shapes this takes most often**, and the test behind all three
+is the same: strike the line out, and ask what the reader would then not know. Where the answer is
+nothing, it was struck out for good.
 
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
