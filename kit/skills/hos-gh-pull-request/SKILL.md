@@ -95,6 +95,16 @@ keyword does when one lands, which steps somebody takes afterwards — whoever m
 brings that with them, and a body restating it spends the reader's one stop on something this
 change does not contain.
 
+**What the reader already has is not a note.** The heading is read for what nothing else in front
+of them supplies, so a line the linked issue, the title or the diff has already delivered spends
+the stop and gives nothing back for it. The linked issue is the usual source — it holds where
+things stand and which direction to take, and a note restating either of those puts one sentence
+in two places, leaving a reader to work out whether the difference between them was meant.
+
+**The two paragraphs above are the shapes this takes most often**, and the test behind all three
+is the same: strike the line out, and ask what the reader would then not know. Where the answer is
+nothing, it was struck out for good.
+
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
 
