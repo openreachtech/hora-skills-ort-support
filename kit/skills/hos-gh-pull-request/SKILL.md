@@ -52,6 +52,11 @@ beside it.
   Repeating them here is the restatement above by another route, and it goes stale the moment a
   child is added or dropped.
 
+**The only issue the body links is the one it closes.** Naming another puts a cross-reference to
+this pull request into that issue, so an issue mentioned in passing — as background, as a
+neighbour, as something the work touched on the way — arrives in that issue beside the pull
+request that closes it, and which one closed it stops being readable from there.
+
 **`Close #<issue>` is what ties them**, and the tie is what the line is written for. Whether the
 host closes the issue off the back of it is the host's, and which merges it acts on is not fixed
 — so look at the issue once the pull request has landed, and close it by hand where it is still
