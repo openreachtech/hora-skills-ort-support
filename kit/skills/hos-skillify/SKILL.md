@@ -173,8 +173,14 @@ What it shows, one row per subject:
 | Subject | The files touched and the words of the correction |
 | Passages | Counted in this phase |
 | Touched | The arguments of the tool calls |
-| Existing skill | The survey. Blank for none, `not surveyed` when out of range |
+| Existing skill | The survey: the skill's name and the library holding it. Blank for none, `not surveyed` when out of range |
 | Proposal | New, addition, or thin |
+
+**The library goes in that cell beside the name.** `dir:` is answered from this column, and a
+skill's prefix has to match the library that holds it — so a bare name lets a caller read the
+right skill and name the wrong repository. Measured: two subjects whose target carried the
+foundational library's prefix were answered with the support library's path, and nothing but the
+survey that followed caught it.
 
 **The caller picks one skill's worth — one subject, or several that land in the same skill.**
 Whether a fact is worth keeping is phase 5's question, and asking it twice wastes the reading
