@@ -146,6 +146,12 @@ as work that belongs to a skill that already exists. A repository outside the on
 `dir:` is not surveyed; where a subject plainly belongs to a domain that is not there, say
 `not surveyed` rather than `none`.
 
+**A repository holding no skills at all is reported before the table, never inside it.** `Blank
+for none` answers a question about the subject, and where the surveyed repository is not one that
+holds skills it answers nothing — every row comes back blank, and a column of blanks reads as a
+harvest of new skills rather than as a search run in the wrong place. Say that the repository
+holds none, and that `dir:` therefore has to be supplied, before any row is shown.
+
 **A `skill:` the survey does not find is a question, never a creation.** Stop and ask
 whether to create it under that name, offering the closest names the target does hold.
 
