@@ -367,6 +367,15 @@ repositories keep one as repository-local tooling. Where there is none, at least
 that `name:` matches the folder name and that the frontmatter parses, since both are
 conditions the skill-updating convention states and neither survives being wrong.
 
+**That check does not read the text.** It answers whether the skill sits where it should and
+declares the name it should, and a body that lost a paragraph on the way in passes it untouched.
+Measured: a commit whose fenced block had been eaten before it reached the file passed both the
+repository's audit and its linter.
+
+So read back what was written, against what was meant to be written, before the commit stands.
+Where the writing spliced into an existing file, the diff is what to read; where it appended, the
+tail of the file is. Reading the line count alone is enough to catch the larger accidents.
+
 ## Adding material after a run
 
 The outline is often what reveals that something is missing. The loop for that is to end
