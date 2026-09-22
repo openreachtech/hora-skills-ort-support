@@ -334,6 +334,24 @@ its origin verbatim is not one.
 Skills are written in English. A thread in another language is translated here, not
 transcribed.
 
+**The text reaches the file as a file, never as a string some other syntax reads first.** A skill
+body is full of backticks and dollar signs, and each is a substitution in two places on the way
+in. A shell reads a backtick pair as a command, runs it, and puts its **output** where the pair
+stood — so a fenced block passed inside a quoted argument is executed and replaced by whatever it
+printed, which is usually nothing at all. A replacement string in a substitution reads the same
+characters as references to the surrounding match, and puts the matched text, or everything
+before it, where they stood.
+
+Measured twice, on one passage: passed through a quoted shell argument, a fenced block came out
+of the commit as a single blank line, and the command written inside it had been run on the way;
+passed as a replacement string, the same passage inserted the whole of the file that preceded it.
+Neither failure announced itself — both produced a file, a commit, and a clean audit.
+
+Put the passage in a quoted heredoc, or in a file the writer reads, and **pass the replacement as
+a function rather than as a string** — a function's return value is taken verbatim, where a
+replacement string is read for its own references first. Nothing between the passage and the file
+may interpret it.
+
 Then hand over. The skill-updating convention decides the file layout, the shape of
 `description:`, and whether a section belongs in `SKILL.md` or under `references/`.
 
