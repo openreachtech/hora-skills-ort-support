@@ -242,6 +242,20 @@ separates it from a decision: *did it close the matter, or was it one voice amon
 several?* A decision closes. In a pasted chat log, look at whether the thread went on
 disputing it.
 
+**A claim is read against its own basis before it goes any further.** The claim is written after
+the passage has been read, and it can come out saying more than the passage showed — not because
+the wrong side of an exchange won, which the harvest already guards against, but because the
+sentence generalised past the evidence standing beside it.
+
+Measured: a row read *an authentication failure names the address, not the credential*, while the
+exchange it came from had no credential at hand at all. The failure was exactly what it announced
+itself to be; what had been wrong was the conclusion drawn next to it. The row passed this phase
+and the sift, and was caught at the gate only because the caller asked something else about it.
+
+So hold the two against each other: **does the basis, on its own, oblige the claim?** Where it
+obliges something narrower, the narrower thing is the fact. The gate sets them in adjacent cells
+for this reason, and that is the last place the gap can be seen.
+
 When adding to an existing skill, classify every fact against what that skill already
 says. The relations, and why the target has to be read in full to tell them apart,
 are in [classification.md](./references/classification.md).
