@@ -197,6 +197,12 @@ good one covers both without naming either. **A hub's title is written this way 
 reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
 where it shows most.
 
+**A hub's title is read beside its children's before it is settled.** The altitude rule says
+where the title has to sit; holding it against the children is what says whether it does. A title
+that comes out identical to one of them is the plainest reading of having pitched it at a child
+instead of above them all — and the collision reaches the host, where two issues then carry one
+name and neither can be picked out of a list.
+
 **The branch name and the trunk's opening marker are written at this altitude too.** All three
 name one piece of work, so a title that stops listing its parts while the branch name keeps
 listing them leaves the three disagreeing. Those two belong to the git branch convention, which
