@@ -325,6 +325,24 @@ assembled the command.
 **`--base` is always stated.** Left out, `gh` opens against the repository's default branch, and
 a sub-branch here usually returns to a trunk that is not it.
 
+**`git fetch origin --prune` is run before the pull request is opened, every time.** The walk
+below reads remote-tracking refs, and those are a copy of what the remote held when it was last
+fetched — so a walk against a stale copy names a base out of the past and the command carries it
+to the host unchanged.
+
+- **The prune is what makes it an answer.** Without it, a branch deleted on the remote stays in
+  the local copy and goes on scoring in the walk, so the base that comes out is one the host no
+  longer has.
+- **Detect the base immediately before the command, not earlier in the run.** Between the walk
+  and the create there is a body to write and flags to settle, and a base merged during that
+  interval is gone by the time `gh` reads it. Measured: a base was detected, and was merged and
+  its branch deleted while the body was being written.
+- **A refusal naming the base ref is the base having moved, not the walk having erred.** `gh`
+  answers `Base ref must be a branch` alongside `No commits between`, and both describe a branch
+  that is no longer there rather than a mistake in finding it. Fetch again, walk again, and take
+  what comes out — it is usually one trunk higher, because what removed the base was its own
+  merge into that trunk.
+
 **The base is the nearest trunk above, and what marks a trunk is the commit it opens with.** A
 branch merged through GitHub never reaches its trunk by a local merge, so the trunk has to be
 named on the command — and its name is no help in finding it. A `feature/xxx` with branches cut
