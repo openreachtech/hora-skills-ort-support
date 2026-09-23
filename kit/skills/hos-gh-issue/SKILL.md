@@ -316,6 +316,18 @@ sections it needs — and the title is on the host, not in the conversation.
 gh issue view <number>
 ```
 
+**An issue handed over to be rewritten is read from its panel first, not from its body.** A hub
+whose `# Sub-issues` lines have all been converted carries no trace of being one: the section is
+gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it from the
+body alone produces a `# Checklist` on an issue that may not take one, and a title pitched at the
+altitude of whichever child was in view.
+
+```sh
+gh api /repos/<owner>/<name>/issues/<number>/sub_issues --jq '.[].number'
+```
+
+Empty means no children. Anything else means the issue is a hub, whatever its body looks like.
+
 ### Filing
 
 **`gh` is touched only after the text has been shown.** A send is not the moment to read what is
