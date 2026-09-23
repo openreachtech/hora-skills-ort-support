@@ -352,6 +352,15 @@ a function rather than as a string** — a function's return value is taken verb
 replacement string is read for its own references first. Nothing between the passage and the file
 may interpret it.
 
+**The anchor is confirmed to occur exactly once before anything is spliced.** A splice names a
+passage of the target and puts the new text beside it, so an anchor matching nothing writes into
+a file that has moved underneath the run, and one matching twice writes beside whichever came
+first. Count the occurrences, and refuse anything but one.
+
+Measured: the count refused two splices, both because the anchor had been copied with a
+typographic quotation mark where the file carries an upright one — and both refusals came before
+the file was touched.
+
 Then hand over. The skill-updating convention decides the file layout, the shape of
 `description:`, and whether a section belongs in `SKILL.md` or under `references/`.
 
