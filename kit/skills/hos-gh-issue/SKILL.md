@@ -47,6 +47,15 @@ says nothing and costs the reader a stop.
 `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. A hub with
 work of its own is not a hub — that work belongs in one of the children.
 
+**Where no child covers a piece of the work, the piece gets a child of its own.** The rule above
+says where such work belongs; it does not say what to do when none of the children standing there
+holds it. Neither of the two easy answers is the answer: the hub does not keep it, and the
+nearest child is not widened to reach it. File one more, and the hub is a hub again.
+
+- **A hub is checked against the work, not against its own children.** Reading the children and
+  finding them coherent says nothing about what they leave out — the residue only shows when the
+  work is listed beside them.
+
 **A hub's title takes one of two forms, and the word `Hub` appears in neither.**
 
 ```
