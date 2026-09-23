@@ -277,6 +277,23 @@ gh api /repos/<owner>/<name>/issues/<parent>/sub_issues --jq '.[].number'
 and nothing else — and **writing that body is this skill's work too.** Given such an issue, write
 the five sections for it as for any other.
 
+## What decides the parent
+
+**Where the work already exists as commits on a branch, the parent is not chosen — it is read off
+the trunk that branch belongs to.** An issue raised after the fact records work that already sits
+somewhere, and where it sits is what says which issue gathers it. Picking a parent by what the
+issue is about, rather than by where its commits are, puts the record under something the work
+never belonged to.
+
+- **A branch under a `release/x.x.x` takes that release's hub.** Find it before writing the child;
+  the parent is part of what the child is, not a link added afterwards.
+- **Where that hub does not exist, it is filed first.** Writing the child and leaving it parentless
+  until somebody notices is how a release ends up gathering only the issues raised after its hub
+  happened to appear. The hub is cheap — see the `# As-is` it carries — and filing it is what
+  secures the parent the child is about to take.
+- **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
+  the issue has no parent and takes none.
+
 ## Language
 
 **An issue is written in English unless a language is asked for.** The reader is whoever opens the
