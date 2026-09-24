@@ -159,6 +159,22 @@ answer, and the answer is already in the title, the `# To-be` and the `# Checkli
   one of those still binds after the work is done. What leaves is the deliberation, never the
   conditions.
 
+## What the work will erase never enters the body
+
+**A fact the work removes is not the current state a reader needs; it is the state they are about
+to stop living in.** Where the issue is written for work that unifies something, the detail of how
+the several things differ today disappears the moment the work lands, and a reader who took it in
+has learned something in order to discard it.
+
+Say that they differ, and say what they will become. **The inventory of how each one differs is
+what the body leaves out.**
+
+- **The exception is a difference that survives.** Where one of them will keep its own spelling,
+  or where the unification leaves a case behind, that case is a constraint and belongs in
+  `# Note` with the rest.
+- **This is not the settled-question rule above wearing another hat.** That one removes the
+  deliberation behind an answer; this one removes facts that are true today and will not be.
+
 ## The title
 
 **The title opens with the type's emoji**, and the rest of it says what the issue is about.
