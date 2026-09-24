@@ -44,7 +44,7 @@ says nothing and costs the reader a stop.
 | Section | What goes in it |
 | :-- | :-- |
 | `# As-is` | How things stand now, and what that costs. A gap is a current state: "nothing states X" belongs here |
-| `# To-be` | The direction to take. Not the implementation |
+| `# To-be` | The direction to take. Not the implementation, though what will exist once it is taken belongs here |
 | `# Note` | Premises, constraints, warnings, ordering dependencies on other work |
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
