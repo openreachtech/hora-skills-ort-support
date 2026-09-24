@@ -209,9 +209,15 @@ deliberately too shallow to judge that — the artefacts and the words of the co
 further — so `thin` is a count with a guess attached to it. **The caller overrides it without
 owing an argument.**
 
-Measured across two runs, `thin` was wrong both times it was used. One subject was marked on a
-misreading of how its exchange had closed, and produced two rows. The other was marked because no
-skill seemed to hold it, and produced four rows across two skills.
+**Measured across three runs, `thin` has been wrong every time it has been used.** One subject was
+marked on a misreading of how its exchange had closed, and produced two rows. Two were marked
+because no skill seemed to hold them; one produced four rows across two skills, the other eleven.
+
+**The third was given after this paragraph already ruled it out**, which is what settles that
+words are not the remedy. So the verdict is withheld rather than argued against: **`thin` may
+only be given where the skill it would go into is named in the same row.** A subject whose home
+is unknown cannot carry it, because the judgement being made is about material and the thing
+actually unknown is the destination.
 
 **The second is the failure the column invites.** `New`, `addition` and `thin` sit in one cell
 while answering two different questions: the first two say which skill, the third says how much
