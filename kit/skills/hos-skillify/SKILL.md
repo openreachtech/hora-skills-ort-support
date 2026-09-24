@@ -379,7 +379,12 @@ default worth refusing; here it is what the table is for.
 
 | # | Claim | Basis | Kind | Source | Verdict |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| A number, counted from one | A one-line statement of the rule | What established it | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
+| A number, counted from one | A one-line statement of the rule | The evidence itself | Measurement or decision | Where in the thread | New, sharpens, exception, contradicts, covered, or dropped |
+
+**`Basis` carries the evidence, not an account of it.** A cell reporting that a decision was
+made, or that a command was run, asks the caller to approve a rule on the strength of a summary
+written by the party that wants it approved. What goes in the cell is the words that settled it,
+or the command and what it printed.
 
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
