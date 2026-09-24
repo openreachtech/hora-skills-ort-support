@@ -1,6 +1,6 @@
 ---
 name: hos-skillify
-description: "Build a skill out of the conversation you are in: mine its transcript, decide what is durable convention, and hand the result to the skill-updating convention. Use when a thread has settled something worth keeping — as a new skill, or as an addition to one that already exists. Produces skills only: material that turns out not to be a convention is reported and dropped. Naming, `description:` and file layout belong to the skill-updating convention, not here."
+description: "Build a skill out of the conversation you are in: mine its transcript, decide what is durable convention, then write it and run the repository's own audit. Use when a thread has settled something worth keeping — as a new skill, or as an addition to one that already exists. Produces skills only: material that turns out not to be a convention is reported and dropped. Naming, `description:` and file layout belong to the skill-updating convention, not here."
 ---
 
 # Skillify
@@ -18,9 +18,10 @@ The material is the **transcript on disk**, not what remains in the conversation
 context. A long thread has been compacted, and the part that is gone is often the part
 where the corrections happened.
 
-- **Writing the skill is not this skill's work.** Naming, `description:`, directory
-  layout and self-containment belong to the skill-updating convention. This one stops at
-  handing over material that is ready to be written.
+- **A run ends at a skill written and audited**, never at material handed over ready to
+  be written. What it does not settle is naming, `description:`, directory layout and
+  self-containment: those belong to the skill-updating convention, and a run applies
+  them. **The delegation is of decisions, never of the work.**
 - **The output is a skill.** Nothing else. Material that turns out to be project state, or
   a record of some external package's behaviour, is reported at the gate and dropped —
   finding it a home is another tool's job, and a command named *skillify* that writes
