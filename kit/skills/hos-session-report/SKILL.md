@@ -17,10 +17,16 @@ stands between them and the exit.
 A reader who can act on it closes the terminal. So the report is measured against that act:
 
 - **What the session left unfinished in a place that will not keep it** — a change not committed,
-  a branch not pushed, a draft nobody has read, a question asked and not answered.
+  a draft nobody has read, a question asked and not answered.
 - **What it handed over** — the issue filed, the pull request opened, the branch someone else now
   merges. These are finished from the session's side, and saying so is what lets the reader stop
   looking for them.
+
+**A commit is the floor of preservation, and reaching it takes the work out of the report.** The
+criterion is a place that will not keep it, and a commit is a place that keeps it: the work
+survives the terminal closing, the machine restarting, and the branch being left alone for a
+month. A branch committed and not pushed is therefore not stranded. It is preserved and waiting,
+which is a different state and a different person's decision.
 
 **A missing line is worse than a surplus one**, because it is the one that gets stranded. That is
 not licence to add: a surplus line postpones the verdict the reader came for, and the way to
