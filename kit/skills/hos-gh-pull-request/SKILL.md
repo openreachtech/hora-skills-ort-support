@@ -133,6 +133,19 @@ Follow-up deliberately left for later, a side effect somebody will meet, an orde
 another pull request. **It is left out entirely when there is none** — an empty heading costs the
 reader a stop and says nothing.
 
+**An ordering dependency is written by the pull request that is blocked, never by the one that
+blocks.** The dependency runs one way: the branch standing on another cannot merge until that one
+has, and the one beneath is free to merge whenever it is approved. A note on the lower pull
+request tells its reader about work that does not concern them, and the base branch is on the
+screen already. **State it by naming the branch** — `hos-gh-notation` says why the number is not
+written.
+
+**A note whose truth turns on a date has expired by the time it is read.** A pull request is read
+at merge, which is not when it was written, so a line resting on how recently something was
+published, or on what a quarantine is currently holding back, describes a state the reader is no
+longer in. Where the date has done its work, the result is in the diff — a version pinned in a
+lock file says what was taken without a note explaining the day it was taken on.
+
 **A note is about this pull request's own content, and nothing else.** What belongs is what the
 reader cannot take from the diff in front of them — above all what the work deliberately did not
 do, where the diff on its own would read as an oversight. A test case simplified rather than
