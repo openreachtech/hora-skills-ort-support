@@ -375,6 +375,12 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
 
 - **A dependency line carries the package and the version it goes to.** A raise without its target
   is not a line somebody can close, because nothing says what would make it true.
+- **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
+  `Declare <a class>` and leaves the origin to the branch it sits on, whose opening marker names
+  that origin once. A checklist line has no branch under it, so a line reading `Declare <a class>`
+  describes writing one from nothing — and where the class was carried in from elsewhere, that is
+  the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
+  as `hos-gh-notation` says under the heading a repeated value calls for.
 - The rule is not about packages. Anything taking the same operation over several targets splits
   per target, and a long result is grouped under `##` headings rather than folded back into fewer
   lines.
