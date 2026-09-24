@@ -298,6 +298,20 @@ An assertion goes here too, by the previous phase's test.
 assertion that later becomes a decision gets harvested then. Without that, a doubtful call
 drifts towards keeping things "just in case", and the skill swells.
 
+**A subject with no home is more often framed wrongly than homeless.** Before concluding that no
+skill holds it and none should, say what it is about a second time, at the altitude a skill name
+would sit at. Measured: a subject framed as how a proposal is made had no home anywhere in either
+library — one convention covered code and the other covered a workflow, and neither covered
+judgement. Framed instead as when a third-party tool may be brought in, it had a place beside the
+dependency conventions, took a name that passed the naming test, and carried **every rule the
+first framing had** plus the ones the reframing invited.
+
+- **The rules do not change; the subject they sit under does.** Where a reframing would drop or
+  alter a rule, it is a different subject rather than a better name for this one.
+- **A framing that names behaviour rather than a practice is the usual cause.** *How a proposal is
+  made* describes what somebody does; *when a tool may be adopted* names the decision being
+  settled, which is what a skill is for.
+
 The second and third kinds are worth writing down somewhere. Not here, and not by this
 skill: report them at the gate as material for a document or a note, and let the caller
 take them elsewhere.
