@@ -392,6 +392,12 @@ or the command and what it printed.
   weight of an instruction, and the two look identical once quoted. Mark each quotation as one
   or the other. A measurement takes no mark, having no pasted form to be confused with.
 
+**`Source` is the machine's anchor, not the caller's.** A transcript is appended to and never
+rewritten, so a line number fixes a passage for as long as the file exists: a re-run reads the
+same lines back, rather than searching out a passage resembling the one it had. It also outlives
+a compaction, which the passage itself does not. That the caller never follows it is no argument
+for dropping it — the column is doing its work somewhere else.
+
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
 entitled to see which they are doing.
