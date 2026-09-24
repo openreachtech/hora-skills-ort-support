@@ -61,6 +61,16 @@ error:
 - **A topic holding the standalone word `dry`.** The run reports and writes nothing, which looks
   like a decision somebody made. Reword it, or drop the topic and let the subject gate ask
 
+**A key given twice is a question, never a resolution.** Neither answer is safe to take on the
+caller's behalf: taking the last drops a target they named, and taking both breaks the one-skill
+bound the whole run is sized against. Stop, show what the two would each cost, and let them pick —
+the other one is a second run, which is what the bound is for.
+
+- **`skill:` is where this bites**, because the bound counts skills. Two of them are two runs, and
+  a run cannot quietly become one of them
+- **A second `dir:` or `path:` stops for the same reason.** They point at where the writing lands,
+  and a run that guessed which one was meant writes into a repository nobody chose
+
 **A deliberate `dry` is worth stating twice** — once as the flag and once in the report — so that
 a run which wrote nothing never leaves the caller wondering whether it was asked to.
 
