@@ -386,6 +386,12 @@ made, or that a command was run, asks the caller to approve a rule on the streng
 written by the party that wants it approved. What goes in the cell is the words that settled it,
 or the command and what it printed.
 
+- **A quotation says where it was spoken.** Phase 2 holds the conversation's own exchanges apart
+  from anything pasted into it, and the gate is where that separation has to survive: a line
+  typed elsewhere carries the weight of an opinion, and a line from this thread carries the
+  weight of an instruction, and the two look identical once quoted. Mark each quotation as one
+  or the other. A measurement takes no mark, having no pasted form to be confused with.
+
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
 entitled to see which they are doing.
