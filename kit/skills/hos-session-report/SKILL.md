@@ -28,6 +28,16 @@ survives the terminal closing, the machine restarting, and the branch being left
 month. A branch committed and not pushed is therefore not stranded. It is preserved and waiting,
 which is a different state and a different person's decision.
 
+**Pushing, filing the issue and opening the pull request are the next task, not this one's
+residue.** They are conditional on the commits being adopted, and nothing inside the session that
+wrote them settles that. Listed as outstanding, they are work whose precondition has not been
+decided — the reader cannot clear them by doing anything, which is the one thing a cause under the
+verdict is for.
+
+- **Where the session was asked for them, they are inside.** A push that was requested and not
+  made is unfinished work by the ordinary test. What the rule above excludes is the push nobody
+  asked for, reported because the commits exist.
+
 **A missing line is worse than a surplus one**, because it is the one that gets stranded. That is
 not licence to add: a surplus line postpones the verdict the reader came for, and the way to
 cover both is a scope fixed before anything is gathered, not a report widened to be safe.
