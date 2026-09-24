@@ -82,6 +82,19 @@ them shows is why the work took this shape rather than another.
 `# Checklist`, as checkboxes. Reporting it in the pull request as well puts the same state in two
 places.
 
+**Nor is what every pull request in the repository does.** A heading describing the branch
+structure, the order the sub-branches landed in or the way the commits were split says what the
+git conventions already say, and a reader who merges pull requests here brings those with them. A
+body restating one of them spends the reader's attention on a rule they are not being asked to
+judge, and the graph shows the shape besides.
+
+- **What earns a heading is the departure.** Where the work went against a convention, or chose
+  between two the convention leaves open, that judgement is exactly what nothing else on the
+  screen holds. Name the judgement, not the structure it produced.
+- **This is the limit on the carrying-out heading below.** That rule says a `# Checklist` never
+  records how the work was carried out, which is why such a heading disagrees with no box. It does
+  not say the carrying-out is worth a heading.
+
 ## `# How` and the `# Checklist` divide the same way
 
 **Which sections take an H2, and when, belongs to `hos-gh-notation`.** One test is this skill's
