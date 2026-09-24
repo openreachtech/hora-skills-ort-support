@@ -80,6 +80,13 @@ the same afternoon does not bring it in. That material has a home, and the home 
 - **Reached, not adjacent, is the test.** An artefact the session touched stays in even where the
   session did not finish it: an issue filed under a larger one is part of what the session did.
   The larger one's other children are not.
+- **A repository the session was not started for is outside, even where the session reached it.**
+  A session is started in one place and is answerable for that place. Work it did elsewhere along
+  the way was committed there, so nothing about it is stranded, and what remains to decide needs a
+  reading of that repository's whole diff — which this session never did. Its home is a session
+  started there, where the diff is visible at once and a commit plan can be made against it.
+  - **Committing there is still owed.** The floor holds wherever the session changed a file. What
+    stops at the boundary is the report's interest, never the duty to preserve.
 
 ## Nothing outstanding is a complete report
 
