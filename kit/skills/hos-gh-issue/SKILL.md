@@ -16,6 +16,12 @@ the shape it is pasted in where `gh` cannot reach GitHub.
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
 
+**How any of it is set down belongs to `hos-gh-notation`** — the table several things of one kind
+go in, the heading a section takes once it holds two subjects, the backticks a name is read
+through, the reference to another issue that cannot be taken back, the fenced block the text is
+shown in, and the language it is written in. That convention is read alongside this one, and this
+one does not restate it.
+
 ## What each artefact holds
 
 | Artefact | Holds |
@@ -78,45 +84,6 @@ both; **a hub carries only the second.**
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
-## When a section takes H2s
-
-**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
-number of subjects the section holds — never the number of items.** A section holding ten items on
-one subject takes none; a section holding two items on two subjects takes both. Depth is not
-capped, and the same test settles each level below.
-
-**An H2 is a table of contents.** `# As-is` says only "the current state", so a section carrying
-two kinds of current state leaves the reader sorting the items as they go. The H2 hands them that
-sorting before they start.
-
-**So a count never triggers one.** Six items falling four on one subject and two on another take
-two H2s, and the four are not divided again — items differing only in which thing they name are
-one subject. The division lands where the subjects part, never where the items pile up.
-
-Three signs say a section wants them, and they arrive in this order.
-
-- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
-  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
-  subject boundary making itself felt. It is the earliest of the three, because it arrives while
-  the section is still being written
-- **One value repeated down the lines.** Where several lines open with the same words — the same
-  file, the same section, the same package — that value is a heading written into each line
-  instead of above them. **The test is repetition, not naming.** Four items each naming a
-  different thing are the four things and stay as they are; eleven lines each naming the same
-  thing are eleven items under one subject, and that subject is the heading
-- **`# As-is` and `# Checklist` disagreeing.** The division is the issue's own, so the current
-  state and the work divide the same way. Where the two sets of H2s do not correspond, one of the
-  two divisions is wrong. It is the last of the three, because it needs both sections written
-
-**Each sign catches what the one before it missed.** A flat run of six items raises no wish to
-nest anything; six items that repeat nothing raise no second sign either, and the division shows
-only when the two sections are held against each other.
-
-**The second sign is the table rule one level up.** `## Several of one kind go in a table` sends
-a value every row would repeat to the line above the table rather than to a column of its own,
-and a value every line would repeat goes to the heading above them for the same reason: what they
-share is not what the reader came for.
-
 ## `# As-is` is observed, never inferred
 
 **Every sentence in `# As-is` is something that was read, or it is not written.** The section
@@ -135,6 +102,39 @@ reads exactly like one that was, which leaves the reader holding a guess they ca
 list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
 others.
+
+## What the notation convention is read for here
+
+**How anything in the body is set down belongs to `hos-gh-notation`.** Three of its rules land
+differently on an issue, and those differences are this skill's.
+
+**An issue is read before the work, by whoever is deciding to pick it up.** That is who the
+backticks are for: a name set in prose is one they cannot lift out of the sentence to look up, and
+nothing else is open in front of them to match it against.
+
+**A version goes missing in the title most often.** A `# Sub-issues` line becomes a title verbatim
+and a `# Checklist` line carries the version that closes it, so a bare number lands in both places
+at once.
+
+**The type label stays in English even when the body does not.** Asked for Japanese, write
+Japanese — the type set is defined in English, and a translated label stops matching it.
+
+```
+💪 Add a quick start to `docs/`                 default
+💪 `docs/` にクイックスタートを追加する          asked for in Japanese
+```
+
+## `# As-is` and `# Checklist` divide the same way
+
+**Which sections take an H2, and when, belongs to `hos-gh-notation`.** The pair held against each
+other is this skill's own.
+
+**The division is the issue's, so the current state and the work divide alike.** Where the two
+sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
+checklist does nothing about, or a group of boxes answering a state nobody wrote down.
+
+**`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
+against each other are `# How` and this issue's `# Checklist`.
 
 ## A settled question leaves the body
 
@@ -181,21 +181,9 @@ A title reading `Tidy up <one file>` is the usual way this goes wrong. The file 
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
 
-**The title names the whole at one altitude, and never lists the parts.** Work that falls into
-two subjects is still one piece of work, and the title is where that one piece gets named. `A,
-and B` hands the reader the division instead of the thing, and the division already has a home —
-`# As-is` and `# Checklist` carry it under their own `##`.
-
-```
-Bad   💪 Settle the rules three skills leave unstated, and the audit no skill covers
-Good  💪 Enhance skills by feedback
-```
-
-**The altitude to find is the one the parts sit beneath.** Both halves of the bad title above
-were the same thing — something the library settles by hand every time instead of once — and the
-good one covers both without naming either. **A hub's title is written this way for the same
-reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
-where it shows most.
+**A title naming two subjects is one the notation convention turns away**, and a hub's title is
+the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
+along with correcting a title the work has outrun.
 
 **A hub's title is read beside its children's before it is settled.** The altitude rule says
 where the title has to sit; holding it against the children is what says whether it does. A title
@@ -294,37 +282,6 @@ never belonged to.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
 
-## Language
-
-**An issue is written in English unless a language is asked for.** The reader is whoever opens the
-repository rather than whoever is in the conversation, so the language of the request does not
-decide it.
-
-**This overrides the documentation convention for issues only.** That convention writes a document
-in the language its reader is using; an issue's readers are not knowable from the conversation,
-and English is the one they share.
-
-**An explicit instruction wins**, as it does everywhere. Asked for Japanese, write Japanese —
-**and keep the type label in English.** The type set is defined in English, so a translated label
-stops matching it.
-
-```
-💪 Add a quick start to `docs/`                 default
-💪 `docs/` にクイックスタートを追加する          asked for in Japanese
-```
-
-## How the text is shown
-
-**Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
-blocks, because they are two fields on the form and two arguments on the command.
-
-- **The body goes in one fenced block, whatever it contains.** Split across two, it needs a
-  label to say which half is which, and that label is pasted into GitHub along with them
-- **Where the body contains a fenced block of its own, fence the whole thing with four backticks
-  or more.** Three would end the block at the first inner fence
-- **Nothing but the issue text goes inside the fence.** Commentary, a heading saying "body", an
-  explanation of a choice — all of that goes outside it, or the reader pastes it into GitHub
-
 ## Using `gh`
 
 **Where `gh` can reach GitHub, this skill uses it** — for reading the host as much as for filing
@@ -387,58 +344,6 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 - **`--parent <number>` files the issue under another one**, described under `# Sub-issues` above
 - **Report the URL `gh` prints.** It is the one part of the result that is not already on the
   screen
-
-## Referring to a file
-
-**Anything somebody would search for goes in backticks** — file names and paths, class, method,
-function and variable names, package names, config keys, versions, commands. An issue is read
-before the work by whoever is deciding to pick it up, and a name set in prose is one they cannot
-lift out of the sentence to look up.
-
-**A version is one of them, and the title is where it goes missing.** A `# Sub-issues` line
-becomes a title verbatim and a `# Checklist` line carries the version that closes it, so a bare
-number lands in both places at once.
-
-```
-Bad   💪 Raise @humanfs/node to 0.16.8
-Good  💪 Raise `@humanfs/node` to `0.16.8`
-```
-
-**A path goes in backticks, not in a link.** A relative link resolves against the issue's own URL
-rather than the repository tree, so filing the issue is what breaks it.
-
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-## Several of one kind go in a table
-
-**Where one kind of change reaches several things of one kind — fields, parameters, files,
-workflows — they are not enumerated in prose.** They go in a table, one row each, with a column
-for whatever differs between them. This holds in every section of the body, not only in
-`# As-is`.
-
-```
-Bad   `name:`, `repository:`, `bugs:` and `homepage:` all still carry the boilerplate's
-      name, and `description:` still reads `TODO: fulfill here`.
-
-Good  | Field | Current value |
-      | :-- | :-- |
-      | `name:` | `@acme/todo-fulfill-here` |
-      | `description:` | `TODO: fulfill here` |
-```
-
-**Items of one kind are alike by construction, so what a reader came for is the differences.**
-Prose spends its length on what they share and leaves the one thing that varies scattered through
-a run-on clause; a reader checking whether their own case is among them has to parse the sentence
-instead of scanning a column.
-
-- **The columns carry what differs, and nothing else.** Where every row would repeat one value,
-  that value belongs in the line above the table rather than in a column of its own. A list does
-  the same thing with a heading, which is the second sign under `## When a section takes H2s`.
-- **This is the prose counterpart of one line per target, below.** A checkbox already gives each
-  item a row of its own; a paragraph does not, and the table is what gives it one.
 
 ## One line, one target
 
