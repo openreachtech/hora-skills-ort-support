@@ -176,6 +176,52 @@ phase 3 does: in addition mode every fact is classified against the target, and 
 mode every row comes out `new`. Ask right after the survey, before any of that reading is
 spent.
 
+**The survey does not stop at the trunk.** A library is worked on by more than one session,
+and each leaves its work on a branch of its own rather than on the release trunk. So a
+skill's current state is not what `release/x.x.x` holds — it is that, plus what every
+branch cut from the trunk has already written into it, plus whatever the working tree
+holds uncommitted. Surveying the trunk alone reads a version that nobody is going to
+merge into.
+
+**Fetch before enumerating.** `refs/heads` is what this machine holds and `refs/remotes` is
+what it last heard, and neither is what the repository now has: a branch another session
+pushed is invisible until it is fetched, and a branch already merged and deleted keeps its
+remote-tracking ref until it is pruned. Unfetched, the enumeration comes back one branch
+short and one branch long at once — and the short one is the one that gets overwritten.
+
+Then enumerate, and read what each branch holds for the target:
+
+```sh
+git fetch origin --prune
+
+git for-each-ref --format='%(refname:short)' refs/heads refs/remotes/origin |
+  while read -r branch; do
+    git merge-base --is-ancestor <trunk> "$branch" && echo "$branch"
+  done
+
+git diff <trunk>..<branch> -- <the target skill's directory>
+
+git status --short
+git diff -- <the target skill's directory>
+```
+
+Three things follow from what comes back, and none of them can be reached from the trunk:
+
+- **A fact a pending branch already carries is `covered`, not `new`.** Written from the
+  trunk's reading it becomes a second statement of one rule, which is the outcome
+  [classification.md](./references/classification.md) rates worst.
+- **A sharpening is aimed at wording that may no longer be there.** The sentence the row
+  proposes to replace can have been rewritten on a pending branch already, and the
+  replacement then lands on text that the merge will not contain.
+- **A branch already holding work on the target is where this run's work goes**, unless
+  there is a reason to keep them apart. Two branches editing one file merge by hand, and
+  the reason has to be worth that.
+
+**Reading the branches is also what keeps the write from erasing them.** Measured: a
+branch carried six commits on one skill, and the run was about to write the file whole —
+comparing the section sets is what caught it. How a change is carried onto a branch that
+already holds work belongs to the branch convention.
+
 **The gate here fires only when the subject is not determined.** It fires when no `<topic>`
 was given and the thread holds several subjects, when a `<topic>` matches more than one,
 and when it matches nothing at all. A short thread about one subject, or a `<topic>` that
@@ -273,8 +319,9 @@ obliges something narrower, the narrower thing is the fact. The gate sets them i
 for this reason, and that is the last place the gap can be seen.
 
 When adding to an existing skill, classify every fact against what that skill already
-says. The relations, and why the target has to be read in full to tell them apart,
-are in [classification.md](./references/classification.md).
+says — **the trunk's version together with what the pending branches add to it**, as the
+survey read it. The relations, and why the target has to be read in full to tell them
+apart, are in [classification.md](./references/classification.md).
 
 ### 4. Sift
 
