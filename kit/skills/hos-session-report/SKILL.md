@@ -22,6 +22,23 @@ A reader who can act on it closes the terminal. So the report is measured agains
   merges. These are finished from the session's side, and saying so is what lets the reader stop
   looking for them.
 
+**Writing a task down is neither finishing it nor handing it over.** A remaining-work table, a
+handoff note, a todo list the session keeps — each makes an unfinished item findable, and none
+of them does it. Every open item on a list the session itself keeps is a cause under the verdict,
+however carefully it is recorded and wherever the file lives.
+
+- **Handed over means another party now holds it, in a place they own** — an issue filed, a pull
+  request opened, a branch somebody else merges. A table in the session's own handoff file is
+  still the session's: nobody else is going to act on it.
+- **The floor of preservation is about work done.** A commit keeps what was written; it says
+  nothing about what was only planned. An item that was listed and never started is outstanding
+  whatever the commit history holds.
+- **An open question on that list is a cause of its own**, as any question asked and not answered
+  is.
+- Measured: a report closed on ✅ with six open items in the session's own remaining-work table,
+  on the reading that the table was a place that kept them. The reader's first question was
+  whether six open items could mean the session was exitable, and they could not.
+
 **A commit is the floor of preservation, and reaching it takes the work out of the report.** The
 criterion is a place that will not keep it, and a commit is a place that keeps it: the work
 survives the terminal closing, the machine restarting, and the branch being left alone for a
