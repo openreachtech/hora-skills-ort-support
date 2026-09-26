@@ -1,6 +1,6 @@
 ---
 name: hos-gh-issue
-description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, and the hub issue that gathers several. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
+description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, the hub issue that gathers several, and settles which issue a new one sits under. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
 # GitHub issue
@@ -15,6 +15,12 @@ the shape it is pasted in where `gh` cannot reach GitHub.
 
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
+
+**How any of it is set down belongs to `hos-gh-notation`** — the table several things of one kind
+go in, the heading a section takes once it holds two subjects, the backticks a name is read
+through, the reference to another issue that cannot be taken back, the fenced block the text is
+shown in, and the language it is written in. That convention is read alongside this one, and this
+one does not restate it.
 
 ## What each artefact holds
 
@@ -38,7 +44,7 @@ says nothing and costs the reader a stop.
 | Section | What goes in it |
 | :-- | :-- |
 | `# As-is` | How things stand now, and what that costs. A gap is a current state: "nothing states X" belongs here |
-| `# To-be` | The direction to take. Not the implementation |
+| `# To-be` | The direction to take. Not the implementation, though what will exist once it is taken belongs here |
 | `# Note` | Premises, constraints, warnings, ordering dependencies on other work |
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
@@ -46,6 +52,15 @@ says nothing and costs the reader a stop.
 **Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go:
 `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. A hub with
 work of its own is not a hub — that work belongs in one of the children.
+
+**Where no child covers a piece of the work, the piece gets a child of its own.** The rule above
+says where such work belongs; it does not say what to do when none of the children standing there
+holds it. Neither of the two easy answers is the answer: the hub does not keep it, and the
+nearest child is not widened to reach it. File one more, and the hub is a hub again.
+
+- **A hub is checked against the work, not against its own children.** Reading the children and
+  finding them coherent says nothing about what they leave out — the residue only shows when the
+  work is listed beside them.
 
 **A hub's title takes one of two forms, and the word `Hub` appears in neither.**
 
@@ -69,45 +84,6 @@ both; **a hub carries only the second.**
 [types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
 in full.
 
-## When a section takes H2s
-
-**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
-number of subjects the section holds — never the number of items.** A section holding ten items on
-one subject takes none; a section holding two items on two subjects takes both. Depth is not
-capped, and the same test settles each level below.
-
-**An H2 is a table of contents.** `# As-is` says only "the current state", so a section carrying
-two kinds of current state leaves the reader sorting the items as they go. The H2 hands them that
-sorting before they start.
-
-**So a count never triggers one.** Six items falling four on one subject and two on another take
-two H2s, and the four are not divided again — items differing only in which thing they name are
-one subject. The division lands where the subjects part, never where the items pile up.
-
-Three signs say a section wants them, and they arrive in this order.
-
-- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
-  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
-  subject boundary making itself felt. It is the earliest of the three, because it arrives while
-  the section is still being written
-- **One value repeated down the lines.** Where several lines open with the same words — the same
-  file, the same section, the same package — that value is a heading written into each line
-  instead of above them. **The test is repetition, not naming.** Four items each naming a
-  different thing are the four things and stay as they are; eleven lines each naming the same
-  thing are eleven items under one subject, and that subject is the heading
-- **`# As-is` and `# Checklist` disagreeing.** The division is the issue's own, so the current
-  state and the work divide the same way. Where the two sets of H2s do not correspond, one of the
-  two divisions is wrong. It is the last of the three, because it needs both sections written
-
-**Each sign catches what the one before it missed.** A flat run of six items raises no wish to
-nest anything; six items that repeat nothing raise no second sign either, and the division shows
-only when the two sections are held against each other.
-
-**The second sign is the table rule one level up.** `## Several of one kind go in a table` sends
-a value every row would repeat to the line above the table rather than to a column of its own,
-and a value every line would repeat goes to the heading above them for the same reason: what they
-share is not what the reader came for.
-
 ## `# As-is` is observed, never inferred
 
 **Every sentence in `# As-is` is something that was read, or it is not written.** The section
@@ -126,6 +102,39 @@ reads exactly like one that was, which leaves the reader holding a guess they ca
 list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
 others.
+
+## What the notation convention is read for here
+
+**How anything in the body is set down belongs to `hos-gh-notation`.** Three of its rules land
+differently on an issue, and those differences are this skill's.
+
+**An issue is read before the work, by whoever is deciding to pick it up.** That is who the
+backticks are for: a name set in prose is one they cannot lift out of the sentence to look up, and
+nothing else is open in front of them to match it against.
+
+**A version goes missing in the title most often.** A `# Sub-issues` line becomes a title verbatim
+and a `# Checklist` line carries the version that closes it, so a bare number lands in both places
+at once.
+
+**The type label stays in English even when the body does not.** Asked for Japanese, write
+Japanese — the type set is defined in English, and a translated label stops matching it.
+
+```
+💪 Add a quick start to `docs/`                 default
+💪 `docs/` にクイックスタートを追加する          asked for in Japanese
+```
+
+## `# As-is` and `# Checklist` divide the same way
+
+**Which sections take an H2, and when, belongs to `hos-gh-notation`.** The pair held against each
+other is this skill's own.
+
+**The division is the issue's, so the current state and the work divide alike.** Where the two
+sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
+checklist does nothing about, or a group of boxes answering a state nobody wrote down.
+
+**`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
+against each other are `# How` and this issue's `# Checklist`.
 
 ## A settled question leaves the body
 
@@ -150,6 +159,22 @@ answer, and the answer is already in the title, the `# To-be` and the `# Checkli
   one of those still binds after the work is done. What leaves is the deliberation, never the
   conditions.
 
+## What the work will erase never enters the body
+
+**A fact the work removes is not the current state a reader needs; it is the state they are about
+to stop living in.** Where the issue is written for work that unifies something, the detail of how
+the several things differ today disappears the moment the work lands, and a reader who took it in
+has learned something in order to discard it.
+
+Say that they differ, and say what they will become. **The inventory of how each one differs is
+what the body leaves out.**
+
+- **The exception is a difference that survives.** Where one of them will keep its own spelling,
+  or where the unification leaves a case behind, that case is a constraint and belongs in
+  `# Note` with the rest.
+- **This is not the settled-question rule above wearing another hat.** That one removes the
+  deliberation behind an answer; this one removes facts that are true today and will not be.
+
 ## The title
 
 **The title opens with the type's emoji**, and the rest of it says what the issue is about.
@@ -172,21 +197,15 @@ A title reading `Tidy up <one file>` is the usual way this goes wrong. The file 
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
 
-**The title names the whole at one altitude, and never lists the parts.** Work that falls into
-two subjects is still one piece of work, and the title is where that one piece gets named. `A,
-and B` hands the reader the division instead of the thing, and the division already has a home —
-`# As-is` and `# Checklist` carry it under their own `##`.
+**A title naming two subjects is one the notation convention turns away**, and a hub's title is
+the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
+along with correcting a title the work has outrun.
 
-```
-Bad   💪 Settle the rules three skills leave unstated, and the audit no skill covers
-Good  💪 Enhance skills by feedback
-```
-
-**The altitude to find is the one the parts sit beneath.** Both halves of the bad title above
-were the same thing — something the library settles by hand every time instead of once — and the
-good one covers both without naming either. **A hub's title is written this way for the same
-reason**, so the rule above it is not the hub's own: it is every title's, and the hub is only
-where it shows most.
+**A hub's title is read beside its children's before it is settled.** The altitude rule says
+where the title has to sit; holding it against the children is what says whether it does. A title
+that comes out identical to one of them is the plainest reading of having pitched it at a child
+instead of above them all — and the collision reaches the host, where two issues then carry one
+name and neither can be picked out of a list.
 
 **The branch name and the trunk's opening marker are written at this altitude too.** All three
 name one piece of work, so a title that stops listing its parts while the branch name keeps
@@ -262,36 +281,22 @@ gh api /repos/<owner>/<name>/issues/<parent>/sub_issues --jq '.[].number'
 and nothing else — and **writing that body is this skill's work too.** Given such an issue, write
 the five sections for it as for any other.
 
-## Language
+## What decides the parent
 
-**An issue is written in English unless a language is asked for.** The reader is whoever opens the
-repository rather than whoever is in the conversation, so the language of the request does not
-decide it.
+**Where the work already exists as commits on a branch, the parent is not chosen — it is read off
+the trunk that branch belongs to.** An issue raised after the fact records work that already sits
+somewhere, and where it sits is what says which issue gathers it. Picking a parent by what the
+issue is about, rather than by where its commits are, puts the record under something the work
+never belonged to.
 
-**This overrides the documentation convention for issues only.** That convention writes a document
-in the language its reader is using; an issue's readers are not knowable from the conversation,
-and English is the one they share.
-
-**An explicit instruction wins**, as it does everywhere. Asked for Japanese, write Japanese —
-**and keep the type label in English.** The type set is defined in English, so a translated label
-stops matching it.
-
-```
-💪 Add a quick start to `docs/`                 default
-💪 `docs/` にクイックスタートを追加する          asked for in Japanese
-```
-
-## How the text is shown
-
-**Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
-blocks, because they are two fields on the form and two arguments on the command.
-
-- **The body goes in one fenced block, whatever it contains.** Split across two, it needs a
-  label to say which half is which, and that label is pasted into GitHub along with them
-- **Where the body contains a fenced block of its own, fence the whole thing with four backticks
-  or more.** Three would end the block at the first inner fence
-- **Nothing but the issue text goes inside the fence.** Commentary, a heading saying "body", an
-  explanation of a choice — all of that goes outside it, or the reader pastes it into GitHub
+- **A branch under a `release/x.x.x` takes that release's hub.** Find it before writing the child;
+  the parent is part of what the child is, not a link added afterwards.
+- **Where that hub does not exist, it is filed first.** Writing the child and leaving it parentless
+  until somebody notices is how a release ends up gathering only the issues raised after its hub
+  happened to appear. The hub is cheap — see the `# As-is` it carries — and filing it is what
+  secures the parent the child is about to take.
+- **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
+  the issue has no parent and takes none.
 
 ## Using `gh`
 
@@ -315,6 +320,18 @@ sections it needs — and the title is on the host, not in the conversation.
 ```sh
 gh issue view <number>
 ```
+
+**An issue handed over to be rewritten is read from its panel first, not from its body.** A hub
+whose `# Sub-issues` lines have all been converted carries no trace of being one: the section is
+gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it from the
+body alone produces a `# Checklist` on an issue that may not take one, and a title pitched at the
+altitude of whichever child was in view.
+
+```sh
+gh api /repos/<owner>/<name>/issues/<number>/sub_issues --jq '.[].number'
+```
+
+Empty means no children. Anything else means the issue is a hub, whatever its body looks like.
 
 ### Filing
 
@@ -344,58 +361,6 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 - **Report the URL `gh` prints.** It is the one part of the result that is not already on the
   screen
 
-## Referring to a file
-
-**Anything somebody would search for goes in backticks** — file names and paths, class, method,
-function and variable names, package names, config keys, versions, commands. An issue is read
-before the work by whoever is deciding to pick it up, and a name set in prose is one they cannot
-lift out of the sentence to look up.
-
-**A version is one of them, and the title is where it goes missing.** A `# Sub-issues` line
-becomes a title verbatim and a `# Checklist` line carries the version that closes it, so a bare
-number lands in both places at once.
-
-```
-Bad   💪 Raise @humanfs/node to 0.16.8
-Good  💪 Raise `@humanfs/node` to `0.16.8`
-```
-
-**A path goes in backticks, not in a link.** A relative link resolves against the issue's own URL
-rather than the repository tree, so filing the issue is what breaks it.
-
-```
-Bad   [`docs/adopting.md`](./docs/adopting.md)
-Good  `docs/adopting.md`
-```
-
-## Several of one kind go in a table
-
-**Where one kind of change reaches several things of one kind — fields, parameters, files,
-workflows — they are not enumerated in prose.** They go in a table, one row each, with a column
-for whatever differs between them. This holds in every section of the body, not only in
-`# As-is`.
-
-```
-Bad   `name:`, `repository:`, `bugs:` and `homepage:` all still carry the boilerplate's
-      name, and `description:` still reads `TODO: fulfill here`.
-
-Good  | Field | Current value |
-      | :-- | :-- |
-      | `name:` | `@acme/todo-fulfill-here` |
-      | `description:` | `TODO: fulfill here` |
-```
-
-**Items of one kind are alike by construction, so what a reader came for is the differences.**
-Prose spends its length on what they share and leaves the one thing that varies scattered through
-a run-on clause; a reader checking whether their own case is among them has to parse the sentence
-instead of scanning a column.
-
-- **The columns carry what differs, and nothing else.** Where every row would repeat one value,
-  that value belongs in the line above the table rather than in a column of its own. A list does
-  the same thing with a heading, which is the second sign under `## When a section takes H2s`.
-- **This is the prose counterpart of one line per target, below.** A checkbox already gives each
-  item a row of its own; a paragraph does not, and the table is what gives it one.
-
 ## One line, one target
 
 **A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
@@ -410,6 +375,12 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
 
 - **A dependency line carries the package and the version it goes to.** A raise without its target
   is not a line somebody can close, because nothing says what would make it true.
+- **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
+  `Declare <a class>` and leaves the origin to the branch it sits on, whose opening marker names
+  that origin once. A checklist line has no branch under it, so a line reading `Declare <a class>`
+  describes writing one from nothing — and where the class was carried in from elsewhere, that is
+  the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
+  as `hos-gh-notation` says under the heading a repeated value calls for.
 - The rule is not about packages. Anything taking the same operation over several targets splits
   per target, and a long result is grouped under `##` headings rather than folded back into fewer
   lines.
