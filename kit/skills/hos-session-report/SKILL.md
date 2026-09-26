@@ -17,10 +17,43 @@ stands between them and the exit.
 A reader who can act on it closes the terminal. So the report is measured against that act:
 
 - **What the session left unfinished in a place that will not keep it** — a change not committed,
-  a branch not pushed, a draft nobody has read, a question asked and not answered.
+  a draft nobody has read, a question asked and not answered.
 - **What it handed over** — the issue filed, the pull request opened, the branch someone else now
   merges. These are finished from the session's side, and saying so is what lets the reader stop
   looking for them.
+
+**Writing a task down is neither finishing it nor handing it over.** A remaining-work table, a
+handoff note, a todo list the session keeps — each makes an unfinished item findable, and none
+of them does it. Every open item on a list the session itself keeps is a cause under the verdict,
+however carefully it is recorded and wherever the file lives.
+
+- **Handed over means another party now holds it, in a place they own** — an issue filed, a pull
+  request opened, a branch somebody else merges. A table in the session's own handoff file is
+  still the session's: nobody else is going to act on it.
+- **The floor of preservation is about work done.** A commit keeps what was written; it says
+  nothing about what was only planned. An item that was listed and never started is outstanding
+  whatever the commit history holds.
+- **An open question on that list is a cause of its own**, as any question asked and not answered
+  is.
+- Measured: a report closed on ✅ with six open items in the session's own remaining-work table,
+  on the reading that the table was a place that kept them. The reader's first question was
+  whether six open items could mean the session was exitable, and they could not.
+
+**A commit is the floor of preservation, and reaching it takes the work out of the report.** The
+criterion is a place that will not keep it, and a commit is a place that keeps it: the work
+survives the terminal closing, the machine restarting, and the branch being left alone for a
+month. A branch committed and not pushed is therefore not stranded. It is preserved and waiting,
+which is a different state and a different person's decision.
+
+**Pushing, filing the issue and opening the pull request are the next task, not this one's
+residue.** They are conditional on the commits being adopted, and nothing inside the session that
+wrote them settles that. Listed as outstanding, they are work whose precondition has not been
+decided — the reader cannot clear them by doing anything, which is the one thing a cause under the
+verdict is for.
+
+- **Where the session was asked for them, they are inside.** A push that was requested and not
+  made is unfinished work by the ordinary test. What the rule above excludes is the push nobody
+  asked for, reported because the commits exist.
 
 **A missing line is worse than a surplus one**, because it is the one that gets stranded. That is
 not licence to add: a surplus line postpones the verdict the reader came for, and the way to
@@ -64,6 +97,13 @@ the same afternoon does not bring it in. That material has a home, and the home 
 - **Reached, not adjacent, is the test.** An artefact the session touched stays in even where the
   session did not finish it: an issue filed under a larger one is part of what the session did.
   The larger one's other children are not.
+- **A repository the session was not started for is outside, even where the session reached it.**
+  A session is started in one place and is answerable for that place. Work it did elsewhere along
+  the way was committed there, so nothing about it is stranded, and what remains to decide needs a
+  reading of that repository's whole diff — which this session never did. Its home is a session
+  started there, where the diff is visible at once and a commit plan can be made against it.
+  - **Committing there is still owed.** The floor holds wherever the session changed a file. What
+    stops at the boundary is the report's interest, never the duty to preserve.
 
 ## Nothing outstanding is a complete report
 

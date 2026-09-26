@@ -33,10 +33,23 @@ Measured on a conversation continued across two sessions: 13.8 MB in the first f
 in the second, seven compactions between them. Reading only the current file would have
 missed four fifths of the material — including every measurement the run was harvesting.
 
-**The predecessor names itself inside the current transcript.** A resume injects a summary
-of the session it continues, and that summary carries the earlier file's absolute path.
-Find it, then repeat for the file it names: a conversation resumed twice has two
+**The predecessor usually names itself inside the current transcript.** A resume injects a
+summary of the session it continues, and that summary carries the earlier file's absolute
+path. Find it, then repeat for the file it names: a conversation resumed twice has two
 predecessors, and the chain ends at a transcript that summarises nothing.
+
+**Where it does not, the chain is settled by the directory.** Measured on a resume that
+replayed the conversation rather than summarising it: the current file and its predecessor
+opened with the **same first timestamp**, and no summary named either. Take the files whose
+first timestamp matches, order them by modification time, and the one still being written to
+is the current session.
+
+**Never look for the path by searching the transcript's text.** A transcript holds the
+agent's own tool output as well as its turns, so a search for a path in that directory
+matches a directory listing the agent printed during the session — and the result reads
+exactly like a resume marker. Measured: the search returned the agent's own `ls`, and the
+first file named in it was not a predecessor of anything. Read the directory, and use the
+transcripts' own first and last timestamps.
 
 - **A path taken from a summary is a predecessor, not the current session.** Reading it
   because a summary handed it over, without establishing which file is being written to

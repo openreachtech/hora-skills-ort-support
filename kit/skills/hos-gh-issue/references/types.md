@@ -100,5 +100,21 @@ The body carries the situation and the direction, then its children:
 **No `# Checklist`.** A hub with work of its own is not a hub; that work belongs in one of the
 children.
 
+**A release hub's `# As-is` is one line, and the line is `* next release`.** Every other hub opens
+by stating the situation its children sit in; a release hub cannot, because its children arrive
+throughout the release and there is no moment at which the list is complete. An `# As-is` written
+to describe them goes stale the next time one is filed, and the only thing about it that stays
+true is which release it gathers — which the title has already said.
+
+```markdown
+# As-is
+
+* next release
+```
+
+This is the one place the rule that `# As-is` states the situation gives way, and it gives way to
+arithmetic rather than to brevity: the section is short because the enumeration never finishes,
+not because the hub deserves less care than the others.
+
 **A piece of work spanning two repositories is the ordinary case for a hub.** One issue per
 repository, gathered under it, with the ordering between them stated in the hub's `# Note`.

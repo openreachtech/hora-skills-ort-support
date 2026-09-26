@@ -15,6 +15,10 @@ away and none of them is what the reader came for — they came to find out whet
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-issue` and `hos-gh-pull-request` are the others carrying it.
 
+
+**How any of it is set down belongs to `hos-gh-notation`** — the form a table, a name and a
+cross-reference take, the fenced block the text is shown in, and the language it is written in.
+That convention is read alongside this one, and this one does not restate it.
 ## What it holds
 
 | Heading | What goes in it | Level |
@@ -280,19 +284,24 @@ usually has the right neighbour by accident.
   `git ls-remote --tags origin` answers it, and `git fetch --tags` brings it down so the range
   can be diffed
 
-## Language
+## What the notation convention is read for here
 
-**Written in English unless a language is asked for.** The reader is whoever opens the repository
-rather than whoever is in the conversation, so the language of the request does not decide it. An
-explicit instruction wins.
+**How anything in the note is set down belongs to `hos-gh-notation`.** One of its rules lands
+differently on a release note.
 
-## How the text is shown
+**The reader came holding the versions they are on.** Every name in the note is something they
+copy rather than read, which is why the backticks matter more here than anywhere — and **the
+tables are where it bites hardest.** A package cell and a version cell are read as values and
+nothing else, so a row setting either in prose costs the reader the comparison the table was built
+for.
 
-**In a fenced block, so it can be read and copied.** The body is full of tables and backticks, and
-a reader checking a version number is copying it.
+```
+Bad   Raise example-parser to 4.0.1
+Good  Raise `example-parser` to `4.0.1`
+```
 
-- **Fence the whole body with four backticks or more** where it holds a fenced block of its own
-- **Nothing but the release note goes inside the fence.** Commentary belongs outside it
+**A note on the repository's front page is where a broken link costs most**, which is the reason
+the notation convention gives for writing a path rather than linking it.
 
 ## Using `gh`
 
@@ -414,24 +423,6 @@ from afterwards.
   drafts, so the tag is still the argument to use
 - **Report the URL `gh` prints.** It is the one part of the result that is not already on the
   screen. For a draft it is the `untagged-<hash>` form rather than the tag's URL
-
-## Referring to a file
-
-**Anything the reader will check against their own manifest goes in backticks** — package names,
-versions, file names and paths, config keys, commands. They came to this note holding the versions
-they are on, so every name in it is something they copy rather than read.
-
-**The tables are where this bites hardest.** A `package name` cell and a version cell are read as
-values and nothing else, and a row that sets either in prose costs the reader the comparison the
-table was built for.
-
-```
-Bad   Raise example-parser to 4.0.1
-Good  Raise `example-parser` to `4.0.1`
-```
-
-**A path is written, not linked.** A relative link resolves against the release's own URL rather
-than the repository tree, and a note on the repository's front page is where that costs most.
 
 ## Out of scope
 
