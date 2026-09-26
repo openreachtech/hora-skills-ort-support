@@ -15,6 +15,10 @@ is read before the work, with nothing else to look at.
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-issue` is the other one carrying it.
 
+**How any of it is set down belongs to `hos-gh-notation`** — the form a table, a heading, a name
+and a cross-reference take, and the language the body is written in. That convention is read
+alongside this one, and this one does not restate it.
+
 ## What it holds
 
 | Section | What goes in it | Written |
@@ -78,11 +82,69 @@ them shows is why the work took this shape rather than another.
 `# Checklist`, as checkboxes. Reporting it in the pull request as well puts the same state in two
 places.
 
+**Nor is what every pull request in the repository does.** A heading describing the branch
+structure, the order the sub-branches landed in or the way the commits were split says what the
+git conventions already say, and a reader who merges pull requests here brings those with them. A
+body restating one of them spends the reader's attention on a rule they are not being asked to
+judge, and the graph shows the shape besides.
+
+- **What earns a heading is the departure.** Where the work went against a convention, or chose
+  between two the convention leaves open, that judgement is exactly what nothing else on the
+  screen holds. Name the judgement, not the structure it produced.
+- **This is the limit on the carrying-out heading below.** That rule says a `# Checklist` never
+  records how the work was carried out, which is why such a heading disagrees with no box. It does
+  not say the carrying-out is worth a heading.
+
+## `# How` and the `# Checklist` divide the same way
+
+**Which sections take an H2, and when, belongs to `hos-gh-notation`.** One test is this skill's
+own, because it needs the linked issue as well as the body.
+
+**`# How` and the linked issue's `# Checklist` divide the same way.** The work divides one way, so
+the boxes that record it and the approach that carried it out divide alike. Where the two sets of
+H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a box it has
+nothing to say about — it holds the approach, not what was done — and the ones that do answer a
+box are that box's.
+
+**An H2 about how the work was carried out answers no box.** A `# Checklist` never records the
+branch structure, the order the sub-branches landed in, or what was dropped rather than written,
+because an issue says where things stand and which direction to take and leaves the carrying-out
+to this artefact. So the test is read against the headings that answer boxes, and a heading about
+the carrying-out is not a disagreement with anything. **Whether such a heading is worth writing at
+all is the question the section above settles.**
+
+**Where two box-answering divisions disagree, the checklist is the one to suspect.** `# How` is
+written after the work, so a heading there is evidence that the work under it was carried out —
+and a box that was never written is the likelier omission of the two. The reverse needs no rule: a
+box `# How` says nothing about is already allowed.
+
+**`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
+each other are `# As-is` and `# Checklist`.
+
+**And the units of the change never supply the subjects.** One heading per rule added, per file
+touched, per commit made is the change's own table of contents, and the reader already holds it —
+the diff lists the files and the commit subjects list the order. What replaces it is the reason the
+points fall together: what the approach rests on, what it hands to another convention, what it
+deliberately left alone.
+
 ## `# Note` is for what has to be watched
 
 Follow-up deliberately left for later, a side effect somebody will meet, an ordering dependency on
 another pull request. **It is left out entirely when there is none** — an empty heading costs the
 reader a stop and says nothing.
+
+**An ordering dependency is written by the pull request that is blocked, never by the one that
+blocks.** The dependency runs one way: the branch standing on another cannot merge until that one
+has, and the one beneath is free to merge whenever it is approved. A note on the lower pull
+request tells its reader about work that does not concern them, and the base branch is on the
+screen already. **State it by naming the branch** — `hos-gh-notation` says why the number is not
+written.
+
+**A note whose truth turns on a date has expired by the time it is read.** A pull request is read
+at merge, which is not when it was written, so a line resting on how recently something was
+published, or on what a quarantine is currently holding back, describes a state the reader is no
+longer in. Where the date has done its work, the result is in the diff — a version pinned in a
+lock file says what was taken without a note explaining the day it was taken on.
 
 **A note is about this pull request's own content, and nothing else.** What belongs is what the
 reader cannot take from the diff in front of them — above all what the work deliberately did not
@@ -108,64 +170,22 @@ nothing, it was struck out for good.
 It exists so that `# How` stays the approach. A caveat mixed into the approach is read as part of
 it.
 
-## When a section takes H2s
+## What the notation convention is read for here
 
-**Headings from H2 down may be used inside an H1 section, and what decides whether they are is the
-number of subjects the section holds — never the number of points.** A `# How` carrying ten
-sentences about one approach takes none; a `# How` carrying two approaches takes one H2 each.
-Depth is not capped, and the same test settles each level below.
+**How anything in the body is set down belongs to `hos-gh-notation`.** Two of its rules land
+differently on a pull request.
 
-**An H2 is a table of contents.** `# How` says only "the approach", so a section carrying two of
-them leaves the reader working out which sentence belongs to which as they go. The H2 hands them
-that sorting before they start. A flat run of long bullets gives them nowhere to aim: every one
-has to be read to find the one they opened the pull request for.
+**A pull request is read at merge with the diff already open.** That is who the backticks are for:
+a name set in prose is one the reader has to find twice, once in the sentence and once in the
+files beside it.
 
-**So a count never triggers one.** Six points falling four on one subject and two on another take
-two H2s, and the four are not divided again — points differing only in which thing they name are
-one subject. The division lands where the subjects part, never where the points pile up.
+**The title carries them as well.** It is what survives the merge commit, and a raise nobody can
+read a version out of says only that something moved.
 
-**And the units of the change never supply the subjects.** One heading per rule added, per file
-touched, per commit made is the change's own table of contents, and the reader already holds it —
-the diff lists the files and the commit subjects list the order. A section built that way restates
-the screen in a different shape, which is what the table under `# How` rules out. What replaces it
-is the reason the points fall together: what the approach rests on, what it hands to another
-convention, what it deliberately left alone.
-
-Three signs say a section wants them, and they arrive in this order.
-
-- **Wanting to nest a bullet list.** A `* <a sentence that reads as a heading>` with
-  `  * <the substance>` beneath it is an H2 written as a bullet, and the wish to write one is a
-  subject boundary making itself felt. It is the earliest of the three, because it arrives while
-  the section is still being written
-- **One value repeated down the points.** Where several points open with the same words — the
-  same file, the same skill, the same convention — that value is a heading written into each of
-  them instead of above them. **The test is repetition, not naming.** Four points each naming a
-  different thing are the four things and stay as they are; eleven points each naming the same
-  thing are eleven under one subject, and that subject is the heading
-- **`# How` and the linked issue's `# Checklist` disagreeing.** The work divides one way, so the
-  boxes that record it and the approach that carried it out divide the same way. Where the two
-  sets of H2s do not correspond, one of the two divisions is wrong. `# How` carries no H2 for a
-  box it has nothing to say about — it holds the approach, not what was done — and the ones that
-  do answer a box are that box's. It is the last of the three, because it needs the issue as well
-
-**An H2 about how the work was carried out answers no box, and is `# How`'s alone.** The branch
-structure the work took, the order the sub-branches landed in, what was dropped rather than
-written — a `# Checklist` never records any of it, because an issue says where things stand and
-which direction to take and leaves how the work is carried out to this artefact. So the third
-sign is read against the headings that answer boxes, and a heading about the carrying-out is not
-a disagreement with anything.
-
-**Each sign catches what the one before it missed.** A flat run of six points raises no wish to
-nest anything; six points that repeat nothing raise no second sign either, and the division shows
-only when the section and the checklist are held against each other.
-
-**Where two box-answering divisions disagree, the checklist is the one to suspect.** `# How` is
-written after the work, so a heading there is evidence that the work under it was carried out —
-and a box that was never written is the likelier omission of the two. The reverse needs no rule:
-a box `# How` says nothing about is already allowed.
-
-**`hos-gh-issue` states the same test from the issue's side**, where the two sections held against
-each other are `# As-is` and `# Checklist`.
+```
+Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
+Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
+```
 
 ## Merging a trunk
 
@@ -206,36 +226,9 @@ in its `references/types.md`, and this skill keeps no second copy of the list.
 recorded; the title is what survives it, and a title repeating the branch name says nothing the
 merge commit did not.
 
-**The title names the whole at one altitude, and never lists the parts.** Work that falls into
-two subjects is still one pull request, and the title is where that one piece gets named. `A, and
-B` hands the reader the division instead of the thing, and the division already has a home —
-`# How` carries it under its own `##`.
-
-```
-Bad   🤖 Author three skills for document repair, issues and pull requests
-Good  🤖 Author the skills that hand work over
-```
-
-**The altitude to find is the one the parts sit beneath.** The three skills of the bad title were
-all for handing work over, and the good one covers them without naming any of the three.
-
-## Language
-
-**Written in English unless a language is asked for.** The reader is whoever opens the repository
-rather than whoever is in the conversation, so the language of the request does not decide it. An
-explicit instruction wins.
-
-## How the text is shown
-
-**Inside fenced blocks, so it can be read and copied.** The title and the body go in separate
-blocks, because they are two fields on the form and two arguments on the command.
-
-- **The body goes in one fenced block, whatever it contains.** Split across two, it needs a
-  label to say which half is which, and that label is pasted into the form along with them
-- **Where the body contains a fenced block of its own, fence the whole thing with four backticks or
-  more.** Three would end the block at the first inner fence
-- **Nothing but the pull request text goes inside the fence.** Commentary belongs outside it, or it
-  gets pasted into the form
+**A title naming two subjects is one `hos-gh-notation` turns away.** Where the work falls into
+two, `# How` carries the division under its own `##`, and the title names the one piece they sit
+beneath.
 
 ## Using `gh`
 
@@ -324,6 +317,24 @@ assembled the command.
 
 **`--base` is always stated.** Left out, `gh` opens against the repository's default branch, and
 a sub-branch here usually returns to a trunk that is not it.
+
+**`git fetch origin --prune` is run before the pull request is opened, every time.** The walk
+below reads remote-tracking refs, and those are a copy of what the remote held when it was last
+fetched — so a walk against a stale copy names a base out of the past and the command carries it
+to the host unchanged.
+
+- **The prune is what makes it an answer.** Without it, a branch deleted on the remote stays in
+  the local copy and goes on scoring in the walk, so the base that comes out is one the host no
+  longer has.
+- **Detect the base immediately before the command, not earlier in the run.** Between the walk
+  and the create there is a body to write and flags to settle, and a base merged during that
+  interval is gone by the time `gh` reads it. Measured: a base was detected, and was merged and
+  its branch deleted while the body was being written.
+- **A refusal naming the base ref is the base having moved, not the walk having erred.** `gh`
+  answers `Base ref must be a branch` alongside `No commits between`, and both describe a branch
+  that is no longer there rather than a mistake in finding it. Fetch again, walk again, and take
+  what comes out — it is usually one trunk higher, because what removed the base was its own
+  merge into that trunk.
 
 **The base is the nearest trunk above, and what marks a trunk is the commit it opens with.** A
 branch merged through GitHub never reaches its trunk by a local merge, so the trunk has to be
@@ -437,29 +448,6 @@ it, which is why the sender is the default rather than a name somebody has to ch
   open one from. Where it is unpushed, say so and stop: a push is a decision of its own
 - **Report the URL `gh` prints.** It is the one part of the result that is not already on the
   screen
-
-## Referring to a file
-
-**Anything the reader will match against the diff goes in backticks** — file names and paths,
-class, method, function and variable names, package names, config keys, versions, commands. The
-body is read at merge with the diff already open, and a name set in prose is one they have to
-find twice.
-
-**The title takes them as well.** It is what survives the merge commit, and a raise nobody can
-read a version out of says only that something moved.
-
-```
-Bad   🛡️ Raise @humanfs/node to 0.16.8 and pin it through an override
-Good  🛡️ Raise `@humanfs/node` to `0.16.8` and pin it through an override
-```
-
-**Never link a path.** The pull request has a URL of its own, and a relative link resolves against
-that rather than the repository tree — so it breaks on the way to review.
-
-```
-Bad   [`docs/quick-start.md`](./docs/quick-start.md)
-Good  `docs/quick-start.md`
-```
 
 ## Out of scope
 
