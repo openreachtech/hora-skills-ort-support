@@ -101,6 +101,18 @@ of three skills reads three.
 To grow one skill across several runs: create it on the first run, then pass
 `skill:<that name>` on the following ones.
 
+**What is left is named by what it is once its list is out of sight.** A run that finished one
+subject has pushed the harvest table off the screen with its writing, its audit and its commits,
+and a caller told that subjects 2 to 4 remain has to scroll back to learn what they were — nobody
+keeps that in mind. So the report that closes the run restates each remaining subject in a line of
+its own.
+
+- **The test is whether 80% or more of the earlier list is still on the caller's screen.** Where
+  it is, as after an exchange of two or three lines, the numbers are enough and restating them is
+  noise. Where it is not, restate.
+- **The same test holds wherever a row or a subject is pointed at by number**, at the gate as much
+  as after it.
+
 ## The run
 
 | Phase | What happens | Stops |
@@ -346,6 +358,14 @@ An assertion goes here too, by the previous phase's test.
 assertion that later becomes a decision gets harvested then. Without that, a doubtful call
 drifts towards keeping things "just in case", and the skill swells.
 
+**A candidate target is checked for who it serves, not only for its name.** A skill's name and
+its `description:` say what it covers; they do not always say for what kind of work. A subject that
+came out of maintaining a library does not belong in a convention written for building
+applications, however well the names line up. Where the `description:` does not state the audience,
+ask at the gate rather than assume the reach. Measured: a subject was proposed for a workflow
+convention whose `description:` named only its procedures, and the answer was that the convention
+served a different kind of work and was not to be changed.
+
 **A subject with no home is more often framed wrongly than homeless.** Before concluding that no
 skill holds it and none should, say what it is about a second time, at the altitude a skill name
 would sit at. Measured: a subject framed as how a proposal is made had no home anywhere in either
@@ -401,6 +421,19 @@ for dropping it — the column is doing its work somewhere else.
 The `Kind` column is not decoration. Approving a rule that rests on a decision is a
 different act from approving one that rests on a measurement, and the person approving is
 entitled to see which they are doing.
+
+**The gate names the one skill it writes into, before the table and in the question that closes
+it.** An approval is given to a question, so the question has to say what is being approved:
+*may `/<name>` be updated with this?*, or *may `/<name>` be created?* for a new skill — the slash
+name, and the library holding it beside the table's heading. A question that names no skill
+leaves the approval pointing at nothing in particular.
+
+- **Rows that write nowhere go in a table of their own.** A row settled as `covered` by another
+  skill, or dropped, names a second skill in a table about the first, and the caller then cannot
+  tell which of the two the approval would write into. Measured: an outline carried one row for
+  the target and one `covered` by a neighbour, and the answer was that it could not be approved
+  because the skill it wrote into was unclear. The same rows, split by where they wrote, were
+  approved.
 
 A row marked `contradicts` is not written until it is resolved. Resolving it is an
 interview, not a veto — see [classification.md](./references/classification.md).
@@ -482,22 +515,34 @@ tail of the file is. Reading the line count alone is enough to catch the larger 
 
 ## Adding material after a run
 
-The outline is often what reveals that something is missing. The loop for that is to end
-the run, paste what was missing, and run again — pasted text is part of the thread, so the
-next run picks it up with no further ceremony.
+The outline is often what reveals that something is missing. **The missing material is given
+at the gate, and the gate stays open:** it is taken into the outline, and the outline is shown
+again with what it changed marked. Pasted text is part of the thread, so nothing further is
+needed to bring it in.
 
-Three rules make the loop safe:
+**Ending the run and starting it again puts the cost on the wrong party.** The caller then has to
+carry the previous outline — which row said what, which verdict it held — across a whole
+harvest's worth of output, and the one who is meant to vet the rows ends up scrolling back to find
+them. Measured: across one thread, material arrived at the gate three times, and each time the
+caller asked for the outline to be updated and shown again rather than for a fresh run.
 
-- **The gate takes a selection or an approval, and nothing else.** Any other input ends the
-  run without writing, and says to paste the missing material and run again. A paste is not
-  an answer to the gate, and guessing that it might be is how an unintended write happens.
+Four rules keep the loop safe:
+
+- **Only a selection or an approval writes.** Anything else — new material, a correction to a
+  row, a reason the thread had not given — is folded into the outline, and the gate is shown
+  again with nothing written. A paste is not an answer to the gate, and guessing that it might
+  be is how an unintended write happens, so the write waits for the word that approves it
+  however many times the outline comes back first.
+- **A request about the table is answered with the table.** Asked to show only part of it — the
+  rows that survive, the ones that changed — show that part and stay at the gate. Such a request
+  is not an approval, even where it reads as the last step before one.
+- **Rows whose source has not changed come back with the same wording and the same verdict,**
+  and every row the new material touched is marked as updated or added. Without the marks, a
+  caller who has just vetted twelve rows has to vet them all over again to find the two that
+  moved.
 - **A run can be ended up to the gate, never during the write.** Stopping mid-write leaves
   a half-written file. Nothing is lost by this restriction: the moment a caller discovers
   the gap is the moment the outline is in front of them.
-- **On a re-run, rows whose source has not changed come back with the same wording and the
-  same verdict.** Only what the new material added is presented as new. The previous
-  outline is in the thread, so it can be read; without this rule a caller who has just
-  vetted twelve rows has to vet them all over again to find the two that changed.
 
 **A run only ever reads the current session's transcript**, so a subject harvested here
 cannot come back in a different conversation — a different conversation holds different
