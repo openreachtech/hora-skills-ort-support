@@ -21,6 +21,11 @@ A reader who can act on it closes the terminal. So the report is measured agains
 - **What it handed over** — the issue filed, the pull request opened, the branch someone else now
   merges. These are finished from the session's side, and saying so is what lets the reader stop
   looking for them.
+- **A document the session's own work has made false** — a note it read and worked from, which
+  still describes as undone what the session has now done. Nobody changed the file, so nothing in
+  a repository's state shows it, and whoever opens it next does the work a second time. It counts
+  wherever the file sits: the session reached it by acting on it, and what it now misstates is that
+  work.
 
 **Writing a task down is neither finishing it nor handing it over.** A remaining-work table, a
 handoff note, a todo list the session keeps — each makes an unfinished item findable, and none
@@ -33,6 +38,9 @@ however carefully it is recorded and wherever the file lives.
 - **The floor of preservation is about work done.** A commit keeps what was written; it says
   nothing about what was only planned. An item that was listed and never started is outstanding
   whatever the commit history holds.
+- **The agent's own memory is one more such list.** A correction saved there while the convention
+  that governs it still states the old rule is recorded, not done: the next session in another
+  repository reads the convention, not this memory, and makes the corrected mistake again.
 - **An open question on that list is a cause of its own**, as any question asked and not answered
   is.
 - Measured: a report closed on ✅ with six open items in the session's own remaining-work table,
@@ -192,6 +200,17 @@ state as a side effect, and a report reaches for whatever is already in hand. Th
 
 Settling the scope afterwards does not work. By then the material is there, and dropping it feels
 like withholding something — which it is not, because it was never in the answer.
+
+**Gather from what the session said, not only from what the repositories hold.** Status, branches,
+pull requests and issues answer what was written down on a host; they cannot show what the session
+put off in its own words — a step it said it would take later, a follow-up it said belonged to
+another run, a question it asked and moved past. Those exist only in the conversation, so the
+gathering reads the conversation for them.
+
+- Measured: a report built from repository and host state alone closed on ✅. Asked whether that
+  was true, a second pass through the conversation found a follow-up the session had deferred to a
+  later run and never taken, and a note the session's work had made false. Neither was visible in
+  any status the first pass read.
 
 ## Where this stops
 
