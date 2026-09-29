@@ -1,6 +1,6 @@
 ---
 name: hos-gh-pull-request
-description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
+description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, or none on a merge into `main`, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
 ---
 
 # GitHub pull request
@@ -221,6 +221,24 @@ issue's title already opens with its type — a pull request picking a different
 work changed kind on its way to review. The types and their emoji belong to `hos-gh-issue`,
 in its `references/types.md`, and this skill keeps no second copy of the list.
 
+**A pull request into `main` carries no emoji.** Whatever type the issue it closes carries, the
+title opens with the words:
+
+```
+Release `1.4.0` > Main
+```
+
+- **It is the largest pull request there is, and it is not divided.** Everything the release
+  carries arrives through it at once, already reviewed piece by piece in the pull requests that
+  fed the trunk. A type emoji would claim one kind of work for what is every kind of it
+- **The missing emoji is what sets it apart.** Every work pull request opens with one, so a title
+  that does not is recognisable at a glance in any list — which is the one pull request whose
+  merge is a release rather than a change
+- **A release trunk's title takes the shape above**, the version in backticks. The workflows that
+  guard `main` and tag the merge read the version out of the backticks and hold it against the
+  branch name, so the shape is not a matter of style. The main-bound branches that are not release
+  trunks take no emoji either, and no shape is fixed for the rest of their title
+
 **Name the work the pull request carries, never the branch it came from.** The host writes
 `Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is already
 recorded; the title is what survives it, and a title repeating the branch name says nothing the
@@ -390,6 +408,8 @@ section.
 **Only a main-bound branch opens against `main`**, and there are four of them: `dev`, `env`,
 `hotfix/*` and `release/*`. Everything else returns to one of those, and reaches `main` when that
 one does.
+
+**Its title carries no emoji**, whichever of the four it is — the title section says why.
 
 | The branch | What it opens against |
 | :-- | :-- |
