@@ -212,6 +212,21 @@ gathering reads the conversation for them.
   later run and never taken, and a note the session's work had made false. Neither was visible in
   any status the first pass read.
 
+**Fetch before gathering: `git fetch origin --prune` in every repository the session worked in.**
+A remote-tracking ref is a local copy of what the remote held at the last fetch, and nothing
+refreshes it on its own. Read without one, a branch reported as ahead of `origin` is ahead of
+wherever the remote stood then, and a push the person made outside the session does not show at
+all.
+
+- **`--prune` is part of the command, not an option to it.** A branch deleted on the remote — the
+  ordinary fate of one whose pull request merged — stays behind as `origin/<branch>` until a fetch
+  prunes it, and reads as still open.
+- **The fetch comes after the scope is fixed and before anything is gathered.** It changes nothing
+  the scope depends on, and everything the gathering reads depends on it.
+- Measured: a report counted a trunk as a number of commits ahead of `origin`, from refs last
+  fetched when the session began. Another session had been working on the same trunk in the
+  meantime, and nothing the report read could say whether the remote had moved since.
+
 ## Where this stops
 
 **A feature with its requirements written down is answered from those, not from here.** Where the
