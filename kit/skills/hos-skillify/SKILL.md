@@ -358,6 +358,14 @@ An assertion goes here too, by the previous phase's test.
 assertion that later becomes a decision gets harvested then. Without that, a doubtful call
 drifts towards keeping things "just in case", and the skill swells.
 
+**A candidate target is checked for who it serves, not only for its name.** A skill's name and
+its `description:` say what it covers; they do not always say for what kind of work. A subject that
+came out of maintaining a library does not belong in a convention written for building
+applications, however well the names line up. Where the `description:` does not state the audience,
+ask at the gate rather than assume the reach. Measured: a subject was proposed for a workflow
+convention whose `description:` named only its procedures, and the answer was that the convention
+served a different kind of work and was not to be changed.
+
 **A subject with no home is more often framed wrongly than homeless.** Before concluding that no
 skill holds it and none should, say what it is about a second time, at the altitude a skill name
 would sit at. Measured: a subject framed as how a proposal is made had no home anywhere in either
