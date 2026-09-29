@@ -201,6 +201,17 @@ state as a side effect, and a report reaches for whatever is already in hand. Th
 Settling the scope afterwards does not work. By then the material is there, and dropping it feels
 like withholding something — which it is not, because it was never in the answer.
 
+**Gather from what the session said, not only from what the repositories hold.** Status, branches,
+pull requests and issues answer what was written down on a host; they cannot show what the session
+put off in its own words — a step it said it would take later, a follow-up it said belonged to
+another run, a question it asked and moved past. Those exist only in the conversation, so the
+gathering reads the conversation for them.
+
+- Measured: a report built from repository and host state alone closed on ✅. Asked whether that
+  was true, a second pass through the conversation found a follow-up the session had deferred to a
+  later run and never taken, and a note the session's work had made false. Neither was visible in
+  any status the first pass read.
+
 ## Where this stops
 
 **A feature with its requirements written down is answered from those, not from here.** Where the
