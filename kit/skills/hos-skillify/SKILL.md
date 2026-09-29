@@ -101,6 +101,18 @@ of three skills reads three.
 To grow one skill across several runs: create it on the first run, then pass
 `skill:<that name>` on the following ones.
 
+**What is left is named by what it is once its list is out of sight.** A run that finished one
+subject has pushed the harvest table off the screen with its writing, its audit and its commits,
+and a caller told that subjects 2 to 4 remain has to scroll back to learn what they were — nobody
+keeps that in mind. So the report that closes the run restates each remaining subject in a line of
+its own.
+
+- **The test is whether 80% or more of the earlier list is still on the caller's screen.** Where
+  it is, as after an exchange of two or three lines, the numbers are enough and restating them is
+  noise. Where it is not, restate.
+- **The same test holds wherever a row or a subject is pointed at by number**, at the gate as much
+  as after it.
+
 ## The run
 
 | Phase | What happens | Stops |
