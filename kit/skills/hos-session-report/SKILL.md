@@ -33,6 +33,9 @@ however carefully it is recorded and wherever the file lives.
 - **The floor of preservation is about work done.** A commit keeps what was written; it says
   nothing about what was only planned. An item that was listed and never started is outstanding
   whatever the commit history holds.
+- **The agent's own memory is one more such list.** A correction saved there while the convention
+  that governs it still states the old rule is recorded, not done: the next session in another
+  repository reads the convention, not this memory, and makes the corrected mistake again.
 - **An open question on that list is a cause of its own**, as any question asked and not answered
   is.
 - Measured: a report closed on ✅ with six open items in the session's own remaining-work table,
