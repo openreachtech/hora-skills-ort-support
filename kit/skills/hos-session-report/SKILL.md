@@ -21,6 +21,11 @@ A reader who can act on it closes the terminal. So the report is measured agains
 - **What it handed over** — the issue filed, the pull request opened, the branch someone else now
   merges. These are finished from the session's side, and saying so is what lets the reader stop
   looking for them.
+- **A document the session's own work has made false** — a note it read and worked from, which
+  still describes as undone what the session has now done. Nobody changed the file, so nothing in
+  a repository's state shows it, and whoever opens it next does the work a second time. It counts
+  wherever the file sits: the session reached it by acting on it, and what it now misstates is that
+  work.
 
 **Writing a task down is neither finishing it nor handing it over.** A remaining-work table, a
 handoff note, a todo list the session keeps — each makes an unfinished item findable, and none
