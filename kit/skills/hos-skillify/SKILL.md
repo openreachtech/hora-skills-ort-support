@@ -422,6 +422,19 @@ The `Kind` column is not decoration. Approving a rule that rests on a decision i
 different act from approving one that rests on a measurement, and the person approving is
 entitled to see which they are doing.
 
+**The gate names the one skill it writes into, before the table and in the question that closes
+it.** An approval is given to a question, so the question has to say what is being approved:
+*may `/<name>` be updated with this?*, or *may `/<name>` be created?* for a new skill — the slash
+name, and the library holding it beside the table's heading. A question that names no skill
+leaves the approval pointing at nothing in particular.
+
+- **Rows that write nowhere go in a table of their own.** A row settled as `covered` by another
+  skill, or dropped, names a second skill in a table about the first, and the caller then cannot
+  tell which of the two the approval would write into. Measured: an outline carried one row for
+  the target and one `covered` by a neighbour, and the answer was that it could not be approved
+  because the skill it wrote into was unclear. The same rows, split by where they wrote, were
+  approved.
+
 A row marked `contradicts` is not written until it is resolved. Resolving it is an
 interview, not a veto — see [classification.md](./references/classification.md).
 
