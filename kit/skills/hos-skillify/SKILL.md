@@ -494,22 +494,34 @@ tail of the file is. Reading the line count alone is enough to catch the larger 
 
 ## Adding material after a run
 
-The outline is often what reveals that something is missing. The loop for that is to end
-the run, paste what was missing, and run again — pasted text is part of the thread, so the
-next run picks it up with no further ceremony.
+The outline is often what reveals that something is missing. **The missing material is given
+at the gate, and the gate stays open:** it is taken into the outline, and the outline is shown
+again with what it changed marked. Pasted text is part of the thread, so nothing further is
+needed to bring it in.
 
-Three rules make the loop safe:
+**Ending the run and starting it again puts the cost on the wrong party.** The caller then has to
+carry the previous outline — which row said what, which verdict it held — across a whole
+harvest's worth of output, and the one who is meant to vet the rows ends up scrolling back to find
+them. Measured: across one thread, material arrived at the gate three times, and each time the
+caller asked for the outline to be updated and shown again rather than for a fresh run.
 
-- **The gate takes a selection or an approval, and nothing else.** Any other input ends the
-  run without writing, and says to paste the missing material and run again. A paste is not
-  an answer to the gate, and guessing that it might be is how an unintended write happens.
+Four rules keep the loop safe:
+
+- **Only a selection or an approval writes.** Anything else — new material, a correction to a
+  row, a reason the thread had not given — is folded into the outline, and the gate is shown
+  again with nothing written. A paste is not an answer to the gate, and guessing that it might
+  be is how an unintended write happens, so the write waits for the word that approves it
+  however many times the outline comes back first.
+- **A request about the table is answered with the table.** Asked to show only part of it — the
+  rows that survive, the ones that changed — show that part and stay at the gate. Such a request
+  is not an approval, even where it reads as the last step before one.
+- **Rows whose source has not changed come back with the same wording and the same verdict,**
+  and every row the new material touched is marked as updated or added. Without the marks, a
+  caller who has just vetted twelve rows has to vet them all over again to find the two that
+  moved.
 - **A run can be ended up to the gate, never during the write.** Stopping mid-write leaves
   a half-written file. Nothing is lost by this restriction: the moment a caller discovers
   the gap is the moment the outline is in front of them.
-- **On a re-run, rows whose source has not changed come back with the same wording and the
-  same verdict.** Only what the new material added is presented as new. The previous
-  outline is in the thread, so it can be read; without this rule a caller who has just
-  vetted twelve rows has to vet them all over again to find the two that changed.
 
 **A run only ever reads the current session's transcript**, so a subject harvested here
 cannot come back in a different conversation — a different conversation holds different
