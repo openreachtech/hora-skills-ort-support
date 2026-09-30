@@ -110,6 +110,21 @@ that needs a paragraph has started describing the route — which is the pull re
 checklist's where the route has steps worth a box. What will exist once the work lands belongs in
 the line; how it comes to exist does not.
 
+## `# Note` carries only what a reader would miss
+
+**Strike the line out, and ask what the reader would then not know.** Where the answer is nothing,
+it was struck out for good. A `# Note` that grows a line for every premise it can think of is read
+as a list of warnings, and the one that matters is found only by reading them all.
+
+- **Something left as it stands is not a note by being left.** It earns a line only where the
+  reader would otherwise expect it done — a field the work seems to have forgotten, a file the
+  diff seems to have skipped. A sample kept until something replaces it, or a passage that keeps a
+  placeholder on purpose because it describes the placeholder, surprises nobody
+- **The meaning of a value the work chose is not a note either.** The value is in the checklist or
+  the diff, and what it does belongs to whatever documents it
+- **What the issue's own scope covers is not a note.** A line saying some part is left out of this
+  issue is wrong the moment the author decides it is in, and then it is a box instead
+
 ## What the notation convention is read for here
 
 **How anything in the body is set down belongs to `hos-gh-notation`.** Three of its rules land
@@ -423,7 +438,9 @@ that has to take effect on an external service, a value somebody enters in a con
 by hand alone, which is what a box is for.
 
 **A box is work that changes something.** Something left as it stands, and the outcome of a check,
-are neither: they belong under `# Note`.
+are neither: they belong under `# Note` — where a reader would otherwise take them for work
+missed, and nowhere where nobody would. The section on what `# Note` carries says how that is
+told.
 
 **Whether a line is still outstanding is checked before it is written.** A box already closed by
 the time the issue is filed is something left as it stands, and belongs under `# Note` with the
