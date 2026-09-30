@@ -197,6 +197,22 @@ A title reading `Tidy up <one file>` is the usual way this goes wrong. The file 
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
 
+**The title names the purpose, never what was found on the way to it.** A title defines what is
+to be done. Where the cause behind it is already known by the time the issue is filed — the
+package behind an audit report, its severity, the mechanism the fix will take — that is a finding,
+and it belongs in `# As-is` and `# To-be`. The title stays at the task the finding serves.
+
+```
+Bad   🛡️ Resolve the high `brace-expansion` vulnerability reported by `npm audit`
+Good  🛡️ Resolve `npm audit`
+```
+
+- **The test is whether the title would still hold had the finding come out otherwise.**
+  ``Resolve `npm audit` `` is true whichever package the report names, and stays true when a second
+  advisory arrives before the work lands. The bad title is wrong the moment either happens.
+- **Knowing the implementation early is not a reason to write it in.** It reads as precision, and
+  what it does is narrow the issue to one route before anybody has agreed to take it.
+
 **A title naming two subjects is one the notation convention turns away**, and a hub's title is
 the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
 along with correcting a title the work has outrun.
