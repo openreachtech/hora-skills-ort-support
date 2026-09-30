@@ -103,6 +103,13 @@ list of intentions, so both are read as things somebody has yet to agree with. `
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
 others.
 
+## `# To-be` is one line
+
+**`# To-be` names the state the work arrives at, in a line.** It is a direction, and a direction
+that needs a paragraph has started describing the route — which is the pull request's, and the
+checklist's where the route has steps worth a box. What will exist once the work lands belongs in
+the line; how it comes to exist does not.
+
 ## What the notation convention is read for here
 
 **How anything in the body is set down belongs to `hos-gh-notation`.** Three of its rules land
