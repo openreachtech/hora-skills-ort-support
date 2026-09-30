@@ -169,6 +169,12 @@ has learned something in order to discard it.
 Say that they differ, and say what they will become. **The inventory of how each one differs is
 what the body leaves out.**
 
+**Unifying is the plainest case, not the only one.** Any work that clears a set of places leaves
+their list behind with it: a placeholder resolved everywhere it sits, a setting removed from every
+file that carries it, a name replaced wherever it appears. The table of those places is exactly
+what the work is about to make untrue, so `# As-is` says that the state holds and stops — which
+is usually one line.
+
 - **The exception is a difference that survives.** Where one of them will keep its own spelling,
   or where the unification leaves a case behind, that case is a constraint and belongs in
   `# Note` with the rest.
