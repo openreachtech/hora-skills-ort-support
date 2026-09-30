@@ -428,6 +428,19 @@ nothing to find at review except that the line should never have been there.
 - **A box states what is true.** Checking one that is not is the one thing that makes a checklist
   worth less than no checklist
 
+**An issue raised from commits already made takes its checklist from what the work does, never
+from the commits.** The commits are the nearest list to hand, and projecting them onto boxes turns
+the checklist into a record of how the work was split — which edit came first, which file took
+which change. That is the commit history's to say, and the pull request's. **The checklist is not
+where commit granularity is written down**: a box names a thing the issue sets out to do, and one
+thing done may have taken several commits and touched several files.
+
+- **`## One line, one target` still holds, because a target is a thing to do.** Two files purged
+  are two things done, and take a line each. One change that reached several files is one thing,
+  and takes one line
+- **The test is to ask of each box what is being done, not where.** A line that only names the
+  file an edit landed in is a commit subject copied across
+
 ## Templates
 
 The organization keeps its issue templates centrally, so **a repository being worked in usually has
