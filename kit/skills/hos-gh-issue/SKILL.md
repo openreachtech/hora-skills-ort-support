@@ -487,6 +487,18 @@ thing done may have taken several commits and touched several files.
 - **The test is to ask of each box what is being done, not where.** A line that only names the
   file an edit landed in is a commit subject copied across
 
+**The same holds before any commit exists.** A plan for how the work will be committed is commit
+granularity as much as a record of it is, and it reaches a checklist by the same route — from the
+convention that settles the commit shape, or from an earlier issue whose boxes are copied across.
+Measured: a dependency raise was drafted with ``Refresh `package-lock.json` in a single commit
+after the raise`` beside ``Raise `<package>` to `<range>` ``. The lockfile moving is part of the
+raise, and taking it in one commit is the dependency convention's rule; neither is a thing the
+issue sets out to do, and the issue took one box.
+
+- **A box copied from an earlier issue is checked like one written fresh.** An issue of the same
+  kind is the nearest template to hand, and whatever commit plan its checklist carried arrives
+  with it
+
 ## Templates
 
 The organization keeps its issue templates centrally, so **a repository being worked in usually has
