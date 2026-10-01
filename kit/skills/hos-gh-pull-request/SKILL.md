@@ -1,6 +1,6 @@
 ---
 name: hos-gh-pull-request
-description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, or none on a merge into `main`, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
+description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, or only the two branches on a trunk merging into `main`, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
 ---
 
 # GitHub pull request
@@ -24,7 +24,7 @@ alongside this one, and this one does not restate it.
 | Section | What goes in it | Written |
 | :-- | :-- | :-- |
 | `# Why` | `* Close #<issue>`, and nothing else | always |
-| `# How` | The approach the work took | always |
+| `# How` | The approach the work took | always, except on a trunk merging into `main` |
 | `# Note` | What has to be watched — follow-up left undone, a side effect, an ordering dependency | **only when there is something** |
 
 ## `# Why` is a link, not an explanation
@@ -221,28 +221,33 @@ issue's title already opens with its type — a pull request picking a different
 work changed kind on its way to review. The types and their emoji belong to `hos-gh-issue`,
 in its `references/types.md`, and this skill keeps no second copy of the list.
 
-**A pull request into `main` carries no emoji.** Whatever type the issue it closes carries, the
-title opens with the words:
+**A pull request that merges a trunk into `main` is titled by the two branches it joins, and
+nothing else.** Whatever type the issue it closes carries:
 
 ```
 Release `1.4.0` > Main
+Env > Main
+Dev > Main
 ```
 
-- **It is the largest pull request there is, and it is not divided.** Everything the release
-  carries arrives through it at once, already reviewed piece by piece in the pull requests that
-  fed the trunk. A type emoji would claim one kind of work for what is every kind of it
-- **The missing emoji is what sets it apart.** Every work pull request opens with one, so a title
-  that does not is recognisable at a glance in any list — which is the one pull request whose
-  merge is a release rather than a change
-- **A release trunk's title takes the shape above**, the version in backticks. The workflows that
-  guard `main` and tag the merge read the version out of the backticks and hold it against the
-  branch name, so the shape is not a matter of style. The main-bound branches that are not release
-  trunks take no emoji either, and no shape is fixed for the rest of their title
+- **Naming only the branches leaves no room for an emoji.** The title states the merge and
+  describes none of the work, because everything it carries was described in the pull requests
+  that fed the trunk
+- **A title written in prose takes the emoji, and the emoji marks it as not a merge into
+  `main`.** The type it names is the linked issue's, and its presence is what tells a work pull
+  request apart from a merge at a glance in any list
+- **A release trunk carries its version in backticks.** The workflows that guard `main` and tag
+  the merge read the version out of the backticks and hold it against the branch name, so the
+  shape is not a matter of style
+- **Its body is `# Why` alone.** With nothing described in the title, there is no approach of its
+  own for `# How` to carry
+- **`hotfix/*` is main-bound without being a trunk**, so it is not titled by its branches. It
+  takes no emoji either, and no shape is fixed for its title
 
-**Name the work the pull request carries, never the branch it came from.** The host writes
-`Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is already
-recorded; the title is what survives it, and a title repeating the branch name says nothing the
-merge commit did not.
+**Every other pull request names the work it carries, never the branch it came from.** The host
+writes `Merge pull request #<n> from <owner>/<branch>` on the merge commit, so the branch is
+already recorded; the title is what survives it, and a title repeating the branch name says
+nothing the merge commit did not.
 
 **A title naming two subjects is one `hos-gh-notation` turns away.** Where the work falls into
 two, `# How` carries the division under its own `##`, and the title names the one piece they sit

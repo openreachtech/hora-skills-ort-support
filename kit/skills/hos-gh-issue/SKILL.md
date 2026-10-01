@@ -103,6 +103,28 @@ list of intentions, so both are read as things somebody has yet to agree with. `
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
 others.
 
+## `# To-be` is one line
+
+**`# To-be` names the state the work arrives at, in a line.** It is a direction, and a direction
+that needs a paragraph has started describing the route — which is the pull request's, and the
+checklist's where the route has steps worth a box. What will exist once the work lands belongs in
+the line; how it comes to exist does not.
+
+## `# Note` carries only what a reader would miss
+
+**Strike the line out, and ask what the reader would then not know.** Where the answer is nothing,
+it was struck out for good. A `# Note` that grows a line for every premise it can think of is read
+as a list of warnings, and the one that matters is found only by reading them all.
+
+- **Something left as it stands is not a note by being left.** It earns a line only where the
+  reader would otherwise expect it done — a field the work seems to have forgotten, a file the
+  diff seems to have skipped. A sample kept until something replaces it, or a passage that keeps a
+  placeholder on purpose because it describes the placeholder, surprises nobody
+- **The meaning of a value the work chose is not a note either.** The value is in the checklist or
+  the diff, and what it does belongs to whatever documents it
+- **What the issue's own scope covers is not a note.** A line saying some part is left out of this
+  issue is wrong the moment the author decides it is in, and then it is a box instead
+
 ## What the notation convention is read for here
 
 **How anything in the body is set down belongs to `hos-gh-notation`.** Three of its rules land
@@ -169,6 +191,12 @@ has learned something in order to discard it.
 Say that they differ, and say what they will become. **The inventory of how each one differs is
 what the body leaves out.**
 
+**Unifying is the plainest case, not the only one.** Any work that clears a set of places leaves
+their list behind with it: a placeholder resolved everywhere it sits, a setting removed from every
+file that carries it, a name replaced wherever it appears. The table of those places is exactly
+what the work is about to make untrue, so `# As-is` says that the state holds and stops — which
+is usually one line.
+
 - **The exception is a difference that survives.** Where one of them will keep its own spelling,
   or where the unification leaves a case behind, that case is a constraint and belongs in
   `# Note` with the rest.
@@ -196,6 +224,22 @@ what the issue asks for.
 A title reading `Tidy up <one file>` is the usual way this goes wrong. The file shrank because
 fifteen others were fixed, and whoever opens the issue reads one file's worth of work where the
 work was the fifteen.
+
+**The title names the purpose, never what was found on the way to it.** A title defines what is
+to be done. Where the cause behind it is already known by the time the issue is filed — the
+package behind an audit report, its severity, the mechanism the fix will take — that is a finding,
+and it belongs in `# As-is` and `# To-be`. The title stays at the task the finding serves.
+
+```
+Bad   🛡️ Resolve the high `brace-expansion` vulnerability reported by `npm audit`
+Good  🛡️ Resolve `npm audit`
+```
+
+- **The test is whether the title would still hold had the finding come out otherwise.**
+  ``Resolve `npm audit` `` is true whichever package the report names, and stays true when a second
+  advisory arrives before the work lands. The bad title is wrong the moment either happens.
+- **Knowing the implementation early is not a reason to write it in.** It reads as precision, and
+  what it does is narrow the issue to one route before anybody has agreed to take it.
 
 **A title naming two subjects is one the notation convention turns away**, and a hub's title is
 the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
@@ -410,7 +454,9 @@ that has to take effect on an external service, a value somebody enters in a con
 by hand alone, which is what a box is for.
 
 **A box is work that changes something.** Something left as it stands, and the outcome of a check,
-are neither: they belong under `# Note`.
+are neither: they belong under `# Note` — where a reader would otherwise take them for work
+missed, and nowhere where nobody would. The section on what `# Note` carries says how that is
+told.
 
 **Whether a line is still outstanding is checked before it is written.** A box already closed by
 the time the issue is filed is something left as it stands, and belongs under `# Note` with the
@@ -427,6 +473,19 @@ nothing to find at review except that the line should never have been there.
   with the boxes already checked
 - **A box states what is true.** Checking one that is not is the one thing that makes a checklist
   worth less than no checklist
+
+**An issue raised from commits already made takes its checklist from what the work does, never
+from the commits.** The commits are the nearest list to hand, and projecting them onto boxes turns
+the checklist into a record of how the work was split — which edit came first, which file took
+which change. That is the commit history's to say, and the pull request's. **The checklist is not
+where commit granularity is written down**: a box names a thing the issue sets out to do, and one
+thing done may have taken several commits and touched several files.
+
+- **`## One line, one target` still holds, because a target is a thing to do.** Two files purged
+  are two things done, and take a line each. One change that reached several files is one thing,
+  and takes one line
+- **The test is to ask of each box what is being done, not where.** A line that only names the
+  file an edit landed in is a commit subject copied across
 
 ## Templates
 
