@@ -360,7 +360,7 @@ never belonged to.
   the parent is part of what the child is, not a link added afterwards.
 - **Where that hub does not exist, it is filed first.** Writing the child and leaving it parentless
   until somebody notices is how a release ends up gathering only the issues raised after its hub
-  happened to appear. The hub is cheap — see the `# As-is` it carries — and filing it is what
+  happened to appear. The hub is cheap — see the `# Note` it carries — and filing it is what
   secures the parent the child is about to take.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
