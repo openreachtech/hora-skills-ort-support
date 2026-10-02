@@ -165,6 +165,11 @@ other is this skill's own.
 sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
 checklist does nothing about, or a group of boxes answering a state nobody wrote down.
 
+**A heading over a single line is not a division.** Where every heading in `# Checklist` would
+hold one line, the checklist goes flat: each line already names its fix, and a heading above it
+only says it twice. `# As-is` keeps its headings where they group what was observed, and the two
+are then held against each other line by heading.
+
 **`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
 against each other are `# How` and this issue's `# Checklist`.
 
