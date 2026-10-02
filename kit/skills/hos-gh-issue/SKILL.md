@@ -116,6 +116,10 @@ that needs a paragraph has started describing the route — which is the pull re
 checklist's where the route has steps worth a box. What will exist once the work lands belongs in
 the line; how it comes to exist does not.
 
+**It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
+restate the current state with the verbs reversed. Where the one line would only do that, leave
+`# To-be` out, and let `# Checklist` name the fixes.
+
 ## `# Note` carries only what a reader would miss
 
 **Strike the line out, and ask what the reader would then not know.** Where the answer is nothing,
