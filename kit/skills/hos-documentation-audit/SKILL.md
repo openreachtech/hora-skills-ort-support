@@ -1,6 +1,6 @@
 ---
 name: hos-documentation-audit
-description: "Audit a maintained document against the conventions it must not contradict, and report what is found without repairing it. A document written for people and a skill written for an agent can state the same rule differently, and neither file records which of them moved last — so both sides are quoted with their evidence and a person decides which one is wrong. A rule a skill states and the document does not is not a finding. Use when a document and a convention may have drifted apart, and after either side changes. Repairing a document a reader stalls on belongs to the humanize skill; what a document may state belongs to the documentation convention."
+description: "Audit a maintained document against the conventions it must not contradict, and report what is found without repairing it; which side is wrong stays a person's call. Use when a document and a convention may have drifted apart, and after either side changes. Repairing a document a reader stalls on belongs to the humanize skill; what a document may state belongs to the documentation convention."
 ---
 
 # Documentation Audit
