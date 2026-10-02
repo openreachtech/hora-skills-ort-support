@@ -431,8 +431,8 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 ## One line, one target
 
 **A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
-two files, two workflows or two config keys sharing a line give a reader a box that can only be
-whole or untouched — there is no way to say the half that is done.
+two workflows or two config keys sharing a line give a reader a box that can only be whole or
+untouched — there is no way to say the half that is done.
 
 ```markdown
 Bad   - [ ] Raise `@acme/env` and `jest`
@@ -451,6 +451,10 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
 - The rule is not about packages. Anything taking the same operation over several targets splits
   per target, and a long result is grouped under `##` headings rather than folded back into fewer
   lines.
+- **The target is the fix, never the place it lands.** One fix that has to reach several files — a
+  rule written into a skill and into its guide, a document and its translation — is one line,
+  named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
+  file or by language, the checklist lists the work, and the work is the pull request's.
 
 **Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
 it a second one that says nothing more — then has to be renumbered every time a line is inserted or
