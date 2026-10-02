@@ -1,6 +1,6 @@
 ---
 name: hos-skillify
-description: "Build a skill out of the conversation you are in: mine its transcript, decide what is durable convention, then write it and run the repository's own audit. Use when a thread has settled something worth keeping — as a new skill, or as an addition to one that already exists. Produces skills only: material that turns out not to be a convention is reported and dropped. Naming, `description:` and file layout belong to the skill-updating convention, not here."
+description: "Build a skill out of the conversation you are in, as a new skill or as an addition to one that already exists. Use when a thread has settled something worth keeping. It produces skills only: material that turns out not to be a convention is dropped. Naming, `description:` and file layout belong to the skill-updating convention."
 ---
 
 # Skillify

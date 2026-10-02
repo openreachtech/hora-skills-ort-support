@@ -1,6 +1,6 @@
 ---
 name: hos-gh-pull-request
-description: "Write a pull request for this organization and open it — a title carrying the linked issue's type emoji, or only the two branches on a trunk merging into `main`, and a body of `# Why` carrying the issue it closes, `# How` carrying the approach taken, and `# Note` where something has to be watched — shown in full first, then opened with `gh pr create --draft` once you say so, and handed over as text alone where `gh` is missing or logged out. It states how the work was carried out; where things stood and which direction to take belongs to the issue. Covers the merge-only line a pull request that merges a trunk turns on. Use whenever a pull request body or title is asked for. Issue bodies, commit messages and branch names are not this skill's."
+description: "Write a pull request for this organization and open it, once the text has been approved. A pull request states how the work was carried out; where things stood and which direction to take belong to the issue it closes. Use whenever a pull request body or title is asked for, a pull request merging a trunk included. Issue bodies, commit messages and branch names are not this skill's."
 ---
 
 # GitHub pull request
