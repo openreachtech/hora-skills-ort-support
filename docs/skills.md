@@ -20,6 +20,7 @@ Each skill lives at `kit/skills/<name>/`, directly under the skills directory, a
 | `hos-documentation-audit` | Audit a maintained document against the conventions it must not contradict, and report what is found without repairing it. Both sides are quoted with their evidence and a person decides which one is wrong, because neither file records which of them moved last. A rule a convention states and the document does not is not a finding. |
 | `hos-skillify` | Build a skill out of the conversation you are in — mine its transcript, decide what is durable convention, then write it and run the repository's own audit. Material that turns out not to be a convention is reported and dropped. |
 | `hos-user-manual` | Generate end-user operation manuals by driving the system for real: walk each feature in the UI of a running environment, and write one HTML page per feature with screenshots, plus a table-of-contents page, under a directory bound to the product version. |
+| `hos-virtual-research` | Put a question to a panel of seven personas who know nothing of the session — a ranking of several candidates, or a blind check of a single name — and report how each read it, so that a choice made by one judgement is held against a first reading. Collisions with Claude's own vocabulary are counted by full-text search beside it, and the report says what it cannot show. |
 
 ## Where the boundaries are
 
@@ -37,6 +38,7 @@ They overlap less than their summaries suggest, and each says in its own `SKILL.
 - **`hos-gh-release-note` writes for whoever is deciding whether to upgrade.** It carries what changed, what could break and what has to be done about it, and never a record of the work — which is why the generated list of merged pull requests is dropped rather than extended. A new release is created as a draft; a published body is never dropped to draft to make it safe, because that regresses what the repository advertises as its latest release. On a new major it keeps what is already gone apart from what is merely on its way out, because the two ask different things of the reader.
 - **`hos-npm-publish-audit` reads the tarball, not the repository.** Lint and tests examine the tree and neither opens what actually gets packed, so the inventory is read and reported in full — a summary of it is exactly the second-hand statement the reading exists to stop trusting.
 - **`hos-skillify` produces skills only.** It mines a settled conversation for what is durable and writes it, and the naming, the `description:` and the file layout of what it produces belong to the skill-updating convention it writes by.
+- **`hos-virtual-research` reports; it does not decide.** The panel is evidence about how a choice reads, and adopting a candidate stays with whoever asked. It judges a choice not yet made, where `hos-humanize-docs` sends a cold reader through a document that already exists and fixes what it finds.
 
 ## Installing them
 
