@@ -1,6 +1,6 @@
 ---
 name: hos-user-manual
-description: "Generate end-user operation manuals by driving the system for real: start the local E2E environment, log in as a test user, walk each feature in the UI, and write one HTML page per feature with screenshots plus a table-of-contents page, under a directory bound to the product version. Requires an already-built E2E environment (building it is the E2E build convention's job). Use when asked for a user manual / 利用マニュアル / operation guide; developer-facing docs belong to the documentation convention."
+description: "Generate end-user operation manuals by driving a running system through its UI, as pages bound to the product version. Requires an E2E environment that is already built; building it belongs to the E2E build convention. Use when asked for a user manual / 利用マニュアル / operation guide. Developer-facing documents belong to the documentation convention."
 ---
 
 # User Manual
