@@ -98,6 +98,12 @@ reads exactly like one that was, which leaves the reader holding a guess they ca
   a branch describes what that branch carries, and a paragraph wandering onto work the branch
   does not touch belongs to a different issue
 
+**It states what happened, outright, and stops there.** A sentence framed as where it was seen —
+"in a smoke test", "during the run" — reads as a report about that occasion rather than as the
+state, and a sentence explaining why — the mechanism behind it, what some file fails to say — is
+the inference this section refuses, written in its voice. The cause is acted on in the work, and
+the pull request is where it is told.
+
 **`# As-is` is the section that fails quietly.** `# To-be` is a direction and `# Checklist` is a
 list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
