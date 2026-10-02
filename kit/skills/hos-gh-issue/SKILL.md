@@ -227,6 +227,14 @@ is usually one line.
 🗑️ Purge the unused fixtures under `tests/legacy/`
 ```
 
+**What follows the emoji opens with a verb.** A noun phrase names a topic, and a topic is not
+something a box or a pull request can close; the verb is what says which work the issue asks for.
+A hub is the exception, and its two forms are given above.
+
+**A correction to something already shipped is `🐛 Bug`**, whatever shape the change takes. A
+document that carries a wrong instruction behaves incorrectly from its reader's side, and an
+`💪 Enhancement` label would tell them the shipped version was merely improvable.
+
 **The title names the work, not the file the diff happens to concentrate in.** The test is
 whether the file is the decision or the place the decision was recorded. A file purged, a
 document written, a lock file regenerated because it had drifted from the manifest — each of
