@@ -52,7 +52,6 @@
     "jest": "^30.5.2"
   },
   "overrides": {
-    "flatted": "^3.4.2",
     "glob": "^13.0.6"
   },
   "allowScripts": {
