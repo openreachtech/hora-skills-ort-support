@@ -98,6 +98,12 @@ reads exactly like one that was, which leaves the reader holding a guess they ca
   a branch describes what that branch carries, and a paragraph wandering onto work the branch
   does not touch belongs to a different issue
 
+**It states what happened, outright, and stops there.** A sentence framed as where it was seen —
+"in a smoke test", "during the run" — reads as a report about that occasion rather than as the
+state, and a sentence explaining why — the mechanism behind it, what some file fails to say — is
+the inference this section refuses, written in its voice. The cause is acted on in the work, and
+the pull request is where it is told.
+
 **`# As-is` is the section that fails quietly.** `# To-be` is a direction and `# Checklist` is a
 list of intentions, so both are read as things somebody has yet to agree with. `# As-is` is read
 as reporting — and a reader who catches one sentence of it false has no reason left to trust the
@@ -109,6 +115,10 @@ others.
 that needs a paragraph has started describing the route — which is the pull request's, and the
 checklist's where the route has steps worth a box. What will exist once the work lands belongs in
 the line; how it comes to exist does not.
+
+**It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
+restate the current state with the verbs reversed. Where the one line would only do that, leave
+`# To-be` out, and let `# Checklist` name the fixes.
 
 ## `# Note` carries only what a reader would miss
 
@@ -154,6 +164,11 @@ other is this skill's own.
 **The division is the issue's, so the current state and the work divide alike.** Where the two
 sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
 checklist does nothing about, or a group of boxes answering a state nobody wrote down.
+
+**A heading over a single line is not a division.** Where every heading in `# Checklist` would
+hold one line, the checklist goes flat: each line already names its fix, and a heading above it
+only says it twice. `# As-is` keeps its headings where they group what was observed, and the two
+are then held against each other line by heading.
 
 **`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
 against each other are `# How` and this issue's `# Checklist`.
@@ -211,6 +226,14 @@ is usually one line.
 💪 Add a quick start to `docs/`
 🗑️ Purge the unused fixtures under `tests/legacy/`
 ```
+
+**What follows the emoji opens with a verb.** A noun phrase names a topic, and a topic is not
+something a box or a pull request can close; the verb is what says which work the issue asks for.
+A hub is the exception, and its two forms are given above.
+
+**A correction to something already shipped is `🐛 Bug`**, whatever shape the change takes. A
+document that carries a wrong instruction behaves incorrectly from its reader's side, and an
+`💪 Enhancement` label would tell them the shipped version was merely improvable.
 
 **The title names the work, not the file the diff happens to concentrate in.** The test is
 whether the file is the decision or the place the decision was recorded. A file purged, a
@@ -337,7 +360,7 @@ never belonged to.
   the parent is part of what the child is, not a link added afterwards.
 - **Where that hub does not exist, it is filed first.** Writing the child and leaving it parentless
   until somebody notices is how a release ends up gathering only the issues raised after its hub
-  happened to appear. The hub is cheap — see the `# As-is` it carries — and filing it is what
+  happened to appear. The hub is cheap — see the `# Note` it carries — and filing it is what
   secures the parent the child is about to take.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
@@ -408,8 +431,8 @@ gh issue create --title '💪 Add a quick start to `docs/`' --body-file <path>
 ## One line, one target
 
 **A checklist line holds one thing, and the box beside it closes on that one thing.** Two packages,
-two files, two workflows or two config keys sharing a line give a reader a box that can only be
-whole or untouched — there is no way to say the half that is done.
+two workflows or two config keys sharing a line give a reader a box that can only be whole or
+untouched — there is no way to say the half that is done.
 
 ```markdown
 Bad   - [ ] Raise `@acme/env` and `jest`
@@ -428,6 +451,10 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
 - The rule is not about packages. Anything taking the same operation over several targets splits
   per target, and a long result is grouped under `##` headings rather than folded back into fewer
   lines.
+- **The target is the fix, never the place it lands.** One fix that has to reach several files — a
+  rule written into a skill and into its guide, a document and its translation — is one line,
+  named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
+  file or by language, the checklist lists the work, and the work is the pull request's.
 
 **Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
 it a second one that says nothing more — then has to be renumbered every time a line is inserted or
@@ -486,6 +513,18 @@ thing done may have taken several commits and touched several files.
   and takes one line
 - **The test is to ask of each box what is being done, not where.** A line that only names the
   file an edit landed in is a commit subject copied across
+
+**The same holds before any commit exists.** A plan for how the work will be committed is commit
+granularity as much as a record of it is, and it reaches a checklist by the same route — from the
+convention that settles the commit shape, or from an earlier issue whose boxes are copied across.
+Measured: a dependency raise was drafted with ``Refresh `package-lock.json` in a single commit
+after the raise`` beside ``Raise `<package>` to `<range>` ``. The lockfile moving is part of the
+raise, and taking it in one commit is the dependency convention's rule; neither is a thing the
+issue sets out to do, and the issue took one box.
+
+- **A box copied from an earlier issue is checked like one written fresh.** An issue of the same
+  kind is the nearest template to hand, and whatever commit plan its checklist carried arrives
+  with it
 
 ## Templates
 

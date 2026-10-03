@@ -1,6 +1,6 @@
 ---
 name: hos-explain
-description: "Rewrite an AI-generated explanation, report or proposal into plain language with diagrams, so that a reader with no technical background — a junior-high-school student is the bar — can understand it in one read. Use when an AI answer is too long or too hard, when sharing a conclusion with non-engineers, or when asked to explain simply or with diagrams. It only rewrites an existing message and adds no new analysis; end-user product manuals belong to the user-manual skill."
+description: "Rewrite an AI-generated explanation, report or proposal into plain language with diagrams, for a reader with no technical background. Use when an AI answer is too long or too hard, when sharing a conclusion with non-engineers, or when asked to explain simply or with diagrams. It only rewrites an existing message and adds no new analysis; end-user product manuals belong to the user-manual skill."
 ---
 
 # Explain

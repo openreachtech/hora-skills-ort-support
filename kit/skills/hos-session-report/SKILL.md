@@ -239,6 +239,10 @@ which is the residue that one leaves.
   decision; whether a neighbouring feature's document belongs in this report at all is decided
   here, by which of the two questions was asked.
 
+**What the session took up, as against what it left, is the session-summary convention's.** A
+report that opens by listing the session's subjects has put that list in front of the verdict; where
+the reader wants both, both are run.
+
 Run this convention to its end and the report is scoped and true. **What is left is whether the
 reader can follow it** — a report built for somebody who watched the session and handed to
 somebody who did not is the explain skill's.
