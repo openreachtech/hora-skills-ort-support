@@ -5,8 +5,31 @@ description: "The last audit of a package before it reaches the npm registry: it
 
 # npm publish audit
 
-**This reads what is in the tarball.** That is what reaches a consumer, and whatever is wrong in
-it is what they meet in their first minute.
+**This reads the tarball `npm pack` produces at the current `HEAD`.** What that tarball holds is
+what reaches a consumer, and whatever is wrong in there is what they meet in their first minute.
+
+**Which release it is comes from the `origin/release/x.x.x` that `HEAD` belongs to, and exactly
+one of them does. Where none does, there is nothing to audit.** This reading exists for a
+release, and a commit belonging to none is not one anything is about to be published from.
+
+```sh
+git fetch origin --prune
+git branch -r --contains HEAD --list 'origin/release/*'
+```
+
+**The remote branch is the basis, never the local one.** What `origin` holds is what arrived
+through a pull request, so a commit contained in `origin/release/x.x.x` is one that was reviewed
+and merged — where the same name locally carries whatever has not been pushed yet, and answers
+for a release nobody has agreed to. The fetch comes first for the same reason: a remote-tracking
+ref reports whatever the clone last saw, which is a release branch deleted since still listed,
+or one opened since not listed at all.
+
+**The version in `package.json` is never read for this.** The npm publish convention puts the
+version bump in the release's last commit, so for the whole window in which this reading is worth
+making the manifest still holds the version already on the registry, and so does the filename
+`npm pack` stamps from it. Two things follow: a publish refused as a collision is that ordering
+working rather than a finding, and nothing is owed a second reading after the bump, which touches
+the version and nothing else.
 
 ## Read the inventory
 
@@ -83,6 +106,8 @@ grep.**
 **Show the inventory in full — the count and every path, not a summary.** A summary is exactly
 the second-hand statement the reading exists to stop trusting.
 
+- **Name the release, and the commit the tarball was packed at.** Without them every finding is
+  measured against a tree nobody can reach.
 - **A rehearsal is not a finding.** A command that reports what it would have done proves it
   would run, and says nothing about whether what it packed is right.
 - **Say what was read and what was not.** An audit whose range is unstated cannot be argued

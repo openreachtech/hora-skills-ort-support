@@ -1,6 +1,6 @@
 ---
 name: hos-humanize-docs
-description: "Repair a maintained document so that a first-time reader stops stalling on it. A cold read by an agent with no prior knowledge reports where it stalled, each stall is classified against written criteria, and the document is fixed — looping until the findings fall inside a threshold. Structure and voice are preserved, and the intended reader never changes. Use when a document is hard to follow, when one language version reads like a translation, or when a language family has drifted apart. Rewriting a message for a non-technical reader belongs to the explain skill; deciding which language a document is written in belongs to the documentation convention."
+description: "Repair a maintained document so that a first-time reader stops stalling on it, keeping its structure, its voice and the reader it was written for. Use when a document is hard to follow, when one language version reads like a translation, or when a language family has drifted apart. Rewriting a message for a non-technical reader belongs to the explain skill; deciding which language a document is written in belongs to the documentation convention."
 ---
 
 # Humanize docs

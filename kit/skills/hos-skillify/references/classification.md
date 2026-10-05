@@ -121,6 +121,16 @@ Three outcomes:
 - **Add it as an exception.** The interview showed the rule's scope never covered this.
 - **Reject the fact.** The rule holds for reasons the thread did not see.
 
+**The three are shown so they can be compared, never described one after another.** An interview
+ends in a choice among them, and three paragraphs of prose hand the reader the arguments without
+handing them the comparison: what each outcome changes, what it then permits, and what it costs
+are scattered across whichever paragraph happened to mention them.
+
+Put them in a table that asks the same questions of each — what changes in the skill, what the
+change then allows, what it costs, and where the fact at issue lands under it. Measured: three
+outcomes written as prose came back with the objection that they could not be surveyed; the same
+three as a table were answered with a number.
+
 Never resolve it by writing both. A skill holding two rules that contradict each other is
 worse than one holding the wrong rule, because the reader cannot tell which to follow and
 neither will be corrected.
