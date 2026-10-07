@@ -122,8 +122,26 @@ the same afternoon does not bring it in. That material has a home, and the home 
 
 ## Nothing outstanding is a complete report
 
-**Where the session leaves nothing outstanding, the verdict block is the whole report.** The ✅
-line says it, and it is worth no more words than it takes.
+**Where the session leaves nothing outstanding, the report is what it settled, then the
+verdict.** The subjects the session took to a close come first, one line each and numbered, then
+one blank line, then the ✅ line:
+
+```
+1. Fix the bug in the alpha parser
+2. Update the beta skill
+
+✅ Nothing is left
+```
+
+**The ✅ line alone does not say what was closed.** A 🤔 report names its residue in the bullets
+under it, so the reader learns what the session was about from what it left. A ✅ report has no
+such list, and a mark with nothing beside it tells the reader the session may end without telling
+them which session it was. The list is what gives the verdict its subject.
+
+- **One line per subject, and nothing more.** The line names what was settled; how it was settled
+  is in the commits and the pull requests. A line that grows a clause, or a paragraph under the
+  list, is the surplus this convention exists to refuse.
+- **Numbered, as the causes of a 🤔 are**, so the reader can point at one by its number.
 
 A short report reads as a thin one, and the reach for something to add is where the surplus comes
 from, never a judgement that the reader needed it. **Length is not what makes a report finished;
@@ -164,8 +182,9 @@ have to hunt. What they see without moving is the last line.
   list is what they act on, so the order is the order they need them in: a ✅ stops them there,
   and a 🤔 sends them on to the next line. Put the causes first and the reader is reading a list
   before knowing whether it concerns them.
-- **✅ takes no bullets.** There is nothing to list under it, and a line explaining why there is
-  nothing is a paragraph the reader has already been told they do not need.
+- **✅ takes no bullets below it.** There is nothing to list under it, and a line explaining why
+  there is nothing is a paragraph the reader has already been told they do not need. What it
+  settled goes above it, as `## Nothing outstanding is a complete report` says.
 - **The mark is not decoration.** A reader scanning for it finds a glyph faster than a sentence,
   and the two states have to be told apart at a glance rather than read.
 - **One cause per bullet.** A reader closes a session by clearing them one at a time, and two
@@ -180,7 +199,8 @@ have to hunt. What they see without moving is the last line.
     once and never edited, so the renumber never arrives.
   - **Plain numerals, `1.` upward.** Enclosed forms such as `①` are not written anywhere a reader
     sees, in this convention or any other.
-  - **✅ numbers nothing**, having nothing to list.
+  - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
+    numbers of their own.
 
 ## A label does not put a section back outside
 
@@ -246,9 +266,10 @@ which is the residue that one leaves.
   decision; whether a neighbouring feature's document belongs in this report at all is decided
   here, by which of the two questions was asked.
 
-**What the session took up, as against what it left, is the session-summary convention's.** A
-report that opens by listing the session's subjects has put that list in front of the verdict; where
-the reader wants both, both are run.
+**An account of what the session took up is the session-summary convention's.** The one-line
+subjects above a ✅ name what was closed, so that the verdict has a subject; they are not that
+account. A report that opens by narrating the session has put the narration in front of the
+verdict, and where the reader wants both, both are run.
 
 Run this convention to its end and the report is scoped and true. **What is left is whether the
 reader can follow it** — a report built for somebody who watched the session and handed to
