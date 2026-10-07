@@ -202,6 +202,23 @@ have to hunt. What they see without moving is the last line.
   - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
     numbers of their own.
 
+## A remaining-work table
+
+**Where the session keeps a list of what remains, it is a numbered table: the number, the status,
+then the work.** The reader answers it by number, so the numbers stay as they are from one list to
+the next, and an item named in a question carries its content beside its number.
+
+- **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
+  reader skips what is done before reading what it was.
+- **A row is ✅️ once its own work is done.** A fix committed, a pull request opened — the work the
+  row names is finished, and what carries it further, such as the branch reaching its trunk, is a
+  row of its own.
+- **The pull request that takes a release trunk into `main` is the release, not a row before it.**
+  It is listed apart from what the release still needs, never as one more item on the way to it.
+- **A numbered item is never written as a bullet holding a number.** `- 3. …` nests an ordered
+  list inside a bullet, and a renderer draws a nested ordered list in Roman numerals. Numbered
+  items stand at the top level of a list, or in a table.
+
 ## A label does not put a section back outside
 
 **Marking a section as out of scope does not excuse including it.** Measured: a report opened by
