@@ -63,6 +63,13 @@ verdict is for.
   made is unfinished work by the ordinary test. What the rule above excludes is the push nobody
   asked for, reported because the commits exist.
 
+**An issue still open after its pull request merged has been handed over, and is not listed.** A
+pull request merged into a trunk rather than the default branch may leave the issue it closes
+open, because the host does not always act on `Close #<issue>` there. The work is in the trunk
+all the same, and closing the issue belongs to taking that merge in — done on the host, by whoever
+merged it, with nothing the session still holds. Listed as a cause, it sends the reader to an issue
+they are about to close, or already have.
+
 **A missing line is worse than a surplus one**, because it is the one that gets stranded. That is
 not licence to add: a surplus line postpones the verdict the reader came for, and the way to
 cover both is a scope fixed before anything is gathered, not a report widened to be safe.
