@@ -365,6 +365,18 @@ never belonged to.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
 
+**An issue a publish issue links inline, in its description, takes no parent.** Raising the
+package version and merging the release into `main` are steps of the publish, and the publish
+issue's description is where they are linked. That link is the whole of the relation: neither the
+publish issue nor the release hub takes such an issue as a sub-issue.
+
+- **The reason is the flow.** The description lists the steps in the order they are taken, and a
+  step linked there is read in that order. Made a sub-issue, the step moves to the panel, which
+  lists children without that order — and the order is what the publish issue is there to show.
+- **This covers the steps of the publish, not the work it turns up.** A fix the check before
+  publishing finds is work of the release, raised from commits on a branch under it, and takes the
+  release hub as above.
+
 ## Using `gh`
 
 **Where `gh` can reach GitHub, this skill uses it** — for reading the host as much as for filing
