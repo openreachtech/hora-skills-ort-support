@@ -49,6 +49,23 @@ says nothing and costs the reader a stop.
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
 
+**An issue small enough for its title to say it all may leave out `# As-is` and `# To-be`.** Both
+sections exist to carry what the title cannot. Where the title already names where things stand and
+where they go, either section would only repeat it, so drop whichever has nothing left to add —
+one, the other or both. This is a judgement per issue, not a shape fixed per kind of work.
+
+- **The package's own version raise is the usual case.** `` 📦️ Update package version to `1.4.0` ``
+  names the version it goes to, and all an `# As-is` could add is that the manifest still holds the
+  one already published — true of every release until its last commit. The body can be the
+  `# Checklist` alone, one box rather than one per file, since the lockfile moving is part of the
+  raise:
+
+  ```markdown
+  # Checklist
+
+  - [ ] Raise `version` to `1.4.0`
+  ```
+
 **Asked for an umbrella, the issue is an umbrella.** The word settles the type and the shape in one
 go: `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. An umbrella
 with work of its own is not an umbrella — that work belongs in one of the children.
