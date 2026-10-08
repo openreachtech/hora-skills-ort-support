@@ -46,13 +46,13 @@ the moment either is edited.
 
 **`# Why` names exactly one issue, always.** A pull request is opened for one reason, and the
 issue is that reason written down. Where the work arrives as several pieces at once, what the
-pull request closes is the issue those pieces sit under — the hub — and never the children
+pull request closes is the issue those pieces sit under — the umbrella — and never the children
 beside it.
 
 - **Several `Close` lines say the pull request had several reasons**, which is what one reason
   rules out. A reader meeting three of them has to work out which the pull request was for, and
   the answer is that it was for none of them on its own.
-- **The children are reached through the hub**, whose sub-issue panel already lists them.
+- **The children are reached through the umbrella**, whose sub-issue panel already lists them.
   Repeating them here is the restatement above by another route, and it goes stale the moment a
   child is added or dropped.
 
