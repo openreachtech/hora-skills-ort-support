@@ -24,7 +24,7 @@ alongside this one, and this one does not restate it.
 | Section | What goes in it | Written |
 | :-- | :-- | :-- |
 | `# Why` | `* Close #<issue>`, and nothing else | always |
-| `# How` | The approach the work took | always, except on a trunk merging into `main` |
+| `# How` | The approach the work took | always, unless the work took no approach of its own (below) |
 | `# Note` | What has to be watched — follow-up left undone, a side effect, an ordering dependency | **only when there is something** |
 
 ## `# Why` is a link, not an explanation
@@ -94,6 +94,17 @@ judge, and the graph shows the shape besides.
 - **This is the limit on the carrying-out heading below.** That rule says a `# Checklist` never
   records how the work was carried out, which is why such a heading disagrees with no box. It does
   not say the carrying-out is worth a heading.
+
+**Where the work took no approach of its own, `# How` is left out and the body is `# Why` alone.**
+The section holds the shape the work chose, so where nothing was chosen — the title and the diff
+say all there is, and anything further is what a convention already fixes — a `# How` written
+anyway restates one of them. This is a judgement per pull request, not a list of kinds that skip
+it.
+
+- **A trunk merging into `main` is the usual case.** Everything it carries was described in the
+  pull requests that fed the trunk.
+- **So is the package's own version raise.** Where the raise sits and what it moves are the
+  publishing convention's, and the diff shows the rest.
 
 ## `# How` and the `# Checklist` divide the same way
 
