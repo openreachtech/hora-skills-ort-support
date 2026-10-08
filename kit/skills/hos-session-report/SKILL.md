@@ -197,8 +197,11 @@ have to hunt. What they see without moving is the last line.
     There, a checkbox already marks each item and the numbers only double it, and every insertion
     or deletion forces a renumber. Here there is no checkbox to double, and a report is written
     once and never edited, so the renumber never arrives.
-  - **Plain numerals, `1.` upward.** Enclosed forms such as `①` are not written anywhere a reader
-    sees, in this convention or any other.
+  - **Plain numerals, `1.` upward.** A numeral drawn as one decorated character — circled,
+    parenthesized, or carrying its own full stop — is not written anywhere a reader sees, in this
+    convention or any other. Those characters occupy `U+2460`–`U+249B`, `U+24EA`–`U+24FF`,
+    `U+2776`–`U+2793`, `U+3220`–`U+3229`, `U+3251`–`U+325F`, `U+3280`–`U+3289`, `U+32B1`–`U+32BF`
+    and `U+1F100`–`U+1F10C`.
   - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
     numbers of their own.
 

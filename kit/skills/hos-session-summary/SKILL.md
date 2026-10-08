@@ -76,8 +76,11 @@ one subject, never three.
   remember, and any other — by importance, by repository — is a judgement the summary has no
   ground for.
 - **The subjects are numbered**, because a reader answers a summary by pointing at a line, and
-  `2` is a word where the line itself would be a quotation. Plain numerals, `1.` upward; enclosed
-  forms such as `①` are not written anywhere a reader sees.
+  `2` is a word where the line itself would be a quotation. Plain numerals, `1.` upward. A numeral
+  drawn as one decorated character — circled, parenthesized, or carrying its own full stop — is
+  not written anywhere a reader sees. Those characters occupy `U+2460`–`U+249B`,
+  `U+24EA`–`U+24FF`, `U+2776`–`U+2793`, `U+3220`–`U+3229`, `U+3251`–`U+325F`, `U+3280`–`U+3289`,
+  `U+32B1`–`U+32BF` and `U+1F100`–`U+1F10C`.
 - **One line each, with no sub-bullets.** A second level is where the account of the work comes
   back in.
 - **Nothing before the list and nothing after it.** No heading, no count, no closing sentence. A
