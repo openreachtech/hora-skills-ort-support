@@ -15,7 +15,7 @@ verbatim, so a line written without one produces an issue nobody can classify at
 | 💪 Enhancement | an existing thing made better |
 | ⚙️ Environment | the environment a project runs or builds in |
 | ⚒️ Feature | a capability that did not exist |
-| 📂 Hub | **a hub.** It holds no work of its own; its children carry it |
+| ⛱️ Umbrella | **an umbrella.** It holds no work of its own; its children carry it |
 | 🦵 Kick out | **a part removed from something that stays** — a member, a section, an entry, a field |
 | 🏗️ Building layout | markup and layout written for the first time |
 | 🧵 Lint | lint configuration and the fixes it demands |
@@ -61,20 +61,20 @@ and the commits saying the same thing. The verbs are in the git commit conventio
 commit vocabulary deliberately leaves out, and `📄 Specification` names an artefact rather than an
 action.
 
-## Where a hub differs
+## Where an umbrella differs
 
-**`📂 Hub` is the one type whose title and body are both shaped differently.**
+**`⛱️ Umbrella` is the one type whose title and body are both shaped differently.**
 
-The title takes one of two forms, and the word `Hub` appears in neither:
+The title takes one of two forms, and the word `Umbrella` appears in neither:
 
 ```
-📂 Release `1.4.0`                          gathering a release — the version is the whole title
-📂 The move off the legacy mail templates    any other hub — what the whole of it is about
+⛱️ Release `1.4.0`                          gathering a release — the version is the whole title
+⛱️ The move off the legacy mail templates    any other umbrella — what the whole of it is about
 ```
 
-A release hub is titled by its version alone; every other hub is titled by the overview of what
-it gathers. `Hub` in the title says nothing the emoji has not, and it costs the reader the words
-that would have told them what the group is.
+A release umbrella is titled by its version alone; every other umbrella is titled by the overview of
+what it gathers. `Umbrella` in the title says nothing the emoji has not, and it costs the reader the
+words that would have told them what the group is.
 
 The body carries the situation and the direction, then its children:
 
@@ -97,15 +97,15 @@ The body carries the situation and the direction, then its children:
 - [ ] 🧪 <another>
 ```
 
-**No `# Checklist`.** A hub with work of its own is not a hub; that work belongs in one of the
-children.
+**No `# Checklist`.** An umbrella with work of its own is not an umbrella; that work belongs in one
+of the children.
 
-**A release hub's body is one line under `# Note`, and the line is `* Next release`.** Every other
-hub opens by stating the situation its children sit in; a release hub cannot, because its children
-arrive throughout the release and there is no moment at which the list is complete. An `# As-is`
-written to describe them goes stale the next time one is filed, and the only thing about it that
-stays true is which release it gathers — which the title has already said. So it carries no
-`# As-is` at all, and `hos-gh-open-release` files it in this shape.
+**A release umbrella's body is one line under `# Note`, and the line is `* Next release`.** Every
+other umbrella opens by stating the situation its children sit in; a release umbrella cannot,
+because its children arrive throughout the release and there is no moment at which the list is
+complete. An `# As-is` written to describe them goes stale the next time one is filed, and the only
+thing about it that stays true is which release it gathers — which the title has already said. So it
+carries no `# As-is` at all, and `hos-gh-open-release` files it in this shape.
 
 ```markdown
 # Note
@@ -113,9 +113,9 @@ stays true is which release it gathers — which the title has already said. So 
 * Next release
 ```
 
-This is the one hub without an `# As-is`, and it goes without one for arithmetic rather than for
-brevity: the body is short because the enumeration never finishes, not because the hub deserves
-less care than the others.
+This is the one umbrella without an `# As-is`, and it goes without one for arithmetic rather than
+for brevity: the body is short because the enumeration never finishes, not because the umbrella
+deserves less care than the others.
 
-**A piece of work spanning two repositories is the ordinary case for a hub.** One issue per
-repository, gathered under it, with the ordering between them stated in the hub's `# Note`.
+**A piece of work spanning two repositories is the ordinary case for an umbrella.** One issue per
+repository, gathered under it, with the ordering between them stated in the umbrella's `# Note`.
