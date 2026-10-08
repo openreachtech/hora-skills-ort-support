@@ -1,6 +1,6 @@
 ---
 name: hos-gh-issue
-description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, the hub issue that gathers several, and settles which issue a new one sits under. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
+description: "Write a GitHub issue for this organization and file it, once the text has been approved. An issue states where things stand and which direction to take; how the work is carried out belongs to the pull request. Also writes the body of a sub-issue GitHub left empty, the umbrella issue that gathers several, and settles which issue a new one sits under. Use whenever an issue, a sub-issue or a tracking issue is asked for. Pull request bodies and commit messages are not this skill's."
 ---
 
 # GitHub issue
@@ -49,40 +49,57 @@ says nothing and costs the reader a stop.
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
 
-**Asked for a hub, the issue is a hub.** The word settles the type and the shape in one go:
-`# Checklist` is not written at all, and `# Sub-issues` stands where it would have. A hub with
-work of its own is not a hub — that work belongs in one of the children.
+**An issue small enough for its title to say it all may leave out `# As-is` and `# To-be`.** Both
+sections exist to carry what the title cannot. Where the title already names where things stand and
+where they go, either section would only repeat it, so drop whichever has nothing left to add —
+one, the other or both. This is a judgement per issue, not a shape fixed per kind of work.
+
+- **The package's own version raise is the usual case.** `` 📦️ Update package version to `1.4.0` ``
+  names the version it goes to, and all an `# As-is` could add is that the manifest still holds the
+  one already published — true of every release until its last commit. The body can be the
+  `# Checklist` alone, one box rather than one per file, since the lockfile moving is part of the
+  raise:
+
+  ```markdown
+  # Checklist
+
+  - [ ] Raise `version` to `1.4.0`
+  ```
+
+**Asked for an umbrella, the issue is an umbrella.** The word settles the type and the shape in one
+go: `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. An umbrella
+with work of its own is not an umbrella — that work belongs in one of the children.
 
 **Where no child covers a piece of the work, the piece gets a child of its own.** The rule above
 says where such work belongs; it does not say what to do when none of the children standing there
-holds it. Neither of the two easy answers is the answer: the hub does not keep it, and the
-nearest child is not widened to reach it. File one more, and the hub is a hub again.
+holds it. Neither of the two easy answers is the answer: the umbrella does not keep it, and the
+nearest child is not widened to reach it. File one more, and the umbrella is an umbrella again.
 
-- **A hub is checked against the work, not against its own children.** Reading the children and
-  finding them coherent says nothing about what they leave out — the residue only shows when the
+- **An umbrella is checked against the work, not against its own children.** Reading the children
+  and finding them coherent says nothing about what they leave out — the residue only shows when the
   work is listed beside them.
 
-**A hub's title takes one of two forms, and the word `Hub` appears in neither.**
+**An umbrella's title takes one of two forms, and the word `Umbrella` appears in neither.**
 
 ```
-📂 Release `1.4.0`                          gathering a release — the version is the whole title
-📂 The move off the legacy mail templates    any other hub — what the whole of it is about
+⛱️ Release `1.4.0`                          gathering a release — the version is the whole title
+⛱️ The move off the legacy mail templates    any other umbrella — what the whole of it is about
 ```
 
-A hub that gathers a release is titled by that release and nothing else. Every other hub is
-titled by the overview of what it gathers, at the altitude the children sit beneath.
+An umbrella that gathers a release is titled by that release and nothing else. Every other umbrella
+is titled by the overview of what it gathers, at the altitude the children sit beneath.
 
-**Writing `Hub` into the title says nothing the emoji has not already said**, and it spends the
+**Writing `Umbrella` into the title says nothing the emoji has not already said**, and it spends the
 first words on a label instead of on the thing a reader opened the issue for.
 
 **The two checkbox sections are not interchangeable.** A box under `# Checklist` is work done
 inside this issue; a box under `# Sub-issues` is an issue that does not exist yet, written as the
 full title it will carry, emoji and all — which is what lets GitHub's own sub-issue feature turn
 the line into an issue, as the section below describes. An ordinary issue may carry either or
-both; **a hub carries only the second.**
+both; **an umbrella carries only the second.**
 
-[types.md](./references/types.md) carries `📂 Hub` alongside the other types, and the hub's body
-in full.
+[types.md](./references/types.md) carries `⛱️ Umbrella` alongside the other types, and the
+umbrella's body in full.
 
 ## `# As-is` is observed, never inferred
 
@@ -229,7 +246,7 @@ is usually one line.
 
 **What follows the emoji opens with a verb.** A noun phrase names a topic, and a topic is not
 something a box or a pull request can close; the verb is what says which work the issue asks for.
-A hub is the exception, and its two forms are given above.
+An umbrella is the exception, and its two forms are given above.
 
 **A correction to something already shipped is `🐛 Bug`**, whatever shape the change takes. A
 document that carries a wrong instruction behaves incorrectly from its reader's side, and an
@@ -264,11 +281,11 @@ Good  🛡️ Resolve `npm audit`
 - **Knowing the implementation early is not a reason to write it in.** It reads as precision, and
   what it does is narrow the issue to one route before anybody has agreed to take it.
 
-**A title naming two subjects is one the notation convention turns away**, and a hub's title is
-the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
+**A title naming two subjects is one the notation convention turns away**, and an umbrella's title
+is the place it shows most. Finding the altitude the parts sit beneath belongs to `hos-gh-notation`,
 along with correcting a title the work has outrun.
 
-**A hub's title is read beside its children's before it is settled.** The altitude rule says
+**An umbrella's title is read beside its children's before it is settled.** The altitude rule says
 where the title has to sit; holding it against the children is what says whether it does. A title
 that comes out identical to one of them is the plainest reading of having pitched it at a child
 instead of above them all — and the collision reaches the host, where two issues then carry one
@@ -356,14 +373,26 @@ somewhere, and where it sits is what says which issue gathers it. Picking a pare
 issue is about, rather than by where its commits are, puts the record under something the work
 never belonged to.
 
-- **A branch under a `release/x.x.x` takes that release's hub.** Find it before writing the child;
-  the parent is part of what the child is, not a link added afterwards.
-- **Where that hub does not exist, it is filed first.** Writing the child and leaving it parentless
-  until somebody notices is how a release ends up gathering only the issues raised after its hub
-  happened to appear. The hub is cheap — see the `# Note` it carries — and filing it is what
-  secures the parent the child is about to take.
+- **A branch under a `release/x.x.x` takes that release's umbrella.** Find it before writing the
+  child; the parent is part of what the child is, not a link added afterwards.
+- **Where that umbrella does not exist, it is filed first.** Writing the child and leaving it
+  parentless until somebody notices is how a release ends up gathering only the issues raised after
+  its umbrella happened to appear. The umbrella is cheap — see the `# Note` it carries — and filing
+  it is what secures the parent the child is about to take.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
+
+**An issue a publish issue links inline, in its description, takes no parent.** Raising the
+package version and merging the release into `main` are steps of the publish, and the publish
+issue's description is where they are linked. That link is the whole of the relation: neither the
+publish issue nor the release umbrella takes such an issue as a sub-issue.
+
+- **The reason is the flow.** The description lists the steps in the order they are taken, and a
+  step linked there is read in that order. Made a sub-issue, the step moves to the panel, which
+  lists children without that order — and the order is what the publish issue is there to show.
+- **This covers the steps of the publish, not the work it turns up.** A fix the check before
+  publishing finds is work of the release, raised from commits on a branch under it, and takes the
+  release umbrella as above.
 
 ## Using `gh`
 
@@ -388,17 +417,17 @@ sections it needs — and the title is on the host, not in the conversation.
 gh issue view <number>
 ```
 
-**An issue handed over to be rewritten is read from its panel first, not from its body.** A hub
-whose `# Sub-issues` lines have all been converted carries no trace of being one: the section is
-gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it from the
-body alone produces a `# Checklist` on an issue that may not take one, and a title pitched at the
-altitude of whichever child was in view.
+**An issue handed over to be rewritten is read from its panel first, not from its body.** An
+umbrella whose `# Sub-issues` lines have all been converted carries no trace of being one: the
+section is gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it
+from the body alone produces a `# Checklist` on an issue that may not take one, and a title pitched
+at the altitude of whichever child was in view.
 
 ```sh
 gh api /repos/<owner>/<name>/issues/<number>/sub_issues --jq '.[].number'
 ```
 
-Empty means no children. Anything else means the issue is a hub, whatever its body looks like.
+Empty means no children. Anything else means the issue is an umbrella, whatever its body looks like.
 
 ### Filing
 

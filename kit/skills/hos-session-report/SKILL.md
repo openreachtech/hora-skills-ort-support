@@ -63,6 +63,13 @@ verdict is for.
   made is unfinished work by the ordinary test. What the rule above excludes is the push nobody
   asked for, reported because the commits exist.
 
+**An issue still open after its pull request merged has been handed over, and is not listed.** A
+pull request merged into a trunk rather than the default branch may leave the issue it closes
+open, because the host does not always act on `Close #<issue>` there. The work is in the trunk
+all the same, and closing the issue belongs to taking that merge in — done on the host, by whoever
+merged it, with nothing the session still holds. Listed as a cause, it sends the reader to an issue
+they are about to close, or already have.
+
 **A missing line is worse than a surplus one**, because it is the one that gets stranded. That is
 not licence to add: a surplus line postpones the verdict the reader came for, and the way to
 cover both is a scope fixed before anything is gathered, not a report widened to be safe.
@@ -115,8 +122,26 @@ the same afternoon does not bring it in. That material has a home, and the home 
 
 ## Nothing outstanding is a complete report
 
-**Where the session leaves nothing outstanding, the verdict block is the whole report.** The ✅
-line says it, and it is worth no more words than it takes.
+**Where the session leaves nothing outstanding, the report is what it settled, then the
+verdict.** The subjects the session took to a close come first, one line each and numbered, then
+one blank line, then the ✅ line:
+
+```
+1. Fix the bug in the alpha parser
+2. Update the beta skill
+
+✅ Nothing is left
+```
+
+**The ✅ line alone does not say what was closed.** A 🤔 report names its residue in the bullets
+under it, so the reader learns what the session was about from what it left. A ✅ report has no
+such list, and a mark with nothing beside it tells the reader the session may end without telling
+them which session it was. The list is what gives the verdict its subject.
+
+- **One line per subject, and nothing more.** The line names what was settled; how it was settled
+  is in the commits and the pull requests. A line that grows a clause, or a paragraph under the
+  list, is the surplus this convention exists to refuse.
+- **Numbered, as the causes of a 🤔 are**, so the reader can point at one by its number.
 
 A short report reads as a thin one, and the reach for something to add is where the surplus comes
 from, never a judgement that the reader needed it. **Length is not what makes a report finished;
@@ -157,8 +182,9 @@ have to hunt. What they see without moving is the last line.
   list is what they act on, so the order is the order they need them in: a ✅ stops them there,
   and a 🤔 sends them on to the next line. Put the causes first and the reader is reading a list
   before knowing whether it concerns them.
-- **✅ takes no bullets.** There is nothing to list under it, and a line explaining why there is
-  nothing is a paragraph the reader has already been told they do not need.
+- **✅ takes no bullets below it.** There is nothing to list under it, and a line explaining why
+  there is nothing is a paragraph the reader has already been told they do not need. What it
+  settled goes above it, as `## Nothing outstanding is a complete report` says.
 - **The mark is not decoration.** A reader scanning for it finds a glyph faster than a sentence,
   and the two states have to be told apart at a glance rather than read.
 - **One cause per bullet.** A reader closes a session by clearing them one at a time, and two
@@ -171,9 +197,30 @@ have to hunt. What they see without moving is the last line.
     There, a checkbox already marks each item and the numbers only double it, and every insertion
     or deletion forces a renumber. Here there is no checkbox to double, and a report is written
     once and never edited, so the renumber never arrives.
-  - **Plain numerals, `1.` upward.** Enclosed forms such as `①` are not written anywhere a reader
-    sees, in this convention or any other.
-  - **✅ numbers nothing**, having nothing to list.
+  - **Plain numerals, `1.` upward.** A numeral drawn as one decorated character — circled,
+    parenthesized, or carrying its own full stop — is not written anywhere a reader sees, in this
+    convention or any other. Those characters occupy `U+2460`–`U+249B`, `U+24EA`–`U+24FF`,
+    `U+2776`–`U+2793`, `U+3220`–`U+3229`, `U+3251`–`U+325F`, `U+3280`–`U+3289`, `U+32B1`–`U+32BF`
+    and `U+1F100`–`U+1F10C`.
+  - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
+    numbers of their own.
+
+## A remaining-work table
+
+**Where the session keeps a list of what remains, it is a numbered table: the number, the status,
+then the work.** The reader answers it by number, so the numbers stay as they are from one list to
+the next, and an item named in a question carries its content beside its number.
+
+- **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
+  reader skips what is done before reading what it was.
+- **A row is ✅️ once its own work is done.** A fix committed, a pull request opened — the work the
+  row names is finished, and what carries it further, such as the branch reaching its trunk, is a
+  row of its own.
+- **The pull request that takes a release trunk into `main` is the release, not a row before it.**
+  It is listed apart from what the release still needs, never as one more item on the way to it.
+- **A numbered item is never written as a bullet holding a number.** `- 3. …` nests an ordered
+  list inside a bullet, and a renderer draws a nested ordered list in Roman numerals. Numbered
+  items stand at the top level of a list, or in a table.
 
 ## A label does not put a section back outside
 
@@ -239,9 +286,10 @@ which is the residue that one leaves.
   decision; whether a neighbouring feature's document belongs in this report at all is decided
   here, by which of the two questions was asked.
 
-**What the session took up, as against what it left, is the session-summary convention's.** A
-report that opens by listing the session's subjects has put that list in front of the verdict; where
-the reader wants both, both are run.
+**An account of what the session took up is the session-summary convention's.** The one-line
+subjects above a ✅ name what was closed, so that the verdict has a subject; they are not that
+account. A report that opens by narrating the session has put the narration in front of the
+verdict, and where the reader wants both, both are run.
 
 Run this convention to its end and the report is scoped and true. **What is left is whether the
 reader can follow it** — a report built for somebody who watched the session and handed to
