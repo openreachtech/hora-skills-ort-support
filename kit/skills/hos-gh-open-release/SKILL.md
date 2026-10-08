@@ -1,17 +1,17 @@
 ---
 name: hos-gh-open-release
-description: "Open the next release on both ends — the `release/x.x.x` trunk cut locally from a freshly fetched `origin/main`, pushed, and the hub issue that will gather its work. Use when the next release is to be prepared, or a release trunk has to exist before work can be opened against it. It ends at the push and the hub: the version bump, the pull request into `main` and the release note belong to their own conventions."
+description: "Open the next release on both ends — the `release/x.x.x` trunk cut locally from a freshly fetched `origin/main`, pushed, and the umbrella issue that will gather its work. Use when the next release is to be prepared, or a release trunk has to exist before work can be opened against it. It ends at the push and the umbrella: the version bump, the pull request into `main` and the release note belong to their own conventions."
 ---
 
 # Open release
 
-**Opening a release is one act with two ends.** The trunk is cut and marked here, then it is
-pushed and a hub issue is filed there. Neither end is worth having alone: a trunk that exists only
-locally cannot be the base of anything, and a hub with no trunk behind it gathers work that has
-nowhere to land.
+**Opening a release is one act with two ends.** The trunk is cut and marked here, then it is pushed
+and an umbrella issue is filed there. Neither end is worth having alone: a trunk that exists only
+locally cannot be the base of anything, and an umbrella with no trunk behind it gathers work that
+has nowhere to land.
 
-**This skill ends at the push and the hub.** Everything after them belongs to a convention of its
-own:
+**This skill ends at the push and the umbrella.** Everything after them belongs to a convention of
+its own:
 
 | What comes after | Whose it is |
 | :-- | :-- |
@@ -34,7 +34,7 @@ confirmed before the cut:
 
 **The version is asked, not assumed.** Which part of it moves is a decision about what the
 release will carry, and nothing on the branch can make it yet. Confirm it before the name is
-written anywhere, because the name goes into the branch, the marker and the hub at once.
+written anywhere, because the name goes into the branch, the marker and the umbrella at once.
 
 ## The local end
 
@@ -67,11 +67,11 @@ git push -u origin release/x.x.x
 
 **`-u` sets the upstream that `--no-track` left unset**, to the trunk's own remote branch.
 
-**Then file the hub.** Its title is the release's version alone, in the form the issue convention
-gives a release hub:
+**Then file the umbrella.** Its title is the release's version alone, in the form the issue
+convention gives a release umbrella:
 
 ```
-📂 Release `x.x.x`
+⛱️ Release `x.x.x`
 ```
 
 **Its body carries one line under `# Note`, and that is the ordinary case:**
@@ -83,12 +83,12 @@ gives a release hub:
 ```
 
 Nothing about the release can be written before its work exists. The work arrives as issues filed
-under the hub, one by one, and the hub's sub-issue panel becomes its contents as they do — so a
-hub opened with more than this is a hub that guessed.
+under the umbrella, one by one, and the umbrella's sub-issue panel becomes its contents as they do —
+so an umbrella opened with more than this is an umbrella that guessed.
 
 **Both are asked for before they happen.** The push takes the permission the git push convention
-describes, and the hub is shown in full before it is filed, as the issue convention requires. One
-yes for the pair is not implied by a yes for either.
+describes, and the umbrella is shown in full before it is filed, as the issue convention requires.
+One yes for the pair is not implied by a yes for either.
 
 ## What is left behind
 
