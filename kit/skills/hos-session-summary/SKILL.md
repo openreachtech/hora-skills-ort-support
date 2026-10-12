@@ -58,6 +58,10 @@ one subject, never three.
   on, and the list says so by holding both.
 - **A subject raised and dropped still counts.** It was taken up; that it went nowhere is an
   outcome, and outcomes are left out.
+- **A skill run to report on the session itself is not a subject.** `/hos-session-report` and
+  this convention look back over what the session took up rather than take anything up of their
+  own. Listed, they make the session's bookkeeping read as work, and a summary run last would
+  always end on itself.
 - **Name it by its subject, not by the session's actions.** "The `/hos-explain` specification",
   not "Read `SKILL.md` and its references". A line the reader has to translate back into what the
   conversation was about has not named it.
