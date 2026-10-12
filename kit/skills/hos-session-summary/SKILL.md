@@ -62,6 +62,10 @@ one subject, never three.
   this convention look back over what the session took up rather than take anything up of their
   own. Listed, they make the session's bookkeeping read as work, and a summary run last would
   always end on itself.
+- **A prompt that only moves the work along is not a subject.** "Go on", "next", "continue" ask
+  the session to carry on, and name nothing to carry on with. What the session did in answer
+  belongs to the subject that work served; where it opened a goal of its own, that goal is the
+  subject, named for what it was rather than for the prompt that reached it.
 - **Name it by its subject, not by the session's actions.** "The `/hos-explain` specification",
   not "Read `SKILL.md` and its references". A line the reader has to translate back into what the
   conversation was about has not named it.
