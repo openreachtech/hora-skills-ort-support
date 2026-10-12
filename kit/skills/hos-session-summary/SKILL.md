@@ -53,6 +53,11 @@ one subject, never three.
 
 - **Follow-up questions on one subject stay in its line.** A subject asked about, then challenged,
   then narrowed is one subject that took several turns.
+- **Work toward one goal is one subject, however many prompts and artefacts it took.** Finishing
+  a release may run through an issue body, a pull request and a release note, each asked for in a
+  prompt of its own, and the person still names it as one thing: finishing the release. A line per
+  artefact lists what the session produced, which is the account of the work arriving by another
+  door. The line names the goal the person was pursuing, and the artefacts were steps toward it.
 - **A subject that turned into a different one is two.** Where a question about whether a report
   should list topics became a question about what a new skill should be called, the person moved
   on, and the list says so by holding both.
