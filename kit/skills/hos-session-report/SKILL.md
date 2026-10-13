@@ -141,6 +141,12 @@ them which session it was. The list is what gives the verdict its subject.
 - **One line per subject, and nothing more.** The line names what was settled; how it was settled
   is in the commits and the pull requests. A line that grows a clause, or a paragraph under the
   list, is the surplus this convention exists to refuse.
+  - **A subject is the act the session was asked to carry out, never a step of it.** The pushes,
+    filings and clean-up an act takes are how it was settled, so a line per step lists the work
+    where the reader wanted the act. A session asked for one act lists one line, and a session
+    asked for several lists one line each. Measured: a session asked to open a release listed its
+    push, its umbrella issue, a sub-issue link and a branch deletion as four lines, and the
+    correction was the one act — opening the release.
 - **Numbered, as the causes of a 🤔 are**, so the reader can point at one by its number.
 
 A short report reads as a thin one, and the reach for something to add is where the surplus comes
