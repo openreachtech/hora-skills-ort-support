@@ -24,7 +24,7 @@ alongside this one, and this one does not restate it.
 | Section | What goes in it | Written |
 | :-- | :-- | :-- |
 | `# Why` | `* Close #<issue>`, and nothing else | always |
-| `# How` | The approach the work took | always, unless the work took no approach of its own (below) |
+| `# How` | The approach the work took, or the merge-only line of a trunk (below) | always, unless the work took no approach of its own (below) |
 | `# Note` | What has to be watched — follow-up left undone, a side effect, an ordering dependency | **only when there is something** |
 
 ## `# Why` is a link, not an explanation
@@ -101,10 +101,10 @@ say all there is, and anything further is what a convention already fixes — a 
 anyway restates one of them. This is a judgement per pull request, not a list of kinds that skip
 it.
 
-- **A trunk merging into `main` is the usual case.** Everything it carries was described in the
-  pull requests that fed the trunk.
-- **So is the package's own version raise.** Where the raise sits and what it moves are the
-  publishing convention's, and the diff shows the rest.
+- **The package's own version raise is the usual case.** Where the raise sits and what it moves
+  are the publishing convention's, and the diff shows the rest.
+- **A trunk merging into another branch is not.** It took no approach of its own either, but its
+  `# How` carries the merge-only line — see `## Merging a trunk`.
 
 ## `# How` and the `# Checklist` divide the same way
 
@@ -210,6 +210,23 @@ branch carries one line the others do not:
 The commits arriving through it were reviewed in the pull requests that fed that trunk, so this
 one asks for a merge rather than a review.
 
+**The line sits under `# How`, never under `# Why`.** `# Why` holds the issue the pull request
+closes and nothing else, and asking for a merge rather than a review is how the work is to be
+carried out, not why it was done:
+
+```markdown
+# Why
+
+* Close #123
+
+# How
+
+* All commits have already been reviewed, merge only
+```
+
+- **A trunk is not the case for leaving `# How` out.** It took no approach of its own, but the
+  line has nowhere else to sit, so `# How` stays and holds the line alone.
+
 **Every other pull request leaves the line out** — out, not commented out. A body handed over
 with the line wrapped in `<!-- -->` says nothing to whoever pastes it, and costs the next reader
 a stop working out whether it was meant to be turned on. Where a repository's own template ships
@@ -250,8 +267,8 @@ Dev > Main
 - **A release trunk carries its version in backticks.** The workflows that guard `main` and tag
   the merge read the version out of the backticks and hold it against the branch name, so the
   shape is not a matter of style
-- **Its body is `# Why` alone.** With nothing described in the title, there is no approach of its
-  own for `# How` to carry
+- **Its `# How` holds the merge-only line alone.** With nothing described in the title, there is
+  no approach of its own for `# How` to carry beside it
 - **`hotfix/*` is main-bound without being a trunk**, so it is not titled by its branches. It
   takes no emoji either, and no shape is fixed for its title
 
