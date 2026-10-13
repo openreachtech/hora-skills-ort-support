@@ -53,11 +53,24 @@ one subject, never three.
 
 - **Follow-up questions on one subject stay in its line.** A subject asked about, then challenged,
   then narrowed is one subject that took several turns.
+- **Work toward one goal is one subject, however many prompts and artefacts it took.** Finishing
+  a release may run through an issue body, a pull request and a release note, each asked for in a
+  prompt of its own, and the person still names it as one thing: finishing the release. A line per
+  artefact lists what the session produced, which is the account of the work arriving by another
+  door. The line names the goal the person was pursuing, and the artefacts were steps toward it.
 - **A subject that turned into a different one is two.** Where a question about whether a report
   should list topics became a question about what a new skill should be called, the person moved
   on, and the list says so by holding both.
 - **A subject raised and dropped still counts.** It was taken up; that it went nowhere is an
   outcome, and outcomes are left out.
+- **A skill run to report on the session itself is not a subject.** `/hos-session-report` and
+  this convention look back over what the session took up rather than take anything up of their
+  own. Listed, they make the session's bookkeeping read as work, and a summary run last would
+  always end on itself.
+- **A prompt that only moves the work along is not a subject.** "Go on", "next", "continue" ask
+  the session to carry on, and name nothing to carry on with. What the session did in answer
+  belongs to the subject that work served; where it opened a goal of its own, that goal is the
+  subject, named for what it was rather than for the prompt that reached it.
 - **Name it by its subject, not by the session's actions.** "The `/hos-explain` specification",
   not "Read `SKILL.md` and its references". A line the reader has to translate back into what the
   conversation was about has not named it.
