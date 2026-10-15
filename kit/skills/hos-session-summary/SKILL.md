@@ -67,6 +67,12 @@ a single file changing is as much a subject as a change that was committed.
 - **Nothing is fetched and no state is read.** Status, branches and pull requests say what was
   left on a host, which is a session report's material. Reading them here produces lines the
   summary does not carry.
+- **A compaction summary's list of the person's messages is not a list of subjects.** It is kept
+  to carry the conversation forward, one entry per message and in order, so a summary copied from
+  it lists prompts where it should list subjects. Group its entries under what they served before
+  writing a line.
+  - Measured: a twenty-one-line summary followed the compaction summary's chronological list of
+    messages entry for entry.
 
 ## What counts as one subject
 
