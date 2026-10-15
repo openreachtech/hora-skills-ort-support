@@ -513,6 +513,16 @@ So read back what was written, against what was meant to be written, before the 
 Where the writing spliced into an existing file, the diff is what to read; where it appended, the
 tail of the file is. Reading the line count alone is enough to catch the larger accidents.
 
+**Where the run wrote more than one passage, read them against each other as well.** The full
+read in phase 3 fixed what the skill said before any of this run's passages existed, so nothing
+earlier in the run can report that two of them say one thing twice: each was classified against
+the target, never against its siblings. Apply the copy test to the run's own output
+([classification.md](./references/classification.md)).
+
+- **Several subjects in one skill is the case this is for**, which is the case the one-skill
+  bound exists to make affordable. Two of them reaching for the same distinction is ordinary,
+  and each writes it out in the file its own subject sits in.
+
 ## Adding material after a run
 
 The outline is often what reveals that something is missing. **The missing material is given
