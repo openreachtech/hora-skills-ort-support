@@ -140,9 +140,11 @@ only what has happened since — and the predecessor is usually the larger of th
 the predecessors too, and report each; how to find them is in
 [transcript.md](./references/transcript.md).
 
-**A path handed over by a compaction summary is a predecessor, not the current session.**
-Taking it and going no further leaves the run one session behind, reading nothing that has
-happened since the resume.
+**A path handed over by a summary is either the current session or a predecessor**, and
+nothing about its having come from a summary says which. Taken for a predecessor it sends the
+run looking for a file that is not there; taken for the current session it can leave the run a
+whole session behind. Settle which file is being written to before using the path
+([transcript.md](./references/transcript.md)).
 
 Report the numbers before going further. A caller who sees "271 turns of yours across
 6,371 lines" knows the run is about to read a lot; a caller who sees eight knows the
