@@ -74,8 +74,15 @@ a single file changing is as much a subject as a change that was committed.
 is not a step. Reading a file, running an audit and fixing what the audit found are the work on
 one subject, never three.
 
-- **Follow-up questions on one subject stay in its line.** A subject asked about, then challenged,
-  then narrowed is one subject that took several turns.
+- **The questions a subject raises stay in its line.** A subject asked about, then challenged,
+  then narrowed is one subject that took several turns — and so is one whose work raised questions
+  of its own: how far along it is, why something it turned up went wrong, where a finding it made
+  should be sent. Each was asked because the subject was under way, and none is what the person
+  would name the session for.
+  - Measured: a summary of a session started to try out a tool listed twenty-one lines, among
+    them the progress display, the cause of a missing mark and where each finding was filed. All
+    were questions the trial raised, and the correction was that most of the list had nothing to
+    do with the subject.
 - **Work toward one goal is one subject, however many prompts and artefacts it took.** Finishing
   a release may run through an issue body, a pull request and a release note, each asked for in a
   prompt of its own, and the person still names it as one thing: finishing the release. A line per
