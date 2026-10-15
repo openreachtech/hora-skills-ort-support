@@ -438,6 +438,22 @@ leaves the approval pointing at nothing in particular.
 A row marked `contradicts` is not written until it is resolved. Resolving it is an
 interview, not a veto — see [classification.md](./references/classification.md).
 
+**A doubt about a row is a verdict, never a sentence beside the table.** Where the author is
+unsure which skill a row belongs to, or whether its basis obliges the claim, that uncertainty
+is the thing the caller is being asked to settle. Written in prose under the table it reads as
+colour, while the table beside it still says `new` — and `new` is what gets approved.
+
+- **An unresolved doubt is not written, as a contradiction is not.** Declaring it and writing
+  anyway hands over a row approved on a verdict its own author did not hold, and moves the
+  question from the gate, where it is cheap, to a reader who has lost the thread that raised it.
+- **The remedy is the table, not a better declaration.** Say which skill the row might belong
+  to instead, or what the basis would have to show, and let the caller answer that.
+- Measured: three rows went in with a declaration attached — *it may be dropped*, *not writing
+  it is also defensible*. One was later deleted outright, as an assertion that did not hold;
+  one was narrowed, because half of its stated reason belonged to a neighbouring skill; one
+  stood. Both corrections landed after the thread had been compacted, and each cost a fresh
+  reading of the target that the gate would not have needed.
+
 For a new skill, take the name here rather than in a turn of its own: the outline is what
 tells you what to call it, and one stop is better than two. Show the domain the subject
 implies, the names already in use in the target, and two or three candidates with the
