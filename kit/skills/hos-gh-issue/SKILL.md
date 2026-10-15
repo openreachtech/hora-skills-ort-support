@@ -67,8 +67,9 @@ one, the other or both. This is a judgement per issue, not a shape fixed per kin
   ```
 
 **Asked for an umbrella, the issue is an umbrella.** The word settles the type and the shape in one
-go: `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. An umbrella
-with work of its own is not an umbrella — that work belongs in one of the children.
+go: neither `# Checklist` nor `# Sub-issues` is written. The children are filed straight into the
+sub-issues panel with `--parent`, and the panel lists them. An umbrella with work of its own is not
+an umbrella — that work belongs in one of the children.
 
 **Where no child covers a piece of the work, the piece gets a child of its own.** The rule above
 says where such work belongs; it does not say what to do when none of the children standing there
@@ -96,7 +97,7 @@ first words on a label instead of on the thing a reader opened the issue for.
 inside this issue; a box under `# Sub-issues` is an issue that does not exist yet, written as the
 full title it will carry, emoji and all — which is what lets GitHub's own sub-issue feature turn
 the line into an issue, as the section below describes. An ordinary issue may carry either or
-both; **an umbrella carries only the second.**
+both; **an umbrella carries neither.**
 
 [types.md](./references/types.md) carries `⛱️ Umbrella` alongside the other types, and the
 umbrella's body in full.
@@ -418,8 +419,8 @@ gh issue view <number>
 ```
 
 **An issue handed over to be rewritten is read from its panel first, not from its body.** An
-umbrella whose `# Sub-issues` lines have all been converted carries no trace of being one: the
-section is gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it
+umbrella carries no trace of being one in its body: it has no `# Sub-issues` section, so what
+remains reads as an ordinary issue that happens to be short. Rewriting it
 from the body alone produces a `# Checklist` on an issue that may not take one, and a title pitched
 at the altitude of whichever child was in view.
 

@@ -51,10 +51,19 @@ exactly like a resume marker. Measured: the search returned the agent's own `ls`
 first file named in it was not a predecessor of anything. Read the directory, and use the
 transcripts' own first and last timestamps.
 
-- **A path taken from a summary is a predecessor, not the current session.** Reading it
-  because a summary handed it over, without establishing which file is being written to
-  now, puts the run one session behind and it stays there for every later run. The current
-  session's file is the one still growing; modification time settles it.
+- **A summary's path is either, and the summary does not say which.** A resume summarises
+  the session it continues, so its path names a predecessor. A compaction summarises a
+  session into itself and keeps writing to the same file, so its path names the session the
+  run is in. Both arrive as a summary carrying an absolute path, and the two read
+  identically.
+- **So establish which file is being written to before using the path**, whichever it turns
+  out to be. The current session's file is the one still growing; modification time settles
+  it, and a path's having come from a summary settles nothing. Reading it on that alone puts
+  the run one session behind, and it stays there for every later run.
+- Measured on a thread compacted in place: the summary handed over a path, and that file was
+  the one still being written to — it grew by several megabytes while the run was reading it.
+  The only other transcripts in the directory had both begun after it, so neither could have
+  been a predecessor of anything.
 - Report every file located and its size, so the caller sees the span the run covers rather
   than assuming it is one conversation in one file.
 - Ordering matters when reading: the predecessors hold the earlier exchanges. A passage's

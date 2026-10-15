@@ -37,8 +37,9 @@ author alone — the same failure as resting a convention on an external link.
   travel together: one is published, the other stays behind.
 - The check is mechanical. **Could a reader holding only this skill follow the rule?** If
   not, the rule belongs in the skill, whatever else happens to state it.
-- The one place duplication is a real question is between **two skills**, and that is a
-  different test — see the last section of this file.
+- Duplication is a real question **wherever two passages ship together**: between two skills,
+  and between two files of one skill. That is a different test — see the last section of this
+  file.
 
 ## Read the whole skill
 
@@ -156,3 +157,19 @@ A measured pair: one root — *duplicating a thing whose identity is depended up
 what depends on it* — surfaced in two domains as *"a shared `cases` belongs once under the
 member describe"* and *"the two language versions of one document are one commit"*.
 Different sentences, different triggers, neither a copy of the other.
+
+## Two files of one skill are the same question
+
+**A skill's own files ship together and are corrected separately**, so a copy rots between
+`SKILL.md` and a file under `references/` exactly as it rots between two skills. The two
+tests above apply unchanged: one passage is subordinate and names the other, or each is its
+domain's own way of saying it.
+
+**This is likelier than the two-skill case, because one run produces both halves.** Several
+subjects landing in one skill ride together by design, and nothing stops two of them from
+reaching for the same distinction — each writing it out in the file its own subject sits in.
+
+Measured: one run wrote a distinction between two kinds of thing into a section about where
+one kind is kept, and wrote it again as a table in the file whose subject that distinction
+was. The two passages matched almost word for word. Neither was wrong, and nothing in either
+file pointed at the other.

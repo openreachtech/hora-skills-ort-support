@@ -27,6 +27,23 @@ where the corrections happened.
   finding it a home is another tool's job, and a command named *skillify* that writes
   documents is lying about itself.
 
+## The reason the session began is its most important subject
+
+Everything else a thread holds, it took up along the way. That one is what the thread exists
+for, and **it outranks every subject that came after it** — however recent, however much of
+the thread they fill.
+
+**It is also the subject that gets skipped, and skipped again.** It sits at the beginning of
+the chain, which is the one part of a thread carried neither by the live context nor by the
+summary that replaced it: both hold the end. A run that starts from what is in front of it has
+started from the wrong end, and it will not find out, because a region never read produces no
+absence to notice. The omission is silent every time, which is why repeating it is the normal
+outcome rather than an unlucky one.
+
+**So it is named before anything is searched for, and reported before anything else.** Phase 1
+does it, and no later phase can: by then the run is already reading what it chose while it did
+not know.
+
 ## Invocation
 
 ```
@@ -117,7 +134,7 @@ its own.
 
 | Phase | What happens | Stops |
 | :-- | :-- | :-- |
-| 1. Locate | Fix the transcript path and report its size | — |
+| 1. Locate | Fix the transcript path, and name what the session was started for | — |
 | 2. Harvest | Pull candidate passages and group them into subjects | **When the subject is not determined, or `skill:` names nothing** |
 | 3. Distil | Classify each fact and tie it to its evidence | — |
 | 4. Sift | Drop what is not a convention. Decide new or addition | — |
@@ -140,13 +157,30 @@ only what has happened since — and the predecessor is usually the larger of th
 the predecessors too, and report each; how to find them is in
 [transcript.md](./references/transcript.md).
 
-**A path handed over by a compaction summary is a predecessor, not the current session.**
-Taking it and going no further leaves the run one session behind, reading nothing that has
-happened since the resume.
+**A path handed over by a summary is either the current session or a predecessor**, and
+nothing about its having come from a summary says which. Taken for a predecessor it sends the
+run looking for a file that is not there; taken for the current session it can leave the run a
+whole session behind. Settle which file is being written to before using the path
+([transcript.md](./references/transcript.md)).
 
 Report the numbers before going further. A caller who sees "271 turns of yours across
 6,371 lines" knows the run is about to read a lot; a caller who sees eight knows the
 opposite, and both should know which one they are in.
+
+**Then name what the session was started for**, which the top of this skill settles as the
+most important subject the run will handle. It is reached by reading the first turns of the
+earliest transcript, never a summary of them, and it is usually stated plainly in the first
+thing the person asked for.
+
+- **Report it above the numbers.** It is what tells the caller whether the run is pointed at
+  the thread they mean; a line count only tells them how long that thread is.
+- **Where it and the recent subjects differ, say both.** A thread can close the work it was
+  opened for and spend its last days on something incidental. Which of the two the run should
+  be mining is the caller's to say, and they can only say it with both in front of them.
+- Measured: an outline carried four rows, every one drawn from the last two days of a
+  transcript spanning a month. The opening eight hundred lines had never been searched for
+  that target, and whether they held anything for it was still unknown when the outline was
+  shown.
 
 ### 2. Harvest
 
@@ -438,6 +472,22 @@ leaves the approval pointing at nothing in particular.
 A row marked `contradicts` is not written until it is resolved. Resolving it is an
 interview, not a veto — see [classification.md](./references/classification.md).
 
+**A doubt about a row is a verdict, never a sentence beside the table.** Where the author is
+unsure which skill a row belongs to, or whether its basis obliges the claim, that uncertainty
+is the thing the caller is being asked to settle. Written in prose under the table it reads as
+colour, while the table beside it still says `new` — and `new` is what gets approved.
+
+- **An unresolved doubt is not written, as a contradiction is not.** Declaring it and writing
+  anyway hands over a row approved on a verdict its own author did not hold, and moves the
+  question from the gate, where it is cheap, to a reader who has lost the thread that raised it.
+- **The remedy is the table, not a better declaration.** Say which skill the row might belong
+  to instead, or what the basis would have to show, and let the caller answer that.
+- Measured: three rows went in with a declaration attached — *it may be dropped*, *not writing
+  it is also defensible*. One was later deleted outright, as an assertion that did not hold;
+  one was narrowed, because half of its stated reason belonged to a neighbouring skill; one
+  stood. Both corrections landed after the thread had been compacted, and each cost a fresh
+  reading of the target that the gate would not have needed.
+
 For a new skill, take the name here rather than in a turn of its own: the outline is what
 tells you what to call it, and one stop is better than two. Show the domain the subject
 implies, the names already in use in the target, and two or three candidates with the
@@ -512,6 +562,16 @@ repository's audit and its linter.
 So read back what was written, against what was meant to be written, before the commit stands.
 Where the writing spliced into an existing file, the diff is what to read; where it appended, the
 tail of the file is. Reading the line count alone is enough to catch the larger accidents.
+
+**Where the run wrote more than one passage, read them against each other as well.** The full
+read in phase 3 fixed what the skill said before any of this run's passages existed, so nothing
+earlier in the run can report that two of them say one thing twice: each was classified against
+the target, never against its siblings. Apply the copy test to the run's own output
+([classification.md](./references/classification.md)).
+
+- **Several subjects in one skill is the case this is for**, which is the case the one-skill
+  bound exists to make affordable. Two of them reaching for the same distinction is ordinary,
+  and each writes it out in the file its own subject sits in.
 
 ## Adding material after a run
 
