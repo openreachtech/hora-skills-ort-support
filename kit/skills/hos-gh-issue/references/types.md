@@ -76,7 +76,7 @@ A release umbrella is titled by its version alone; every other umbrella is title
 what it gathers. `Umbrella` in the title says nothing the emoji has not, and it costs the reader the
 words that would have told them what the group is.
 
-The body carries the situation and the direction, then its children:
+The body carries the situation and the direction:
 
 ```markdown
 # As-is
@@ -90,15 +90,26 @@ The body carries the situation and the direction, then its children:
 # Note
 
 * <what holds across the children — ordering, release dependencies>
-
-# Sub-issues
-
-- [ ] 💪 <a child>
-- [ ] 🧪 <another>
 ```
 
-**No `# Checklist`.** An umbrella with work of its own is not an umbrella; that work belongs in one
-of the children.
+**No `# Checklist` and no `# Sub-issues`.** The children are filed straight into the sub-issues
+panel with `--parent`, and the panel lists them. An umbrella with work of its own is not an
+umbrella; that work belongs in one of the children.
+
+**An umbrella's `# As-is` is the situation the group sits in, and never an inventory of what its
+children will do.** Children are alike by construction — one skill each, one package each — and each
+states its own gap in its own issue. Naming them here repeats the sub-issues panel and goes stale
+when one is added or dropped, and listing what each leaves unstated is the checklist an umbrella
+does not carry. One line says what the group has in common.
+
+```
+Bad   * `/alpha`, `/beta` and `/gamma` do not carry the conventions the work settled
+
+Bad   ## `/alpha`
+      * What a clean run proves
+
+Good  * Several skills do not yet carry the conventions the work settled
+```
 
 **A release umbrella's body is one line under `# Note`, and the line is `* Next release`.** Every
 other umbrella opens by stating the situation its children sit in; a release umbrella cannot,
