@@ -28,8 +28,8 @@ each of them is slowed by a line that says.
 
 ## The subject the session was started for
 
-**It is the first line**, where the conversation's order already puts it. What the opening of
-this convention adds is not a position but a test: every further line has to be something the
+**It stands apart from the list, on a 🤖 line of its own** (`## The form`). What the opening of
+this convention adds is not a position but a test: every line of the list has to be something the
 opening subject did not hold.
 
 - **A session that closed its opening subject and moved on holds two**, and the summary lists
@@ -113,17 +113,24 @@ one subject, never three.
 
 ## The form
 
-**A numbered list, one subject per line, in the order the session took them up.**
+**The reason the session was started on a 🤖 line of its own, then a numbered list, one subject
+per line, in the order the session took them up.**
 
 ```
+🤖 <the reason the session was started>
+
 1. <subject>
 2. <subject>
-3. <subject>
 ```
 
 - **The order is the conversation's.** It is the one order the reader can check against what they
   remember, and any other — by importance, by repository — is a judgement the summary has no
   ground for.
+- **The reason the session was started is not a line of the list.** It is what the list is held
+  against, so it stands above it, unnumbered, behind 🤖, and the list does not repeat it. A mark
+  is seen before a sentence is read, and set apart the reason is found without reading the list.
+  A session that moved on to a second subject still writes only the first there: the later one is
+  a line of the list, not the reason the session was opened.
 - **The subjects are numbered**, because a reader answers a summary by pointing at a line, and
   `2` is a word where the line itself would be a quotation. Plain numerals, `1.` upward. A numeral
   drawn as one decorated character — circled, parenthesized, or carrying its own full stop — is
@@ -132,8 +139,9 @@ one subject, never three.
   `U+32B1`–`U+32BF` and `U+1F100`–`U+1F10C`.
 - **One line each, with no sub-bullets.** A second level is where the account of the work comes
   back in.
-- **Nothing before the list and nothing after it.** No heading, no count, no closing sentence. A
-  session that took up one subject gets a list of one.
+- **Nothing before the 🤖 line and nothing after the list.** No heading, no count, no closing
+  sentence. A session that took up nothing beyond the reason it was started gets the 🤖 line
+  alone.
 - **Written in the reader's language**, as the documentation convention requires of anything
   generated for a reader. Names that are code stay in backticks whatever the language.
 
