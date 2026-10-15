@@ -1,9 +1,22 @@
 ---
 name: hos-session-summary
-description: "List the subjects a session took up, one line each, in the order it took them up — what the session was about, for a reader deciding where to look or which session this was. Held to the session itself and read off its conversation. It lists subjects and carries no verdict, outcome or account of the work: whether the session may be exited belongs to the session-report convention."
+description: "List the subjects a session took up, one line each, in the order it took them up — what the session was about, for a reader deciding where to look or which session this was. The reason the session was started is its main subject: it is found first, in the opening turns rather than in any summary of them, and every other line is held against it. Held to the session itself and read off its conversation. It lists subjects and carries no verdict, outcome or account of the work: whether the session may be exited belongs to the session-report convention."
 ---
 
 # Session summary
+
+**The reason the session was started is its most important subject. Find it before anything
+else, and build the summary from it.** It is also the subject skipped most often: the end of a
+session is what sits in front of whoever writes the summary, and the reason it was opened is not.
+A summary that never looked for it lists whatever came last, and reports no gap, because a
+region never read produces no absence to notice.
+
+- **Read the first turns of the earliest transcript for it**, never a summary of them. In a long
+  session the live context holds only the end, and a compaction summary keeps the opening as one
+  entry among dozens, with nothing marking it as the reason the session exists. The first thing
+  the person asked for usually names it plainly.
+- **Every other line is held against it.** Work done in its service belongs to its line, and only
+  what it does not serve becomes a subject of its own.
 
 **The summary answers one question: what did this session take up?** It is a list of subjects,
 and nothing else is in it.
@@ -12,6 +25,16 @@ Its reader is somebody who has to place the session rather than close it — tel
 sessions left open at once, finding which one a subject was settled in, or seeing at a glance how
 far one session ranged. None of them needs to know how a subject ended in order to do that, and
 each of them is slowed by a line that says.
+
+## The subject the session was started for
+
+**It is the first line**, where the conversation's order already puts it. What the opening of
+this convention adds is not a position but a test: every further line has to be something the
+opening subject did not hold.
+
+- **A session that closed its opening subject and moved on holds two**, and the summary lists
+  both. The later one is not demoted for coming later; it is a subject because the first did not
+  hold it.
 
 ## What the summary is not
 
