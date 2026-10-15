@@ -100,6 +100,21 @@ The body carries the situation and the direction, then its children:
 **No `# Checklist`.** An umbrella with work of its own is not an umbrella; that work belongs in one
 of the children.
 
+**An umbrella's `# As-is` is the situation the group sits in, and never an inventory of what its
+children will do.** Children are alike by construction — one skill each, one package each — and each
+states its own gap in its own issue. Naming them here repeats the sub-issues panel and goes stale
+when one is added or dropped, and listing what each leaves unstated is the checklist an umbrella
+does not carry. One line says what the group has in common.
+
+```
+Bad   * `/alpha`, `/beta` and `/gamma` do not carry the conventions the work settled
+
+Bad   ## `/alpha`
+      * What a clean run proves
+
+Good  * Several skills do not yet carry the conventions the work settled
+```
+
 **A release umbrella's body is one line under `# Note`, and the line is `* Next release`.** Every
 other umbrella opens by stating the situation its children sit in; a release umbrella cannot,
 because its children arrive throughout the release and there is no moment at which the list is
