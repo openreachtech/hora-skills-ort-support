@@ -15,8 +15,9 @@ region never read produces no absence to notice.
   session the live context holds only the end, and a compaction summary keeps the opening as one
   entry among dozens, with nothing marking it as the reason the session exists. The first thing
   the person asked for usually names it plainly.
-- **Every other line is held against it.** Work done in its service belongs to its line, and only
-  what it does not serve becomes a subject of its own.
+- **Everything the session began after it is a side subject.** Work done in its service belongs
+  to it and is not listed; whatever else the session took up is held against it, and listed as a
+  side subject.
 
 **The summary answers one question: what did this session take up?** It is a list of subjects,
 and nothing else is in it.
@@ -32,9 +33,10 @@ each of them is slowed by a line that says.
 this convention adds is not a position but a test: every line of the list has to be something the
 opening subject did not hold.
 
-- **A session that closed its opening subject and moved on holds two**, and the summary lists
-  both. The later one is not demoted for coming later; it is a subject because the first did not
-  hold it.
+- **A subject begun later is a side subject however large it grew.** A session can close the
+  work it was opened for and spend most of its length on something else, and the reason it was
+  opened stays what it was. The later work is listed, as a side subject, and never takes the 🤖
+  line.
 
 ## What the summary is not
 
@@ -113,14 +115,14 @@ one subject, never three.
 
 ## The form
 
-**The reason the session was started on a 🤖 line of its own, then a numbered list, one subject
-per line, in the order the session took them up.**
+**The reason the session was started on a 🤖 line of its own, then a numbered list of the side
+subjects, one per line, in the order the session took them up.**
 
 ```
 🤖 <the reason the session was started>
 
-1. <subject>
-2. <subject>
+1. <side subject>
+2. <side subject>
 ```
 
 - **The order is the conversation's.** It is the one order the reader can check against what they
@@ -129,8 +131,8 @@ per line, in the order the session took them up.**
 - **The reason the session was started is not a line of the list.** It is what the list is held
   against, so it stands above it, unnumbered, behind 🤖, and the list does not repeat it. A mark
   is seen before a sentence is read, and set apart the reason is found without reading the list.
-  A session that moved on to a second subject still writes only the first there: the later one is
-  a line of the list, not the reason the session was opened.
+  A session that moved on still writes only the first there: what came later is a side subject,
+  not the reason the session was opened.
 - **The subjects are numbered**, because a reader answers a summary by pointing at a line, and
   `2` is a word where the line itself would be a quotation. Plain numerals, `1.` upward. A numeral
   drawn as one decorated character — circled, parenthesized, or carrying its own full stop — is
