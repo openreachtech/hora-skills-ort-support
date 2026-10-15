@@ -123,20 +123,41 @@ the same afternoon does not bring it in. That material has a home, and the home 
 ## Nothing outstanding is a complete report
 
 **Where the session leaves nothing outstanding, the report is what it settled, then the
-verdict.** The subjects the session took to a close come first, one line each and numbered, then
-one blank line, then the ✅ line:
+verdict.** The reason the session was started goes first, on a 🤖 line of its own; the side
+subjects follow it, numbered, one line each; then one blank line, then the ✅ line:
 
 ```
-1. Fix the bug in the alpha parser
-2. Update the beta skill
+🤖 Fix the bug in the alpha parser
+
+1. Update the beta skill
 
 ✅ Nothing is left
 ```
 
+**The 🤖 line is what tells the reader which session they are being allowed to close.** A ✅
+says they may close the terminal; it does not say what they were doing. Set inside the numbered
+list, that answer is one line among several, and a reader who scans for the verdict rather than
+reading up to it never reaches it. Apart and behind a mark, it is found without reading the list
+at all.
+
+- **It is not a line of the list.** The list holds what the session took up along the way; the
+  🤖 line is what those were taken up beside. Unnumbered, above the list, and never repeated
+  in it.
+- **One 🤖 line, and a session that took up nothing else carries it alone.** There is no list
+  to write under it, and the ✅ line follows it directly.
+- **A session whose opening subject is not settled is not ✅.** It was left unfinished, which is a
+  cause under the verdict, or handed over — and handed over is settled, so it takes the 🤖 line
+  as any other closed subject would.
+
+**Which subject the 🤖 line carries, and what counts as a side subject, is the session-summary
+convention's.** It decides what a subject is at all; this one borrows that answer so the verdict
+has something to stand on, and settles only what the mark does to a report.
+
 **The ✅ line alone does not say what was closed.** A 🤔 report names its residue in the bullets
 under it, so the reader learns what the session was about from what it left. A ✅ report has no
 such list, and a mark with nothing beside it tells the reader the session may end without telling
-them which session it was. The list is what gives the verdict its subject.
+them which session it was. The 🤖 line and the list under it are what give the verdict its
+subject.
 
 - **One line per subject, and nothing more.** The line names what was settled; how it was settled
   is in the commits and the pull requests. A line that grows a clause, or a paragraph under the
@@ -147,7 +168,9 @@ them which session it was. The list is what gives the verdict its subject.
     asked for several lists one line each. Measured: a session asked to open a release listed its
     push, its umbrella issue, a sub-issue link and a branch deletion as four lines, and the
     correction was the one act — opening the release.
-- **Numbered, as the causes of a 🤔 are**, so the reader can point at one by its number.
+- **The side subjects are numbered, as the causes of a 🤔 are**, so the reader can point at
+  one by its number. The 🤖 line takes no number: it is not one of several, and nothing above
+  the list competes with it for the reader's eye.
 
 A short report reads as a thin one, and the reach for something to add is where the surplus comes
 from, never a judgement that the reader needed it. **Length is not what makes a report finished;
@@ -168,6 +191,9 @@ the verdict, and the causes as a bullet list from the next line down.**
 | :-- | :-- |
 | ✅ | Nothing would be stranded. The session may be exited |
 | 🤔 | Something is left, and the bullets below it say what |
+
+**Two marks, and no third.** 🤖 belongs to a subject above the line, never to the verdict on it,
+and a report carrying it on this line is answering a question nobody asked.
 
 **The mark carries a word, and the word is in the reader's language.** The forms above are the
 English ones; a reader working in another language gets the verdict in theirs, as the
@@ -208,8 +234,8 @@ have to hunt. What they see without moving is the last line.
     convention or any other. Those characters occupy `U+2460`–`U+249B`, `U+24EA`–`U+24FF`,
     `U+2776`–`U+2793`, `U+3220`–`U+3229`, `U+3251`–`U+325F`, `U+3280`–`U+3289`, `U+32B1`–`U+32BF`
     and `U+1F100`–`U+1F10C`.
-  - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
-    numbers of their own.
+  - **✅ numbers nothing below it**, having nothing to list there. The side subjects above it
+    carry numbers of their own, and the 🤖 line above them carries none.
 
 ## A remaining-work table
 
