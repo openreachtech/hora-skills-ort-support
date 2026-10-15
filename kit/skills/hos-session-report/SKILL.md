@@ -168,6 +168,7 @@ subject.
     asked for several lists one line each. Measured: a session asked to open a release listed its
     push, its umbrella issue, a sub-issue link and a branch deletion as four lines, and the
     correction was the one act — opening the release.
+  - **A part of the main subject is never a side subject.**
 - **The side subjects are numbered, as the causes of a 🤔 are**, so the reader can point at
   one by its number. The 🤖 line takes no number: it is not one of several, and nothing above
   the list competes with it for the reader's eye.
