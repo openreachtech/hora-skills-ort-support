@@ -27,6 +27,23 @@ where the corrections happened.
   finding it a home is another tool's job, and a command named *skillify* that writes
   documents is lying about itself.
 
+## The reason the session began is its most important subject
+
+Everything else a thread holds, it took up along the way. That one is what the thread exists
+for, and **it outranks every subject that came after it** — however recent, however much of
+the thread they fill.
+
+**It is also the subject that gets skipped, and skipped again.** It sits at the beginning of
+the chain, which is the one part of a thread carried neither by the live context nor by the
+summary that replaced it: both hold the end. A run that starts from what is in front of it has
+started from the wrong end, and it will not find out, because a region never read produces no
+absence to notice. The omission is silent every time, which is why repeating it is the normal
+outcome rather than an unlucky one.
+
+**So it is named before anything is searched for, and reported before anything else.** Phase 1
+does it, and no later phase can: by then the run is already reading what it chose while it did
+not know.
+
 ## Invocation
 
 ```
@@ -117,7 +134,7 @@ its own.
 
 | Phase | What happens | Stops |
 | :-- | :-- | :-- |
-| 1. Locate | Fix the transcript path and report its size | — |
+| 1. Locate | Fix the transcript path, and name what the session was started for | — |
 | 2. Harvest | Pull candidate passages and group them into subjects | **When the subject is not determined, or `skill:` names nothing** |
 | 3. Distil | Classify each fact and tie it to its evidence | — |
 | 4. Sift | Drop what is not a convention. Decide new or addition | — |
@@ -149,6 +166,21 @@ whole session behind. Settle which file is being written to before using the pat
 Report the numbers before going further. A caller who sees "271 turns of yours across
 6,371 lines" knows the run is about to read a lot; a caller who sees eight knows the
 opposite, and both should know which one they are in.
+
+**Then name what the session was started for**, which the top of this skill settles as the
+most important subject the run will handle. It is reached by reading the first turns of the
+earliest transcript, never a summary of them, and it is usually stated plainly in the first
+thing the person asked for.
+
+- **Report it above the numbers.** It is what tells the caller whether the run is pointed at
+  the thread they mean; a line count only tells them how long that thread is.
+- **Where it and the recent subjects differ, say both.** A thread can close the work it was
+  opened for and spend its last days on something incidental. Which of the two the run should
+  be mining is the caller's to say, and they can only say it with both in front of them.
+- Measured: an outline carried four rows, every one drawn from the last two days of a
+  transcript spanning a month. The opening eight hundred lines had never been searched for
+  that target, and whether they held anything for it was still unknown when the outline was
+  shown.
 
 ### 2. Harvest
 
