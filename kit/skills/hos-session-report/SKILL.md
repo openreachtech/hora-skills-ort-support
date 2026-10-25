@@ -242,7 +242,8 @@ have to hunt. What they see without moving is the last line.
 
 **Where the session keeps a list of what remains, it is a numbered table: the number, the status,
 then the work.** The reader answers it by number, so the numbers stay as they are from one list to
-the next, and an item named in a question carries its content beside its number.
+the next, and an item named in a question carries its content beside its number — as does an
+option named by a letter, beside its letter.
 
 - **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
   reader skips what is done before reading what it was.
