@@ -595,6 +595,9 @@ issue sets out to do, and the issue took one box.
 - **A box copied from an earlier issue is checked like one written fresh.** An issue of the same
   kind is the nearest template to hand, and whatever commit plan its checklist carried arrives
   with it
+- **An earlier issue is a precedent only if it was reviewed.** One filed without review records
+  what was written, not what was agreed, so it is neither a template for the wording nor an
+  authority for the shape.
 
 ## Templates
 
