@@ -55,7 +55,8 @@ where they go, either section would only repeat it, so drop whichever has nothin
 one, the other or both. This is a judgement per issue, not a shape fixed per kind of work.
 
 - **The package's own version raise is the usual case.** `` 📦️ Update package version to `1.4.0` ``
-  names the version it goes to, and all an `# As-is` could add is that the manifest still holds the
+  names the version it goes to (a boilerplate's takes `📄` instead, as `types.md` says), and all an
+  `# As-is` could add is that the manifest still holds the
   one already published — true of every release until its last commit. The body can be the
   `# Checklist` alone, one box rather than one per file, since the lockfile moving is part of the
   raise:
