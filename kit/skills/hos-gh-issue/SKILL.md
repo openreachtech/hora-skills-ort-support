@@ -155,6 +155,13 @@ umbrella's overview.
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
 
+**Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
+name, the name of a base class: each says how the work is built, and the prose of an issue says
+where things stand and where they are going. A reader who needs the name finds it in
+`# Checklist`, whose lines name the thing to be done. Where an ordering has to be explained, it
+is explained by the work (`the family merges before the composer that uses it`), never by the
+class or member that creates the dependency.
+
 ## `# Note` carries only what a reader would miss
 
 **Strike the line out, and ask what the reader would then not know.** Where the answer is nothing,
