@@ -130,10 +130,20 @@ others.
 
 ## `# To-be` is one line
 
-**`# To-be` names the state the work arrives at, in a line.** It is a direction, and a direction
-that needs a paragraph has started describing the route — which is the pull request's, and the
-checklist's where the route has steps worth a box. What will exist once the work lands belongs in
-the line; how it comes to exist does not.
+**`# To-be` declares what will be done, in a line, and the line opens with the verb the work
+uses.** It says what the issue sets out to do, as a declaration rather than a description of a
+state of the world.
+
+Two lines, from two different issues:
+
+```
+Declare the class family that holds the logic for building mail templates
+Purge the unused fixtures under `tests/legacy/`
+```
+
+It is a direction, and a direction that needs a paragraph has started describing the route — which
+is the pull request's, and the checklist's where the route has steps worth a box. What will exist
+once the work lands belongs in the line; how it comes to exist does not.
 
 **It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
 restate the current state with the verbs reversed. Where the one line would only do that, leave
