@@ -145,6 +145,12 @@ It is a direction, and a direction that needs a paragraph has started describing
 is the pull request's, and the checklist's where the route has steps worth a box. What will exist
 once the work lands belongs in the line; how it comes to exist does not.
 
+**The prose names the work with the verb the code uses for it.** A class whose entry-point method
+is `compose~` composes, and one whose entry point is `build~` builds. Another verb for the same
+work — a family that builds said to generate — leaves the reader asking whether a second thing
+happens. The verb is the same wherever the work is named: in `# To-be`, in `# Note`, and in an
+umbrella's overview.
+
 **It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
