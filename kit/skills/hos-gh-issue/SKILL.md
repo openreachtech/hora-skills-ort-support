@@ -370,6 +370,22 @@ gh issue create --parent <parent number> --title '💪 …' --body-file <path>
 - **A child filed this way is an issue like any other.** Its title carries its own type emoji and
   its body carries the sections it needs; having a parent changes neither
 
+**The panel lists the children in the order the work merges in.** A reader walks an umbrella's
+children from the top, and the order of the work is the order they are read in. A child filed
+later is appended at the bottom; moving one is a call on the parent, and it names issues by their
+ids, not their numbers:
+
+```sh
+gh api -X PATCH /repos/<owner>/<name>/issues/<parent>/sub_issues/priority \
+  -F sub_issue_id=<child id> -F after_id=<sibling id>
+```
+
+- **One call places one child after the sibling it names**, so a run of moves is made one child
+  at a time
+- **An id is read from the issue itself**: `gh api /repos/<owner>/<name>/issues/<number> --jq .id`
+- **Read the order back from the parent**, with the check below, since the child's own payload
+  shows nothing of it
+
 **Confirm a link from the parent, never from the child.** A child's REST payload carries no
 `parent` field — `parent_issue_url` sits where one would be — so asking it for `.parent` answers
 `null` whether the issue has a parent or not. The reading is indistinguishable from a link that
