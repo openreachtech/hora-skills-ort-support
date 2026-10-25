@@ -245,8 +245,13 @@ then the work.** The reader answers it by number, so the numbers stay as they ar
 the next, and an item named in a question carries its content beside its number — as does an
 option named by a letter, beside its letter.
 
-- **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
-  reader skips what is done before reading what it was.
+- **The status is the second column, and a finished row says ✅️.** A row the reader decided to put
+  off says ⏳️, and every other unfinished row carries no mark.
+- **Finished rows are shown only when the reader asks for them.** The list carries what remains.
+  The numbers do not move: the rows that remain keep theirs, and a finished number is not given to
+  a new item. Where they are shown, the ✅️ rows come first and the rows without a mark follow, numbers
+  unchanged, so that reading down the left edge the reader skips what is done before reading what
+  it was.
 - **A row is ✅️ once its own work is done.** A fix committed, a pull request opened — the work the
   row names is finished, and what carries it further, such as the branch reaching its trunk, is a
   row of its own.
