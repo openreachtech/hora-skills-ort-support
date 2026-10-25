@@ -37,6 +37,15 @@ verbatim, so a line written without one produces an issue nobody can classify at
 distinction a reader needs: `Purge` says the thing is gone, `Kick out` says the place is still
 there without it.
 
+**A boilerplate's own version raise is `📄 Specification`, never `📦️ Package`.** Its version is the
+line under `## Version` in `about-boilerplate.md`, so the work changes a document and no dependency
+moves. `📦️` is for the version a `package.json` holds.
+
+```
+📦️ Update package version to `1.4.0`         a package's own version
+📄 Update boilerplate version to `1.4.0`     a boilerplate's own version
+```
+
 **Two types share 🚀.** So the emoji alone does not name a type — **quote the label as well**
 whenever one is being referred to.
 
