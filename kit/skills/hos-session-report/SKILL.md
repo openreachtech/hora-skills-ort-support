@@ -252,6 +252,8 @@ option named by a letter, beside its letter.
   row of its own.
 - **The pull request that takes a release trunk into `main` is the release, not a row before it.**
   It is listed apart from what the release still needs, never as one more item on the way to it.
+- **The list is printed whole each time, in its current state.** A list reprinted as the rows that
+  changed, with a note that the rest is as before, sends the reader back to an earlier list.
 - **A numbered item is never written as a bullet holding a number.** `- 3. …` nests an ordered
   list inside a bullet, and a renderer draws a nested ordered list in Roman numerals. Numbered
   items stand at the top level of a list, or in a table.
