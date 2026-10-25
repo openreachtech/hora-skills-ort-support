@@ -120,6 +120,10 @@ the same afternoon does not bring it in. That material has a home, and the home 
   be made against it.
   - **Committing there is still owed.** The floor holds wherever the session changed a file. What
     stops at the boundary is the report's interest, never the duty to preserve.
+- **Where operating other repositories is the session's subject, those repositories are what it was
+  started for.** A session run in an orchestrating folder is answerable for the repositories its
+  instructions name, and the work instructed for them stays in the remaining work until it is
+  finished.
 
 ## Nothing outstanding is a complete report
 
