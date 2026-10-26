@@ -55,6 +55,9 @@ never the children beside it.
 - **The children are reached through the issue that has them**, whose sub-issue panel already lists
   them. Repeating them here is the restatement above by another route, and it goes stale the moment
   a child is added or dropped.
+- **Where the pieces reached the branch by an octopus merge or by sequential merges, the
+  sub-issues of the issue the pull request closes are finished when the pull request is opened.**
+  Their checklists are ticked and they are closed then.
 
 **The only issue the body links is the one it closes.** Naming another puts a cross-reference to
 this pull request into that issue, so an issue mentioned in passing — as background, as a
