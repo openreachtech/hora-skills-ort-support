@@ -130,14 +130,37 @@ others.
 
 ## `# To-be` is one line
 
-**`# To-be` names the state the work arrives at, in a line.** It is a direction, and a direction
-that needs a paragraph has started describing the route — which is the pull request's, and the
-checklist's where the route has steps worth a box. What will exist once the work lands belongs in
-the line; how it comes to exist does not.
+**`# To-be` declares what will be done, in a line, and the line opens with the verb the work
+uses.** It says what the issue sets out to do, as a declaration rather than a description of a
+state of the world.
+
+Two lines, from two different issues:
+
+```
+Declare the class family that holds the logic for building mail templates
+Purge the unused fixtures under `tests/legacy/`
+```
+
+It is a direction, and a direction that needs a paragraph has started describing the route — which
+is the pull request's, and the checklist's where the route has steps worth a box. What will exist
+once the work lands belongs in the line; how it comes to exist does not.
+
+**The prose names the work with the verb the code uses for it.** A class whose entry-point method
+is `compose~` composes, and one whose entry point is `build~` builds. Another verb for the same
+work — a family that builds said to generate — leaves the reader asking whether a second thing
+happens. The verb is the same wherever the work is named: in `# To-be`, in `# Note`, and in an
+umbrella's overview.
 
 **It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
+
+**Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
+name, the name of a base class: each says how the work is built, and the prose of an issue says
+where things stand and where they are going. A reader who needs the name finds it in
+`# Checklist`, whose lines name the thing to be done. Where an ordering has to be explained, it
+is explained by the work (`the family merges before the composer that uses it`), never by the
+class or member that creates the dependency.
 
 ## `# Note` carries only what a reader would miss
 
@@ -346,6 +369,22 @@ gh issue create --parent <parent number> --title '💪 …' --body-file <path>
   `--remove-sub-issue` undo them
 - **A child filed this way is an issue like any other.** Its title carries its own type emoji and
   its body carries the sections it needs; having a parent changes neither
+
+**The panel lists the children in the order the work merges in.** A reader walks an umbrella's
+children from the top, and the order of the work is the order they are read in. A child filed
+later is appended at the bottom; moving one is a call on the parent, and it names issues by their
+ids, not their numbers:
+
+```sh
+gh api -X PATCH /repos/<owner>/<name>/issues/<parent>/sub_issues/priority \
+  -F sub_issue_id=<child id> -F after_id=<sibling id>
+```
+
+- **One call places one child after the sibling it names**, so a run of moves is made one child
+  at a time
+- **An id is read from the issue itself**: `gh api /repos/<owner>/<name>/issues/<number> --jq .id`
+- **Read the order back from the parent**, with the check below, since the child's own payload
+  shows nothing of it
 
 **Confirm a link from the parent, never from the child.** A child's REST payload carries no
 `parent` field — `parent_issue_url` sits where one would be — so asking it for `.parent` answers
@@ -556,6 +595,9 @@ issue sets out to do, and the issue took one box.
 - **A box copied from an earlier issue is checked like one written fresh.** An issue of the same
   kind is the nearest template to hand, and whatever commit plan its checklist carried arrives
   with it
+- **An earlier issue is a precedent only if it was reviewed.** One filed without review records
+  what was written, not what was agreed, so it is neither a template for the wording nor an
+  authority for the shape.
 
 ## Templates
 
