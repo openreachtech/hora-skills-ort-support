@@ -15,9 +15,12 @@ region never read produces no absence to notice.
   session the live context holds only the end, and a compaction summary keeps the opening as one
   entry among dozens, with nothing marking it as the reason the session exists. The first thing
   the person asked for usually names it plainly.
-- **Everything the session began after it is a side subject.** Work done in its service belongs
-  to it and is not listed; whatever else the session took up is held against it, and listed as a
-  side subject.
+- **A side subject is a separate piece of work that the main subject does not include.** Say a
+  session opened to implement a feature, and the person later says "use that feature to rewrite
+  all the existing code": the rewrite is a side subject. Shaping the branches, filing an issue
+  and opening a pull request, for either piece of work, are part of that work and are not
+  subjects. Work done in the main subject's service belongs to it and is not listed. **A side
+  subject is never a work log**: the list names what the session took up, not what was done.
 
 **The summary answers one question: what did this session take up?** It is a list of subjects,
 and nothing else is in it.
@@ -141,11 +144,22 @@ subjects, one per line, in the order the session took them up.**
   `U+32B1`–`U+32BF` and `U+1F100`–`U+1F10C`.
 - **One line each, with no sub-bullets.** A second level is where the account of the work comes
   back in.
+- **A line names the subject and nothing else.** The work, its cause and its extent are not
+  written into it, in the 🤖 line or in the list.
 - **Nothing before the 🤖 line and nothing after the list.** No heading, no count, no closing
   sentence. A session that took up nothing beyond the reason it was started gets the 🤖 line
   alone.
 - **Written in the reader's language**, as the documentation convention requires of anything
   generated for a reader. Names that are code stay in backticks whatever the language.
+- **Take the session's work in the order it came, and judge each piece against the subjects
+  already held.** Start with the main subject: the first large instruction the person gives is
+  the main subject of the whole session, and the small exchanges before it do not count. It does
+  not change afterwards. Read every subject at the altitude of its goal and carry it to its end:
+  whatever completes that goal is part of its work. For each instruction that follows, ask
+  whether it is part of the work of the main subject or of a side subject already held. If it
+  is, it belongs to that subject and gets no line. When an instruction is clearly different from
+  every subject held, the side subjects grow by one, and every later instruction is judged
+  against that one as well.
 
 ## Where this stops
 
