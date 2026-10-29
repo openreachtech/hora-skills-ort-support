@@ -114,11 +114,16 @@ the same afternoon does not bring it in. That material has a home, and the home 
   The larger one's other children are not.
 - **A repository the session was not started for is outside, even where the session reached it.**
   A session is started in one place and is answerable for that place. Work it did elsewhere along
-  the way was committed there, so nothing about it is stranded, and what remains to decide needs a
-  reading of that repository's whole diff — which this session never did. Its home is a session
-  started there, where the diff is visible at once and a commit plan can be made against it.
+  the way is no longer remaining work once it is a diff there, because what was wanted is kept, and
+  what remains to decide needs a reading of that repository's whole diff — which this session never
+  did. Its home is a session started there, where the diff is visible at once and a commit plan can
+  be made against it.
   - **Committing there is still owed.** The floor holds wherever the session changed a file. What
     stops at the boundary is the report's interest, never the duty to preserve.
+- **Where operating other repositories is the session's subject, those repositories are what it was
+  started for.** A session run in an orchestrating folder is answerable for the repositories its
+  instructions name, and the work instructed for them stays in the remaining work until it is
+  finished.
 
 ## Nothing outstanding is a complete report
 
@@ -242,15 +247,26 @@ have to hunt. What they see without moving is the last line.
 
 **Where the session keeps a list of what remains, it is a numbered table: the number, the status,
 then the work.** The reader answers it by number, so the numbers stay as they are from one list to
-the next, and an item named in a question carries its content beside its number.
+the next, and an item named in a question carries its content beside its number — as does an
+option named by a letter, beside its letter.
 
-- **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
-  reader skips what is done before reading what it was.
+- **The status is the second column, and a finished row says ✅️.** A row the reader decided to put
+  off says ⏳️, and every other unfinished row carries no mark.
+- **Finished rows are shown only when the reader asks for them.** The list carries what remains.
+  The numbers do not move: the rows that remain keep theirs, and a finished number is not given to
+  a new item. Where they are shown, the ✅️ rows come first and the rows without a mark follow, numbers
+  unchanged, so that reading down the left edge the reader skips what is done before reading what
+  it was.
 - **A row is ✅️ once its own work is done.** A fix committed, a pull request opened — the work the
   row names is finished, and what carries it further, such as the branch reaching its trunk, is a
   row of its own.
 - **The pull request that takes a release trunk into `main` is the release, not a row before it.**
   It is listed apart from what the release still needs, never as one more item on the way to it.
+- **The list is printed whole each time, in its current state.** A list reprinted as the rows that
+  changed, with a note that the rest is as before, sends the reader back to an earlier list.
+- **While a design or a review is under way, a push, a branch or a merge is not raised.** It is
+  neither asked about nor written as a row, which holds back the row for a branch reaching its
+  trunk (above) for as long as the work lasts.
 - **A numbered item is never written as a bullet holding a number.** `- 3. …` nests an ordered
   list inside a bullet, and a renderer draws a nested ordered list in Roman numerals. Numbered
   items stand at the top level of a list, or in a table.
