@@ -99,6 +99,12 @@ one subject, never three.
   prompt of its own, and the person still names it as one thing: finishing the release. A line per
   artefact lists what the session produced, which is the account of the work arriving by another
   door. The line names the goal the person was pursuing, and the artefacts were steps toward it.
+  A release is the usual case of it: a feature, a format change, a document and a pre-publish
+  audit, each filed and merged on its own, are still one subject when all of them serve one
+  release, and the line names that release's goal. A line per piece lists what the session
+  produced, and that is the work log again.
+  - Measured: five lines, one per piece of work under a release umbrella, and the correction was
+    one line naming the preparation of that release.
 - **A subject that turned into a different one is two.** Where a question about whether a report
   should list topics became a question about what a new skill should be called, the person moved
   on, and the list says so by holding both.
