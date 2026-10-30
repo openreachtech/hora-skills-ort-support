@@ -21,6 +21,14 @@ region never read produces no absence to notice.
   and opening a pull request, for either piece of work, are part of that work and are not
   subjects. Work done in the main subject's service belongs to it and is not listed. **A side
   subject is never a work log**: the list names what the session took up, not what was done.
+  The test is whether it could be the subject of a session of its own: a piece of work, or an
+  investigation, somebody could open a session for. A question asked in passing, or a rule stated
+  while a subject was under way, could not, and it belongs to the subject it came up in.
+  - Measured: a session opened to move a feature into a repository went on to prepare the release
+    and to update a skill. Each of those could have been a session of its own, since the first
+    could have been closed when the move was done. A question about how to quit the tool could
+    not, and neither could a rule about how to write a type; both were listed as side subjects,
+    and the correction was that they were not.
 
 **The summary answers one question: what did this session take up?** It is a list of subjects,
 and nothing else is in it.
@@ -66,8 +74,9 @@ takes: the work the session itself did, and the questions it was asked. What sta
 it in the same repository is outside, however close it sits.
 
 **The source is the conversation.** A subject is something the person raised or the session took
-up, and that exists in what was said, not in what a repository holds. A question answered without
-a single file changing is as much a subject as a change that was committed.
+up, and that exists in what was said, not in what a repository holds. A question that could be the
+subject of a session of its own is as much a subject as a change that was committed, even where no
+file changed.
 
 - **Nothing is fetched and no state is read.** Status, branches and pull requests say what was
   left on a host, which is a session report's material. Reading them here produces lines the
