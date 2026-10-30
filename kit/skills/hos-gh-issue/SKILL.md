@@ -55,7 +55,8 @@ where they go, either section would only repeat it, so drop whichever has nothin
 one, the other or both. This is a judgement per issue, not a shape fixed per kind of work.
 
 - **The package's own version raise is the usual case.** `` 📦️ Update package version to `1.4.0` ``
-  names the version it goes to, and all an `# As-is` could add is that the manifest still holds the
+  names the version it goes to (a boilerplate's takes `📄` instead, as `types.md` says), and all an
+  `# As-is` could add is that the manifest still holds the
   one already published — true of every release until its last commit. The body can be the
   `# Checklist` alone, one box rather than one per file, since the lockfile moving is part of the
   raise:
@@ -67,8 +68,9 @@ one, the other or both. This is a judgement per issue, not a shape fixed per kin
   ```
 
 **Asked for an umbrella, the issue is an umbrella.** The word settles the type and the shape in one
-go: `# Checklist` is not written at all, and `# Sub-issues` stands where it would have. An umbrella
-with work of its own is not an umbrella — that work belongs in one of the children.
+go: neither `# Checklist` nor `# Sub-issues` is written. The children are filed straight into the
+sub-issues panel with `--parent`, and the panel lists them. An umbrella with work of its own is not
+an umbrella — that work belongs in one of the children.
 
 **Where no child covers a piece of the work, the piece gets a child of its own.** The rule above
 says where such work belongs; it does not say what to do when none of the children standing there
@@ -96,7 +98,7 @@ first words on a label instead of on the thing a reader opened the issue for.
 inside this issue; a box under `# Sub-issues` is an issue that does not exist yet, written as the
 full title it will carry, emoji and all — which is what lets GitHub's own sub-issue feature turn
 the line into an issue, as the section below describes. An ordinary issue may carry either or
-both; **an umbrella carries only the second.**
+both; **an umbrella carries neither.**
 
 [types.md](./references/types.md) carries `⛱️ Umbrella` alongside the other types, and the
 umbrella's body in full.
@@ -128,14 +130,37 @@ others.
 
 ## `# To-be` is one line
 
-**`# To-be` names the state the work arrives at, in a line.** It is a direction, and a direction
-that needs a paragraph has started describing the route — which is the pull request's, and the
-checklist's where the route has steps worth a box. What will exist once the work lands belongs in
-the line; how it comes to exist does not.
+**`# To-be` declares what will be done, in a line, and the line opens with the verb the work
+uses.** It says what the issue sets out to do, as a declaration rather than a description of a
+state of the world.
+
+Two lines, from two different issues:
+
+```
+Declare the class family that holds the logic for building mail templates
+Purge the unused fixtures under `tests/legacy/`
+```
+
+It is a direction, and a direction that needs a paragraph has started describing the route — which
+is the pull request's, and the checklist's where the route has steps worth a box. What will exist
+once the work lands belongs in the line; how it comes to exist does not.
+
+**The prose names the work with the verb the code uses for it.** A class whose entry-point method
+is `compose~` composes, and one whose entry point is `build~` builds. Another verb for the same
+work — a family that builds said to generate — leaves the reader asking whether a second thing
+happens. The verb is the same wherever the work is named: in `# To-be`, in `# Note`, and in an
+umbrella's overview.
 
 **It is never a list.** Bullets that turn each `# As-is` item inside out name no direction; they
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
+
+**Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
+name, the name of a base class: each says how the work is built, and the prose of an issue says
+where things stand and where they are going. A reader who needs the name finds it in
+`# Checklist`, whose lines name the thing to be done. Where an ordering has to be explained, it
+is explained by the work (`the family merges before the composer that uses it`), never by the
+class or member that creates the dependency.
 
 ## `# Note` carries only what a reader would miss
 
@@ -345,6 +370,22 @@ gh issue create --parent <parent number> --title '💪 …' --body-file <path>
 - **A child filed this way is an issue like any other.** Its title carries its own type emoji and
   its body carries the sections it needs; having a parent changes neither
 
+**The panel lists the children in the order the work merges in.** A reader walks an umbrella's
+children from the top, and the order of the work is the order they are read in. A child filed
+later is appended at the bottom; moving one is a call on the parent, and it names issues by their
+ids, not their numbers:
+
+```sh
+gh api -X PATCH /repos/<owner>/<name>/issues/<parent>/sub_issues/priority \
+  -F sub_issue_id=<child id> -F after_id=<sibling id>
+```
+
+- **One call places one child after the sibling it names**, so a run of moves is made one child
+  at a time
+- **An id is read from the issue itself**: `gh api /repos/<owner>/<name>/issues/<number> --jq .id`
+- **Read the order back from the parent**, with the check below, since the child's own payload
+  shows nothing of it
+
 **Confirm a link from the parent, never from the child.** A child's REST payload carries no
 `parent` field — `parent_issue_url` sits where one would be — so asking it for `.parent` answers
 `null` whether the issue has a parent or not. The reading is indistinguishable from a link that
@@ -418,8 +459,8 @@ gh issue view <number>
 ```
 
 **An issue handed over to be rewritten is read from its panel first, not from its body.** An
-umbrella whose `# Sub-issues` lines have all been converted carries no trace of being one: the
-section is gone, and what remains reads as an ordinary issue that happens to be short. Rewriting it
+umbrella carries no trace of being one in its body: it has no `# Sub-issues` section, so what
+remains reads as an ordinary issue that happens to be short. Rewriting it
 from the body alone produces a `# Checklist` on an issue that may not take one, and a title pitched
 at the altitude of whichever child was in view.
 
@@ -554,6 +595,9 @@ issue sets out to do, and the issue took one box.
 - **A box copied from an earlier issue is checked like one written fresh.** An issue of the same
   kind is the nearest template to hand, and whatever commit plan its checklist carried arrives
   with it
+- **An earlier issue is a precedent only if it was reviewed.** One filed without review records
+  what was written, not what was agreed, so it is neither a template for the wording nor an
+  authority for the shape.
 
 ## Templates
 

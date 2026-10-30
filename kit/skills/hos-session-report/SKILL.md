@@ -114,29 +114,55 @@ the same afternoon does not bring it in. That material has a home, and the home 
   The larger one's other children are not.
 - **A repository the session was not started for is outside, even where the session reached it.**
   A session is started in one place and is answerable for that place. Work it did elsewhere along
-  the way was committed there, so nothing about it is stranded, and what remains to decide needs a
-  reading of that repository's whole diff — which this session never did. Its home is a session
-  started there, where the diff is visible at once and a commit plan can be made against it.
+  the way is no longer remaining work once it is a diff there, because what was wanted is kept, and
+  what remains to decide needs a reading of that repository's whole diff — which this session never
+  did. Its home is a session started there, where the diff is visible at once and a commit plan can
+  be made against it.
   - **Committing there is still owed.** The floor holds wherever the session changed a file. What
     stops at the boundary is the report's interest, never the duty to preserve.
+- **Where operating other repositories is the session's subject, those repositories are what it was
+  started for.** A session run in an orchestrating folder is answerable for the repositories its
+  instructions name, and the work instructed for them stays in the remaining work until it is
+  finished.
 
 ## Nothing outstanding is a complete report
 
 **Where the session leaves nothing outstanding, the report is what it settled, then the
-verdict.** The subjects the session took to a close come first, one line each and numbered, then
-one blank line, then the ✅ line:
+verdict.** The reason the session was started goes first, on a 🤖 line of its own; the side
+subjects follow it, numbered, one line each; then one blank line, then the ✅ line:
 
 ```
-1. Fix the bug in the alpha parser
-2. Update the beta skill
+🤖 Fix the bug in the alpha parser
+
+1. Update the beta skill
 
 ✅ Nothing is left
 ```
 
+**The 🤖 line is what tells the reader which session they are being allowed to close.** A ✅
+says they may close the terminal; it does not say what they were doing. Set inside the numbered
+list, that answer is one line among several, and a reader who scans for the verdict rather than
+reading up to it never reaches it. Apart and behind a mark, it is found without reading the list
+at all.
+
+- **It is not a line of the list.** The list holds what the session took up along the way; the
+  🤖 line is what those were taken up beside. Unnumbered, above the list, and never repeated
+  in it.
+- **One 🤖 line, and a session that took up nothing else carries it alone.** There is no list
+  to write under it, and the ✅ line follows it directly.
+- **A session whose opening subject is not settled is not ✅.** It was left unfinished, which is a
+  cause under the verdict, or handed over — and handed over is settled, so it takes the 🤖 line
+  as any other closed subject would.
+
+**Which subject the 🤖 line carries, and what counts as a side subject, is the session-summary
+convention's.** It decides what a subject is at all; this one borrows that answer so the verdict
+has something to stand on, and settles only what the mark does to a report.
+
 **The ✅ line alone does not say what was closed.** A 🤔 report names its residue in the bullets
 under it, so the reader learns what the session was about from what it left. A ✅ report has no
 such list, and a mark with nothing beside it tells the reader the session may end without telling
-them which session it was. The list is what gives the verdict its subject.
+them which session it was. The 🤖 line and the list under it are what give the verdict its
+subject.
 
 - **One line per subject, and nothing more.** The line names what was settled; how it was settled
   is in the commits and the pull requests. A line that grows a clause, or a paragraph under the
@@ -147,7 +173,10 @@ them which session it was. The list is what gives the verdict its subject.
     asked for several lists one line each. Measured: a session asked to open a release listed its
     push, its umbrella issue, a sub-issue link and a branch deletion as four lines, and the
     correction was the one act — opening the release.
-- **Numbered, as the causes of a 🤔 are**, so the reader can point at one by its number.
+  - **A part of the main subject is never a side subject.**
+- **The side subjects are numbered, as the causes of a 🤔 are**, so the reader can point at
+  one by its number. The 🤖 line takes no number: it is not one of several, and nothing above
+  the list competes with it for the reader's eye.
 
 A short report reads as a thin one, and the reach for something to add is where the surplus comes
 from, never a judgement that the reader needed it. **Length is not what makes a report finished;
@@ -168,6 +197,9 @@ the verdict, and the causes as a bullet list from the next line down.**
 | :-- | :-- |
 | ✅ | Nothing would be stranded. The session may be exited |
 | 🤔 | Something is left, and the bullets below it say what |
+
+**Two marks, and no third.** 🤖 belongs to a subject above the line, never to the verdict on it,
+and a report carrying it on this line is answering a question nobody asked.
 
 **The mark carries a word, and the word is in the reader's language.** The forms above are the
 English ones; a reader working in another language gets the verdict in theirs, as the
@@ -208,22 +240,33 @@ have to hunt. What they see without moving is the last line.
     convention or any other. Those characters occupy `U+2460`–`U+249B`, `U+24EA`–`U+24FF`,
     `U+2776`–`U+2793`, `U+3220`–`U+3229`, `U+3251`–`U+325F`, `U+3280`–`U+3289`, `U+32B1`–`U+32BF`
     and `U+1F100`–`U+1F10C`.
-  - **✅ numbers nothing below it**, having nothing to list there. The subjects above it carry
-    numbers of their own.
+  - **✅ numbers nothing below it**, having nothing to list there. The side subjects above it
+    carry numbers of their own, and the 🤖 line above them carries none.
 
 ## A remaining-work table
 
 **Where the session keeps a list of what remains, it is a numbered table: the number, the status,
 then the work.** The reader answers it by number, so the numbers stay as they are from one list to
-the next, and an item named in a question carries its content beside its number.
+the next, and an item named in a question carries its content beside its number — as does an
+option named by a letter, beside its letter.
 
-- **The status is the second column, and a finished row says ✅️.** Read down the left edge, the
-  reader skips what is done before reading what it was.
+- **The status is the second column, and a finished row says ✅️.** A row the reader decided to put
+  off says ⏳️, and every other unfinished row carries no mark.
+- **Finished rows are shown only when the reader asks for them.** The list carries what remains.
+  The numbers do not move: the rows that remain keep theirs, and a finished number is not given to
+  a new item. Where they are shown, the ✅️ rows come first and the rows without a mark follow, numbers
+  unchanged, so that reading down the left edge the reader skips what is done before reading what
+  it was.
 - **A row is ✅️ once its own work is done.** A fix committed, a pull request opened — the work the
   row names is finished, and what carries it further, such as the branch reaching its trunk, is a
   row of its own.
 - **The pull request that takes a release trunk into `main` is the release, not a row before it.**
   It is listed apart from what the release still needs, never as one more item on the way to it.
+- **The list is printed whole each time, in its current state.** A list reprinted as the rows that
+  changed, with a note that the rest is as before, sends the reader back to an earlier list.
+- **While a design or a review is under way, a push, a branch or a merge is not raised.** It is
+  neither asked about nor written as a row, which holds back the row for a branch reaching its
+  trunk (above) for as long as the work lasts.
 - **A numbered item is never written as a bullet holding a number.** `- 3. …` nests an ordered
   list inside a bullet, and a renderer draws a nested ordered list in Roman numerals. Numbered
   items stand at the top level of a list, or in a table.
