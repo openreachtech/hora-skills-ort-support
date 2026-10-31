@@ -547,14 +547,17 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   - [ ] Update `#get:isPaused` of `Scheduler` to read the flag
   - [ ] Update `.create()` of `Scheduler` to accept a clock
   ```
-- **A dependency line carries the package and the version it goes to.** A raise without its target
-  is not a line somebody can close, because nothing says what would make it true.
-- **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
-  `Declare <a class>` and leaves the origin to the branch it sits on, whose opening marker names
-  that origin once. A checklist line has no branch under it, so a line reading `Declare <a class>`
-  describes writing one from nothing — and where the class was carried in from elsewhere, that is
-  the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
-  as `hos-gh-notation` says under the heading a repeated value calls for.
+- **Work that is not a change to something that stands takes its own verb, and it is not the
+  commit vocabulary.** `Purge` for a file that goes whole and `Install` for a dependency taken on
+  open a line for what they say; taking a part out of something that stays is still a change to it,
+  so it reads `Update <target> to kick out <part>`. A commit says `Declare <a class>` and
+  leaves the origin to the branch it sits on, whose opening marker names that origin once; a
+  checklist line has no branch under it, so `Declare <a class>` would describe writing one from
+  nothing, and where the class was carried in from elsewhere that is the wrong work. Write
+  `Migrate <a class> from <where>`, or lift the shared part — the origin, never the verb — into a
+  heading as `hos-gh-notation` says.
+- **A dependency line carries the package and the version it goes to.** A raise without its
+  target is not a line somebody can close, because nothing says what would make it true.
 - **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
   that would name several files, packages, classes or workflows — in one sentence, or two of them
   joined with `and` — names the one thing the work is done to instead, and leaves the places to
