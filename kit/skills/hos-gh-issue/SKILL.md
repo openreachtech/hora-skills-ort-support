@@ -558,7 +558,9 @@ told.
 **Whether a line is still outstanding is checked before it is written.** A box already closed by
 the time the issue is filed is something left as it stands, and belongs under `# Note` with the
 rest — but it only lands there if somebody looked first. Written unchecked, it sends whoever picks
-the issue up to do work that was finished before they arrived.
+the issue up to do work that was finished before they arrived. This is about a line the repository
+already satisfies in the state the issue starts from; work done for this issue itself on a local
+branch is not that, and the checkboxes section below settles it.
 
 **A line nothing asks for is the worse of the two.** Where the repository's own documents say a
 thing needs no arranging, a checklist that arranges it invents the work outright, and there is
@@ -568,6 +570,8 @@ nothing to find at review except that the line should never have been there.
 
 - **An issue is sometimes filed after the work is done.** Where that is what happened, hand it over
   with the boxes already checked
+  - **Work done locally for this issue counts as done.** Commits on a branch — merged or not,
+    pushed or not — are the work, so its boxes are `[x]` and none of them moves to `# Note`.
 - **A box states what is true.** Checking one that is not is the one thing that makes a checklist
   worth less than no checklist
 
