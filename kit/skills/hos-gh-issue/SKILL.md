@@ -568,6 +568,8 @@ nothing to find at review except that the line should never have been there.
 
 - **An issue is sometimes filed after the work is done.** Where that is what happened, hand it over
   with the boxes already checked
+  - **Work done locally for this issue counts as done.** Commits on a branch — merged or not,
+    pushed or not — are the work, so its boxes are `[x]` and none of them moves to `# Note`.
 - **A box states what is true.** Checking one that is not is the one thing that makes a checklist
   worth less than no checklist
 
