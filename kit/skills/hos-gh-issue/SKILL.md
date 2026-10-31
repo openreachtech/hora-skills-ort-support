@@ -525,21 +525,39 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
       - [ ] Raise `jest` to `^30.5.1`
 ```
 
-- **A dependency line carries the package and the version it goes to.** A raise without its target
-  is not a line somebody can close, because nothing says what would make it true.
-- **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
-  `Declare <a class>` and leaves the origin to the branch it sits on, whose opening marker names
-  that origin once. A checklist line has no branch under it, so a line reading `Declare <a class>`
-  describes writing one from nothing — and where the class was carried in from elsewhere, that is
-  the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
-  as `hos-gh-notation` says under the heading a repeated value calls for.
-- The rule is not about packages. Anything taking the same operation over several targets splits
-  per target, and a long result is grouped under `##` headings rather than folded back into fewer
-  lines.
-- **The target is the fix, never the place it lands.** One fix that has to reach several files — a
-  rule written into a skill and into its guide, a document and its translation — is one line,
-  named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
-  file or by language, the checklist lists the work, and the work is the pull request's.
+- **What takes a line of its own is what could be done while the others stay undone.** The same
+  operation over several workflows, config files, packages, classes or members is several lines.
+  One fix that cannot be done in halves — a rule written into a skill and into its guide, a
+  document and its translation — is one line, named as the fix: ``Add the stop code `E-AI-GUARD` ``.
+  The checklist lists the work, and which files it touched is the pull request's.
+- **A line names its target and opens with the verb the work uses.** For something that stands
+  and is changed, the form is `Update <target> to <verb> ...`, the target being a file, a class or
+  a member. A member reads `Update <member> of <class> to <verb> ...`, written in the library's
+  member notation, `/hoc-classes-member-notation`: `#` for an instance member, `.` for a static
+  one, `get:` or `set:` after it for an accessor. The verb stays in every line and is never lifted
+  into a heading over bare names, which would say the operation about none of them. What may rise
+  into a heading is the thing the lines share, one class for instance, and each line then keeps
+  `Update <member> to <verb> ...`.
+
+  ```markdown
+  - [ ] Update `test.yml` to lock its actions
+  - [ ] Update `release.yml` to lock its actions
+  - [ ] Update `Scheduler` to run its jobs in order
+  - [ ] Update `#tick()` of `Scheduler` to skip a paused job
+  - [ ] Update `#get:isPaused` of `Scheduler` to read the flag
+  - [ ] Update `.create()` of `Scheduler` to accept a clock
+  ```
+- **Work that is not a change to something that stands takes its own verb, and it is not the
+  commit vocabulary.** `Purge` for a file that goes whole and `Install` for a dependency taken on
+  open a line for what they say; taking a part out of something that stays is still a change to it,
+  so it reads `Update <target> to kick out <part>`. A commit says `Declare <a class>` and
+  leaves the origin to the branch it sits on, whose opening marker names that origin once; a
+  checklist line has no branch under it, so `Declare <a class>` would describe writing one from
+  nothing, and where the class was carried in from elsewhere that is the wrong work. Write
+  `Migrate <a class> from <where>`, or lift the shared part — the origin, never the verb — into a
+  heading as `hos-gh-notation` says.
+- **A dependency line carries the package and the version it goes to.** A raise without its
+  target is not a line somebody can close, because nothing says what would make it true.
 - **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
   that would name several files, packages, classes or workflows — in one sentence, or two of them
   joined with `and` — names the one thing the work is done to instead, and leaves the places to
