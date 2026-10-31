@@ -16,11 +16,12 @@ the shape it is pasted in where `gh` cannot reach GitHub.
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
 
-**How any of it is set down belongs to `hos-gh-notation`** — the table several things of one kind
-go in, the heading a section takes once it holds two subjects, the backticks a name is read
-through, the reference to another issue that cannot be taken back, the fenced block the text is
-shown in, and the language it is written in. That convention is read alongside this one, and this
-one does not restate it.
+**How any of it is set down belongs to `/hos-gh-notation`, and reading it is required.** Load it
+before the first line of the body is written, never after a draft exists: the table several things
+of one kind go in, the heading a section takes once it holds two subjects or a value repeats down
+its lines, the backticks a name is read through, the reference to another issue that cannot be
+taken back, the fenced block the text is shown in, and the language it is written in. This skill
+does not restate those rules, so an issue written from this skill alone is written without them.
 
 ## What each artefact holds
 
