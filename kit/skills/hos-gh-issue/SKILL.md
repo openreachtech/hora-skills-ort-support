@@ -16,11 +16,12 @@ the shape it is pasted in where `gh` cannot reach GitHub.
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
 
-**How any of it is set down belongs to `hos-gh-notation`** — the table several things of one kind
-go in, the heading a section takes once it holds two subjects, the backticks a name is read
-through, the reference to another issue that cannot be taken back, the fenced block the text is
-shown in, and the language it is written in. That convention is read alongside this one, and this
-one does not restate it.
+**How any of it is set down belongs to `/hos-gh-notation`, and reading it is required.** Load it
+before the first line of the body is written, never after a draft exists: the table several things
+of one kind go in, the heading a section takes once it holds two subjects or a value repeats down
+its lines, the backticks a name is read through, the reference to another issue that cannot be
+taken back, the fenced block the text is shown in, and the language it is written in. This skill
+does not restate those rules, so an issue written from this skill alone is written without them.
 
 ## What each artefact holds
 
@@ -48,6 +49,12 @@ says nothing and costs the reader a stop.
 | `# Note` | Premises, constraints, warnings, ordering dependencies on other work |
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
+
+**`# Note` sits between `# To-be` and `# Checklist`, never after the checklist.** It qualifies the
+work before the reader meets the boxes, and the checklist is where the body ends.
+
+**An H2 sits inside an H1 section and never stands alone.** A body that is only a checklist still
+opens with `# Checklist`, and its `##` headings go beneath it.
 
 **An issue small enough for its title to say it all may leave out `# As-is` and `# To-be`.** Both
 sections exist to carry what the title cannot. Where the title already names where things stand and
@@ -205,12 +212,15 @@ other is this skill's own.
 
 **The division is the issue's, so the current state and the work divide alike.** Where the two
 sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
-checklist does nothing about, or a group of boxes answering a state nobody wrote down.
+checklist does nothing about, or a group of boxes answering a state nobody wrote down. A section
+that goes flat under the next paragraph is not a mismatch: `# As-is` stays flat where each of its
+headings would hold one bullet, whatever `# Checklist` does.
 
-**A heading over a single line is not a division.** Where every heading in `# Checklist` would
-hold one line, the checklist goes flat: each line already names its fix, and a heading above it
-only says it twice. `# As-is` keeps its headings where they group what was observed, and the two
-are then held against each other line by heading.
+**A heading over a single item is not a division.** Where every heading in a section would hold
+one item — one box of `# Checklist`, one bullet of `# As-is` — that section goes flat: each item
+already names itself, and a heading above it only says it twice. A section keeps its headings
+where at least one of them holds more than one item, and the two sections are then held against
+each other over the headings that remain.
 
 **`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
 against each other are `# How` and this issue's `# Checklist`.
