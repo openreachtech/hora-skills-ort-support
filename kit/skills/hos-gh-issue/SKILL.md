@@ -525,6 +525,11 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
       - [ ] Raise `jest` to `^30.5.1`
 ```
 
+- **What takes a line of its own is what could be done while the others stay undone.** The same
+  operation over several workflows, config files, packages, classes or members is several lines.
+  One fix that cannot be done in halves — a rule written into a skill and into its guide, a
+  document and its translation — is one line, named as the fix: ``Add the stop code `E-AI-GUARD` ``.
+  The checklist lists the work, and which files it touched is the pull request's.
 - **A dependency line carries the package and the version it goes to.** A raise without its target
   is not a line somebody can close, because nothing says what would make it true.
 - **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
@@ -533,13 +538,6 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   describes writing one from nothing — and where the class was carried in from elsewhere, that is
   the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
   as `hos-gh-notation` says under the heading a repeated value calls for.
-- The rule is not about packages. Anything taking the same operation over several targets splits
-  per target, and a long result is grouped under `##` headings rather than folded back into fewer
-  lines.
-- **The target is the fix, never the place it lands.** One fix that has to reach several files — a
-  rule written into a skill and into its guide, a document and its translation — is one line,
-  named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
-  file or by language, the checklist lists the work, and the work is the pull request's.
 - **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
   that would name several files, packages, classes or workflows — in one sentence, or two of them
   joined with `and` — names the one thing the work is done to instead, and leaves the places to
