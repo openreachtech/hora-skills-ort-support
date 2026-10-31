@@ -91,11 +91,16 @@ Three signs say a section wants them, and they arrive in this order.
 - **One value repeated down the lines.** Where several lines carry the same words — the same
   file, the same section, the same package — that value is a heading written into each line
   instead of above them. **Where it sits in the line decides nothing.** A qualifier every line
-  ends with repeats exactly as a prefix every line opens with, and the verb they share hoists with
-  it: six lines reading `Migrate <a name> from <a package>` become a heading naming the migration
-  and its origin, with the six names bare beneath it. **The test is repetition, not naming.** Four items each naming a
-  different thing are the four things and stay as they are; eleven lines each naming the same
-  thing are eleven items under one subject, and that subject is the heading
+  ends with repeats exactly as a prefix every line opens with. **The test is repetition, not
+  naming.** Four items each naming a different thing are the four things and stay as they are;
+  eleven lines each naming the same thing are eleven items under one subject, and that subject is
+  the heading
+  - **What rises into the heading is the thing the lines share, never the verb.** A line that
+    names a file as what changes opens `Update <file> to <verb> ...`, and the lines of several
+    files keep that opening even where they share the rest: the verb is what the line says about
+    its file, and a heading over bare file names says it about none of them. Six lines reading
+    `Migrate <a name> from <a package>` share the package, so the package becomes the heading and
+    each line keeps `Migrate <a name>`
 - **Two sections of one body dividing differently.** Where a section recording what was done and
   a section describing it do not carry the same H2s, one of the two divisions is wrong. Which two
   sections are held against each other is the artefact's own — each skill names its pair. It is
