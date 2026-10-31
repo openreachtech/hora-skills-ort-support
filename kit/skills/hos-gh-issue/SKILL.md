@@ -530,6 +530,23 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   One fix that cannot be done in halves — a rule written into a skill and into its guide, a
   document and its translation — is one line, named as the fix: ``Add the stop code `E-AI-GUARD` ``.
   The checklist lists the work, and which files it touched is the pull request's.
+- **A line names its target and opens with the verb the work uses.** For something that stands
+  and is changed, the form is `Update <target> to <verb> ...`, the target being a file, a class or
+  a member. A member reads `Update <member> of <class> to <verb> ...`, written in the library's
+  member notation, `/hoc-classes-member-notation`: `#` for an instance member, `.` for a static
+  one, `get:` or `set:` after it for an accessor. The verb stays in every line and is never lifted
+  into a heading over bare names, which would say the operation about none of them. What may rise
+  into a heading is the thing the lines share, one class for instance, and each line then keeps
+  `Update <member> to <verb> ...`.
+
+  ```markdown
+  - [ ] Update `test.yml` to lock its actions
+  - [ ] Update `release.yml` to lock its actions
+  - [ ] Update `Scheduler` to run its jobs in order
+  - [ ] Update `#tick()` of `Scheduler` to skip a paused job
+  - [ ] Update `#get:isPaused` of `Scheduler` to read the flag
+  - [ ] Update `.create()` of `Scheduler` to accept a clock
+  ```
 - **A dependency line carries the package and the version it goes to.** A raise without its target
   is not a line somebody can close, because nothing says what would make it true.
 - **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
