@@ -50,6 +50,9 @@ says nothing and costs the reader a stop.
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
 
+**`# Note` sits between `# To-be` and `# Checklist`, never after the checklist.** It qualifies the
+work before the reader meets the boxes, and the checklist is where the body ends.
+
 **An issue small enough for its title to say it all may leave out `# As-is` and `# To-be`.** Both
 sections exist to carry what the title cannot. Where the title already names where things stand and
 where they go, either section would only repeat it, so drop whichever has nothing left to add —
