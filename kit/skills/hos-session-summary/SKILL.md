@@ -21,6 +21,14 @@ region never read produces no absence to notice.
   and opening a pull request, for either piece of work, are part of that work and are not
   subjects. Work done in the main subject's service belongs to it and is not listed. **A side
   subject is never a work log**: the list names what the session took up, not what was done.
+  The test is whether it could be the subject of a session of its own: a piece of work, or an
+  investigation, somebody could open a session for. A question asked in passing, or a rule stated
+  while a subject was under way, could not, and it belongs to the subject it came up in.
+  - Measured: a session opened to move a feature into a repository went on to prepare the release
+    and to update a skill. Each of those could have been a session of its own, since the first
+    could have been closed when the move was done. A question about how to quit the tool could
+    not, and neither could a rule about how to write a type; both were listed as side subjects,
+    and the correction was that they were not.
 
 **The summary answers one question: what did this session take up?** It is a list of subjects,
 and nothing else is in it.
@@ -66,8 +74,9 @@ takes: the work the session itself did, and the questions it was asked. What sta
 it in the same repository is outside, however close it sits.
 
 **The source is the conversation.** A subject is something the person raised or the session took
-up, and that exists in what was said, not in what a repository holds. A question answered without
-a single file changing is as much a subject as a change that was committed.
+up, and that exists in what was said, not in what a repository holds. A question that could be the
+subject of a session of its own is as much a subject as a change that was committed, even where no
+file changed.
 
 - **Nothing is fetched and no state is read.** Status, branches and pull requests say what was
   left on a host, which is a session report's material. Reading them here produces lines the
@@ -99,6 +108,12 @@ one subject, never three.
   prompt of its own, and the person still names it as one thing: finishing the release. A line per
   artefact lists what the session produced, which is the account of the work arriving by another
   door. The line names the goal the person was pursuing, and the artefacts were steps toward it.
+  A release is the usual case of it: a feature, a format change, a document and a pre-publish
+  audit, each filed and merged on its own, are still one subject when all of them serve one
+  release, and the line names that release's goal. A line per piece lists what the session
+  produced, and that is the work log again.
+  - Measured: five lines, one per piece of work under a release umbrella, and the correction was
+    one line naming the preparation of that release.
 - **A subject that turned into a different one is two.** Where a question about whether a report
   should list topics became a question about what a new skill should be called, the person moved
   on, and the list says so by holding both.
