@@ -162,6 +162,11 @@ umbrella's overview.
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
 
+**A line that joins two actions with `and` is a list too.** `Turn off a rule for one directory and
+install a package` hands the reader the division, which is what `# Checklist` is for. Name the
+whole at the altitude the pieces sit beneath, as a title does; where no such name exists, leave
+`# To-be` out and let `# Checklist` carry both.
+
 **Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
 name, the name of a base class: each says how the work is built, and the prose of an issue says
 where things stand and where they are going. A reader who needs the name finds it in
@@ -535,6 +540,20 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   rule written into a skill and into its guide, a document and its translation — is one line,
   named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
   file or by language, the checklist lists the work, and the work is the pull request's.
+- **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
+  that would name several files, packages, classes or workflows — in one sentence, or two of them
+  joined with `and` — names the one thing the work is done to instead, and leaves the places to
+  `# Checklist`. A list run into a sentence cannot be ticked off, and it goes stale when a target
+  is added or dropped. `# As-is` is where it happens most: say what is true of all of them in one
+  clause with no place named, and the same holds for two kinds of place, the callers and the
+  manual.
+
+  ```
+  Bad   `src/a.js`, `src/b.js` and `src/c.js` carry no licence header
+  Good  The source files carry no licence header
+  Bad   The callers pass `mode`, and the manual documents it
+  Good  `mode` is still an accepted argument
+  ```
 
 **Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
 it a second one that says nothing more — then has to be renumbered every time a line is inserted or
