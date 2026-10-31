@@ -162,6 +162,11 @@ umbrella's overview.
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
 
+**A line that joins two actions with `and` is a list too.** `Turn off a rule for one directory and
+install a package` hands the reader the division, which is what `# Checklist` is for. Name the
+whole at the altitude the pieces sit beneath, as a title does; where no such name exists, leave
+`# To-be` out and let `# Checklist` carry both.
+
 **Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
 name, the name of a base class: each says how the work is built, and the prose of an issue says
 where things stand and where they are going. A reader who needs the name finds it in
