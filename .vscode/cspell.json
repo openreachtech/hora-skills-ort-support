@@ -11,5 +11,8 @@
     "encryptable",
 
     "esac"
+  ],
+  "ignoreWords": [
+    "gcqx"
   ]
 }

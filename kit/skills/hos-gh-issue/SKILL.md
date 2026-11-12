@@ -16,11 +16,12 @@ the shape it is pasted in where `gh` cannot reach GitHub.
 **The `gh` in the name is GitHub.** It marks a skill that reaches the host rather than stopping
 at the text it wrote; `hos-gh-pull-request` is the other one carrying it.
 
-**How any of it is set down belongs to `hos-gh-notation`** — the table several things of one kind
-go in, the heading a section takes once it holds two subjects, the backticks a name is read
-through, the reference to another issue that cannot be taken back, the fenced block the text is
-shown in, and the language it is written in. That convention is read alongside this one, and this
-one does not restate it.
+**How any of it is set down belongs to `/hos-gh-notation`, and reading it is required.** Load it
+before the first line of the body is written, never after a draft exists: the table several things
+of one kind go in, the heading a section takes once it holds two subjects or a value repeats down
+its lines, the backticks a name is read through, the reference to another issue that cannot be
+taken back, the fenced block the text is shown in, and the language it is written in. This skill
+does not restate those rules, so an issue written from this skill alone is written without them.
 
 ## What each artefact holds
 
@@ -48,6 +49,12 @@ says nothing and costs the reader a stop.
 | `# Note` | Premises, constraints, warnings, ordering dependencies on other work |
 | `# Checklist` | **What gets done inside this issue's own scope**, as checkboxes |
 | `# Sub-issues` | **What becomes a sub-issue of its own** (below) |
+
+**`# Note` sits between `# To-be` and `# Checklist`, never after the checklist.** It qualifies the
+work before the reader meets the boxes, and the checklist is where the body ends.
+
+**An H2 sits inside an H1 section and never stands alone.** A body that is only a checklist still
+opens with `# Checklist`, and its `##` headings go beneath it.
 
 **An issue small enough for its title to say it all may leave out `# As-is` and `# To-be`.** Both
 sections exist to carry what the title cannot. Where the title already names where things stand and
@@ -155,6 +162,12 @@ umbrella's overview.
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
 
+**A line that joins two actions with a connector is a list too.** `Turn off a rule for one
+directory and install a package` hands the reader the division, which is what `# Checklist` is
+for. Name the whole at the altitude the pieces sit beneath, as a title does; where no such name
+exists, leave `# To-be` out and let `# Checklist` carry both. The refusal and its replacements
+belong to `/hoc-notation`; this is where they land in `# To-be`.
+
 **Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
 name, the name of a base class: each says how the work is built, and the prose of an issue says
 where things stand and where they are going. A reader who needs the name finds it in
@@ -205,12 +218,19 @@ other is this skill's own.
 
 **The division is the issue's, so the current state and the work divide alike.** Where the two
 sets of H2s do not correspond, one of the two divisions is wrong — a kind of current state the
-checklist does nothing about, or a group of boxes answering a state nobody wrote down.
+checklist does nothing about, or a group of boxes answering a state nobody wrote down. A section
+that goes flat under the next paragraph is not a mismatch: `# As-is` stays flat where each of its
+headings would hold one bullet, whatever `# Checklist` does.
 
-**A heading over a single line is not a division.** Where every heading in `# Checklist` would
-hold one line, the checklist goes flat: each line already names its fix, and a heading above it
-only says it twice. `# As-is` keeps its headings where they group what was observed, and the two
-are then held against each other line by heading.
+**A heading over a single item is not a division.** Where every heading in a section would hold
+one item — one box of `# Checklist`, one bullet of `# As-is` — that section goes flat: each item
+already names itself, and a heading above it only says it twice. A section keeps its headings
+where at least one of them holds more than one item, and the two sections are then held against
+each other over the headings that remain.
+
+**Where one heading's work depends on another's, the headings stand in the order the
+implementation needs them.** A section that installs a package comes before the section that
+defines the class which uses it, because the second cannot be done until the first has been.
 
 **`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
 against each other are `# How` and this issue's `# Checklist`.
@@ -423,10 +443,12 @@ never belonged to.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
 
-**An issue a publish issue links inline, in its description, takes no parent.** Raising the
-package version and merging the release into `main` are steps of the publish, and the publish
-issue's description is where they are linked. That link is the whole of the relation: neither the
-publish issue nor the release umbrella takes such an issue as a sub-issue.
+**An issue a publish issue links inline, in its description, has the publish issue as its parent
+by that link, and is not made a sub-issue.** Raising the package version and merging the release
+into `main` are steps of the publish, and the publish issue's description is where they are
+linked. That link is the whole of the relation, and it is a parent-child one: the sub-issues panel
+is one way to hold the relation and not the only way. Neither the publish issue nor the release
+umbrella takes such an issue as a sub-issue, and nothing written about it says it has no parent.
 
 - **The reason is the flow.** The description lists the steps in the order they are taken, and a
   step linked there is read in that order. Made a sub-issue, the step moves to the panel, which
@@ -510,21 +532,62 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
       - [ ] Raise `jest` to `^30.5.1`
 ```
 
-- **A dependency line carries the package and the version it goes to.** A raise without its target
-  is not a line somebody can close, because nothing says what would make it true.
-- **The verb names the kind of work, and it is not the commit vocabulary.** A commit says
-  `Declare <a class>` and leaves the origin to the branch it sits on, whose opening marker names
-  that origin once. A checklist line has no branch under it, so a line reading `Declare <a class>`
-  describes writing one from nothing — and where the class was carried in from elsewhere, that is
-  the wrong work. Write `Migrate <a class> from <where>`, or hoist the shared part into a heading
-  as `hos-gh-notation` says under the heading a repeated value calls for.
-- The rule is not about packages. Anything taking the same operation over several targets splits
-  per target, and a long result is grouped under `##` headings rather than folded back into fewer
-  lines.
-- **The target is the fix, never the place it lands.** One fix that has to reach several files — a
-  rule written into a skill and into its guide, a document and its translation — is one line,
-  named as the fix: ``Add the stop code `E-AI-GUARD` ``, not one line per file it touches. Split by
-  file or by language, the checklist lists the work, and the work is the pull request's.
+- **What takes a line of its own is what the issue names as a piece of work.** The same operation
+  over several packages, classes or members is several lines, because each is something somebody
+  can finish while the others stay undone. Where the issue names the operation itself as the one
+  piece of work — the versions a set of workflows pins its actions at, a rule written into a skill
+  and into its guide, a document and its translation — it is one line, named as that work:
+  ``Update the `actions/` versions of GitHub Workflows``, ``Add the stop code `E-AI-GUARD` ``. That
+  the operation could be carried out workflow by workflow does not split it: the checklist lists
+  the work, and which files it touched is the pull request's.
+- **A line names its target and opens with the verb the work uses.** For something that stands
+  and is changed, the form is `Update <target> to <verb> ...`, the target being a file, a class or
+  a member. A member reads `Update <class><member> to <verb> ...`, the class name attached as the
+  library's member notation, `/hoc-classes-member-notation`, writes it: `#` for an instance member,
+  `.` for a static one, `get:` or `set:` after it for an accessor. The verb stays in every line and
+  is never lifted into a heading over bare names, which would say the operation about none of them.
+  What may rise into a heading is the thing the lines share, one class for instance, and each line
+  then keeps `Update <member> to <verb> ...`.
+
+  ```markdown
+  - [ ] Update `eslint.config.js` to turn off a rule for tests
+  - [ ] Update `jest.config.js` to collect coverage
+  - [ ] Update `Scheduler` to run its jobs in order
+  - [ ] Update `Scheduler#tick()` to skip a paused job
+  - [ ] Update `Scheduler#get:isPaused` to read the flag
+  - [ ] Update `Scheduler.create()` to accept a clock
+  ```
+- **Work that is not a change to something that stands takes its own verb, and it is not the
+  commit vocabulary.** `Purge` for a file that goes whole and `Install` for a dependency taken on
+  open a line for what they say; taking a part out of something that stays is still a change to it,
+  so it reads `Update <target> to kick out <part>`. A commit says `Declare <a class>` and
+  leaves the origin to the branch it sits on, whose opening marker names that origin once; a
+  checklist line has no branch under it, so `Declare <a class>` would describe writing one from
+  nothing, and where the class was carried in from elsewhere that is the wrong work. Write
+  `Migrate <a class> from <where>`, or lift the shared part — the origin, never the verb — into a
+  heading as `hos-gh-notation` says.
+- **A title that names the target takes it out of the lines.** What the lines share may rise into a
+  heading, and where the title already says what is changed — ``💪 Update `allowScripts:` `` — it
+  has risen as far as it goes. A line that restated the target would say the title twice, so it
+  opens with its verb and names the part: ``Kick out `left-pad` ``,
+  ``Deny the install script of `native-addon` ``.
+- **A dependency line carries the package and the version it goes to.** A raise without its
+  target is not a line somebody can close, because nothing says what would make it true.
+- **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
+  that would name several files, packages, classes or workflows — in one sentence, or two of them
+  joined with a connector — names the one thing the work is done to instead, and leaves the places
+  to `# Checklist`. The refusal belongs to `/hoc-notation`, and this is its reading for the prose of
+  an issue. A list run into a sentence cannot be ticked off, and it goes stale when a target
+  is added or dropped. `# As-is` is where it happens most: say what is true of all of them in one
+  clause with no place named, and the same holds for two kinds of place, the callers and the
+  manual.
+
+  ```
+  Bad   `src/a.js`, `src/b.js` and `src/c.js` carry no licence header
+  Good  The source files carry no licence header
+  Bad   The callers pass `mode`, and the manual documents it
+  Good  `mode` is still an accepted argument
+  ```
 
 **Do not number the lines.** The checkbox is already the per-item mark, and `(1)` `(2)` set beside
 it a second one that says nothing more — then has to be renumbered every time a line is inserted or
@@ -558,7 +621,9 @@ told.
 **Whether a line is still outstanding is checked before it is written.** A box already closed by
 the time the issue is filed is something left as it stands, and belongs under `# Note` with the
 rest — but it only lands there if somebody looked first. Written unchecked, it sends whoever picks
-the issue up to do work that was finished before they arrived.
+the issue up to do work that was finished before they arrived. This is about a line the repository
+already satisfies in the state the issue starts from; work done for this issue itself on a local
+branch is not that, and the checkboxes section below settles it.
 
 **A line nothing asks for is the worse of the two.** Where the repository's own documents say a
 thing needs no arranging, a checklist that arranges it invents the work outright, and there is
@@ -568,6 +633,8 @@ nothing to find at review except that the line should never have been there.
 
 - **An issue is sometimes filed after the work is done.** Where that is what happened, hand it over
   with the boxes already checked
+  - **Work done locally for this issue counts as done.** Commits on a branch — merged or not,
+    pushed or not — are the work, so its boxes are `[x]` and none of them moves to `# Note`.
 - **A box states what is true.** Checking one that is not is the one thing that makes a checklist
   worth less than no checklist
 
@@ -583,6 +650,17 @@ thing done may have taken several commits and touched several files.
   and takes one line
 - **The test is to ask of each box what is being done, not where.** A line that only names the
   file an edit landed in is a commit subject copied across
+- **Several changes to one target are one line.** The hunks of a file, the keys of a configuration
+  and the words added to a list are one target with one thing done to it, and the line says that
+  thing at the level the issue is about: ``Update `.npmrc` along `<source>` ``,
+  ``Update `.vscode/cspell.json` to add some words``. It does not list the keys, values or words
+  inside the line, because they are the diff's, and one line per hunk is the commit history copied
+  across
+- **What exists only to serve another piece of work is part of that work's line.** The lock file
+  an install moves is the plainest case. An ignore list a script reads, and the workflow step that
+  runs the script, are the same case: each belongs to the line for the work it serves —
+  ``Add `npm run audit:npm` `` — and takes none of its own. Nor is it filed under the heading of
+  the place its file lives: a directory says where a file landed, and not what it is for
 
 **The same holds before any commit exists.** A plan for how the work will be committed is commit
 granularity as much as a record of it is, and it reaches a checklist by the same route — from the
