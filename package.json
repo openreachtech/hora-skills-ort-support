@@ -18,6 +18,7 @@
     "support"
   ],
   "scripts": {
+    "audit:npm": "node node_modules/@openreachtech/mentsu-npm-audit-gate/scripts/npm-audit-gate.js scripts/stopgap-audit/IGNORED_ADVISORIES.js",
     "build": "node .claude/skills/build/scripts/build.js",
     "l": "npm run lint",
     "lint": "eslint .",
