@@ -556,6 +556,11 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   nothing, and where the class was carried in from elsewhere that is the wrong work. Write
   `Migrate <a class> from <where>`, or lift the shared part — the origin, never the verb — into a
   heading as `hos-gh-notation` says.
+- **A title that names the target takes it out of the lines.** What the lines share may rise into a
+  heading, and where the title already says what is changed — ``💪 Update `allowScripts:` `` — it
+  has risen as far as it goes. A line that restated the target would say the title twice, so it
+  opens with its verb and names the part: ``Kick out `left-pad` ``,
+  ``Deny the install script of `native-addon` ``.
 - **A dependency line carries the package and the version it goes to.** A raise without its
   target is not a line somebody can close, because nothing says what would make it true.
 - **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
