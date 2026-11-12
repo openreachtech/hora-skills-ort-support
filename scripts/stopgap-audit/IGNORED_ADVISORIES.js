@@ -1,5 +1,5 @@
 /**
- * Advisories `scripts/stopgap-audit/npm-audit-gate.js` lets through, as a stopgap until a release fixes them.
+ * Advisories `npm run audit:npm` lets through, as a stopgap until a release fixes them.
  *
  * Each entry carries its reason and the condition for removing it,
  * and an entry whose advisory is no longer reported fails the audit,
