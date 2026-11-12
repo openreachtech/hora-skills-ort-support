@@ -525,11 +525,14 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
       - [ ] Raise `jest` to `^30.5.1`
 ```
 
-- **What takes a line of its own is what could be done while the others stay undone.** The same
-  operation over several workflows, config files, packages, classes or members is several lines.
-  One fix that cannot be done in halves — a rule written into a skill and into its guide, a
-  document and its translation — is one line, named as the fix: ``Add the stop code `E-AI-GUARD` ``.
-  The checklist lists the work, and which files it touched is the pull request's.
+- **What takes a line of its own is what the issue names as a piece of work.** The same operation
+  over several packages, classes or members is several lines, because each is something somebody
+  can finish while the others stay undone. Where the issue names the operation itself as the one
+  piece of work — the versions a set of workflows pins its actions at, a rule written into a skill
+  and into its guide, a document and its translation — it is one line, named as that work:
+  ``Update the `actions/` versions of GitHub Workflows``, ``Add the stop code `E-AI-GUARD` ``. That
+  the operation could be carried out workflow by workflow does not split it: the checklist lists
+  the work, and which files it touched is the pull request's.
 - **A line names its target and opens with the verb the work uses.** For something that stands
   and is changed, the form is `Update <target> to <verb> ...`, the target being a file, a class or
   a member. A member reads `Update <class><member> to <verb> ...`, the class name attached as the
