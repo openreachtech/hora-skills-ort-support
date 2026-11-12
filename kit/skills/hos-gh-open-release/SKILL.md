@@ -1,6 +1,6 @@
 ---
 name: hos-gh-open-release
-description: "Open the next release on both ends — the `release/x.x.x` trunk cut locally from a freshly fetched `origin/main`, pushed, and the umbrella issue that will gather its work. Use when the next release is to be prepared, or a release trunk has to exist before work can be opened against it. It ends at the push and the umbrella: the version bump, the pull request into `main` and the release note belong to their own conventions."
+description: "Open the next release on both ends — the `release/x.x.x` trunk cut locally from a freshly fetched `origin/main`, pushed, and the umbrella issue that will gather its work. Use when the next release is to be prepared, when a release trunk has to exist before work can be opened against it, or when an issue or work branch is asked for and no release is open. It ends at the push and the umbrella: the version bump, the pull request into `main` and the release note belong to their own conventions."
 ---
 
 # Open release
@@ -9,6 +9,10 @@ description: "Open the next release on both ends — the `release/x.x.x` trunk c
 and an umbrella issue is filed there. Neither end is worth having alone: a trunk that exists only
 locally cannot be the base of anything, and an umbrella with no trunk behind it gathers work that
 has nowhere to land.
+
+**It also comes first when an issue or a work branch is asked for and no release is open.** Work
+for a release is raised under that release's trunk and umbrella, so where neither exists yet, this
+runs before the issue is filed or the branch is cut, never after it with the parent attached later.
 
 **This skill ends at the push and the umbrella.** Everything after them belongs to a convention of
 its own:
