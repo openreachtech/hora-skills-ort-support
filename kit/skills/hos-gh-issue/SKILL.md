@@ -634,6 +634,12 @@ thing done may have taken several commits and touched several files.
   and takes one line
 - **The test is to ask of each box what is being done, not where.** A line that only names the
   file an edit landed in is a commit subject copied across
+- **Several changes to one target are one line.** The hunks of a file, the keys of a configuration
+  and the words added to a list are one target with one thing done to it, and the line says that
+  thing at the level the issue is about: ``Update `.npmrc` along `<source>` ``,
+  ``Update `.vscode/cspell.json` to add some words``. It does not list the keys, values or words
+  inside the line, because they are the diff's, and one line per hunk is the commit history copied
+  across
 - **What exists only to serve another piece of work is part of that work's line.** The lock file
   an install moves is the plainest case. An ignore list a script reads, and the workflow step that
   runs the script, are the same case: each belongs to the line for the work it serves —
