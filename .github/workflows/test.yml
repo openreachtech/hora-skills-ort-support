@@ -66,14 +66,14 @@ jobs:
       # so the install itself runs none of that code.
       #
       # ⚠️ The script runs npm audit itself and fails on every advisory except the ones
-      # scripts/stopgap-audit/IGNORED_ADVISORIES.js lists, a stopgap until a release fixes them. An entry
-      # whose advisory is no longer reported fails too, so the list cannot outlive its reason.
+      # the file it is given lists, a stopgap until a release fixes them.
+      # An entry whose advisory is no longer reported fails too, so the list cannot outlive its reason.
       #
       # ⚠️ A 503 from the advisory service leaves npm with no report, and the script says
       # so rather than listing advisories. npm does not retry the bulk POST —
       # `--fetch-retries=4` still sends one request — so rerun the job.
       - name: 🛡️ npm audit
-        run: node scripts/stopgap-audit/npm-audit-gate.js
+        run: npm run audit:npm
 
       - name: 🧵 ESLint
         run: npm run lint
