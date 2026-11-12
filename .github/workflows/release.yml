@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: ✂️ Extract the version from the PR title, or the release branch name
         id: extract_version
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        uses: actions/github-script@v9
         with:
           script: |
             /*
@@ -85,7 +85,7 @@ jobs:
 
       - name: 🏷️ Create the version tag
         if: steps.extract_version.outputs.version != ''
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        uses: actions/github-script@v9
         env:
           VERSION: ${{ steps.extract_version.outputs.version }}
         with:
@@ -106,7 +106,7 @@ jobs:
 
       - name: 📢 Create GitHub Release
         if: steps.extract_version.outputs.version != ''
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        uses: actions/github-script@v9
         env:
           VERSION: ${{ steps.extract_version.outputs.version }}
         with:
