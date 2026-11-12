@@ -438,10 +438,12 @@ never belonged to.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
 
-**An issue a publish issue links inline, in its description, takes no parent.** Raising the
-package version and merging the release into `main` are steps of the publish, and the publish
-issue's description is where they are linked. That link is the whole of the relation: neither the
-publish issue nor the release umbrella takes such an issue as a sub-issue.
+**An issue a publish issue links inline, in its description, has the publish issue as its parent
+by that link, and is not made a sub-issue.** Raising the package version and merging the release
+into `main` are steps of the publish, and the publish issue's description is where they are
+linked. That link is the whole of the relation, and it is a parent-child one: the sub-issues panel
+is one way to hold the relation and not the only way. Neither the publish issue nor the release
+umbrella takes such an issue as a sub-issue, and nothing written about it says it has no parent.
 
 - **The reason is the flow.** The description lists the steps in the order they are taken, and a
   step linked there is read in that order. Made a sub-issue, the step moves to the panel, which
