@@ -634,6 +634,11 @@ thing done may have taken several commits and touched several files.
   and takes one line
 - **The test is to ask of each box what is being done, not where.** A line that only names the
   file an edit landed in is a commit subject copied across
+- **What exists only to serve another piece of work is part of that work's line.** The lock file
+  an install moves is the plainest case. An ignore list a script reads, and the workflow step that
+  runs the script, are the same case: each belongs to the line for the work it serves —
+  ``Add `npm run audit:npm` `` — and takes none of its own. Nor is it filed under the heading of
+  the place its file lives: a directory says where a file landed, and not what it is for
 
 **The same holds before any commit exists.** A plan for how the work will be committed is commit
 granularity as much as a record of it is, and it reaches a checklist by the same route — from the
