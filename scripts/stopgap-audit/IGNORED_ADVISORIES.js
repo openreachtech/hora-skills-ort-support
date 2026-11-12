@@ -5,13 +5,7 @@
  * and an entry whose advisory is no longer reported fails the audit,
  * so this list cannot outlive the reasons it was written for.
  *
- * @type {Array<{
- *   id: string
- *   package: string
- *   path: string
- *   reason: string
- *   removeWhen: string
- * }>}
+ * @type {Array<NpmAuditType.IgnoredAdvisory>}
  */
 const IGNORED_ADVISORIES = [
   {
