@@ -35,6 +35,22 @@ yarn.lock
 pnpm-lock.yaml
 bun.lockb
 
-
 #### Secrets
+
+# unused here (this stack reads `.env.<NODE_ENV>`), but it is the default name
+# other dotenv tooling writes to, and where a credential lands
 .env
+
+# not authored here, but a repo cloned from this one will have them
+# a secret committed once lives as long as the history does
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.gpg
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
