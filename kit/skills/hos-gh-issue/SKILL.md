@@ -162,10 +162,11 @@ umbrella's overview.
 restate the current state with the verbs reversed. Where the one line would only do that, leave
 `# To-be` out, and let `# Checklist` name the fixes.
 
-**A line that joins two actions with `and` is a list too.** `Turn off a rule for one directory and
-install a package` hands the reader the division, which is what `# Checklist` is for. Name the
-whole at the altitude the pieces sit beneath, as a title does; where no such name exists, leave
-`# To-be` out and let `# Checklist` carry both.
+**A line that joins two actions with a connector is a list too.** `Turn off a rule for one
+directory and install a package` hands the reader the division, which is what `# Checklist` is
+for. Name the whole at the altitude the pieces sit beneath, as a title does; where no such name
+exists, leave `# To-be` out and let `# Checklist` carry both. The refusal and its replacements
+belong to `/hoc-notation`; this is where they land in `# To-be`.
 
 **Neither `# To-be` nor `# Note` carries an implementation name.** An argument name, a member
 name, the name of a base class: each says how the work is built, and the prose of an issue says
@@ -560,8 +561,9 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   target is not a line somebody can close, because nothing says what would make it true.
 - **Prose never enumerates what the checklist lists.** A title, `# As-is`, `# To-be` or `# Note`
   that would name several files, packages, classes or workflows — in one sentence, or two of them
-  joined with `and` — names the one thing the work is done to instead, and leaves the places to
-  `# Checklist`. A list run into a sentence cannot be ticked off, and it goes stale when a target
+  joined with a connector — names the one thing the work is done to instead, and leaves the places
+  to `# Checklist`. The refusal belongs to `/hoc-notation`, and this is its reading for the prose of
+  an issue. A list run into a sentence cannot be ticked off, and it goes stale when a target
   is added or dropped. `# As-is` is where it happens most: say what is true of all of them in one
   clause with no place named, and the same holds for two kinds of place, the callers and the
   manual.
