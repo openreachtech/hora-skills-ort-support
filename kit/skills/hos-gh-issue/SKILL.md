@@ -532,20 +532,20 @@ Good  - [ ] Raise `@acme/env` to `^1.0.6`
   The checklist lists the work, and which files it touched is the pull request's.
 - **A line names its target and opens with the verb the work uses.** For something that stands
   and is changed, the form is `Update <target> to <verb> ...`, the target being a file, a class or
-  a member. A member reads `Update <member> of <class> to <verb> ...`, written in the library's
-  member notation, `/hoc-classes-member-notation`: `#` for an instance member, `.` for a static
-  one, `get:` or `set:` after it for an accessor. The verb stays in every line and is never lifted
-  into a heading over bare names, which would say the operation about none of them. What may rise
-  into a heading is the thing the lines share, one class for instance, and each line then keeps
-  `Update <member> to <verb> ...`.
+  a member. A member reads `Update <class><member> to <verb> ...`, the class name attached as the
+  library's member notation, `/hoc-classes-member-notation`, writes it: `#` for an instance member,
+  `.` for a static one, `get:` or `set:` after it for an accessor. The verb stays in every line and
+  is never lifted into a heading over bare names, which would say the operation about none of them.
+  What may rise into a heading is the thing the lines share, one class for instance, and each line
+  then keeps `Update <member> to <verb> ...`.
 
   ```markdown
-  - [ ] Update `test.yml` to lock its actions
-  - [ ] Update `release.yml` to lock its actions
+  - [ ] Update `eslint.config.js` to turn off a rule for tests
+  - [ ] Update `jest.config.js` to collect coverage
   - [ ] Update `Scheduler` to run its jobs in order
-  - [ ] Update `#tick()` of `Scheduler` to skip a paused job
-  - [ ] Update `#get:isPaused` of `Scheduler` to read the flag
-  - [ ] Update `.create()` of `Scheduler` to accept a clock
+  - [ ] Update `Scheduler#tick()` to skip a paused job
+  - [ ] Update `Scheduler#get:isPaused` to read the flag
+  - [ ] Update `Scheduler.create()` to accept a clock
   ```
 - **Work that is not a change to something that stands takes its own verb, and it is not the
   commit vocabulary.** `Purge` for a file that goes whole and `Install` for a dependency taken on
