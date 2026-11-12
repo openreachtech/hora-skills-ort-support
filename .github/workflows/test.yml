@@ -26,6 +26,9 @@ jobs:
     timeout-minutes: 60
 
     steps:
+      # ⚠️ Actions are named by their major tag, and actions.lock pins the commit each one runs.
+      # Regenerate the lockfile with `gh actions-lock --no-narrow`: without the flag the tool
+      # rewrites a major tag to a full one, and the lockfile stops following the major.
       - name: 🛎️ Checkout repository code
         uses: actions/checkout@v7
 
