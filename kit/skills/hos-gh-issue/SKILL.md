@@ -227,6 +227,10 @@ already names itself, and a heading above it only says it twice. A section keeps
 where at least one of them holds more than one item, and the two sections are then held against
 each other over the headings that remain.
 
+**Where one heading's work depends on another's, the headings stand in the order the
+implementation needs them.** A section that installs a package comes before the section that
+defines the class which uses it, because the second cannot be done until the first has been.
+
 **`hos-gh-pull-request` states the same test from the pull request's side**, where the two held
 against each other are `# How` and this issue's `# Checklist`.
 
