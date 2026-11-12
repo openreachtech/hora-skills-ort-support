@@ -12,11 +12,16 @@ separately and drift.
 Every rule here is read together with the skill for the artefact being written. That skill says
 which sections exist and what goes in them; this one says how what goes in them is written.
 
+**That an enumeration is never written, whatever the connector and whatever the text, belongs to
+`/hoc-notation`.** What follows reads it for text filed to GitHub: where the replacement is a
+table, when a section takes headings, and how a title names the whole.
+
 ## Several of one kind go in a table
 
 **Where one sentence names several things of one kind, they are not enumerated in prose.** They
 go in a table, one row per thing, with a column for whatever differs between them. This holds in
-every section of a body, wherever the artefact puts them.
+every section of a body, wherever the artefact puts them. A table is the replacement where the
+things are compared on what differs between them; `/hoc-notation` gives the others.
 
 **The trigger is several of one kind in one sentence, whatever put them there.** A change reaching
 each of them is the obvious case and not the only one: an inventory of what several classes hold
@@ -188,8 +193,9 @@ the one they share.
 ## The title names the whole at one altitude
 
 **Work that falls into two subjects is still one piece of work, and the title is where that one
-piece gets named.** `A, and B` hands the reader the division instead of the thing, and the
-division already has a home — the body carries it under its own `##`.
+piece gets named.** A connector between the parts, as in `A, and B`, hands the reader the
+division instead of the thing, and the division already has a home — the body carries it under
+its own `##`.
 
 ```
 Bad   💪 Settle the rules three skills leave unstated, and the audit no skill covers
