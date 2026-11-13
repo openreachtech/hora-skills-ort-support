@@ -104,6 +104,7 @@ for and skips the rest. **Names are title case throughout** — `Supply Chain`, 
 | `## 🛡️ Security` | Where the version stands on advisories — what was closed, and by what means | whenever there is something |
 | `## 🐛 Bug Fixes` | Incorrect behaviour put right | whenever there is something |
 | `## ⚙️ Requirements` | What the reader has to have for this version to run — a declared engine range, a platform, a service version | whenever there is something |
+| `## ⚙️ Environment Files` | The environment files a boilerplate hands over, one `###` per file — see below | A boilerplate only, whenever there is something |
 | `## 🛡️ Supply Chain` | What may run at install, and what the tree resolves through | whenever there is something |
 | `## 📦️ Dependencies` | The tables | whenever there is something |
 | `## ⚙️ CI` | Workflow changes | whenever there is something |
@@ -126,6 +127,37 @@ reader a stop and says nothing.
 - **Whether it is a new major is settled against the previous tag**, which the range already
   found. A tag whose major is one above its predecessor's takes those sections; a minor or a patch
   inside the same major does not
+
+### The files of a boilerplate take one `###` each
+
+**Every changed file of a boilerplate, generated files aside, is part of what the version
+delivers.** The environment files — `.npmrc`, an editor's spelling dictionary, `jsconfig.json` and
+the like — go under `## ⚙️ Environment Files`, even where no setting changed its value and only a
+comment or a dictionary entry moved. A changed file of another kind goes under the `##` section
+that names its kind, taken by the same measure the section list above closes with.
+
+**Each file is its own subject, so each takes a `###` headed by its name in backticks**, with what
+changed beneath it. The files do not go in a table: the change to one has nothing in common with
+the change to the next, and the heading is what a reader scanning for their own file finds. The
+rule is the one `hos-gh-notation` gives for a section holding several subjects, applied one level
+down.
+
+```markdown
+## ⚙️ Environment Files
+
+### `.npmrc`
+
+Comments added on `min-release-age` and a warning not to write a token in the file.
+
+### `jsconfig.json`
+
+`node` added to `types:`.
+```
+
+- **A sentence before the first `###` says what holds across all of them**, such as that no
+  setting changed its value, so it is not repeated under each
+- **An `engines:` range is not an environment file's change.** It goes under `## ⚙️ Requirements`,
+  where the reader checks it against the runtime they have
 
 ### Kicked out and deprecated are not the same section
 
