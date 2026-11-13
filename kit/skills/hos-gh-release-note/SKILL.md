@@ -60,11 +60,36 @@ heading rather than trailing off the end of the body.
 | Left out | Why |
 | :-- | :-- |
 | The list of merged pull requests | The host generates it, and it says who did the work rather than what the version does. It also puts a `@handle` on every line |
-| The version bump itself | A release raises the version by definition. A section stating it tells the reader nothing they did not know from the tag |
+| The version bump itself | A release raises the version by definition. A section stating it tells the reader nothing they did not know from the tag. This holds in a boilerplate too, where the bump is the `## Version` line of `about-boilerplate.md` |
 | Anything the reader cannot act on | Refactors with no visible effect, internal renames, work that only moved files |
+| A generated file's diff | A lock file records the outcome of a change made in a manifest, and the manifest's change is what the note states. `package-lock.json` carrying the same `engines` range as `package.json` is the plain case |
 
 **"The host generated it" is not a reason to keep something.** The generated body is a starting
 point for a human writing one, not a draft to be extended.
+
+### What is left out is shown, never decided alone
+
+**The table above says what a note may leave out. It does not say that the writer may leave it out
+unseen.** Dropping a change on the writer's own judgement is the one mistake a reader of the note
+cannot detect: nothing in the body says it was there, so nobody asks for it back until they go
+looking for it.
+
+So the range is read in full before anything is written, and every change in it is accounted for:
+
+```sh
+git diff --name-status <previous tag> <tag>
+```
+
+- **One line per changed file, each marked "in the note" or "left out", with the reason.** The list
+  is shown before the body is, and the body is not written until the left-out side has been seen
+- **What is left out is left out only once the reader of the list has agreed.** The row above that
+  fits the change is the reason offered, never the authority for dropping it
+- **A change the table does not name is in the note**, because nothing has said it may go
+- **In a boilerplate, every diff outside the generated files is what the reader is there to see.**
+  The files are what a clone starts from, so a comment in `.npmrc`, an entry in a spelling
+  dictionary or a line in a component reaches the reader who clones it. The row about changes the
+  reader cannot act on does not apply, and the only things left out are the generated files and
+  the version bump the table already names
 
 ## The sections
 
@@ -79,6 +104,7 @@ for and skips the rest. **Names are title case throughout** — `Supply Chain`, 
 | `## 🛡️ Security` | Where the version stands on advisories — what was closed, and by what means | whenever there is something |
 | `## 🐛 Bug Fixes` | Incorrect behaviour put right | whenever there is something |
 | `## ⚙️ Requirements` | What the reader has to have for this version to run — a declared engine range, a platform, a service version | whenever there is something |
+| `## ⚙️ Environment Files` | The environment files a boilerplate hands over, one `###` per file — see below | A boilerplate only, whenever there is something |
 | `## 🛡️ Supply Chain` | What may run at install, and what the tree resolves through | whenever there is something |
 | `## 📦️ Dependencies` | The tables | whenever there is something |
 | `## ⚙️ CI` | Workflow changes | whenever there is something |
@@ -101,6 +127,37 @@ reader a stop and says nothing.
 - **Whether it is a new major is settled against the previous tag**, which the range already
   found. A tag whose major is one above its predecessor's takes those sections; a minor or a patch
   inside the same major does not
+
+### The files of a boilerplate take one `###` each
+
+**Every changed file of a boilerplate, generated files aside, is part of what the version
+delivers.** The environment files — `.npmrc`, an editor's spelling dictionary, `jsconfig.json` and
+the like — go under `## ⚙️ Environment Files`, even where no setting changed its value and only a
+comment or a dictionary entry moved. A changed file of another kind goes under the `##` section
+that names its kind, taken by the same measure the section list above closes with.
+
+**Each file is its own subject, so each takes a `###` headed by its name in backticks**, with what
+changed beneath it. The files do not go in a table: the change to one has nothing in common with
+the change to the next, and the heading is what a reader scanning for their own file finds. The
+rule is the one `hos-gh-notation` gives for a section holding several subjects, applied one level
+down.
+
+```markdown
+## ⚙️ Environment Files
+
+### `.npmrc`
+
+Comments added on `min-release-age` and a warning not to write a token in the file.
+
+### `jsconfig.json`
+
+`node` added to `types:`.
+```
+
+- **A sentence before the first `###` says what holds across all of them**, such as that no
+  setting changed its value, so it is not repeated under each
+- **An `engines:` range is not an environment file's change.** It goes under `## ⚙️ Requirements`,
+  where the reader checks it against the runtime they have
 
 ### Kicked out and deprecated are not the same section
 
