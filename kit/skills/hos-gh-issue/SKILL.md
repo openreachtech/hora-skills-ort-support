@@ -443,6 +443,23 @@ never belonged to.
 - **A branch under any other trunk is read the same way**, and where that trunk gathers nothing,
   the issue has no parent and takes none.
 
+**An issue raised before its work exists has no branch to read the parent from, and the same rule
+decides it.** In a repository whose work reaches `main` through `release/x.x.x` — it carries a
+`main-guard`, and only releases merge into `main` — the work lands in the next release, so the issue
+sits under that release's umbrella. Look for one before the issue is filed:
+
+```sh
+gh issue list --state open --search 'Release in:title'
+git branch -r | grep release/
+```
+
+- **Where no release is open, ask, and open the release first** with `/hos-gh-open-release`. The
+  version is asked there, and asking it after the issue is filed is how the order goes wrong: the
+  issue then waits parentless for an umbrella that does not exist yet.
+- **A parentless issue is for work the person says belongs to no release.** No umbrella is not that
+  statement. It is a prerequisite not yet met, and filing past it puts the issue where nothing
+  gathers it.
+
 **An issue a publish issue links inline, in its description, has the publish issue as its parent
 by that link, and is not made a sub-issue.** Raising the package version and merging the release
 into `main` are steps of the publish, and the publish issue's description is where they are
