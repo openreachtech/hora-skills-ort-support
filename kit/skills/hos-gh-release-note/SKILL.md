@@ -60,11 +60,36 @@ heading rather than trailing off the end of the body.
 | Left out | Why |
 | :-- | :-- |
 | The list of merged pull requests | The host generates it, and it says who did the work rather than what the version does. It also puts a `@handle` on every line |
-| The version bump itself | A release raises the version by definition. A section stating it tells the reader nothing they did not know from the tag |
+| The version bump itself | A release raises the version by definition. A section stating it tells the reader nothing they did not know from the tag. This holds in a boilerplate too, where the bump is the `## Version` line of `about-boilerplate.md` |
 | Anything the reader cannot act on | Refactors with no visible effect, internal renames, work that only moved files |
+| A generated file's diff | A lock file records the outcome of a change made in a manifest, and the manifest's change is what the note states. `package-lock.json` carrying the same `engines` range as `package.json` is the plain case |
 
 **"The host generated it" is not a reason to keep something.** The generated body is a starting
 point for a human writing one, not a draft to be extended.
+
+### What is left out is shown, never decided alone
+
+**The table above says what a note may leave out. It does not say that the writer may leave it out
+unseen.** Dropping a change on the writer's own judgement is the one mistake a reader of the note
+cannot detect: nothing in the body says it was there, so nobody asks for it back until they go
+looking for it.
+
+So the range is read in full before anything is written, and every change in it is accounted for:
+
+```sh
+git diff --name-status <previous tag> <tag>
+```
+
+- **One line per changed file, each marked "in the note" or "left out", with the reason.** The list
+  is shown before the body is, and the body is not written until the left-out side has been seen
+- **What is left out is left out only once the reader of the list has agreed.** The row above that
+  fits the change is the reason offered, never the authority for dropping it
+- **A change the table does not name is in the note**, because nothing has said it may go
+- **In a boilerplate, every diff outside the generated files is what the reader is there to see.**
+  The files are what a clone starts from, so a comment in `.npmrc`, an entry in a spelling
+  dictionary or a line in a component reaches the reader who clones it. The row about changes the
+  reader cannot act on does not apply, and the only things left out are the generated files and
+  the version bump the table already names
 
 ## The sections
 
